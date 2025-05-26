@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/styles/tool.css">
+		<style>
+			body {
+				width: 85vw;
+				margin: 0 auto;
+			}
+			label {
+				text-align: right;
+				width: 13rem;
+				padding-right: 1rem;
+			}
+			input {
+				width: calc(100vw - 30rem);
+				flex: 30%;
+				max-width: 100%;
+				text-wrap: wrap;
+			}
+			.rowgroup input:first-of-type {
+				flex: 3rem;
+				width: 3rem;
+				margin-right: .2rem;
+			}
+			.rowgroup input:nth-child(3) {
+				flex: 50%;
+			}
+			.add-new-button {
+				margin: .4rem .2rem;
+			}
+			.correction-inputs {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				width: 100%;
+				flex-wrap: wrap;
+			}
+			
+		</style>
+	</head>
+
+<!-- HTML -->
+	<body class="rubik-400">
+		<div>
+			<div class="buttons-top">
+				<button type="button" class="roboto-condensed-500" onclick="save()">SAVE</button>
+				<input type="file" id="load-input" value="load" name="load" class="hidden" onchange="loading()">
+				<button type="button" id="load-button" class="roboto-condensed-500" onclick="document.getElementById('load-input').click();">LOAD</button>
+				<button type="reset" value="Reset" class="danger roboto-condensed-500" onclick="clearAll();">CLEAR</button>
+			</div>
+
+			<div>
+				<input name="correction group count" id="correction-group-count" type="hidden" value="1">
+				<input name="clarification count" id="clarification-count" type="hidden" value="1">
+				<input name="credit count" id="credit-count" type="hidden" value="1">
+				<input name="patreon count" id="patreon-count" type="hidden" value="1">
+				<fieldset id="data" style="color:white; padding:.5em .5em; border: none;">
+						<div class="row">
+							<label>Video Title:</label>
+							<input id="input-title" class="input" autocomplete="off">
+						</div>
+						<div class="row">
+							<label>Video URL:</label>
+							<input id="input-url" class="input" autocomplete="off">
+						</div>
+						<div class="row">
+							<label>Synopsis:</label>
+							<input id="input-synopsis" class="input" autocomplete="off">
+						</div>
+						<div id="correction-container">
+							<div id="correction1-group">
+								<div id="correction1-rows" class="rowgroup">
+									<div class="row">
+										<label>Correction:</label>
+										<input id="input-correction1-tcode1" autocomplete="off"><input id="input-correction1-details1" autocomplete="off">
+									</div>
+								</div>
+								<div class="row">
+									<label>Correction credit:</label>
+									<input id="input-correction1-credit" class="input" autocomplete="off">
+								</div>
+								<div class="button-row" id="correction-buttons">
+									<button id="btn-correction1" class="add-new-button roboto-condensed-500" value="1" onclick="addNewField('correction',1)">add correction</button>
+									<button id="btn-correction1-group" class="add-new-button roboto-condensed-500" value="1" onclick="addNewField('correction-group',1)">new correction group</button>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<label>Clarifications:</label>
+							<input id="input-clarification1" class="input" autocomplete="off">
+						</div>
+						<div class="row">
+							<label>Bandcamp Embed Code:</label>
+							<input id="input-bandcamp" class="input" autocomplete="off">
+						</div>
+						<div class="row">
+							<label>Patreon Music Link:</label>
+							<input id="input-patreon-music" class="input" autocomplete="off">
+						</div>
+						<div id="credit-container">
+							<div class="row">
+								<label>Credit (name):</label>
+								<input id="input-credit1-name" class="input" autocomplete="off">
+							</div>
+							<div class="row">
+								<label>Credit (role):</label>
+								<input id="input-credit1-role" class="input" autocomplete="off">
+							</div>
+						</div>
+						<div class="button-row">
+							<button id="btn-credit" class="add-new-button roboto-condensed-500" onclick="addNewField('credit')">add credit</button>
+						</div>
+						<div class="row">
+							<label>Transcript:</label>
+							<input id="input-transcript" class="input" autocomplete="off">
+						</div>
+						<div class="row">
+							<label>EN Captions:</label>
+							<input id="input-en-captions" class="input" autocomplete="off">
+						</div>
+						<div class="row">
+							<label>EN Subtitles:</label>
+							<input id="input-en-subtitles" class="input" autocomplete="off">
+						</div>
+						<div id="patreon-container">
+							<div class="row">
+								<label>Patreon Image File:</label>
+								<input id="input-patreon-image" class="input" autocomplete="off">
+							</div>
+							<div class="row">
+								<label>Patreon URL:</label>
+								<input id="input-patreon1-url" class="input" autocomplete="off">
+							</div>
+							<div class="row">
+								<label>Patreon Title:</label>
+								<input id="input-patreon1-title" class="input" autocomplete="off">
+							</div>
+							<div class="row">
+								<label>Patreon Duration:</label>
+								<input id="input-patreon1-duration" class="input" autocomplete="off">
+							</div>
+						</div>
+						<div class="button-row">
+							<button id="btn-patreon" class="add-new-button roboto-condensed-500" onclick="addNewField('patreon')">add reward</button>
+						</div>
+						<div class="row">
+							<label>Next Page Title:</label>
+							<input id="input-next-title" class="input" autocomplete="off">
+						</div>
+						<div class="row">
+							<label>Next Page Link:</label>
+							<input id="input-next-link" class="input" autocomplete="off">
+						</div>
+						<div class="row">
+							<label>Previous Page Title:</label>
+							<input id="input-prev-title" class="input" autocomplete="off">
+						</div>
+						<div class="row">
+							<label>Previous Page Link:</label>
+							<input id="input-prev-link" class="input" autocomplete="off">
+						</div>
+				</fieldset>
+			</div>
+
+			<div class="processing hidden" role="status" id="processing">
+				Processing ...
+			</div>
+
+			<div id="import-confirmation" class="hidden" style="text-align: center; color: white; padding: 1rem 0">
+				sources imported: 
+			</div>
+
+			<div id="buttons-bottom" class="buttons-bottom">
+				<input type="file" id="export-with-source" value="export-with-source" name="export-with-source" class="hidden" onchange="exportHTMLwithSources()">
+				<button type="button" id="export-button-with-source" class="btn-export roboto-condensed-500" onclick="document.getElementById('export-with-source').click();">Export with Sources</button>
+				<button type="button" id="export-button-no-source" onclick="exportHTML(false);"  class="btn-export roboto-condensed-500">Export</button>
+			</div>
+		</div>
+
+<!-- SCRIPTING -->
+
+		<script>
+			let xSources;
+			let iSources = [], mSources = [], load = [], fileImport, file, reader;
+			let fileName = "page-data--.txt", clipboardHTML = "";
+			let diag = true;
+
+			function save() {
+				console.log("... SAVE PRESSED");
+				document.getElementById("processing").classList.remove("hidden");
+
+				let dataCollect = collectData();
+
+				// take info from data and write it to a txt file
+				let dataString = JSON.stringify(dataCollect);
+				let file = new Blob([dataString],{type:"text"});
+				let anchor = document.createElement("a");
+				anchor.href = URL.createObjectURL(file);
+				anchor.download = fileName;
+				anchor.click();
+
+				document.getElementById("processing").classList.add("hidden");
+				console.log("/// SAVE DONE");
+			}
+
+			function collectData() {
+				try {
+					let data = [], vidInfo = [], vidCorrections = [], vidClarifications = [], vidMusic = [], vidCredits = [], vidCaptions = [], vidPatreon = [], nav = [];
+
+					vidInfo.push(document.getElementById("input-title").value);
+					vidInfo.push(document.getElementById("input-url").value);
+					vidInfo.push(document.getElementById("input-synopsis").value);
+					vidMusic.push(document.getElementById("input-bandcamp").value);
+					vidMusic.push(document.getElementById("input-patreon-music").value);
+					vidCaptions.push(document.getElementById("input-transcript").value);
+					vidCaptions.push(document.getElementById("input-en-captions").value);
+					vidCaptions.push(document.getElementById("input-en-subtitles").value);
+					vidPatreon.push(document.getElementById("input-patreon-image").value);
+					nav.push(document.getElementById("input-next-title").value)
+					nav.push(document.getElementById("input-next-link").value)
+					nav.push(document.getElementById("input-prev-title").value)
+					nav.push(document.getElementById("input-prev-link").value)
+					console.log("finished push block");
+
+					let correctionGroupCount = Number.parseInt(document.getElementById("correction-group-count").value);
+					let clarificationCount = Number.parseInt(document.getElementById("clarification-count").value);
+					let creditCount = Number.parseInt(document.getElementById("credit-count").value);
+					let patreonCount = Number.parseInt(document.getElementById("patreon-count").value);
+					console.log("defined terms");
+
+					for (g = 1; g < (correctionGroupCount + 1); g++) {
+						console.log("started corrections");
+						let entries = Number(document.getElementById(`btn-correction${g}`).value);
+						let credit = document.getElementById(`input-correction${g}-credit`).value;
+						let group = [];
+
+						for (e = 1; e < entries + 1; e++) {
+							let eTcode = document.getElementById(`input-correction${g}-tcode${e}`).value;
+							if (eTcode == null) { eTcode = "0:00" };
+							let eDetails = document.getElementById(`input-correction${g}-details${e}`).value;
+							group.push(eTcode);
+							group.push(eDetails);
+						}
+						group.push(credit);
+						vidCorrections.push(group);
+					}
+					
+					for (j = 1; j < (clarificationCount + 1); j++) {
+						console.log("started clarifications");
+						vidClarifications.push(document.getElementById(`input-clarification${j}`).value);
+					}
+					for (k = 1; k < (creditCount + 1); k++) {
+						console.log("started credits");
+						vidCredits.push(document.getElementById(`input-credit${k}-name`).value);
+						vidCredits.push(document.getElementById(`input-credit${k}-role`).value);
+					}
+					for (l = 1; l < (patreonCount + 1); l++) {
+						console.log("started patreon posts");
+						vidPatreon.push(document.getElementById(`input-patreon${l}-url`).value);
+						vidPatreon.push(document.getElementById(`input-patreon${l}-title`).value);
+						vidPatreon.push(document.getElementById(`input-patreon${l}-duration`).value);
+					}
+
+					data.push(vidInfo, vidCorrections, vidClarifications, vidMusic, vidCredits, vidCaptions, vidPatreon, nav);
+
+					return data;
+				} catch(err) {
+					console.log(">!< ERROR: " + err);
+				}
+			}
+
+			function loading() {
+				console.log("... LOADING PRESSED");
+				document.getElementById("processing").classList.remove("hidden");
+				clearAll();
+				file = document.getElementById("load-input").files[0];
+				fileName = file.name;
+				reader = new FileReader();
+				reader.onloadend = function(){
+					load = JSON.parse(reader.result);
+
+					document.getElementById("input-title").value = load[0][0];
+					document.getElementById("input-url").value = load[0][1];
+					document.getElementById("input-synopsis").value = load[0][2];
+					document.getElementById("input-bandcamp").value = load[3][0];
+					document.getElementById("input-patreon-music").value = load[3][1];
+					document.getElementById("input-transcript").value = load[5][0];
+					document.getElementById("input-en-captions").value = load[5][1];
+					document.getElementById("input-en-subtitles").value = load[5][2];
+					document.getElementById("input-patreon-image").value = load[6][0];
+					document.getElementById("input-next-title").value = load[7][0];
+					document.getElementById("input-next-link").value = load[7][1];
+					document.getElementById("input-prev-title").value = load[7][2];
+					document.getElementById("input-prev-link").value = load[7][3];
+
+					let correctionGroupCount = load[1].length;
+					let clarificationCount = load[2].length;
+					let creditCount = load[4].length / 2;
+					let patreonCount = (load[6].length - 1) / 3;
+					console.log("# group count: " + correctionGroupCount);
+
+					// add +1 to for loop when correction groups are accounted for
+					for (a = 1; a < correctionGroupCount + 1; a++) {
+						console.log("# group (a): " + a);
+						if (a > 1) { addNewField("correction-group", a - 1) }
+						let entries = (load[1][a-1].length - 1) / 2;
+						console.log("# group entries: " + entries);
+						for (e = 1; e < entries + 1; e++) {
+							console.log("# entry: " + e);
+							if (e > 1) { addNewField("correction", a) }
+							console.log("# time: " + load[1][a-1][(e * 2) - 2]);
+							document.getElementById(`input-correction${a}-tcode${e}`).value = load[1][a-1][(e * 2) - 2];
+							console.log("# details: " + load[1][a-1][(e * 2) - 1]);
+							document.getElementById(`input-correction${a}-details${e}`).value = load[1][a-1][(e * 2) - 1];
+						}
+						console.log("# credit: " + load[1][a-1][load[1][a-1].length - 1]);
+						document.getElementById(`input-correction${a}-credit`).value = load[1][a-1][load[1][a-1].length - 1];
+					}
+					for (b = 1; b < clarificationCount + 1; b++) {
+						if (b > 1) { addNewField("clarification") }
+						document.getElementById(`input-clarification${b}`).value = load[2][b - 1];
+					}
+					for (c = 1; c < creditCount + 1; c++) {
+						if (c > 1) { addNewField("credit") }
+						let nameNum = c * 2 - 2;
+						let roleNum = c * 2 - 1;
+						document.getElementById(`input-credit${c}-name`).value = load[4][nameNum];
+						document.getElementById(`input-credit${c}-role`).value = load[4][roleNum];
+					}
+					for (d = 1; d < patreonCount + 1; d++) {
+						if (d > 1) { addNewField("patreon") }
+						let urlNum = d * 3 - 2;
+						let titleNum = d * 3 - 1;
+						let durationNum = d * 3;
+						document.getElementById(`input-patreon${d}-url`).value = load[6][urlNum];
+						document.getElementById(`input-patreon${d}-title`).value = load[6][titleNum];
+						document.getElementById(`input-patreon${d}-duration`).value = load[6][durationNum];
+					}
+				};
+				reader.readAsText(file);
+
+				document.getElementById("processing").classList.add("hidden");
+				console.log("/// LOADING DONE");
+			}
+
+			function clearAll() {
+				var elements = document.getElementsByTagName("input");
+				for (e = 0; e < elements.length; e++) {
+					if (elements[e].type == "text") {
+						elements[e].value = "";
+					}
+				}
+				refreshCounts();
+			}
+
+			function refreshCounts() {
+				let correctionCount = document.getElementById("correction-group-count");
+				for (i = 1; i < Number.parseInt(correctionCount.value + 1); i++) {
+					if (document.getElementById(`input-correction${i}`)) {correctionCount.value = i;}
+				}
+				let clarificationCount = document.getElementById("clarification-count");
+				for (j = 1; j < Number.parseInt(clarificationCount.value + 1); j++) {
+					if (document.getElementById(`input-clarification${j}`)) {clarificationCount.value = j;}
+				}
+				let creditCount = document.getElementById("credit-count");
+				for (k = 1; k < Number.parseInt(creditCount.value + 1); k++) {
+					if (document.getElementById(`input-credit${k}-name`)) {creditCount.value = k;}
+				}
+				let patreonCount = document.getElementById("patreon-count");
+				for (p = 1; p < Number.parseInt(patreonCount.value + 1); p++) {
+					if (document.getElementById(`input-patreon${p}-url`)) {patreonCount.value = p;}
+				}
+			}
+
+			function toTopFunction() {
+				let topButton = document.getElementById("to-top-button");
+				document.body.scrollTop = 0; // For Safari
+				document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+			}
+
+			function addListeners(src, t, rows) {
+				if (t == "i") {
+					document.getElementById(t + src + "-AddInst").addEventListener("click", addInstance.bind(this, src, t) );
+					document.getElementById(t + src + "-RmvInst").addEventListener("click", removeInstance.bind(this, src, t) );
+					document.getElementById(t + src + "-Bulk").addEventListener("click", removeAllInstances.bind(this, src, t) );
+					if (src != 1) {document.getElementById(t + src + "-Link").addEventListener("click", linkSource.bind(this, src, t) ); };
+					document.getElementById(t + src + "-Unlink").addEventListener("click", unlinkSource.bind(this, src, t) );
+					if (rows < 12) {
+						document.getElementById(t + src + "F6").addEventListener("input", function(e) {
+							if (e.target.value == "") {
+								document.getElementById(t + src + "URL7").classList.add("hidden");
+							} else {
+								document.getElementById(t + src + "URL7").classList.remove("hidden");
+							}
+						});
+					} else {
+						let instCount = (rows - 8) / 4;
+						for (x = 0; x < instCount; x++) {
+							let r;
+							if (x == 0) {r = 7} else {r = 8 + (4 * x)};
+							document.getElementById(t + src + "F" + r).addEventListener("input", function(e) {
+								if (e.target.value == "") {
+									document.getElementById(t + src + "URL" + (r + 1)).classList.add("hidden");
+								} else {
+									document.getElementById(t + src + "URL" + (r + 1)).classList.remove("hidden");
+								}
+							});
+						}
+					}
+				}
+				
+				document.getElementById(t + src + "-Clear").addEventListener("click", clearInputs.bind(this, src, t) );
+				document.getElementById(t + src + "-Reorder").addEventListener("click", reorderToggle.bind(this, src, t) );
+				document.getElementById(t + src + "-ReorderConfirm").addEventListener("click", pushOrder.bind(this, src, t) );
+				document.getElementById(t + src + "-Delete").addEventListener("click", deleteSource.bind(this, src, t) );
+			}
+
+			function exportHTML(state) {
+				console.log("... EXPORT HTML PRESSED, STATE: " + state);
+
+				try {
+					document.getElementById("processing").classList.remove("hidden");
+
+					let clipboardHTML = buildHead();
+					clipboardHTML += buildHeaderWithNav();
+					clipboardHTML += buildVidWithSynopsis();
+					clipboardHTML += buildCorrections();
+					clipboardHTML += buildClarifications();
+					if (!state == false) { clipboardHTML += buildSources(); }
+					clipboardHTML += buildMusic();
+					clipboardHTML += buildCredits();
+					clipboardHTML += buildTranscript();
+					clipboardHTML += buildPatreon();
+					clipboardHTML += `\n${tabs(2)}</div>`;
+					clipboardHTML += buildFooter();
+					clipboardHTML += buildScript();
+
+					navigator.clipboard.writeText(clipboardHTML); // copy to clipboard
+
+					let confirm = document.getElementById("import-confirmation");
+					confirm.classList.remove("hidden");
+					confirm.innerText = "sources imported: " + fileName;
+					
+					alert("HTML successfully copied!");
+					document.getElementById("processing").classList.add("hidden");
+				} catch(err) {
+					console.log(">!< ERROR: " + err.message);
+				}
+
+				console.log("/// EXPORT HTML DONE");
+			}
+
+			function exportHTMLwithSources() {
+				console.log("... IMPORTING SOURCES");
+				let fileImport = document.getElementById("export-with-source").files[0];
+				fileName = fileImport.name;
+				let reader = new FileReader();
+				reader.onloadend = function(){
+					file = JSON.parse(reader.result);
+					exportHTML(true);
+					diag && console.log("| file: " + file);
+				}
+
+				reader.readAsText(fileImport);
+			}
+
+			function buildHead() {
+				diag && console.log("| building head");
+				let output =
+					`<!DOCTYPE html>` +
+					`\n<html lang="en">` +
+					`\n${tabs(1)}<head>` +
+					`\n${tabs(2)}<!-- Required meta tags -->` +
+					`\n${tabs(2)}<meta charset="utf-8">` +
+					`\n${tabs(2)}<meta name="viewport" content="width=device-width, initial-scale=1">` +
+					`\n${tabs(2)}<link rel="preconnect" href="https://fonts.googleapis.com">` +
+					`\n${tabs(2)}<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>` +
+					`\n${tabs(2)}<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,` +
+					`\n${tabs(2)}wght@0,300..900;1,300..900&display=swap" rel="stylesheet">` +
+					`\n${tabs(2)}<link rel="stylesheet" href="/styles/main.css">` +
+					`\n${tabs(2)}<link rel="stylesheet" href="/styles/video.css">` +
+					`\n${tabs(2)}<style>` +
+					`\n${tabs(2)}</style>` +
+					`\n${tabs(1)}</head>\n`;
+
+				return output;
+			}
+
+			function buildHeaderWithNav() {
+				diag && console.log("| building header with nav");
+				let title = document.getElementById("input-title").value;
+				let output =
+					`\n<!-- HTML -->` +
+					`\n${tabs(1)}<body id="body" class="grid rubik-400">` +
+					`\n${tabs(2)}<nav class="roboto-mono-400 inewspaper">` +
+					`\n${tabs(3)}<span><a href="/home.html">:// home</a> <a href="/videos.html">/ videos</a> / .html</span>` +
+					`\n${tabs(2)}</nav>\n`;
+
+				output +=
+					`\n${tabs(2)}<div class="content-column video-grid">` +
+					`\n${tabs(3)}<div class="socials">` +
+					`\n${tabs(4)}<div class="tooltip"><a href="https://youtube.com/emergentbeacon"><image src="/assets/social/social--yt.svg"></a><span class="tooltip-text">youtube</span></div>` +
+					`\n${tabs(4)}<div class="tooltip"><a href="https://patreon.com/emergentbeacon"><image src="/assets/social/social--patreon.svg"></a><span class="tooltip-text">patreon</span></div>` +
+					`\n${tabs(4)}<div class="tooltip"><a href="https://discord.emergentbeacon.com/"><image src="/assets/social/social--discord.svg"></a><span class="tooltip-text">discord</span></div>` +
+					`\n${tabs(4)}<div class="tooltip"><a href="https://bsky.app/profile/brandthughes.bsky.social"><image src="/assets/social/social--bsky.svg"></a><span class="tooltip-text">bluesky</span></div>` +
+					`\n${tabs(4)}<div class="tooltip"><a href="https://youtube.com/@BrandtHughes"><image src="/assets/social/social--yt2.svg"></a><span class="tooltip-text">youtube 2</span></div>` +
+					`\n${tabs(3)}</div>\n` +
+					`\n${tabs(3)}<!-- header and video embed -->` +
+					`\n${tabs(3)}<h1 class="video-title">${title}</h1>`;
+
+				return output;
+			}
+
+			function buildVidWithSynopsis() {
+				diag && console.log("| building video and synopsis");
+				let synopsis = document.getElementById("input-synopsis").value;
+				let output =
+					`\n${tabs(3)}<div id="yt-player" class="yt-embed"></div>` +
+					`\n\n${tabs(3)}<div class="synopsis slate">` +
+					`\n${tabs(4)}${synopsis}` +
+					`\n${tabs(3)}</div>`;
+
+				return output;
+			}
+
+			function buildCorrections() {
+				diag && console.log("| building corrections");
+				if (!document.getElementById(`input-correction1-details1`).value) { return "" };
+				let groups = Number(document.getElementById("correction-group-count").value);
+				let output = `\n` +
+					`\n${tabs(3)}<div class="corrections-area bee">` +
+					`\n${tabs(4)}<h4>CORRECTIONS</h4>`;
+
+				diag && console.log("# groups: " + groups);
+				for (g = 1; g < groups + 1; g++) {
+					diag && console.log("# group " + g + " started");
+					let entries = Number(document.getElementById(`btn-correction${g}`).value);
+					let credit = document.getElementById(`input-correction${g}-credit`).value;
+
+					output +=
+						`\n${tabs(4)}<div class="corrections-entry">` +
+						`\n${tabs(5)}<ul>`;
+
+					for (e = 1; e < entries + 1; e++) {
+						diag && console.log("# entry " + e + " of group " + g + " started");
+						let eTcode = document.getElementById(`input-correction${g}-tcode${e}`).value;
+						if (eTcode == null) { eTcode = "0:00" };
+						let eTcodeSec = Number(eTcode.slice(-2)) + (Number(eTcode.slice(0,eTcode.length-3)) * 60);
+						let eDetails = document.getElementById(`input-correction${g}-details${e}`).value;
+						output +=
+							`\n${tabs(6)}<li><a class="roboto-mono-400" href="#" onclick="playerSeekTo(player, ${eTcodeSec}); return false;">${eTcode}</a> ${eDetails}</li>`;
+					}
+
+					output +=
+						`\n${tabs(6)}<span>(noticed by ${credit})</span>` +
+						`\n${tabs(5)}</ul>` +
+						`\n${tabs(4)}</div>`;
+					diag && console.log("# credit written");
+				}
+				diag && console.log("# outputting");
+				output += `\n${tabs(3)}</div>`;
+				return output;
+			}
+
+			function buildClarifications() {
+				diag && console.log("| building clarifications");
+				if (!document.getElementById(`input-clarification1`).value) { return "" };
+				let clarificationInput = document.getElementById("input-clarification1").value;
+				let output = `\n` +
+					`\n${tabs(3)}<div class="corrections-area islate">` +
+					`\n${tabs(4)}<h4>CLARIFICATIONS</h4>` +
+					`\n${tabs(4)}<div class="corrections-entry">` +
+					`\n${tabs(5)}<ul style="margin: 0 -1.5em">` +
+					`\n${tabs(6)}<li>${clarificationInput}</li>` +
+					`\n${tabs(5)}</ul>` +
+					`\n${tabs(4)}</div>` +
+					`\n${tabs(3)}</div>`;
+
+				return output;
+			}
+
+			function buildSources() {
+				try {
+					diag && console.log("| building sources");
+					let srcCountI = file[0].length;
+					let srcCountM = file[1].length;
+					let iURL = 0, iTitle = 1, iPub = 2, iAuthor = 3, iYear = 4, iSpecifics = 5, iSpecificsURL = 6, iAccessed = 7, iClaim = 8, iTimecode = 9, iLinkState = 11, iLinks = 12;
+					let mURL = 0, mTitle = 1, mPub = 2, mAuthor = 3, mYear = 4, mMods = 6, mTimecode = 7;
+					let vidLink = file[0][0][0];
+
+					let output = `\n\n${tabs(3)}<div class="cite-info">`
+
+					if (srcCountI) {
+						diag && console.log("| srcCountI detected");
+						output +=
+							`\n${tabs(4)}<h2 class="section-title inewspaper">Info Sources</h2>` +
+							`\n${tabs(4)}<div class="source-container islate" id="infoContainer">`;
+
+						// loop through info data, source by source
+						let linkedChildren = 0;
+						for (srcI = 0; srcI < srcCountI; srcI++) {
+							let s = srcI + 1;
+							let rowTotal = file[0][srcI].length - 2;
+							let tcode;
+							if (file[0][srcI][iTimecode] == null) {
+								tcode = "0:00"
+							} else {
+								tcode = file[0][srcI][iTimecode]
+							}
+							let tcodeSeconds = Number(tcode.slice(-2)) + (Number(tcode.slice(0,tcode.length-3)) * 60);
+							let part = "ABCDEFGHIJKLMNO";
+							let instCount = (rowTotal - 8) / 4;
+							let specifics = "";
+							let instSpecifics = file[0][srcI][iSpecifics];
+							let instSpecificsURL = file[0][srcI][iSpecificsURL];
+							let sLinkState = file[0][srcI][iLinkState];
+							let sLinks = Number(file[0][srcI][iLinks]);
+							let displayURL = urlSanitize(file[0][srcI][iURL]);
+
+							// if this source isn't a child in a link chain
+							// create a box for the claim and source number 
+							if (linkedChildren == 0) {
+								diag && console.log(file[0][srcI]);
+								if (sLinks > 0) {
+									linkedChildren = sLinks;
+									output += `\n${tabs(5)}<div class="info-number" id="Info${s}">${s}`;
+										for (sX = 1; sX < sLinks + 1; sX++){
+											output += ", " + (s + sX);
+										}
+										output += `</div>`;
+								} else {
+									output += `\n${tabs(5)}<div class="info-number" id="Info${s}">${s}</div>`;
+								}
+							
+								if (rowTotal < 12) {
+									if (instSpecifics && instSpecificsURL) {
+										specifics = `<a href="${instSpecificsURL}">${instSpecifics}</a>`;
+									} else {
+										specifics = instSpecifics;
+									}
+
+									output +=
+										`\n${tabs(5)}<div class="cite-box">` +
+										`\n${tabs(6)}${file[0][srcI][iClaim]}<br>` +
+										`\n${tabs(6)}<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, ${tcodeSeconds}); return false;">${tcode}</a></span>` +
+										`\n${tabs(5)}</div>`;
+								} else {
+									for (x = 0; x < instCount; x++) {
+										let instClaim, instTime;
+
+										if (x == 0) {
+											if (instSpecifics && instSpecificsURL) {
+												specifics = part[x] + ": " + "<a href=\"" + instSpecificsURL + "\">" + instSpecifics + "</a>";
+											} else if (instSpecifics) {
+												specifics = part[x] + ": " + instSpecifics;
+											};
+											if (file[0][srcI][iClaim]) {
+												instClaim = file[0][srcI][iClaim];
+											} else {
+												instClaim = "No specific claim."
+											}
+											instTime = tcode;
+										} else {
+											if (file[0][srcI][7 + (x * 4)] && file[0][srcI][8 + (x * 4)]) {
+												if (specifics.length > 0) { specifics += "<br>" };
+												specifics += part[x] + ": " + "<a href=\"" + file[0][srcI][8 + (x * 4)] + "\">" + file[0][srcI][7 + (x * 4)] + "</a>";
+											} else if (file[0][srcI][7 + (x * 4)]) {
+												if (specifics.length > 0) { specifics += "<br>" };
+												specifics += part[x] + ": " + file[0][srcI][7 + (x * 4)];
+											};
+											if (file[0][srcI][9 + (x * 4)]) {
+												instClaim = file[0][srcI][9 + (x * 4)];
+											} else {
+												instClaim = "No specific claim."
+											}
+											instTime = file[0][srcI][10 + (x * 4)];
+										}
+
+										output +=
+											`\n${tabs(5)}<div class="cite-tab-align">` +
+											`\n${tabs(6)}<div class="cite-box-multi-tab">${part[x]}</div>` +
+											`\n${tabs(6)}<div class="cite-box-multi-quote">` +
+											`\n${tabs(7)}${instClaim}<br>` +
+											`\n${tabs(7)}<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, ${tcodeSeconds}); return false;">${instTime}</a></span>` +
+											`\n${tabs(6)}</div>` +
+											`\n${tabs(5)}</div>`;
+									}
+								}
+							} else { linkedChildren-- }
+
+							output +=
+								`\n${tabs(5)}<div class="cite-details">` +
+								`\n${tabs(6)}<span class="cite-identifier">${file[0][srcI][iTitle]}<br></span>` +
+								`\n${tabs(6)}<span class="cite-credits">`;
+
+							if (file[0][srcI][iYear]) {output += `\n${tabs(7)}${file[0][srcI][iYear]}`};
+							if (file[0][srcI][iYear] && file[0][srcI][iAuthor] || file[0][srcI][iYear] && file[0][srcI][iPub]) {output += ", "};
+							if (file[0][srcI][iAuthor]) {output += file[0][srcI][iAuthor] + "<br>"};
+							if (file[0][srcI][iPub]) {output += `\n${tabs(6)}${file[0][srcI][iPub]}<br>`};
+							if (file[0][srcI][iAccessed]) {output += `\n${tabs(6)}accessed ${file[0][srcI][iAccessed]}<br>`};
+							if (specifics) {output += `\n${tabs(7)}${specifics}`};
+							output += `\n${tabs(6)}</span>`;
+							if (file[0][srcI][iURL]) {
+								output +=
+									`\n${tabs(6)}<div class="source-link roboto-mono-400">` +
+									`\n${tabs(7)}<a href="${file[0][srcI][iURL]}">${displayURL}</a>` +
+									`\n${tabs(6)}</div>` +
+									`\n${tabs(5)}</div>`;
+							};
+						};
+					};
+
+					output += `\n${tabs(4)}</div>`;
+
+					if (srcCountI > 2) {
+						output +=
+							`\n${tabs(4)}<form class="search-banner" id="infoSearchBanner">` +
+							`\n${tabs(5)}<input id="infoInput" class="search-input" placeholder="#" onfocus="this.value=''">` +
+							`\n${tabs(5)}<button id="infoBtn" class="search-button" type="button" onclick="infoSearch()">go to</button>` +
+							`\n${tabs(4)}</form>`;
+					}
+
+					output += `\n${tabs(3)}</div>`;
+
+					if (srcCountM) {
+						diag && console.log("| srcCountM detected");
+						output += `\n` +
+							`\n${tabs(3)}<div class="cite-media">` +
+							`\n${tabs(4)}<h2 class="section-title inewspaper">Media Sources</h2>` +
+							`\n${tabs(4)}<div class="source-container islate" id="media-container">`;
+						
+						// loop through media data, source by source
+						for (srcM = 0; srcM < srcCountM; srcM++) {
+							let s = srcM + 1;
+							let rowTotal = file[1][srcM].length;
+							let tcode;
+							if (file[1][srcM][mTimecode] == null) {
+								tcode = "0:00"
+							} else {
+								tcode = file[1][srcM][mTimecode]
+							}
+
+							let tcodeSeconds = Number(tcode.slice(-2)) + (Number(tcode.slice(0,tcode.length-3)) * 60);
+							let displayURL = urlSanitize(file[1][srcM][mURL]);
+
+							output +=
+								`\n${tabs(5)}<div id="Media${s}">` +
+								`\n${tabs(6)}<div class="media-anchor">` +
+								`\n${tabs(7)}<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, ${tcodeSeconds}); return false;">${tcode}</a><span class="inewspaper media-indx">m${s}</span>` +
+								`\n${tabs(6)}</div>` +
+								`\n${tabs(6)}<div class="cite-details">` +
+								`\n${tabs(7)}<span class="cite-identifier">${file[1][srcM][mTitle]}<br></span>` +
+								`\n${tabs(7)}<span class="cite-credits">`;
+
+							if (file[1][srcM][mYear]) {output += `\n${tabs(8)}${file[1][srcM][mYear]}`};
+							if (file[1][srcM][mYear] && file[1][srcM][mAuthor]) {output += ", "};
+							if (file[1][srcM][mAuthor]) {output += file[1][srcM][mAuthor] + "<br>"};
+							if (file[1][srcM][mPub]) {output += `\n${tabs(8)}${file[1][srcM][mPub]}<br>`};
+							if (file[1][srcM][mMods]) {output += `\n${tabs(8)}<i>modifications: ${file[1][srcM][mMods]}</i><br>`};
+
+							output += `\n${tabs(7)}</span>`;
+							if (file[1][srcM][mURL]) {
+								output +=
+									`\n${tabs(7)}<div class="source-link roboto-mono-400">` +
+									`\n${tabs(8)}<a href="${file[1][srcM][mURL]}">${displayURL}</a>` +
+									`\n${tabs(7)}</div>`;
+							};
+							output +=
+								`\n${tabs(6)}</div>` +
+								`\n${tabs(5)}</div>`;
+						};
+					};
+
+					output += `\n${tabs(4)}</div>`;
+
+					if (srcCountM > 2) {
+						output +=
+							`\n${tabs(4)}<form class="search-banner" id="mediaSearchBanner">` +
+							`\n${tabs(5)}<input id="mediaInput" class="search-input" placeholder="#" onfocus="this.value=''">` +
+							`\n${tabs(5)}<button id="mediaBtn" class="search-button" type="button" onclick="mediaSearch()">go to</button>` +
+							`\n${tabs(4)}</form>`;
+					}
+
+					output += `\n${tabs(3)}</div>`;
+					return output;
+				} catch(err) {
+					console.log(">!< ERROR, buildSources: " + err);
+				}
+			}
+
+			function buildMusic() {
+				diag && console.log("| building music");
+				let bandcampEmbed = document.getElementById("input-bandcamp").value;
+				let bandcampID = bandcampEmbed.split(`/album=`).pop().split(`/size=`)[0];
+				let bandcampLink = bandcampEmbed.split(`href="`).pop().split(`">`)[0];
+				let bandcampTitle = bandcampEmbed.split(`">`).pop().split(`</a></iframe>`)[0];
+				let patreonMusic = document.getElementById("input-patreon-music").value;
+				let output = `\n` +
+					`\n${tabs(3)}<div class="music dark">` +
+					`\n${tabs(4)}<h2 class="section-title inewspaper">Music</h2>` +
+					`\n${tabs(4)}<iframe class="bandcamp-embed" src="https://bandcamp.com/EmbeddedPlayer/album=${bandcampID}/size=large/bgcol=333333/linkcol=6decc2/artwork=small/transparent=true/" seamless><a href="${bandcampLink}">${bandcampTitle}</a></iframe>` +
+					`\n${tabs(4)}<div style="text-align: center; margin:.4em auto 0em;">` +
+					`\n${tabs(5)}<span style="font-size:80%;">available to download on</span><br>` +
+					`\n${tabs(5)}<a href="${patreonMusic}" class="button" title="link to patreon">patreon</a> <a href="${bandcampLink}" class="button" title="link to bandcamp">bandcamp</a>` +
+					`\n${tabs(4)}</div>` +
+					`\n${tabs(3)}</div>`;
+
+				return output;
+			}
+
+			function buildCredits() {
+				diag && console.log("| building credits");
+				let output = `\n` +
+					`\n${tabs(3)}<div class="credits-block">` +
+					`\n${tabs(4)}<h2 class="section-title inewspaper">Credits</h2>` +
+					`\n${tabs(4)}<div class="outline dark">` +
+					`\n${tabs(5)}<div class="credits">`;
+				let creditCount = Number.parseInt(document.getElementById("credit-count").value);
+				for (cr = 1; cr < (creditCount + 1); cr++) {
+					let creditName = document.getElementById(`input-credit${cr}-name`).value;
+					let creditRole = document.getElementById(`input-credit${cr}-role`).value;
+					output +=
+						`\n${tabs(6)}<div class="credits-name newspaper">${creditName}</div>` +
+						`\n${tabs(6)}<div class="credits-role">` +
+						`\n${tabs(7)}${creditRole}` +
+						`\n${tabs(6)}</div>`;
+				}
+				output +=
+					`\n${tabs(5)}</div>` +
+					`\n${tabs(4)}</div>` +
+					`\n${tabs(3)}</div>`;
+				return output;
+			}
+
+			function buildTranscript() {
+				diag && console.log("| building transcript");
+				let output = `\n` +
+					`\n${tabs(3)}<div class="transcript-block">` +
+					`\n${tabs(4)}<h2 class="section-title inewspaper">Transcript</h2>` +
+					`\n${tabs(4)}<div class="dark" style="padding:.2em 0 1em;">` +
+					`\n${tabs(5)}<aside class="transcript-text newspaper">` +
+					`\n${tabs(6)}<p>` +
+					`\n${tabs(7)}${document.getElementById(`input-transcript`).value}` +
+					`\n${tabs(6)}</p>` +
+					`\n${tabs(5)}</aside>` +
+					`\n${tabs(5)}<div style="text-align: center;">` +
+					`\n${tabs(6)}<a href="${document.getElementById(`input-en-captions`).value}" class="button" title="file with dialogue and atmospherics">` +
+					`\n${tabs(7)}EN Captions` +
+					`\n${tabs(6)}</a>` +
+					`\n${tabs(6)}<a href="${document.getElementById(`input-en-subtitles`).value}" class="button" title="file with just dialogue">` +
+					`\n${tabs(7)}EN Subtitles` +
+					`\n${tabs(6)}</a>` +
+					`\n${tabs(6)}<a href="/translations" class="button" title="details about translations">` +
+					`\n${tabs(7)}Info` +
+					`\n${tabs(6)}</a>` +
+					`\n${tabs(5)}</div>` +
+					`\n${tabs(4)}</div>` +
+					`\n${tabs(3)}</div>`;
+
+				return output;
+			}
+
+			function buildPatreon() {
+				diag && console.log("| building patreon bonus");
+				let output = `\n` +
+					`\n${tabs(3)}<div class="bonus-block">` +
+					`\n${tabs(4)}<h2 class="section-title inewspaper">Bonus Material</h2>` +
+					`\n${tabs(4)}<div style="padding-bottom: 1em;" class="dark outline">` +
+					`\n${tabs(5)}<div>` +
+					`\n${tabs(6)}<p class="synopsis-text" style="margin-top: .6em;">` +
+					`\n${tabs(7)}<a href="https://patreon.com/emergentbeacon" class="support-link" title="patreon.com/emergentbeacon">Pledge now</a> for these behind the scenes exclusives!` +
+					`\n${tabs(6)}</p>` +
+					`\n${tabs(5)}</div>` +
+					`\n${tabs(5)}<div class="bonus-scroll slate cutout">` +
+					`\n${tabs(6)}<div style="width: max-content;">`;
+
+				let patreonCount = Number.parseInt(document.getElementById("patreon-count").value);
+				let patreonImage = document.getElementById("input-patreon-image").value;
+				for (pa = 1; pa < patreonCount + 1; pa++) {
+					let patreonURL = document.getElementById(`input-patreon${pa}-url`).value;
+					let patreonTitle = document.getElementById(`input-patreon${pa}-title`).value;
+					let patreonDuration = document.getElementById(`input-patreon${pa}-duration`).value;
+					let imageOffset = (pa - 1) * -10;
+					output +=
+						`\n${tabs(7)}<div class="bonus-entry">` +
+						`\n${tabs(8)}<a href="${patreonURL}">` +
+						`\n${tabs(9)}<img src="/assets/${patreonImage}" style="object-position: ${imageOffset}rem 0;">` +
+						`\n${tabs(8)}</a>` +
+						`\n${tabs(8)}<p>` +
+						`\n${tabs(9)}<span class="bonus-entry-time">${patreonDuration}</span><br>` +
+						`\n${tabs(9)}<span class="bonus-entry-label">${patreonTitle}</span>` +
+						`\n${tabs(8)}</p>` +
+						`\n${tabs(7)}</div>`;
+					}
+				
+					output +=
+						`\n${tabs(6)}</div>` +
+						`\n${tabs(5)}</div>` +
+						`\n${tabs(4)}</div>` +
+						`\n${tabs(3)}</div>`;
+
+				return output;
+			}
+
+			function buildFooter() {
+				diag && console.log("| building footer");
+				let output = `\n` +
+					`\n${tabs(2)}<footer class="footnav roboto-mono-400">` +
+					`\n${tabs(3)}<div class="footer-tooltip">` +
+					`\n${tabs(4)}<a href="/videos/${document.getElementById(`input-prev-link`).value}" class="dark-link">← Previous</a>` +
+					`\n${tabs(4)}<span class="tooltip-text tooltip-left">${document.getElementById(`input-prev-title`).value}</span>` +
+					`\n${tabs(3)}</div>` +
+					`\n${tabs(3)}<a href="#" class="dark-link">TO TOP</a>` +
+					`\n${tabs(3)}<div class="footer-tooltip">` +
+					`\n${tabs(4)}<a class="dark-link" href="/videos/${document.getElementById(`input-next-link`).value}">Next →</a>` +
+					`\n${tabs(4)}<span class="tooltip-text tooltip-right">${document.getElementById(`input-next-title`).value}</span>` +
+					`\n${tabs(3)}</div>` +
+					`\n${tabs(2)}</footer>` +
+					`\n${tabs(1)}</body>\n`;
+
+				return output;
+			}
+
+			function buildScript() {
+				diag && console.log("| building script");
+				let output =
+					`\n<!-- SCRIPTS -->` +
+					`\n${tabs(1)}<script>` +
+					`\n${tabs(2)}// 2. This code loads the IFrame Player API code asynchronously.` +
+					`\n${tabs(2)}var tag = document.createElement('script');` +
+					`\n${tabs(2)}tag.src = "https://www.youtube.com/iframe_api";` +
+					`\n${tabs(2)}var firstScriptTag = document.getElementsByTagName('script')[0];` +
+					`\n${tabs(2)}firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);\n` +
+					`\n${tabs(2)}// 3. This function creates an <iframe> (and YouTube player)` +
+					`\n${tabs(2)}//    after the API code downloads.` +
+					`\n${tabs(2)}var player;` +
+					`\n${tabs(2)}function onYouTubeIframeAPIReady() {` +
+					`\n${tabs(2)}player = new YT.Player('yt-player', {` +
+					`\n${tabs(3)}height: '400',` +
+					`\n${tabs(3)}width: '100%',` +
+					`\n${tabs(3)}videoId: '${extractID(document.getElementById("input-url").value)}',` +
+					`\n${tabs(3)}playerVars: {` +
+					`\n${tabs(4)}'playsinline': 1` +
+					`\n${tabs(3)}},` +
+					`\n${tabs(3)}events: {` +
+					`\n${tabs(4)}'onReady': onPlayerReady,` +
+					`\n${tabs(4)}'onStateChange': onPlayerStateChange` +
+					`\n${tabs(3)}}` +
+					`\n${tabs(2)}});` +
+					`\n${tabs(2)}}\n` +
+					`\n${tabs(2)}// 4. The API will call this function when the video player is ready.` +
+					`\n${tabs(2)}function onPlayerReady(event) {}` +
+					`\n${tabs(2)}function onPlayerStateChange(event) {}\n` +
+					`\n${tabs(2)}//generic seekTo function taking a player element and seconds as parameters` +
+					`\n${tabs(2)}function playerSeekTo(player, seconds) {` +
+					`\n${tabs(3)}player.seekTo(seconds);` +
+					`\n${tabs(3)}player.scrollIntoView({` +
+					`\n${tabs(4)}behavior: 'smooth',` +
+					`\n${tabs(4)}block: 'start',` +
+					`\n${tabs(4)}inline: 'nearest'` +
+					`\n${tabs(3)}});` +
+					`\n${tabs(2)}}\n` +
+					`\n${tabs(2)}const mSearch = document.getElementById("mediaSearchBanner");` +
+					`\n${tabs(2)}const iSearch = document.getElementById("infoSearchBanner");\n` +
+					`\n${tabs(2)}function infoSearch() {` +
+					`\n${tabs(3)}let input = document.getElementById("infoInput");` +
+					`\n${tabs(3)}let inputVal = input.value;` +
+					`\n${tabs(3)}let container = document.documentElement;` +
+					`\n${tabs(3)}let containerPos = container.scrollTop;` +
+					`\n${tabs(3)}let anchor = document.getElementById('Info' + inputVal);\n` +
+					`\n${tabs(3)}if (anchor == null) {` +
+					`\n${tabs(4)}iSearch.classList.add("error");` +
+					`\n${tabs(3)}} else {` +
+					`\n${tabs(4)}anchor.scrollIntoView({` +
+					`\n${tabs(5)}behavior: 'smooth',` +
+					`\n${tabs(5)}block: 'start',` +
+					`\n${tabs(5)}inline: 'nearest'` +
+					`\n${tabs(4)}});` +
+					`\n${tabs(4)}container.scrollTop = containerPos;` +
+					`\n${tabs(3)}}` +
+					`\n${tabs(2)}}\n` +
+					`\n${tabs(2)}function mediaSearch() {` +
+					`\n${tabs(3)}let input = document.getElementById("mediaInput");` +
+					`\n${tabs(3)}let inputVal = input.value;` +
+					`\n${tabs(3)}let container = document.documentElement;` +
+					`\n${tabs(3)}let containerPos = container.scrollTop;` +
+					`\n${tabs(3)}let anchor = document.getElementById('Media' + inputVal);\n` +
+					`\n${tabs(3)}if (anchor == null) {` +
+					`\n${tabs(4)}mSearch.classList.add("error");` +
+					`\n${tabs(3)}} else {` +
+					`\n${tabs(4)}anchor.scrollIntoView({` +
+					`\n${tabs(5)}behavior: 'smooth',` +
+					`\n${tabs(5)}block: 'start',` +
+					`\n${tabs(5)}inline: 'nearest'` +
+					`\n${tabs(4)}});` +
+					`\n${tabs(4)}container.scrollTop = containerPos;` +
+					`\n${tabs(3)}}` +
+					`\n${tabs(2)}}\n` +
+					`\n${tabs(2)}// source lookup behavior: disable form submit on "Enter," replace with function` +
+					`\n${tabs(2)}document.getElementById("infoInput").addEventListener("keydown", function (e) {` +
+					`\n${tabs(3)}if (e.code === "Enter") {` +
+					`\n${tabs(4)}e.preventDefault();` +
+					`\n${tabs(4)}infoSearch();` +
+					`\n${tabs(3)}}` +
+					`\n${tabs(2)}});` +
+					`\n${tabs(2)}document.getElementById("mediaInput").addEventListener("keydown", function (e) {` +
+					`\n${tabs(3)}if (e.code === "Enter") {` +
+					`\n${tabs(4)}e.preventDefault();` +
+					`\n${tabs(4)}mediaSearch();` +
+					`\n${tabs(3)}}` +
+					`\n${tabs(2)}});\n` +
+					`\n${tabs(2)}// remove css color animation class when animation finishes` +
+					`\n${tabs(2)}iSearch.addEventListener("animationend", listener, false);` +
+					`\n${tabs(2)}mSearch.addEventListener("animationend", listener, false);` +
+					`\n${tabs(2)}function listener(event) {` +
+					`\n${tabs(3)}switch (event.type) {` +
+					`\n${tabs(4)}case "animationend":` +
+					`\n${tabs(5)}mSearch.classList.remove("error");` +
+					`\n${tabs(5)}iSearch.classList.remove("error");` +
+					`\n${tabs(5)}break;` +
+					`\n${tabs(3)}}` +
+					`\n${tabs(2)}}` +
+					`\n${tabs(1)}<\/script>` +
+					`\n</html>`;
+
+				return output;
+			}
+
+			function addNewField(type, group) {
+				try {
+					document.getElementById("processing").classList.remove("hidden");
+					diag && console.log("| creating new " + type + " field");
+
+					// create a field for another source group
+					if (type == "correction") {
+						let corrCount = document.getElementById(`btn-correction${group}`).value;
+						let corrNum = Number(corrCount) + 1;
+						corrCount = corrNum;
+
+						const row = document.createElement("div");
+						row.classList.add("row");
+						row.innerHTML =
+							`${tabs(8)}<label></label>` +
+							`\n${tabs(8)}<input id="input-${type}${group}-tcode${corrNum}" autocomplete="off"><input id="input-${type}${group}-details${corrNum}" autocomplete="off">`;
+
+						let container = document.getElementById(type + group + "-rows");
+						container.appendChild(row);
+						document.getElementById(`btn-correction${group}`).value = corrNum;
+					} else if (type == "correction-group") {
+						console.log("creating correction group, in loop");
+						let count = document.getElementById(type + "-count");
+						let newCount = group + 1;
+						count.value = newCount;
+						console.log("group: " + group + ", newCount: " + newCount);
+
+						const newGroup = document.createElement("div");
+						newGroup.id = `correction${newCount}-group`;
+
+						console.log("prepping innerHTML");
+						
+						newGroup.innerHTML =
+							`${tabs(8)}<div id="correction${newCount}-rows" class="rowgroup">` +
+							`\n${tabs(9)}<div class="row">` +
+							`\n${tabs(10)}<label>Correction:</label>` +
+							`\n${tabs(10)}<input id="input-correction${newCount}-tcode1" autocomplete="off"><input id="input-correction${newCount}-details1" autocomplete="off">` +
+							`\n${tabs(9)}</div>` +
+							`\n${tabs(8)}</div>` +
+							`\n${tabs(8)}<div class="row">` +
+							`\n${tabs(9)}<label>Correction credit:</label>` +
+							`\n${tabs(9)}<input id="input-correction${newCount}-credit" class="input" autocomplete="off">` +
+							`\n${tabs(8)}</div>` +
+							`\n${tabs(8)}<div class="button-row" id="correction-buttons">` +
+							`\n${tabs(9)}<button id="btn-correction${newCount}" class="add-new-button roboto-condensed-500" value="1" onclick="addNewField('correction',${newCount})">add correction</button>` +
+							`\n${tabs(9)}<button id="btn-correction${newCount}-group" class="add-new-button roboto-condensed-500" value="1" onclick="addNewField('correction-group',${newCount})">new correction group</button>` +
+							`\n${tabs(8)}</div>`;
+
+						console.log("deleting button");
+						document.getElementById(`btn-correction${group}-group`).remove();
+						console.log("button deleted, defining container");
+						let container = document.getElementById("correction-container");
+						console.log("appending child");
+						container.appendChild(newGroup);
+						console.log("child appended");
+					} else if (type == "patreon") {
+						let count = document.getElementById(type + "-count");
+						let countNum = Number.parseInt(count.value);
+						let newCount = countNum + 1;
+						count.value = newCount;
+
+						const row1 = document.createElement("div");
+						row1.classList.add("row");
+						row1.innerHTML =
+							`${tabs(8)}<label>Patreon URL:</label>` +
+							`\n${tabs(8)}<input id="input-${type}${newCount}-url" class="input" autocomplete="off">`;
+
+						const row2 = document.createElement("div");
+						row2.classList.add("row");
+						row2.innerHTML =
+							`${tabs(8)}<label>Patreon Title:</label>` +
+							`\n${tabs(8)}<input id="input-${type}${newCount}-title" class="input" autocomplete="off">`;
+
+						const row3 = document.createElement("div");
+						row3.classList.add("row");
+						row3.innerHTML =
+							`${tabs(8)}<label>Patreon Duration:</label>` +
+							`\n${tabs(8)}<input id="input-${type}${newCount}-duration" class="input" autocomplete="off">`;
+
+						let container = document.getElementById(type + "-container");
+						container.appendChild(row1);
+						container.appendChild(row2);
+						container.appendChild(row3);
+					} else if (type == "credit") {
+						let count = document.getElementById(type + "-count");
+						let countNum = Number.parseInt(count.value);
+						let newCount = countNum + 1;
+						count.value = newCount;
+
+						const row1 = document.createElement("div");
+						row1.classList.add("row");
+						row1.innerHTML =
+							`${tabs(8)}<label>Credit (name):</label>` +
+							`\n${tabs(8)}<input id="input-${type}${newCount}-name" class="input" autocomplete="off">`;
+
+						const row2 = document.createElement("div");
+						row2.classList.add("row");
+						row2.innerHTML =
+							`${tabs(8)}<label>Credit (role):</label>` +
+							`\n${tabs(8)}<input id="input-${type}${newCount}-role" class="input" autocomplete="off">`;
+
+						let container = document.getElementById(type + "-container");
+						container.appendChild(row1);
+						container.appendChild(row2);
+					}
+					
+
+					document.getElementById("processing").classList.add("hidden");
+				} catch(err) {
+					console.log(">!< ERROR: " + err);
+				}
+			}
+
+			function urlSanitize(url) {
+				if (url.indexOf("https://www.") != -1) { return url.slice(12) }
+				else if (url.indexOf("https://") != -1) { return url.slice(8) }
+				else if (url.indexOf("http://www.") != -1) { return url.slice(11) }
+				else if (url.indexOf("http://") != -1) { return url.slice(7) }
+				else if (url.indexOf("www.") != -1) { return url.slice(4) }
+				else { return url }
+			}
+
+			function extractID(url) {
+				let ID = url;
+				if (url.indexOf("?si=") != -1) { ID = url.slice(0,-20) }
+				return ID.slice(-11);
+			}
+
+			function tabs(num) {
+				let x = `	`;
+				let output = "";
+				for (i = 0; i < num; i++) { output += x; }
+				return output;
+			}
+
+		</script>
+	</body>
+</html>

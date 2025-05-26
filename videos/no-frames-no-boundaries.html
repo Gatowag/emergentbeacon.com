@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,
+		wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/styles/main.css">
+		<link rel="stylesheet" href="/styles/video.css">
+		<style>
+		</style>
+	</head>
+
+<!-- HTML -->
+	<body id="body" class="grid rubik-400">
+		<nav class="roboto-mono-400 dark">
+			<span><a href="/home.html">:// home</a> <a href="/videos.html">/ videos</a> / no-frames-no-boundaries.html</span>
+		</nav>
+
+		<div class="content-column video-grid">
+			<div class="socials">
+				<div class="tooltip"><a href="https://youtube.com/emergentbeacon"><image src="/assets/social/social--yt.svg"></a><span class="tooltip-text">youtube</span></div>
+				<div class="tooltip"><a href="https://patreon.com/emergentbeacon"><image src="/assets/social/social--patreon.svg"></a><span class="tooltip-text">patreon</span></div>
+				<div class="tooltip"><a href="https://discord.emergentbeacon.com/"><image src="/assets/social/social--discord.svg"></a><span class="tooltip-text">discord</span></div>
+				<div class="tooltip"><a href="https://bsky.app/profile/brandthughes.bsky.social"><image src="/assets/social/social--bsky.svg"></a><span class="tooltip-text">bluesky</span></div>
+				<div class="tooltip"><a href="https://youtube.com/@BrandtHughes"><image src="/assets/social/social--yt2.svg"></a><span class="tooltip-text">youtube 2</span></div>
+			</div>
+
+			<!-- header and video embed -->
+			<h1 class="video-title">No Frames, No Boundaries</h1>
+			<div id="yt-player" class="yt-embed"></div>
+
+			<div class="synopsis slate">
+				Originally written by Russel Schweickart in 1974. The overview effect has a special place in my heart as an intense moment of developing extreme empathy that very few of us get to experience.
+			</div>
+
+			<div class="corrections-area islate">
+				<h4>CLARIFICATIONS</h4>
+				<div class="corrections-entry">
+					<ul>
+						<li>the lecture was truncated for this video but can be heard in full at <a href="https://youtu.be/IvcHuzrv_gM">youtu.be/IvcHuzrv_gM</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="cite-info">
+				<h2 class="section-title inewspaper">Info Sources</h2>
+				<div class="source-container islate" id="infoContainer">
+					<div class="info-number" id="Info1">1</div>
+					<div class="cite-box">
+						"But up there you go around every hour and a half" ...<br>
+						<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 8); return false;">00:08</a></span>
+					</div>
+					<div class="cite-details">
+						<span class="cite-identifier">No Frames, No Boundaries lecture<br></span>
+						<span class="cite-credits">
+							1974, Russel Schweickart<br>
+							<a href="http://youtu.be/IvcHuzrv_gM?t=1965">performed section starts at timecode 32:45</a>
+						</span>
+						<div class="source-link roboto-mono-400">
+							<a href="https://youtu.be/IvcHuzrv_gM">youtu.be/IvcHuzrv_gM</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cite-media">
+				<h2 class="section-title inewspaper">Media Sources</h2>
+				<div class="source-container islate" id="media-container">
+					<div id="Media1">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 274); return false;">04:34</a><span class="inewspaper media-indx">m1</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">PHOTO: Russel Schweickart<br></span>
+							<span class="cite-credits">
+								1971
+								NASA<br>
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://commons.wikimedia.org/wiki/File:RustySchweickart.jpg">commons.wikimedia.org/wiki/File:RustySchweickart.jpg</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media2">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 88); return false;">01:28</a><span class="inewspaper media-indx">m2</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">photos from the Apollo 9 and Apollo 15 missions<br></span>
+							<span class="cite-credits">
+								1969/1971
+								NASA<br>
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="http://apolloarchive.com/apollo_gallery.html">apolloarchive.com/apollo_gallery.html</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="music dark">
+				<h2 class="section-title inewspaper">Music</h2>
+				<iframe class="bandcamp-embed" src="https://bandcamp.com/EmbeddedPlayer/album=2488943393/size=large/bgcol=333333/linkcol=6decc2/artwork=small/transparent=true/" seamless><a href="https://emergentbeacon.bandcamp.com/album/what-exactly-is-art">What Exactly is Art? by Emergent Beacon</a></iframe>
+				<div style="text-align: center; margin:.4em auto 0em;">
+					<span style="font-size:80%;">available to download on</span><br>
+					<a href="https://patreon.com/posts/70487358" class="button" title="link to patreon">patreon</a> <a href="https://emergentbeacon.bandcamp.com/album/what-exactly-is-art" class="button" title="link to bandcamp">bandcamp</a>
+				</div>
+			</div>
+
+			<div class="credits-block">
+				<h2 class="section-title inewspaper">Credits</h2>
+				<div class="outline dark">
+					<div class="credits">
+						<div class="credits-name newspaper">Brandt Hughes</div>
+						<div class="credits-role">
+							research, writing, host, camera operator, audio engineer, music production, editor
+						</div>
+						<div class="credits-name newspaper">Jason Murphy</div>
+						<div class="credits-role">
+							guest speaker
+						</div>
+						<div class="credits-name newspaper">Bryce Castillo</div>
+						<div class="credits-role">
+							additional audio engineering, production assistance 
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="transcript-block">
+				<h2 class="section-title inewspaper">Transcript</h2>
+				<div class="dark" style="padding:.2em 0 1em;">
+					<aside class="transcript-text newspaper">
+						<p>
+							But up there you go around every hour and a half; time after time after time.<br><br>And you wake up usually in the mornings, and just the way the track of your orbits go you wake up over the Mid-East, and over North Africa.<br><br>And as you eat breakfast, you look out the window as you're going past and there's the Mediterranean area, Greece, and Rome, and North Africa, and the Sinai, that whole area.<br><br>And you realize that in one glance, what you're seeing is what was the whole history of man for years -- the cradle of civilization.<br><br>And you think of all that history that you can imagine, and you go down across North Africa and out over the Indian Ocean and you look up at that great subcontinent of India pointed down toward you as you go past it, Ceylon off to the side, and Burma, Southeast Asia, out over the Philippines and up across that monstrous Pacific Ocean, that vast body of water.<br><br>You've never realized how big that is before.<br><br>And you finally come up across the coast of California and you look for those friendly things, Los Angeles, and Phoenix and on across to El Paso.<br><br>And there's Houston, there's home.<br><br>You know, and you look and sure enough, there's the Astrodome -- and you identify with that.<br><br>It's an attachment.<br><br>And on across New Orleans and then you look down to the south and there's the whole peninsula of Florida just laid out.<br><br>And all the hundreds of hours you've spent flying across that route down in the atmosphere, all that is friendly again.<br><br>You go out across the Atlantic Ocean and back across Africa, you do it again and again and again.<br><br>And you identify with Houston, and then you identify with Los Angeles, Phoenix, and New Orleans.<br><br>And the next thing you recognize in yourself is that you're identifying with North Africa.<br><br>You look forward to that, you anticipate it, and there it is.<br><br>That whole process begins to shift of what it is you identify with.<br><br>When you go around it in an hour and a half, you begin to recognize that your identity is with that whole thing.<br><br>And that makes a change.<br><br>And you look down there, and you can't imagine how many borders and boundaries you cross.<br><br>Again and again and again, and you don't even see them.<br><br>There you are -- hundreds of people killing each other over some imaginary line that you're not even aware of, that you can't see.<br><br>And from where you see it, this thing is a whole and it's so beautiful.<br><br>You wish you could take one in each hand, one from each side and say, "Look.<br><br>Look at it from this perspective, look at that.<br><br>"What's important?" And a little later on, your friend, the person next to you goes out to the Moon.<br><br>And now he looks back and he sees the Earth not as something big, where he can see the beautiful details, but now he sees the Earth as a a small thing out there.<br><br>Now that contrast between the bright blue and white Christmas tree ornament and that black sky, that...<br><br>infinite universe, it really comes through.<br><br>And the size of it, the significance of it -- it becomes both things.<br><br>It becomes so small and so fragile, and such a precious little spot in that universe that you can block out with your thumb.<br><br>And you realize that on that small spot, that little blue and white thing, is everything that means anything to you.<br><br>All of history, music, poetry, art, war and death and birth, love, tears, joy, games, all of it!<br><br>And that little spot out there that you can cover with your thumb.<br><br>And you realize from that perspective that you've changed that there's something new there and that the relationship is it's no longer what it was.<br><br>And it tells you something about your relationship with this thing we call life.<br><br>So that's a change that's -- that's something new.<br><br>When you come back, there's a difference in that world now, there's a difference in that relationship between you and that planet.<br><br>And you and all those other forms of life on that planet because you've had that kind of experience.<br><br>It's a difference and it's so precious.<br><br>That was a lecture given by astronaut Russell Schweickart in 1974, where he described for the first time publicly, his experiences being in outer space during the Apollo Nine mission in 1969.<br><br>He was describing what's come to be known as the overview effect, and it's something that more than a few astronauts have reported experiencing.<br><br>Now, to me, this sounds like the effects of a most potent art.<br><br>What every work of art should really aspire to do.<br><br>He had a literal change in worldview.<br><br>He was up there, and by every measure that I can imagine, he felt it.<br><br>But there was no artist who painted this canvas.<br><br>No, this was the result of billions of years of change and a whole lot of good luck--
+						</p>
+					</aside>
+					<div style="text-align: center;">
+						<a href="https://www.dropbox.com/s/oiorn0btc8hkv20/EB003__no_frames_MR01--cc_en_captions.srt?dl=0" class="button" title="file with dialogue and atmospherics">
+							EN Captions
+						</a>
+						<a href="https://www.dropbox.com/s/yi64dtpvn9tahv0/EB003__no_frames_MR01--cc_en_subs.srt?dl=0" class="button" title="file with just dialogue">
+							EN Subtitles
+						</a>
+						<a href="/translations" class="button" title="details about translations">
+							Info
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="bonus-block">
+				<h2 class="section-title inewspaper">Bonus Material</h2>
+				<div style="padding-bottom: 1em;" class="dark outline">
+					<div>
+						<p class="synopsis-text" style="margin-top: .6em;">
+							<a href="https://patreon.com/emergentbeacon" class="support-link" title="patreon.com/emergentbeacon">Pledge now</a> for these behind the scenes exclusives!
+						</p>
+					</div>
+					<div class="bonus-scroll slate cutout">
+						<div style="width: max-content;">
+							<div class="bonus-entry">
+								<a href="https://patreon.com/posts/58836465">
+									<img src="/assets/patreon--eb003-no-frames.jpg" style="object-position: 0rem 0;">
+								</a>
+								<p>
+									<span class="bonus-entry-time">5:16</span><br>
+									<span class="bonus-entry-label">The Longest Take</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footnav roboto-mono-400">
+			<div class="footer-tooltip">
+				<a href="/videos/critical-curves.html" class="dark-link">← Prev. Video</a>
+				<span class="tooltip-text tooltip-left">How Does Light Ripple Through Deep Space?</span>
+			</div>
+			<a href="#" class="dark-link">TO TOP</a>
+			<div class="footer-tooltip">
+				<a href="/videos/art.html" class="dark-link">Next Video →</a>
+				<span class="tooltip-text tooltip-right">What Exactly is Art?</span>
+			</div>
+		</footer>
+	</body>
+
+<!-- SCRIPT STUFF -->
+	<script>
+		// 2. This code loads the IFrame Player API code asynchronously.
+		var tag = document.createElement('script');
+		tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		// 3. This function creates an <iframe> (and YouTube player)
+		//    after the API code downloads.
+		var player;
+		function onYouTubeIframeAPIReady() {
+		player = new YT.Player('yt-player', {
+			height: '400',
+			width: '100%',
+			videoId: 'Vfmfdb_dEek',
+			playerVars: {
+				'playsinline': 1
+			},
+			events: {
+				'onReady': onPlayerReady,
+				'onStateChange': onPlayerStateChange
+			}
+		});
+		}
+
+		// 4. The API will call this function when the video player is ready.
+		function onPlayerReady(event) {}
+		function onPlayerStateChange(event) {}
+
+		//generic seekTo function taking a player element and seconds as parameters
+		function playerSeekTo(player, seconds) {
+			player.seekTo(seconds);
+			player.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start',
+				inline: 'nearest'
+			});
+		}
+
+		const mSearch = document.getElementById("mediaSearchBanner");
+		const iSearch = document.getElementById("infoSearchBanner");
+
+		function infoSearch() {
+			let input = document.getElementById("infoInput");
+			let inputVal = input.value;
+			let container = document.documentElement;
+			let containerPos = container.scrollTop;
+			let anchor = document.getElementById('Info' + inputVal);
+
+			if (anchor == null) {
+				iSearch.classList.add("error");
+			} else {
+				anchor.scrollIntoView({
+					behavior: 'smooth',
+					block: 'start',
+					inline: 'nearest'
+				});
+				container.scrollTop = containerPos;
+			}
+		}
+
+		function mediaSearch() {
+			let input = document.getElementById("mediaInput");
+			let inputVal = input.value;
+			let container = document.documentElement;
+			let containerPos = container.scrollTop;
+			let anchor = document.getElementById('Media' + inputVal);
+
+			if (anchor == null) {
+				mSearch.classList.add("error");
+			} else {
+				anchor.scrollIntoView({
+					behavior: 'smooth',
+					block: 'start',
+					inline: 'nearest'
+				});
+				container.scrollTop = containerPos;
+			}
+		}
+
+		// source lookup behavior: disable form submit on "Enter," replace with function
+		document.getElementById("infoInput").addEventListener("keydown", function (e) {
+			if (e.code === "Enter") {
+				e.preventDefault();
+				infoSearch();
+			}
+		});
+		document.getElementById("mediaInput").addEventListener("keydown", function (e) {
+			if (e.code === "Enter") {
+				e.preventDefault();
+				mediaSearch();
+			}
+		});
+
+		// remove css color animation class when animation finishes
+		iSearch.addEventListener("animationend", listener, false);
+		mSearch.addEventListener("animationend", listener, false);
+		function listener(event) {
+			switch (event.type) {
+				case "animationend":
+					mSearch.classList.remove("error");
+					iSearch.classList.remove("error");
+					break;
+			}
+		}
+	</script>
+</html>

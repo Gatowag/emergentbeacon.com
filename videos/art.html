@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,
+		wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/styles/main.css">
+		<link rel="stylesheet" href="/styles/video.css">
+		<style>
+		</style>
+	</head>
+
+<!-- HTML -->
+	<body id="body" class="grid rubik-400">
+		<nav class="roboto-mono-400 inewspaper">
+			<span><a href="/home.html">:// home</a> <a href="/videos.html">/ videos</a> / art.html</span>
+		</nav>
+
+		<div class="content-column video-grid">
+			<div class="socials">
+				<div class="tooltip"><a href="https://youtube.com/emergentbeacon"><image src="/assets/social/social--yt.svg"></a><span class="tooltip-text">youtube</span></div>
+				<div class="tooltip"><a href="https://patreon.com/emergentbeacon"><image src="/assets/social/social--patreon.svg"></a><span class="tooltip-text">patreon</span></div>
+				<div class="tooltip"><a href="https://discord.emergentbeacon.com/"><image src="/assets/social/social--discord.svg"></a><span class="tooltip-text">discord</span></div>
+				<div class="tooltip"><a href="https://bsky.app/profile/brandthughes.bsky.social"><image src="/assets/social/social--bsky.svg"></a><span class="tooltip-text">bluesky</span></div>
+				<div class="tooltip"><a href="https://youtube.com/@BrandtHughes"><image src="/assets/social/social--yt2.svg"></a><span class="tooltip-text">youtube 2</span></div>
+			</div>
+
+			<!-- header and video embed -->
+			<h1 class="video-title">What Exactly is Art?</h1>
+			<div id="yt-player" class="yt-embed"></div>
+
+			<div class="synopsis slate">
+				Whenever I ask people what they think art is, they all seem to have their own unique answer. What are the potential consequences of such pervasive ambiguity and can we make sense of this tangled situation?
+			</div>
+
+			<div class="cite-info">
+				<h2 class="section-title inewspaper">Info Sources</h2>
+				<div class="source-container islate" id="infoContainer">
+					<div class="info-number" id="Info1">1</div>
+					<div class="cite-box">
+						"The only world known so far to harbor life." ... "The only home we've ever known."<br>
+						<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 619); return false;">10:19</a></span>
+					</div>
+					<div class="cite-details">
+						<span class="cite-identifier">The Pale Blue Dot: Short Recording<br></span>
+						<span class="cite-credits">
+							1994, Sagan C.<br>
+							<a href="https://en.wikipedia.org/wiki/Pale_Blue_Dot#Reflections">§ Reflections</a>
+						</span>
+						<div class="source-link roboto-mono-400">
+							<a href="https://en.wikipedia.org/wiki/Pale_Blue_Dot">en.wikipedia.org/wiki/Pale_Blue_Dot</a>
+						</div>
+					</div>
+					<div class="info-number" id="Info2">2</div>
+					<div class="cite-tab-align">
+						<div class="cite-box-multi-tab">A</div>
+						<div class="cite-box-multi-quote">
+							"Dictionary definitions serve their own very specific purpose."<br>
+							<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 665); return false;">11:05</a></span>
+						</div>
+					</div>
+					<div class="cite-tab-align">
+						<div class="cite-box-multi-tab">B</div>
+						<div class="cite-box-multi-quote">
+							"These kinds of listed definitions ... are basically where the term you're defining is treated as a category, and the definition is a list of every component that belongs to that category."<br>
+							<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 665); return false;">15:50</a></span>
+						</div>
+					</div>
+					<div class="cite-details">
+						<span class="cite-identifier">Stanford Encyclopedia of Philosophy on Definitions<br></span>
+						<span class="cite-credits">
+							2021, Gupta A.<br>
+						Stanford<br>
+						accessed 2021<br>
+							A: <a href="https://plato.stanford.edu/entries/definitions/#DicDef">§ 1.2 Dictionary definitions</a><br>B: <a href="https://plato.stanford.edu/entries/definitions/#DesDef">§ 1.4 Descriptive definitions</a>
+						</span>
+						<div class="source-link roboto-mono-400">
+							<a href="https://plato.stanford.edu/entries/definitions">plato.stanford.edu/entries/definitions</a>
+						</div>
+					</div>
+					<div class="info-number" id="Info3">3</div>
+					<div class="cite-tab-align">
+						<div class="cite-box-multi-tab">A</div>
+						<div class="cite-box-multi-quote">
+							"He also makes points that don't hold up quite as well."<br>
+							<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 720); return false;">12:00</a></span>
+						</div>
+					</div>
+					<div class="cite-tab-align">
+						<div class="cite-box-multi-tab">B</div>
+						<div class="cite-box-multi-quote">
+							"He calls attention to the value we collectively attribute to art."<br>
+							<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 720); return false;">12:12</a></span>
+						</div>
+					</div>
+					<div class="cite-tab-align">
+						<div class="cite-box-multi-tab">C</div>
+						<div class="cite-box-multi-quote">
+							"Tolstoy argues ... that there's a certain moral imperative to disambiguate the term (art)."<br>
+							<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 720); return false;">12:57</a></span>
+						</div>
+					</div>
+					<div class="cite-tab-align">
+						<div class="cite-box-multi-tab">D</div>
+						<div class="cite-box-multi-quote">
+							"Beauty is something invisible behind nature—a force or spirit revealing itself in ordered energy."<br>
+							<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 720); return false;">15:28</a></span>
+						</div>
+					</div>
+					<div class="cite-tab-align">
+						<div class="cite-box-multi-tab">E</div>
+						<div class="cite-box-multi-quote">
+							"Tolstoy points to monarchs, religious rulers, and generally the upper class who leverage their power to preserver and almost deify the art that reinforced their own power dynamics."<br>
+							<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 720); return false;">25:12</a></span>
+						</div>
+					</div>
+					<div class="cite-tab-align">
+						<div class="cite-box-multi-tab">F</div>
+						<div class="cite-box-multi-quote">
+							"Beauty has gone through many different definitions and interpretations that vary by time and region, but on average, it really just means something that is pleasurable to experience."<br>
+							<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 720); return false;">27:35</a></span>
+						</div>
+					</div>
+					<div class="cite-tab-align">
+						<div class="cite-box-multi-tab">G</div>
+						<div class="cite-box-multi-quote">
+							"Tolstoy strikes one last time with a good comparison that I think helps dispell this maybe silly prerequisite."<br>
+							<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 720); return false;">27:52</a></span>
+						</div>
+					</div>
+					<div class="cite-details">
+						<span class="cite-identifier">What is Art?<br></span>
+						<span class="cite-credits">
+							1899, Tolstoy L.<br>
+						Crowell<br>
+							A: ch. 18, p. 166<br>B: ch. 1, p. 2<br>C: ch. 2, p. 8<br>D: ch. 3, p. 27, bottom of page<br>E: ch. 6<br>F: ch. 4, p. 32-33<br>G: ch. 4, p. 37-38
+						</span>
+						<div class="source-link roboto-mono-400">
+							<a href="https://www.google.com/books/edition/What_is_Art/0SYVAAAAYAAJ?hl=en&gbpv=0">google.com/books/edition/What_is_Art/0SYVAAAAYAAJ?hl=en&gbpv=0</a>
+						</div>
+					</div>
+					<div class="info-number" id="Info4">4</div>
+					<div class="cite-box">
+						"[Tolstoy] also makes points that don't hold up quite as well."<br>
+						<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 720); return false;">12:00</a></span>
+					</div>
+					<div class="cite-details">
+						<span class="cite-identifier">"Tolstoyan movement" on Wikipedia<br></span>
+						<span class="cite-credits">
+							2011, various authors<br>
+						Wikipedia<br>
+						accessed 2021<br>
+							<a href="https://en.wikipedia.org/wiki/Tolstoyan_movement#Beliefs_and_practices">§ Beliefs and practices</a>
+						</span>
+						<div class="source-link roboto-mono-400">
+							<a href="https://en.wikipedia.org/wiki/Tolstoyan_movement">en.wikipedia.org/wiki/Tolstoyan_movement</a>
+						</div>
+					</div>
+					<div class="info-number" id="Info5">5</div>
+					<div class="cite-box">
+						"[Tolstoy] also makes points that don't hold up quite as well."<br>
+						<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 720); return false;">12:00</a></span>
+					</div>
+					<div class="cite-details">
+						<span class="cite-identifier">"Leo Tolstoy" on Wikipedia<br></span>
+						<span class="cite-credits">
+							2006, various authors<br>
+						Wikipedia<br>
+						accessed 2021<br>
+							<a href="https://en.wikipedia.org/wiki/Leo_Tolstoy#Personal_life">§ Personal life</a>
+						</span>
+						<div class="source-link roboto-mono-400">
+							<a href="https://en.wikipedia.org/wiki/Leo_Tolstoy">en.wikipedia.org/wiki/Leo_Tolstoy</a>
+						</div>
+					</div>
+					<div class="info-number" id="Info6">6</div>
+					<div class="cite-box">
+						"Like in ancient China, the Zhou Dynasty emphasized six major arts."<br>
+						<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 889); return false;">14:49</a></span>
+					</div>
+					<div class="cite-details">
+						<span class="cite-identifier">"Six Arts" on Wikipedia<br></span>
+						<span class="cite-credits">
+							2021, various authors<br>
+						Wikipedia<br>
+						accessed 2021<br>
+							<a href="https://en.wikipedia.org/wiki/Six_Arts#History">§ History</a>
+						</span>
+						<div class="source-link roboto-mono-400">
+							<a href="https://en.wikipedia.org/wiki/Six_Arts">en.wikipedia.org/wiki/Six_Arts</a>
+						</div>
+					</div>
+					<div class="info-number" id="Info7">7</div>
+					<div class="cite-box">
+						"[The aestheticians] only landed on five major arts."<br>
+						<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 919); return false;">15:19</a></span>
+					</div>
+					<div class="cite-details">
+						<span class="cite-identifier">"Lectures on Aesthetics" on Wikipedia<br></span>
+						<span class="cite-credits">
+							2021, various authors<br>
+						Wikipedia<br>
+						accessed 2021<br>
+							<a href="https://en.wikipedia.org/wiki/Lectures_on_Aesthetics#Content">§ Content</a>
+						</span>
+						<div class="source-link roboto-mono-400">
+							<a href="https://en.wikipedia.org/wiki/Lectures_on_Aesthetics">en.wikipedia.org/wiki/Lectures_on_Aesthetics</a>
+						</div>
+					</div>
+					<div class="info-number" id="Info8">8</div>
+					<div class="cite-box">
+						"It's actually a really clever work of art that not only is not silent, but it dynamically changes every time it's performed."<br>
+						<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 1128); return false;">18:48</a></span>
+					</div>
+					<div class="cite-details">
+						<span class="cite-identifier">"4′33″" on Wikipedia<br></span>
+						<span class="cite-credits">
+							2012, various authors<br>
+						Wikipedia<br>
+						accessed 2021<br>
+							<a href="https://en.wikipedia.org/wiki/Lectures_on_Aesthetics#Content">§ summary</a>
+						</span>
+						<div class="source-link roboto-mono-400">
+							<a href="https://en.wikipedia.org/wiki/4%E2%80%B233%E2%80%B3">en.wikipedia.org/wiki/4%E2%80%B233%E2%80%B3</a>
+						</div>
+					</div>
+					<div class="info-number" id="Info9">9</div>
+					<div class="cite-tab-align">
+						<div class="cite-box-multi-tab">A</div>
+						<div class="cite-box-multi-quote">
+							"The exhibit is almost two miles long and is filled with 2500 works from all sorts of people."<br>
+							<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 1232); return false;">20:32</a></span>
+						</div>
+					</div>
+					<div class="cite-tab-align">
+						<div class="cite-box-multi-tab">B</div>
+						<div class="cite-box-multi-quote">
+							"One of the directors of the exhibit was absolutely beside himself at the sight of Fountain. He was disgusted and demanded that it be removed."<br>
+							<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 1232); return false;">21:32</a></span>
+						</div>
+					</div>
+					<div class="cite-details">
+						<span class="cite-identifier">Marcel Duchamp's Fountain, Its History and Aesthetics in the Context of 1917<br></span>
+						<span class="cite-credits">
+							1987, Camfield W. A.<br>
+						accessed 2021<br>
+							A: p. 67 (4 in the pdf), bottom of page<br>B: p. 69 (6 in the pdf), bottom of page after "Wood's later recollections"
+						</span>
+						<div class="source-link roboto-mono-400">
+							<a href="http://faculty.winthrop.edu/stockk/modernism/Camfield%20Fountain%201917.pdf">faculty.winthrop.edu/stockk/modernism/Camfield%20Fountain%201917.pdf</a>
+						</div>
+					</div>
+					<div class="info-number" id="Info10">10</div>
+					<div class="cite-box">
+						"93 million miles away, light is being radiated out from the sun."<br>
+						<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 1851); return false;">30:51</a></span>
+					</div>
+					<div class="cite-details">
+						<span class="cite-identifier">How Big Is the Solar System?<br></span>
+						<span class="cite-credits">
+							2020, Davis P.<br>
+						NASA<br>
+						accessed 2021<br>
+							<a href="https://en.wikipedia.org/wiki/Lectures_on_Aesthetics#Content">¶ 3</a>
+						</span>
+						<div class="source-link roboto-mono-400">
+							<a href="https://solarsystem.nasa.gov/news/1164/how-big-is-the-solar-system/">solarsystem.nasa.gov/news/1164/how-big-is-the-solar-system/</a>
+						</div>
+					</div>
+					<div class="info-number" id="Info11">11</div>
+					<div class="cite-box">
+						"From their perspective, however, thanks to relativity, they seem to hit the bottle in an instantaneous moment."<br>
+						<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 1866); return false;">31:06</a></span>
+					</div>
+					<div class="cite-details">
+						<span class="cite-identifier">How Do Photons Experience Time?<br></span>
+						<span class="cite-credits">
+							2016, Siegel E.<br>
+						Forbes<br>
+						accessed 2021<br>
+						</span>
+						<div class="source-link roboto-mono-400">
+							<a href="https://www.forbes.com/sites/startswithabang/2016/09/30/how-do-photons-experience-time/">forbes.com/sites/startswithabang/2016/09/30/how-do-photons-experience-time/</a>
+						</div>
+					</div>
+					<div class="info-number" id="Info12">12</div>
+					<div class="cite-box">
+						"It passes through transparent materials in a process called transmission. For opaque materials, some frequencies of light get absorbed.” ... "In turn, radiating that same light in infrared." ... "All of the rest of the light is reflected."<br>
+						<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 1881); return false;">31:21</a></span>
+					</div>
+					<div class="cite-details">
+						<span class="cite-identifier">Light Absorption, Reflection, and Transmission<br></span>
+						<span class="cite-credits">
+							2022, 
+						Physics Classroom<br>
+						accessed 2022<br>
+						</span>
+						<div class="source-link roboto-mono-400">
+							<a href="https://www.physicsclassroom.com/class/light/Lesson-2/Light-Absorption,-Reflection,-and-Transmission">physicsclassroom.com/class/light/Lesson-2/Light-Absorption,-Reflection,-and-Transmission</a>
+						</div>
+					</div>
+					<div class="info-number" id="Info13">13</div>
+					<div class="cite-tab-align">
+						<div class="cite-box-multi-tab">A</div>
+						<div class="cite-box-multi-quote">
+							"This fovial area is about the size of a pinhead and is made up 50,000 cones. Of your entire visual range, it only covers a meager two degrees."<br>
+							<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 720); return false;">12:00</a></span>
+						</div>
+					</div>
+					<div class="cite-tab-align">
+						<div class="cite-box-multi-tab">B</div>
+						<div class="cite-box-multi-quote">
+							"[The brain] engages in a data parsing operation by activating different areas of the brain that specialize in various tasks. This is parallel processing, where a bunch of different things get worked on at the same time."<br>
+							<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 720); return false;">34:19</a></span>
+						</div>
+					</div>
+					<div class="cite-tab-align">
+						<div class="cite-box-multi-tab">C</div>
+						<div class="cite-box-multi-quote">
+							"[A schema] is the structure of a brain that allows incoming information to be meaningfully organized."<br>
+							<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 720); return false;">35:29</a></span>
+						</div>
+					</div>
+					<div class="cite-tab-align">
+						<div class="cite-box-multi-tab">D</div>
+						<div class="cite-box-multi-quote">
+							"An exemplar is a memory of a specific instance of something.” ... "It isn't efficient to store a bunch of information in your brain from every apple you've ever held or eaten." ... "A prototype, on the other hand, is a generalized concept of the apple."<br>
+							<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 720); return false;">37:00</a></span>
+						</div>
+					</div>
+					<div class="cite-tab-align">
+						<div class="cite-box-multi-tab">E</div>
+						<div class="cite-box-multi-quote">
+							"There is theory that consciousness is not some trait of the brain that just gets switched on, but in stead is a variety of complex systems within the brain to achieve an effect."<br>
+							<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 720); return false;">45:07</a></span>
+						</div>
+					</div>
+					<div class="cite-details">
+						<span class="cite-identifier">The Psychology of Art and the Evolution of the Conscious Brain<br></span>
+						<span class="cite-credits">
+							2003, Solso R. L.<br>
+						The MIT Press<br>
+							A: p. 90<br>B: p. 115<br>C: ch. 8<br>D: ch. 8<br>E: ch. 4
+						</span>
+						<div class="source-link roboto-mono-400">
+							<a href="https://mitpress.mit.edu/books/psychology-art-and-evolution-conscious-brain">mitpress.mit.edu/books/psychology-art-and-evolution-conscious-brain</a>
+						</div>
+					</div>
+					<div class="info-number" id="Info14">14</div>
+					<div class="cite-box">
+						"Maybe you've seen a video of an elephant painting, but there is a study suggesting that they don't feel any better for doing it."<br>
+						<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 2657); return false;">44:17</a></span>
+					</div>
+					<div class="cite-details">
+						<span class="cite-identifier">Is painting by elephants in zoos as enriching as we are led to believe?<br></span>
+						<span class="cite-credits">
+							2014, English M., Kaplan G., Rogers L. J.<br>
+						PeerJ 2:e471<br>
+							§ abstract
+						</span>
+						<div class="source-link roboto-mono-400">
+							<a href="https://peerj.com/articles/471/">peerj.com/articles/471/</a>
+						</div>
+					</div>
+					<div class="info-number" id="Info15">15</div>
+					<div class="cite-box">
+						"There's a study on birds' preferences for various paintings, but that doesn't exactly mean that they feel art."<br>
+						<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 2664); return false;">44:24</a></span>
+					</div>
+					<div class="cite-details">
+						<span class="cite-identifier">Why Do We Care Whether Animals Appreciate Our Art?<br></span>
+						<span class="cite-credits">
+							2013, Eveleth R.<br>
+						Smithsonian Magazine<br>
+						accessed 2021<br>
+						</span>
+						<div class="source-link roboto-mono-400">
+							<a href="https://www.smithsonianmag.com/smart-news/why-do-we-care-whether-animals-appreciate-our-art-28894385/">smithsonianmag.com/smart-news/why-do-we-care-whether-animals-appreciate-our-art-28894385/</a>
+						</div>
+					</div>
+					<div class="info-number" id="Info16">16</div>
+					<div class="cite-box">
+						"There's a genre of art called ephemeral art, and its entire purpose is to call attention to its own changing nature."<br>
+						<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 2646); return false;">44:06</a></span>
+					</div>
+					<div class="cite-details">
+						<span class="cite-identifier">"Ephemeral Art" on Wikipedia<br></span>
+						<span class="cite-credits">
+							2021, various authors<br>
+						Wikipedia<br>
+						accessed 2021<br>
+							§ summary
+						</span>
+						<div class="source-link roboto-mono-400">
+							<a href="https://en.wikipedia.org/wiki/Ephemeral_art">en.wikipedia.org/wiki/Ephemeral_art</a>
+						</div>
+					</div>
+					<div class="info-number" id="Info17">17</div>
+					<div class="cite-box">
+						"His prize for Italy suddenly became very hot, and the target of some very bright spotlights. So he nervously stowed it away in his apartment for the next two years."<br>
+						<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 2876); return false;">47:56</a></span>
+					</div>
+					<div class="cite-details">
+						<span class="cite-identifier">How the 1911 theft of the Mona Lisa made it the world’s most famous painting<br></span>
+						<span class="cite-credits">
+							2019, McArdle T.<br>
+						Washington Post<br>
+						accessed 2022<br>
+							ctrl + f "apartment"
+						</span>
+						<div class="source-link roboto-mono-400">
+							<a href="https://www.washingtonpost.com/history/2019/10/20/how-theft-mona-lisa-made-it-worlds-most-famous-painting/">washingtonpost.com/history/2019/10/20/how-theft-mona-lisa-made-it-worlds-most-famous-painting/</a>
+						</div>
+					</div>
+					<div class="info-number" id="Info18">18</div>
+					<div class="cite-box">
+						"That was a lecture given by astronaught Russell Schweickart in 1974, where he described for the first time publicly his experiences being in outer space during the Apollo 9 mission in 1969."<br>
+						<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 3259); return false;">54:19</a></span>
+					</div>
+					<div class="cite-details">
+						<span class="cite-identifier">Rusty Schweickart orating No Frames, No Boundaries<br></span>
+						<span class="cite-credits">
+							1974, Schweickart R.<br>
+							<a href="http://youtu.be/IvcHuzrv_gM?t=1965">performed section starts at 32:45</a>
+						</span>
+						<div class="source-link roboto-mono-400">
+							<a href="http://youtu.be/IvcHuzrv_gM">youtu.be/IvcHuzrv_gM</a>
+						</div>
+					</div>
+					<div class="info-number" id="Info19">19</div>
+					<div class="cite-box">
+						"He was describing what's come to be known as the overview effect."<br>
+						<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 3268); return false;">54:28</a></span>
+					</div>
+					<div class="cite-details">
+						<span class="cite-identifier">"Overview Effect" on Wikipedia<br></span>
+						<span class="cite-credits">
+							2021, various authors<br>
+						Wikipedia<br>
+						accessed 2021<br>
+							§ summary
+						</span>
+						<div class="source-link roboto-mono-400">
+							<a href="https://en.wikipedia.org/wiki/Overview_effect">en.wikipedia.org/wiki/Overview_effect</a>
+						</div>
+					</div>
+					<div class="info-number" id="Info20">20</div>
+					<div class="cite-box">
+						"Some of them are just sick the entire time."<br>
+						<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 3399); return false;">56:39</a></span>
+					</div>
+					<div class="cite-details">
+						<span class="cite-identifier">"Space adaptation syndrome" on Wikipedia<br></span>
+						<span class="cite-credits">
+							2021, various authors<br>
+						Wikipedia<br>
+						accessed 2021<br>
+							<a href="https://en.wikipedia.org/wiki/Space_adaptation_syndrome#Management">§ Management, Jake Garn quote</a>
+						</span>
+						<div class="source-link roboto-mono-400">
+							<a href="https://en.wikipedia.org/wiki/Space_adaptation_syndrome#Cause_and_remedy">en.wikipedia.org/wiki/Space_adaptation_syndrome#Cause_and_remedy</a>
+						</div>
+					</div>
+					<div class="info-number" id="Info21">21</div>
+					<div class="cite-box">
+						"So unrelentingly sick, in fact, that they informally have a scale of space sickness named after them."<br>
+						<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 3402); return false;">56:42</a></span>
+					</div>
+					<div class="cite-details">
+						<span class="cite-identifier">Oral History 2 Transcript (the Garn scale)<br></span>
+						<span class="cite-credits">
+							1999, 
+						NASA<br>
+							p. 35, last paragraph
+						</span>
+						<div class="source-link roboto-mono-400">
+							<a href="https://historycollection.jsc.nasa.gov/JSCHistoryPortal/history/oral_histories/StevensonRE/RES_5-13-99.pdf">historycollection.jsc.nasa.gov/JSCHistoryPortal/history/oral_histories/StevensonRE/RES_5-13-99.pdf</a>
+						</div>
+					</div>
+				</div>
+				<form class="search-banner" id="infoSearchBanner">
+					<input id="infoInput" class="search-input" placeholder="#" onfocus="this.value=''">
+					<button id="infoBtn" class="search-button" type="button" onclick="infoSearch()">go to</button>
+				</form>
+			</div>
+
+			<div class="cite-media">
+				<h2 class="section-title inewspaper">Media Sources</h2>
+				<div class="source-container islate" id="media-container">
+					<div id="Media1">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 15); return false;">0:15</a><span class="inewspaper media-indx">m1</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">VIDEO: high speed footage of the Apollo 11 launch (camera E-8)<br></span>
+							<span class="cite-credits">
+								1969
+								NASA/Kennedy Space Center<br>
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://commons.wikimedia.org/wiki/File:Apollo_11_launch,_video_of_engines_at_500_fps_(camera_E-8).ogv">commons.wikimedia.org/wiki/File:Apollo_11_launch,_video_of_engines_at_500_fps_(camera_E-8).ogv</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media2">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 222); return false;">3:42</a><span class="inewspaper media-indx">m2</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">3D SCAN: statue of David<br></span>
+							<span class="cite-credits">
+								2014, Scan the World @Myminifactory.com<br>
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://en.wikipedia.org/wiki/File:David_(Michelangelo).stl">en.wikipedia.org/wiki/File:David_(Michelangelo).stl</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media3">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 378); return false;">06:18</a><span class="inewspaper media-indx">m3</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">Apollo 11 photos<br></span>
+							<span class="cite-credits">
+								1969, Buzz Aldrin, Neil Armstrong<br>
+								NASA<br>
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="http://apolloarchive.com/apollo_gallery.html">apolloarchive.com/apollo_gallery.html</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media4">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 472); return false;">07:52</a><span class="inewspaper media-indx">m4</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">VIDEO: Because the Internet screenplay<br></span>
+							<span class="cite-credits">
+								2013
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://dissectpodcast.com/because-the-internet-screenplay-Act-iii/">dissectpodcast.com/because-the-internet-screenplay-Act-iii/</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media5">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 507); return false;">08:27</a><span class="inewspaper media-indx">m5</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">VIDEO: Dijon - Many Times (Live)<br></span>
+							<span class="cite-credits">
+								2021, Dijon<br>
+								YouTube<br>
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://youtu.be/U9_z_uYT19A">youtu.be/U9_z_uYT19A</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media6">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 597); return false;">09:57</a><span class="inewspaper media-indx">m6</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">GIF: Earth's rotation imaged by DSCOVR EPIC<br></span>
+							<span class="cite-credits">
+								2016
+								NASA/EPIC<br>
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://commons.wikimedia.org/wiki/File:EpicEarth-Globespin(2016May29).gif">commons.wikimedia.org/wiki/File:EpicEarth-Globespin(2016May29).gif</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media7">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 602); return false;">10:02</a><span class="inewspaper media-indx">m7</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">PHOTO: Stellar Glitter in a Field of Black<br></span>
+							<span class="cite-credits">
+								2020, E. Shaya, L. Rizzi, B. Tully, et al.<br>
+								ESA/Hubble & NASA<br>
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://esahubble.org/images/potw2020a/">esahubble.org/images/potw2020a/</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media8">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 620); return false;">10:20</a><span class="inewspaper media-indx">m8</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">PHOTO: Publicity photo of Carl Sagan<br></span>
+							<span class="cite-credits">
+								1980
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://en.wikipedia.org/wiki/File:Carl_Sagan_-_1980.jpg">en.wikipedia.org/wiki/File:Carl_Sagan_-_1980.jpg</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media9">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 620); return false;">10:20</a><span class="inewspaper media-indx">m9</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">AUDIO: Carl Sagan reading The Pale Blue Dot<br></span>
+							<span class="cite-credits">
+								2021
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://www.loc.gov/item/cosmos000110/">loc.gov/item/cosmos000110/</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media10">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 1210); return false;">20:10</a><span class="inewspaper media-indx">m10</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">PHOTO: Flatiron Building, New York, N.Y.<br></span>
+							<span class="cite-credits">
+								1902-1910
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://www.loc.gov/resource/det.4a17017/">loc.gov/resource/det.4a17017/</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media11">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 1216); return false;">20:16</a><span class="inewspaper media-indx">m11</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">PHOTO: Federal Hall, New York City<br></span>
+							<span class="cite-credits">
+								1918
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://www.loc.gov/pictures/item/2014707779/">loc.gov/pictures/item/2014707779/</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media12">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 1216); return false;">20:16</a><span class="inewspaper media-indx">m12</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">PHOTO: Times Square at night, New York, N.Y.<br></span>
+							<span class="cite-credits">
+								1900-1915
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://www.loc.gov/pictures/item/2016815976/">loc.gov/pictures/item/2016815976/</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media13">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 1221); return false;">20:21</a><span class="inewspaper media-indx">m13</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">PHOTO: New York City skyline behind the U.S.S. Louisiana<br></span>
+							<span class="cite-credits">
+								1914-1918
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://www.loc.gov/pictures/item/2016646073/">loc.gov/pictures/item/2016646073/</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media14">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 1228); return false;">20:28</a><span class="inewspaper media-indx">m14</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">PHOTO: The Society of Independent Artists Exhibition<br></span>
+							<span class="cite-credits">
+								1917
+								Arensberg Archives, Philadelphia Museum of Art<br>
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://press.philamuseum.org/asset/346550/duchampimage8-societyofindependents">press.philamuseum.org/asset/346550/duchampimage8-societyofindependents</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media15">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 1240); return false;">20:40</a><span class="inewspaper media-indx">m15</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">SCAN: First annual exhibition of the Society of Independent Artists<br></span>
+							<span class="cite-credits">
+								1917
+								Society of Independent Artists (New York, N.Y.), Metropolitan New York Library Council<br>
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://archive.org/details/frick-31072001519901/page/n3/mode/2up">archive.org/details/frick-31072001519901/page/n3/mode/2up</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media16">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 1344); return false;">22:24</a><span class="inewspaper media-indx">m16</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">PHOTO: Duchamp’s Studio, New York, 1917-18<br></span>
+							<span class="cite-credits">
+								1917, Henri-Pierre Roché<br>
+								Philadelphia Museum of Art<br>
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://press.philamuseum.org/asset/346543/duchampimage3-roche-duchampsstudio">press.philamuseum.org/asset/346543/duchampimage3-roche-duchampsstudio</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media17">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 1355); return false;">22:35</a><span class="inewspaper media-indx">m17</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">SCAN: Fountain reproduced in The Blind Man (No. 2)<br></span>
+							<span class="cite-credits">
+								1917, Henri-Pierre Roché<br>
+								University of Iowa's International Dada Archive<br>
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="http://sdrc.lib.uiowa.edu/dada/blindman/2/index.htm">sdrc.lib.uiowa.edu/dada/blindman/2/index.htm</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media18">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 1386); return false;">23:06</a><span class="inewspaper media-indx">m18</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">SCAN: Eljer Co. China Catalogue<br></span>
+							<span class="cite-credits">
+								1918
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://commons.wikimedia.org/wiki/File:Eljer_Co._Highest_Quality_Two-Fired_Vitreous_China_Catalogue_1918_Bedfordshire_No._700.jpg">commons.wikimedia.org/wiki/File:Eljer_Co._Highest_Quality_Two-Fired_Vitreous_China_Catalogue_1918_Bedfordshire_No._700.jpg</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media19">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 1907); return false;">31:47</a><span class="inewspaper media-indx">m19</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">ILLUSTRATION: Schematic diagram of the human eye<br></span>
+							<span class="cite-credits">
+								2014, Jmarchn and Rhcastilhos<br>
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://commons.wikimedia.org/wiki/File:Schematic_diagram_of_the_human_eye_en.svg">commons.wikimedia.org/wiki/File:Schematic_diagram_of_the_human_eye_en.svg</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media20">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 1989); return false;">33:09</a><span class="inewspaper media-indx">m20</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">IMAGE: What The Eye Sees<br></span>
+							<span class="cite-credits">
+								2003, Solso, R. L.<br>
+								The Psychology of Art and the Evolution of the Conscious Brain, p. 93, figure 3.10<br>
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://perpus.univpancasila.ac.id/repository/EBUPT180164.pdf">perpus.univpancasila.ac.id/repository/EBUPT180164.pdf</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media21">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 1998); return false;">33:18</a><span class="inewspaper media-indx">m21</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">VIDEO: Video#11 JSM Rocks 1 LaserSkeleton Raw<br></span>
+							<span class="cite-credits">
+								2020, Matthis J. S., Muller K. S., Bonnen K., Hayhoe K. M.<br>
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://youtu.be/jv8hS3MJoDQ">youtu.be/jv8hS3MJoDQ</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media22">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 2006); return false;">33:26</a><span class="inewspaper media-indx">m22</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">VIDEO: The Van Gogh Museum Eye-tracking Project<br></span>
+							<span class="cite-credits">
+								2016, Walker F., Bucker B., Anderson N. C., Schreij D., Theeuwes J.<br>
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://youtu.be/0_KaItdTkEM">youtu.be/0_KaItdTkEM</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media23">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 2697); return false;">44:57</a><span class="inewspaper media-indx">m23</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">PHOTO: Brent Spiner as Lieutenant Commander Data in TNG-R: "Sarek"<br></span>
+							<span class="cite-credits">
+								1990
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://memory-alpha.fandom.com/wiki/Data?file=Data%252C_2366.jpg">memory-alpha.fandom.com/wiki/Data?file=Data%252C_2366.jpg</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media24">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 2861); return false;">47:41</a><span class="inewspaper media-indx">m24</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">NEWSPAPER: Chronicling America: Historic American Newspapers<br></span>
+							<span class="cite-credits">
+								1910
+								Lib. of Congress<br>
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://chroniclingamerica.loc.gov/lccn/sn83016810/1910-08-20/ed-1/seq-1/#words=Lisa+Mona">chroniclingamerica.loc.gov/lccn/sn83016810/1910-08-20/ed-1/seq-1/#words=Lisa+Mona</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media25">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 3258); return false;">54:18</a><span class="inewspaper media-indx">m25</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">PHOTO: Russel Schweickart<br></span>
+							<span class="cite-credits">
+								1971
+								NASA<br>
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://commons.wikimedia.org/wiki/File:RustySchweickart.jpg">commons.wikimedia.org/wiki/File:RustySchweickart.jpg</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media26">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 3436); return false;">57:16</a><span class="inewspaper media-indx">m26</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">PHOTO: Paul Blart DVD cover art<br></span>
+							<span class="cite-credits">
+								2003
+								Sony Pictures<br>
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://www.sonypictures.com/movies/paulblartmallcop">sonypictures.com/movies/paulblartmallcop</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media27">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 991); return false;">16:31</a><span class="inewspaper media-indx">m27</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">PHOTO: Animorphs cover ("The Predator")<br></span>
+							<span class="cite-credits">
+								1996, David Mattingly<br>
+								Scholastic<br>
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://animorphs.fandom.com/wiki/The_Predator">animorphs.fandom.com/wiki/The_Predator</a>
+							</div>
+						</div>
+					</div>
+					<div id="Media28">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 0); return false;"></a><span class="inewspaper media-indx">m28</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">mistakenly skipped<br></span>
+							<span class="cite-credits">
+							</span>
+						</div>
+					</div>
+					<div id="Media29">
+						<div class="media-anchor">
+							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 1959); return false;">32:39</a><span class="inewspaper media-indx">m29</span>
+						</div>
+						<div class="cite-details">
+							<span class="cite-identifier">ILLUSTRATION: OCT scan of a retina at 800nm<br></span>
+							<span class="cite-credits">
+								2004
+								Dept of Med. Physics, Med. Univ. Vienna, Austria<br>
+							</span>
+							<div class="source-link roboto-mono-400">
+								<a href="https://commons.wikimedia.org/wiki/File:Retina-OCT800.png">commons.wikimedia.org/wiki/File:Retina-OCT800.png</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<form class="search-banner" id="mediaSearchBanner">
+					<input id="mediaInput" class="search-input" placeholder="#" onfocus="this.value=''">
+					<button id="mediaBtn" class="search-button" type="button" onclick="mediaSearch()">go to</button>
+				</form>
+			</div>
+
+			<div class="music dark">
+				<h2 class="section-title inewspaper">Music</h2>
+				<iframe class="bandcamp-embed" src="https://bandcamp.com/EmbeddedPlayer/album=2488943393/size=large/bgcol=333333/linkcol=6decc2/artwork=small/transparent=true/" seamless><a href="https://emergentbeacon.bandcamp.com/album/what-exactly-is-art">What Exactly is Art? by Emergent Beacon</a></iframe>
+				<div style="text-align: center; margin:.4em auto 0em;">
+					<span style="font-size:80%;">available to download on</span><br>
+					<a href="https://patreon.com/posts/70487358" class="button" title="link to patreon">patreon</a> <a href="https://emergentbeacon.bandcamp.com/album/what-exactly-is-art" class="button" title="link to bandcamp">bandcamp</a>
+				</div>
+			</div>
+
+			<div class="credits-block">
+				<h2 class="section-title inewspaper">Credits</h2>
+				<div class="outline dark">
+					<div class="credits">
+						<div class="credits-name newspaper">Brandt Hughes</div>
+						<div class="credits-role">
+							research, writing, host, camera operator, audio engineer, music production, editor
+						</div>
+						<div class="credits-name newspaper">Jason Murphy</div>
+						<div class="credits-role">
+							guest speaker
+						</div>
+						<div class="credits-name newspaper">Brian Brushwood</div>
+						<div class="credits-role">
+							production assistance, Newspaper Guy
+						</div>
+						<div class="credits-name newspaper">Cory Cranfill</div>
+						<div class="credits-role">
+							production assistance, pyrotechnics, behind the scenes photography
+						</div>
+						<div class="credits-name newspaper">Bryce Castillo</div>
+						<div class="credits-role">
+							additional audio engineering
+						</div>
+						<div class="credits-name newspaper">Annaliese Martin</div>
+						<div class="credits-role">
+							additional audio engineering
+						</div>
+						<div class="credits-name newspaper">Grant Davis</div>
+						<div class="credits-role">
+							Carbon Accountant
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="transcript-block">
+				<h2 class="section-title inewspaper">Transcript</h2>
+				<div class="dark" style="padding:.2em 0 1em;">
+					<aside class="transcript-text newspaper">
+						<p>
+							
+						</p>
+					</aside>
+					<div style="text-align: center;">
+						<a href="https://www.dropbox.com/s/rprclv3buqbqehn/EB003__main--cc_en_captions.srt?dl=0" class="button" title="file with dialogue and atmospherics">
+							EN Captions
+						</a>
+						<a href="https://www.dropbox.com/s/3w1rg1r7hn5160u/EB003__main--cc_en_sub.srt?dl=0" class="button" title="file with just dialogue">
+							EN Subtitles
+						</a>
+						<a href="/translations" class="button" title="details about translations">
+							Info
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="bonus-block">
+				<h2 class="section-title inewspaper">Bonus Material</h2>
+				<div style="padding-bottom: 1em;" class="dark outline">
+					<div>
+						<p class="synopsis-text" style="margin-top: .6em;">
+							<a href="https://patreon.com/emergentbeacon" class="support-link" title="patreon.com/emergentbeacon">Pledge now</a> for these behind the scenes exclusives!
+						</p>
+					</div>
+					<div class="bonus-scroll slate cutout">
+						<div style="width: max-content;">
+							<div class="bonus-entry">
+								<a href="https://patreon.com/posts/92619606">
+									<img src="/assets/patreon--eb003.jpg" style="object-position: 0rem 0;">
+								</a>
+								<p>
+									<span class="bonus-entry-time">23:36</span><br>
+									<span class="bonus-entry-label">Outtakes</span>
+								</p>
+							</div>
+							<div class="bonus-entry">
+								<a href="https://patreon.com/posts/72487312">
+									<img src="/assets/patreon--eb003.jpg" style="object-position: -10rem 0;">
+								</a>
+								<p>
+									<span class="bonus-entry-time">56:20</span><br>
+									<span class="bonus-entry-label">BREAKDOWN<br>Spontaneous Combustion</span>
+								</p>
+							</div>
+							<div class="bonus-entry">
+								<a href="https://patreon.com/posts/70487358">
+									<img src="/assets/patreon--eb003.jpg" style="object-position: -20rem 0;">
+								</a>
+								<p>
+									<span class="bonus-entry-time">32:00</span><br>
+									<span class="bonus-entry-label">Music Pack</span>
+								</p>
+							</div>
+							<div class="bonus-entry">
+								<a href="https://patreon.com/posts/70808682">
+									<img src="/assets/patreon--eb003.jpg" style="object-position: -30rem 0;">
+								</a>
+								<p>
+									<span class="bonus-entry-time">1:54:11</span><br>
+									<span class="bonus-entry-label">music session:<br>Banana Stand</span>
+								</p>
+							</div>
+							<div class="bonus-entry">
+								<a href="https://patreon.com/posts/78002124">
+									<img src="/assets/patreon--eb003.jpg" style="object-position: -40rem 0;">
+								</a>
+								<p>
+									<span class="bonus-entry-time">20:49</span><br>
+									<span class="bonus-entry-label">LOG<br>Both Art and Not Art</span>
+								</p>
+							</div>
+							<div class="bonus-entry">
+								<a href="https://patreon.com/posts/70588439">
+									<img src="/assets/patreon--eb003.jpg" style="object-position: -50rem 0;">
+								</a>
+								<p>
+									<span class="bonus-entry-time">8:51</span><br>
+									<span class="bonus-entry-label">LOG<br>Filming in a Theater</span>
+								</p>
+							</div>
+							<div class="bonus-entry">
+								<a href="https://patreon.com/posts/63105265">
+									<img src="/assets/patreon--eb003.jpg" style="object-position: -60rem 0;">
+								</a>
+								<p>
+									<span class="bonus-entry-time">12:07</span><br>
+									<span class="bonus-entry-label">LOG<br>Every Battery Is Dead and So Am I</span>
+								</p>
+							</div>
+							<div class="bonus-entry">
+								<a href="https://patreon.com/posts/60581751">
+									<img src="/assets/patreon--eb003.jpg" style="object-position: -70rem 0;">
+								</a>
+								<p>
+									<span class="bonus-entry-time">9:08</span><br>
+									<span class="bonus-entry-label">LOG<br>Ant Piles and Loud Speakers</span>
+								</p>
+							</div>
+							<div class="bonus-entry">
+								<a href="https://patreon.com/posts/59072684">
+									<img src="/assets/patreon--eb003.jpg" style="object-position: -80rem 0;">
+								</a>
+								<p>
+									<span class="bonus-entry-time">4:59</span><br>
+									<span class="bonus-entry-label">LOG<br>Calibration</span>
+								</p>
+							</div>
+							<div class="bonus-entry">
+								<a href="https://patreon.com/posts/58836465">
+									<img src="/assets/patreon--eb003.jpg" style="object-position: -90rem 0;">
+								</a>
+								<p>
+									<span class="bonus-entry-time">5:16</span><br>
+									<span class="bonus-entry-label">LOG<br>The Long Take</span>
+								</p>
+							</div>
+							<div class="bonus-entry">
+								<a href="https://patreon.com/posts/57963868">
+									<img src="/assets/patreon--eb003.jpg" style="object-position: -100rem 0;">
+								</a>
+								<p>
+									<span class="bonus-entry-time">11:02</span><br>
+									<span class="bonus-entry-label">LOG<br>First Day of Filming</span>
+								</p>
+							</div>
+							<div class="bonus-entry">
+								<a href="https://patreon.com/posts/53001083">
+									<img src="/assets/patreon--eb003.jpg" style="object-position: -110rem 0;">
+								</a>
+								<p>
+									<span class="bonus-entry-time">11:26</span><br>
+									<span class="bonus-entry-label">LOG<br>Research Summary</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footnav roboto-mono-400">
+			<div class="footer-tooltip">
+				<a href="/videos/no-frames-no-boundaries.html" class="dark-link">← Previous</a>
+				<span class="tooltip-text tooltip-left">No Frames, No Boundaries</span>
+			</div>
+			<a href="#" class="dark-link">TO TOP</a>
+			<div class="footer-tooltip">
+				<a class="dark-link" href="/videos/the-search.html">Next →</a>
+				<span class="tooltip-text tooltip-right">The Search</span>
+			</div>
+		</footer>
+	</body>
+
+<!-- SCRIPTS -->
+	<script>
+		// 2. This code loads the IFrame Player API code asynchronously.
+		var tag = document.createElement('script');
+		tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		// 3. This function creates an <iframe> (and YouTube player)
+		//    after the API code downloads.
+		var player;
+		function onYouTubeIframeAPIReady() {
+		player = new YT.Player('yt-player', {
+			height: '400',
+			width: '100%',
+			videoId: '9czNEtiD-jo',
+			playerVars: {
+				'playsinline': 1
+			},
+			events: {
+				'onReady': onPlayerReady,
+				'onStateChange': onPlayerStateChange
+			}
+		});
+		}
+
+		// 4. The API will call this function when the video player is ready.
+		function onPlayerReady(event) {}
+		function onPlayerStateChange(event) {}
+
+		//generic seekTo function taking a player element and seconds as parameters
+		function playerSeekTo(player, seconds) {
+			player.seekTo(seconds);
+			player.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start',
+				inline: 'nearest'
+			});
+		}
+
+		const mSearch = document.getElementById("mediaSearchBanner");
+		const iSearch = document.getElementById("infoSearchBanner");
+
+		function infoSearch() {
+			let input = document.getElementById("infoInput");
+			let inputVal = input.value;
+			let container = document.documentElement;
+			let containerPos = container.scrollTop;
+			let anchor = document.getElementById('Info' + inputVal);
+
+			if (anchor == null) {
+				iSearch.classList.add("error");
+			} else {
+				anchor.scrollIntoView({
+					behavior: 'smooth',
+					block: 'start',
+					inline: 'nearest'
+				});
+				container.scrollTop = containerPos;
+			}
+		}
+
+		function mediaSearch() {
+			let input = document.getElementById("mediaInput");
+			let inputVal = input.value;
+			let container = document.documentElement;
+			let containerPos = container.scrollTop;
+			let anchor = document.getElementById('Media' + inputVal);
+
+			if (anchor == null) {
+				mSearch.classList.add("error");
+			} else {
+				anchor.scrollIntoView({
+					behavior: 'smooth',
+					block: 'start',
+					inline: 'nearest'
+				});
+				container.scrollTop = containerPos;
+			}
+		}
+
+		// source lookup behavior: disable form submit on "Enter," replace with function
+		document.getElementById("infoInput").addEventListener("keydown", function (e) {
+			if (e.code === "Enter") {
+				e.preventDefault();
+				infoSearch();
+			}
+		});
+		document.getElementById("mediaInput").addEventListener("keydown", function (e) {
+			if (e.code === "Enter") {
+				e.preventDefault();
+				mediaSearch();
+			}
+		});
+
+		// remove css color animation class when animation finishes
+		iSearch.addEventListener("animationend", listener, false);
+		mSearch.addEventListener("animationend", listener, false);
+		function listener(event) {
+			switch (event.type) {
+				case "animationend":
+					mSearch.classList.remove("error");
+					iSearch.classList.remove("error");
+					break;
+			}
+		}
+	</script>
+</html>

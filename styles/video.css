@@ -1,0 +1,552 @@
+/*__________________
+ |__ GRID LAYOUT __|
+*/
+.video-grid {
+	display: grid;
+	gap: .6em;
+	grid-template-areas:
+		"socials"
+		"vid-title"
+		"vid-embed"
+		"synopsis"
+		"corrections"
+		"source-info"
+		"source-media"
+		"music"
+		"credits"
+		"transcript"
+		"bonus";
+}
+.video-title {
+	grid-area: vid-title;
+	margin-top: .3em;
+}
+.yt-embed {
+	grid-area: vid-embed;
+	border-radius: 1rem 1rem 0 0;
+	border: .2rem solid black;
+	aspect-ratio: 2;
+	width: calc(100% - .4rem);
+	height: 100%;
+}
+.synopsis {
+	grid-area: synopsis;
+	padding: 1rem 1rem;
+	font-size: .9rem;
+	line-height: 1.5rem;
+	border: .2rem solid black;
+	margin-top: -.4rem;
+}
+
+
+/*__________________
+ |__ CORRECTIONS __|
+*/
+.corrections-area {
+	grid-area: corrections;
+	border: .2rem solid black;
+	padding: .2rem 1rem 0 0;
+	margin-top: -.8rem;
+	text-align: left;
+}
+	.corrections-area h4 {
+		text-align: center;
+		margin: .5rem 0 0;
+	}
+	.corrections-area a {
+		color: #7ff5ce;
+		background-color: #000000;
+		border-radius: .25rem;
+		padding: 0 .25rem;
+		border: .15rem solid #000000;
+		text-decoration: none;
+	}
+	.corrections-area a:hover {
+		background-color: #33ffbb;
+		color: black;
+		border: .15rem solid black;
+	}
+.corrections-entry {
+	display: inline-block;
+	padding: 0 1.4rem;
+	margin: .5rem 0 1rem;
+	font-size: 1rem;
+	line-height: 1.4rem;
+	border-left: .6rem solid black;
+}
+	.corrections-entry ul {
+		margin: 0 -1.5rem;
+	}
+	.corrections-entry a {
+		font-size: .75rem;
+		font-weight: 500;
+		margin-right: .3rem;
+	}
+	.corrections-entry span {
+		font-size: .8rem;
+		font-style:italic;
+	}
+
+.section-title {
+	text-align: center;
+	margin: 0 0 -3px;
+	padding: .15rem 0;
+	border: .2rem solid black;
+}
+
+/*___________________
+ |__ CITATION ROW __|
+	-> grid blocks
+	-> info block specifically
+		-> identifiers
+		-> link styles
+		-> quote box
+	-> media block specifically
+		-> anchors, time, indices
+*/
+.source-container {
+	height: fit-content;
+	min-height: 12rem;
+	max-height: 24.3rem;
+	overflow-y: scroll;
+	scroll-padding-top: 1rem;
+	text-align: left;
+	border: .2rem solid black;
+	padding: 0 1rem;
+	scrollbar-width: 15px;
+}
+
+.cite-info {
+	grid-area: source-info;
+	height: 100%;
+	min-width: 12em;
+}
+	.info-number {
+		text-align: center;
+		background-color: #141414;
+		color: white;
+		font-size: .8rem;
+		margin: 1em 0 0;
+		padding: .2em 1em;
+		border-radius: 3px 3px 0 0;
+	}
+	.cite-info a, .cite-media a, .to-top a {
+		color: hsl(160, 86%, 73%);
+		background-color: hsl(180, 30%, 18%);
+		border-radius: .2rem;
+		padding: 0 .2rem;
+		border: .2em solid black;
+		text-decoration: none;
+	}
+	.cite-info a:hover, .cite-media a:hover, .to-top a:hover {
+		background-color: hsl(160, 100%, 60%);
+		color: black;
+		border: .2em solid black;
+	}
+	.cite-box {
+		margin: 0;
+		padding: .3rem .6rem;
+		border: 2px solid;
+		background: white;
+	}
+
+	/* multi-cited aligns tab to source box*/
+	.cite-tab-align {
+		display: flex;
+		align-items: center;
+		margin: -2px 0 -2px 0;
+	}
+	/* letter tab for citing the same source multiple times */
+	.cite-box-multi-tab {
+		width: 15px;
+		vertical-align: top;
+		background: hsl(180, 30%, 18%);
+		color: white;
+		padding: .3rem .5rem;
+		line-height: 2.2rem;
+		font-size: 1.5rem;
+		font-weight: 500;
+		border: 2px solid black;
+	}
+	/* quote from the video that needs substantiating */
+	.cite-box-multi-quote {
+		vertical-align: top;
+		width: 100%;
+		background: white;
+		padding: .3rem .6rem;
+		margin-left: -2px;
+		border: 2px solid;
+	}
+
+	.cite-details {
+		line-height: 1.3rem;
+		margin: 1rem 0 1rem 2rem;
+	}
+	.cite-identifier {
+		font-size: 1.2rem;
+	}
+	.cite-credits {
+		font-size: 0.9rem;
+		word-wrap: break-word;
+	}
+
+.cite-media {
+	grid-area: source-media;
+	height: 100%;
+	min-width: 12em;
+}
+	.media-anchor {
+		display: flex;
+		align-items: center;
+		margin: 1em 0 0;
+		font-size: .8rem;
+		line-height: 1.2em;
+	}
+	.media-time {
+		display: inline-block;
+		height: 1.2em;
+	}
+	.media-indx {
+		display: inline-block;
+		width: 100%;
+		margin-left: .4em;
+		padding: .2em 1em;
+		font-size: .8rem;
+		border-radius: 3px;
+	}
+
+.timecode {
+	font-size: .7rem;
+	padding-left: 1rem;
+}
+.source-link {
+	width: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	font-size: .7rem;
+}
+
+
+/*_____________________
+ |__ SEARCH SOURCES __|
+	-> container
+	-> input field
+	-> button
+*/
+.search-banner {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	height: 2.8em;
+	margin: -3px 0 0;
+	padding: 0 1em;
+	background-color: #141414;
+	border: 3px solid black;
+}
+.search-input {
+	width: 2em;
+	text-align: center;
+	font-size: 1.4em;
+}
+.search-button {
+	width: 50px;
+	height: 2.4em;
+	margin: auto .5em;
+}
+
+
+/*__________________
+ |__ DETAILS ROW __|
+ (group under citations)
+*/
+.details-grid {
+	display: grid;
+	grid-template-columns: auto 40%;
+	grid-gap: .4em;
+	margin: 0 auto;
+}
+
+
+/*____________________
+ |__ TRANSCRIPTION __|
+	-> grid block
+	-> inner text style
+		-> download buttons
+	-> error animation class
+*/
+.transcript-block {
+	grid-area: transcript;
+}
+.transcript-text {
+	height: 19em;
+	padding: 0 1em;
+	margin: 1em 1em;
+	text-align: left;
+	line-height: 1em;
+	font-size: 90%;
+	overflow-y: scroll;
+	scrollbar-width: 15px;
+	scrollbar-color: #33ffbb black;
+}
+	a.button:link, a.button:visited {
+		display: inline-block;
+		background: #2a2c35;
+		color: #33ffbb;
+		border-radius: .2rem;
+		padding: .3rem .6rem;
+		margin: .1rem;
+		font-size: .7rem;
+		text-decoration: none;
+	}
+	a.button:hover, a.button:active {
+		background: hsl(160, 100%, 60%);
+		color: black;
+	}
+.error {
+	color: #e03b3b;
+	animation: error 2s ease-in-out 0s;
+}
+
+
+/*____________________
+ |__ MUSIC PREVIEW __|
+	-> grid block
+	-> bandcamp embed sizing
+*/
+.music {
+	grid-area: music;
+	height: 100%;
+	min-height: fit-content;
+	max-width: 40em;
+}
+.bandcamp-embed {
+	border: 0;
+	width: calc(100% - 6px);
+	height: calc(100% - 7em);
+	margin-top: .2em;
+}
+
+
+/*______________
+ |__ CREDITS __|
+	-> grid block
+	-> general styles
+		-> name
+		-> role
+*/
+.credits-block {
+	grid-area: credits;
+	height: 100%;
+}
+.credits {
+	text-align: left;
+	margin: 1em 1em 0;
+	padding-bottom: 1em;
+}
+	.credits-name {
+		font-size: 1.2rem;
+		border-radius: .1rem;
+		padding: 0 .4rem;
+	}
+	.credits-role {
+		font-size: .8rem;
+		margin: .5rem;
+	}
+
+
+/*____________________
+ |__ PATREON BONUS __|
+	-> grid block
+	-> scrollable container
+	-> entries
+		-> elements in each entry
+	-> entry emphasis system
+*/
+.bonus-block {
+	grid-area: bonus;
+	width: 100%;
+	max-width: 90vw;
+	margin: 0 auto 0;
+}
+
+.bonus-scroll {
+	overflow-x: scroll;
+	padding: .4em;
+	margin: -.1em 1em 0;
+	scrollbar-width: 15px;
+	scrollbar-color: hsl(160, 100%, 60%) black;
+}
+
+.bonus-entry {
+	display: inline-block;
+	height: max-content;
+	max-width: 400px;
+	vertical-align: top;
+	margin: .3em;
+	transition: .2s ease;
+}
+	.bonus-entry:hover {
+		color: white;
+		transition: .3s ease;
+	}
+	.bonus-entry p {
+		text-align: center;
+		margin: 0;
+	}
+	.bonus-entry img {
+		height: 10rem;
+		aspect-ratio: 1;
+		object-fit: cover;
+		transition: .4s ease;
+	}
+	.bonus-entry-time {
+		font-size: .7em;
+	}
+	.bonus-entry-label {
+		font-size: .8em;
+	}
+
+.bonus-scroll div:hover > .bonus-entry img {
+	opacity: 0.5;
+}
+.bonus-scroll div:hover > .bonus-entry img:hover {
+	opacity: 1;
+}
+
+
+/*_____________
+ |__ FOOTER __|
+	-> container
+	-> link styles
+*/
+.footnav {
+	width: 75vw;
+	max-width: 56rem;
+	text-align: center;
+	padding: .8rem 0 3rem;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+.footnav a {
+	margin-top: -.4rem;
+	padding: .2rem .6rem;
+	border: .2rem solid black;
+	border-radius: .3rem;
+	transition: .3s ease;
+	background: #141414;
+	color: #e6e5e2;
+	text-decoration: none;
+}
+.footnav a:hover {
+	border: .2rem solid black;
+	background:#33ffbb; color: black;
+}
+.footnav-mobile { display: hidden; }
+
+
+/*______________________
+ |__ FOOTER TOOLTIPS __|
+	-> container specific structure
+	-> container and text appearance
+	-> left and right distinctions
+	-> appear on hover
+*/
+.footer-tooltip {
+	position: relative;
+	display: inline-block;
+}
+
+.footer-tooltip .tooltip-text {
+	visibility: hidden;
+	opacity: 0;
+	font-size: .8rem;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: .3rem;
+	padding: .1rem .6rem;
+}
+.footer-tooltip span {
+	width: max-content;
+	position: absolute;
+	font-size: .8rem;
+	top: 120%;
+	transition: .2s ease;
+}
+
+.tooltip-left {
+	text-align: left;
+	left: 0;
+}
+.tooltip-right {
+	text-align: right;
+	right: 0;
+}
+
+.footer-tooltip:hover .tooltip-text {
+	visibility: visible;
+	opacity: 1;
+}
+
+
+
+/*______________________
+ |__ SCREENS: MOBILE __|
+	-> hard code bandcamp embed height
+	-> hide footer
+	-> show mobile footer
+*/
+@media screen and (max-width: 37rem) {
+	.bandcamp-embed { height: 21rem }
+	.footnav { display: hidden; font-size: .9rem; }
+	.footnav-mobile { display: visible; font-size: .9rem; }
+}
+
+
+/*__________________________
+ |__ SCREENS: NON-MOBILE __|
+	-> define grid layout to two columns
+	-> establish every grid element's size/pos
+*/
+@media screen and (min-width: 37rem) {
+	.video-grid {
+		grid-template-columns: repeat(12, [col-start] 1fr);
+		grid-template-areas:
+			"socials socials"
+			"vid-title vid-title"
+			"vid-embed vid-embed"
+			"synopsis synopsis"
+			"corrections corrections"
+			"source-info source-media"
+			"music credits"
+			"music transcript"
+			"bonus bonus";
+	}
+	.socials { grid-column: col-start / -1; }
+	.video-title { grid-column: col-start / -1; }
+	.yt-embed { grid-column: col-start / -1; }
+	.synopsis { grid-column: col-start / -1; }
+	.corrections-area { grid-column: col-start / -1; }
+	.cite-info { grid-column: col-start / span 6; }
+	.cite-media { grid-column: col-start 7 / -1; }
+	.music { grid-column: col-start / 8;
+		grid-row: 7 / 9; }
+	.credits-block { grid-column: col-start 8 / -1; }
+	.transcript-block { grid-column: col-start 8 / -1; }
+	.bonus-block { grid-column: col-start / -1; }
+}
+
+
+/*______________________
+ |__ SCREENS: >1080p __|
+	-> embiggen content column
+*/
+@media screen and (min-width: 121rem) {
+	.content-column {
+		width: 90vw;
+	}
+}

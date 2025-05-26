@@ -1,0 +1,309 @@
+/*____________________
+ |__ PAGE DEFAULTS __|
+*/
+html {
+	min-height: 100vh;
+	height: fit-content;
+	background-color: #232527; /* For browsers that do not support gradients */
+	background-image: radial-gradient(#2b343d, #161616);
+	color: white;
+	scroll-behavior: smooth;
+}
+/*	* {border: 1px solid red}
+
+
+/*________________________
+ |__ TOP LEFT NAV MENU __|
+	-> navigation container
+	-> clickable links
+	-> highlight links on hover
+*/
+nav {
+	border-radius: .2rem;
+	padding: .2rem .7rem;
+	margin-top: -.5rem;
+	font-size: .7rem;
+	display: inline-block;
+	position: absolute;
+	top: 1rem;
+	left: .8rem;
+}
+	nav span {
+		color: #90a0a5;
+	}
+	nav a {
+		text-decoration: none;
+		color: #ffffff;
+	}
+	nav a:hover {
+		color: #ffdd33;
+	}
+.nav-mobile {
+	display: none;
+	position: static;
+	margin: 0 auto;
+	font-size: .8rem;
+}
+.nav-mobile a:active {
+	color: #ffdd33;
+}
+
+
+/*___________________
+ |__ SOCIAL LINKS __|
+	-> icons
+	-> container
+*/
+.socials {
+	grid-area: socials;
+	margin-top: 1.6rem;
+}
+.socials img {
+	cursor: pointer;
+	opacity: 0.4;
+	transition: .4s ease;
+	margin: 0 .2rem;
+	height: .9rem;
+}
+.socials img:hover {
+	opacity: 1;
+}
+
+
+/*_______________
+ |__ TOOLTIPS __|
+	-> container specific structure
+	-> container and text
+		-> appearance
+		-> position
+	-> appear on hover
+*/
+.tooltip {
+	position: relative;
+	display: inline-block;
+}
+.tooltip .tooltip-text {
+	visibility: hidden;
+	opacity: 0;
+	width: 5rem;
+	font-size: .8rem;
+	background-color: white;
+	color: black;
+	text-align: center;
+	border-radius: .3rem;
+	padding: .2rem 0;
+	transition: .15s ease;
+
+	position: absolute;
+	z-index: 1;
+	top: -1.7rem;
+	left: 50%;
+	margin-left: -40px;
+}
+.tooltip:hover .tooltip-text {
+	visibility: visible;
+	opacity: 1;
+	transition: .4s ease;
+}
+
+
+/*______________
+ |__ BUTTONS __|
+*/
+button {
+	cursor: pointer;
+	transition: .3s ease;
+}
+
+
+/*_________________________________
+ |__ CONSTRAINED CONTENT COLUMN __|
+*/
+.content-column {
+	text-align: center;
+	width: 75vw;
+	max-width: 56rem;
+	margin: auto;
+}
+
+
+/*_____________________________
+ |__ ANIMATED SUPPORT LINKS __|
+*/
+.support-link {
+	color: #ffdd33;
+	font-weight: 600;
+	text-decoration: none;
+	position: relative;
+	animation: bounce 1s ease-in-out 2s infinite;
+}
+.support-link:hover {
+	color: #33ffbb;
+}
+
+
+/*___________________________
+ |__ DARK HIGHLIGHT LINKS __|
+ (commonly used in media/info sources)
+	-> link style
+	-> hover style
+*/
+.dark-link {
+	color: #7ff5ce;
+	background: #203c3c;
+	border-radius: .3em;
+	padding: 0 .4em;
+	border: .15em solid black;
+	text-decoration: none;
+}
+.dark-link a:hover {
+	background: #33ffbb;
+	color: black;
+	border: .2em solid black;
+}
+
+
+/*____________________________
+ |__ SELECTION / HIGHLIGHT __|
+	-> general style
+	-> firefox specific
+*/
+::selection {
+	background: #111111; color: #ffdc3e; }
+::-moz-selection {
+	background: #111111; color: #ffdc3e; }
+
+
+/*_____________________
+ |__ IMPORTED FONTS __|
+*/
+.roboto-400 {
+	font-family: "Roboto", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings:
+	  "wdth" 100;
+}
+.rubik-400 {
+	font-family: "Rubik", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+.roboto-mono-400 {
+	font-family: "Roboto Mono", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+.roboto-condensed-400 {
+	font-family: "Roboto Condensed", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+/*______________________
+ |__ COLOR PALLETTES __|
+*/
+.slate { background-color: #141414; color: #bdaa84; }
+.islate { background-color: #bdaa84; color: #141414; }
+.dslate { background-color: #64553a; color: #e6e5e2; }
+.bee { background:#f1e31e; color: black; }
+.leaf { background:#a6c05d; color: black; }
+.splash { background:#3fbfe6; color: black; }
+.mint { background:#33ffbb; color: black; }
+.forrest { background:#92c2ac; color: black; }
+.testing { background:#f51b1b; color: black; }
+.newspaper { background:#e6e5e2; color: #141414; }
+.inewspaper { background: #141414; color: #e6e5e2; }
+.dark { background: #000000; color: #e6e5e2; }
+
+
+/*____________________
+ |__ STYLE MODULES __|
+*/
+.hidden { display: none; }
+.mono { font-family: roboto mono, courier new, monospace; }
+.cutout { outline-style: dashed; outline-offset: -.125rem; outline-width: .125rem; }
+.extrude { border: .2rem solid black; box-shadow: .125rem .125rem black; }
+.outline { border: .2rem solid black; }
+
+
+/*_________________
+ |__ SCROLL BAR __|
+	-> general style
+	-> handhold
+	-> background
+
+::-webkit-scrollbar {
+	width: 15px;
+}
+::-webkit-scrollbar-thumb {
+	background: #33ffbb;
+	border: 2px solid black;
+}
+::-webkit-scrollbar-track {
+	background: black;
+	border: 2px solid black;
+}
+*/
+
+/*________________________
+ |__ ANIMATION PRESETS __|
+	-> bounce: support links
+	-> error: invalid source search
+*/
+@keyframes bounce {
+	0%  {top:0;}
+	50%  {top:-.25rem;}
+	100% {top:0;}
+}
+@keyframes error {
+	from {background-color: #ff0000;}
+	to {background-color: #131313;}
+}
+
+
+/*_________________
+ |__ LIGHT MODE __|
+	-> whole page colors
+	-> social link colors
+*/
+@media (prefers-color-scheme: light) {
+	html {
+		background: #e7f2e7;
+		background-image: radial-gradient(#ffffff, #d1dfd7);
+		color: #29292e;
+	}
+	.socials {
+		filter: invert();
+	}
+}
+
+
+/*______________________
+ |__ SCREENS: MOBILE __|
+	-> embiggen content column
+	-> hide navigation menu
+*/
+@media screen and (max-width: 37em) {
+	.content-column { width: 90vw; }
+	.nav-desktop { display: none; }
+	.nav-mobile { display: block; }
+	.socials { margin-top: .8rem; }
+	.gallery { width: 28%; }
+}
+
+
+/*______________________
+ |__ SCREENS: >1080p __|
+	-> embiggen content column
+*/
+@media screen and (min-width: 121em) {
+	.content-column {
+		width: 90vw;
+	}
+}

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/styles/main.css">
+		<link rel="stylesheet" href="/styles/finance.css">
+	</head>
+
+<!-- HTML -->
+	<body class="rubik-400">
+		<nav class="roboto-mono-400 dark nav-desktop">
+			<span>
+				<a href="/home.html">/ home</a><br>
+				<a href="/videos.html">/ videos</a><br>
+				<a href="/music.html">/ music</a><br>
+				<a href="/about.html">/ about</a>
+			</span>
+		</nav>
+
+		<main>
+			<nav class="roboto-mono-400 dark nav-mobile">
+				<span><a href="/home.html">/ home</a></span>
+				<span><a href="/videos.html">/ videos</a></span>
+				<span><a href="/music.html">/ music</a></span>
+				<span><a href="/about.html">/ about</a></span>
+			</nav>
+			<!-- header and video embed -->
+			<h1>FINANCIAL REPORTS</h1>
+			<section class="about-text">
+				These financial reports are disclosed to provide clarity into financial motives and give insight into the cost of operations. If the opportunity arises to pay other people to work on the show, this transparency should help maintain fair and honest pay.
+			</section>
+
+			<section style="margin-top:2rem;">
+				<label for="report-id">Select a report:</label>
+				<select name="report-id" id="report-id" onchange="dropdown()">
+					<option value="default" selected>---</option>
+					<optgroup label="2025">
+						<option value="2025-Q1">2025 Q1 (JAN / FEB / MAR)</option>
+					</optgroup>
+					<optgroup label="2024">
+						<option value="2024-Q4">2024 Q4 (OCT / NOV / DEC)</option>
+						<option value="2024-Q3">2024 Q3 (JUL / AUG / SEP)</option>
+						<option value="2024-Q2">2024 Q2 (APR / MAY / JUN)</option>
+						<option value="2024-Q1" disabled>2024 Q1 (JAN / FEB / MAR)</option>
+					</optgroup>
+					<optgroup label="2023">
+						<option value="2023-Q4" disabled>2023 Q4 (OCT / NOV / DEC)</option>
+						<option value="2023-Q3" disabled>2023 Q3 (JUL / AUG / SEP)</option>
+						<option value="2023-Q2" disabled>2023 Q2 (APR / MAY / JUN)</option>
+						<option value="2023-Q1" disabled>2023 Q1 (JAN / FEB / MAR)</option>
+					</optgroup>
+					<optgroup label="2022">
+						<option value="2022-Q4" disabled>2022 Q4 (OCT / NOV / DEC)</option>
+						<option value="2022-Q3" disabled>2022 Q3 (JUL / AUG / SEP)</option>
+						<option value="2022-Q2" disabled>2022 Q2 (APR / MAY / JUN)</option>
+						<option value="2022-Q1" disabled>2022 Q1 (JAN / FEB / MAR)</option>
+					</optgroup>
+					<optgroup label="2021">
+						<option value="2021-Q4" disabled>2021 Q4 (OCT / NOV / DEC)</option>
+						<option value="2021-Q3" disabled>2021 Q3 (JUL / AUG / SEP)</option>
+						<option value="2021-Q2" disabled>2021 Q2 (APR / MAY / JUN)</option>
+						<option value="2021-Q1" disabled>2021 Q1 (JAN / FEB / MAR)</option>
+					</optgroup>
+				</select>
+				
+				<report id="2025-Q1" class="newspaper hidden">
+					<table>
+						<caption>2025 Q1 Finances</caption>
+						<thead>
+							<tr>
+								<th>Category</th>
+								<th>Value</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td colspan="2"><strong>Income</strong></td>
+							</tr>
+							<tr>
+								<td>Patreon</td>
+								<td>$246.54</td>
+							</tr>
+							<tr>
+								<td>Bandcamp</td>
+								<td>$9.40</td>
+							</tr>
+							<tr>
+								<td colspan="2"><strong>Expenses</strong></td>
+							</tr>
+							<tr>
+								<td>community infrastructure</td>
+								<td>-$28.92</td>
+							</tr>
+							<tr>
+								<td>admin services</td>
+								<td>-$59.25</td>
+							</tr>
+							<tr>
+								<td>creative tools and assets, software</td>
+								<td>-$59.09</td>
+							</tr>
+							<tr>
+								<td>labor: Brandt Hughes</td>
+								<td>-$108.68*</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="2"></td>
+							</tr>
+							<tr>
+								<td>TOTAL</td>
+								<td class="bee">$0</td>
+							</tr>
+						</tfoot>
+					</table>
+					<sub>*insufficient yield to pay full amount</sub>
+				</report>
+				<report id="2024-Q4" class="newspaper hidden">
+					<table>
+						<caption>2024 Q4 Finances</caption>
+						<thead>
+							<tr>
+								<th>Category</th>
+								<th>Value</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td colspan="2"><strong>Income</strong></td>
+							</tr>
+							<tr>
+								<td>Patreon</td>
+								<td>$248.99</td>
+							</tr>
+							<tr>
+								<td>Bandcamp</td>
+								<td>$25.06</td>
+							</tr>
+							<tr>
+								<td colspan="2"><strong>Expenses</strong></td>
+							</tr>
+							<tr>
+								<td>community infrastructure</td>
+								<td>-$28.92</td>
+							</tr>
+							<tr>
+								<td>admin services</td>
+								<td>-$23.37</td>
+							</tr>
+							<tr>
+								<td>creative tools and assets, software</td>
+								<td>-$76.75</td>
+							</tr>
+							<tr>
+								<td>Tenere video supplies</td>
+								<td>-$9.73</td>
+							</tr>
+							<tr>
+								<td>website</td>
+								<td>-$216.67</td>
+							</tr>
+							<tr>
+								<td>labor: Brandt Hughes</td>
+								<td>-$0*</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="2"></td>
+							</tr>
+							<tr>
+								<td>TOTAL</td>
+								<td class="bee">-$81.39</td>
+							</tr>
+						</tfoot>
+					</table>
+					<sub>*insufficient yield to pay full amount</sub>
+				</report>
+				<report id="2024-Q3" class="newspaper hidden">
+					<table>
+						<caption>2024 Q3 Finances</caption>
+						<thead>
+							<tr>
+								<th>Category</th>
+								<th>Value</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td colspan="2"><strong>Income</strong></td>
+							</tr>
+							<tr>
+								<td>Patreon</td>
+								<td>$236.99</td>
+							</tr>
+							<tr>
+								<td colspan="2"><strong>Expenses</strong></td>
+							</tr>
+							<tr>
+								<td>community infrastructure</td>
+								<td>-$28.92</td>
+							</tr>
+							<tr>
+								<td>admin services</td>
+								<td>-$26.89</td>
+							</tr>
+							<tr>
+								<td>creative tools and assets, software</td>
+								<td>-$169.47</td>
+							</tr>
+							<tr>
+								<td>equipment</td>
+								<td>-$37.86</td>
+							</tr>
+							<tr>
+								<td>labor: Brandt Hughes</td>
+								<td>-$0*</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="2"></td>
+							</tr>
+							<tr>
+								<td>TOTAL</td>
+								<td class="bee">-$26.15</td>
+							</tr>
+						</tfoot>
+					</table>
+					<sub>*insufficient yield to pay full amount</sub>
+				</report>
+				<report id="2024-Q2" class="newspaper hidden">
+					<table>
+						<caption>2024 Q2 Finances</caption>
+						<thead>
+							<tr>
+								<th>Category</th>
+								<th>Value</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td colspan="2"><strong>Income</strong></td>
+							</tr>
+							<tr>
+								<td>Patreon</td>
+								<td>$262.89</td>
+							</tr>
+							<tr>
+								<td>Bandcamp</td>
+								<td>$15.71</td>
+							</tr>
+							<tr>
+								<td colspan="2"><strong>Expenses</strong></td>
+							</tr>
+							<tr>
+								<td>community infrastructure</td>
+								<td>-$28.67</td>
+							</tr>
+							<tr>
+								<td>admin services</td>
+								<td>-$23.15</td>
+							</tr>
+							<tr>
+								<td>creative tools and assets, software</td>
+								<td>-$164.89</td>
+							</tr>
+							<tr>
+								<td>labor: Brandt Hughes</td>
+								<td>-$61.89*</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="2"></td>
+							</tr>
+							<tr>
+								<td>TOTAL</td>
+								<td class="bee">$0</td>
+							</tr>
+						</tfoot>
+					</table>
+					<sub>*insufficient yield to pay full amount</sub>
+				</report>
+			</section>
+		</main>
+
+		<footer>
+			<p>
+				<a href="/home.html">home</a><a href="/videos.html">videos</a><a href="/music.html">music</a><a href="/about.html">about</a><br>
+				<a href="/finance.html">financial reports</a><a href="/media.html">media kit</a>
+			</p>
+			<image src="/assets/eb-logo.svg" style="width: 3rem">
+			<socials>
+				<div class="tooltip"><a href="https://youtube.com/emergentbeacon"><image src="/assets/social/social--yt.svg"></a><span class="tooltip-text">youtube</span></div>
+				<div class="tooltip"><a href="https://patreon.com/emergentbeacon"><image src="/assets/social/social--patreon.svg"></a><span class="tooltip-text">patreon</span></div>
+				<div class="tooltip"><a href="https://discord.emergentbeacon.com/"><image src="/assets/social/social--discord.svg"></a><span class="tooltip-text">discord</span></div>
+				<div class="tooltip"><a href="https://bsky.app/profile/brandthughes.bsky.social"><image src="/assets/social/social--bsky.svg"></a><span class="tooltip-text">bluesky</span></div>
+				<div class="tooltip"><a href="https://youtube.com/@BrandtHughes"><image src="/assets/social/social--yt2.svg"></a><span class="tooltip-text">youtube 2</span></div>
+			</socials>
+		</footer>
+	</body>
+	<script>
+		function dropdown() {
+			if (document.querySelector("report:not(.hidden)")) {
+				document.querySelector("report:not(.hidden)").classList.add("hidden");
+			}
+			let id = document.getElementById("report-id").value;
+			document.getElementById(id).classList.remove("hidden");
+		}
+		function tabs(id) {
+			if (document.querySelector("report:not(.hidden)")) {
+				document.querySelector("report:not(.hidden)").classList.add("hidden");
+			}
+			document.getElementById(id).classList.remove("hidden");
+		}
+	</script>
+</html>

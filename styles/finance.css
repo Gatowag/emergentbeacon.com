@@ -1,0 +1,93 @@
+html {
+	background: #0f0f0f;
+}
+footer {
+	position: absolute;
+	bottom: 0;
+}
+select {
+	background-color: white;
+	margin-bottom: 2rem;
+}
+
+report {
+	display: block;
+	background-color: white;
+	color: black;
+	text-align: left;
+	padding: 1rem 2rem 2rem;
+	border-radius: .2rem;
+
+	h2 {margin:.5rem 0;}
+}
+
+.about-text {
+	width: 20rem;
+	margin: auto;
+	text-align: justify;
+}
+.about-text span {
+	color: #bdbdbd;
+	font-size: 1.2rem;
+	letter-spacing: .1rem;
+}
+
+table {
+	border-collapse: collapse;
+	width:100%;
+	
+
+	caption {
+		margin-bottom: 1rem;
+		font-size: 1.2rem;
+	}
+	th { padding: .5rem 0; }
+	td {
+		padding: .1rem .5rem;
+		border: 1px solid black;
+		border-collapse: collapse;
+		font-family: "Roboto Mono", serif;
+		font-optical-sizing: auto;
+		font-weight: 500;
+		font-size: .9rem;
+	}
+	tr {
+		td:first-child {
+			padding-left: 1rem;
+		}
+		td:nth-child(2){
+			text-align: right;
+		}
+		td[colspan] {
+			padding-left: .5rem;
+			background-color: #cfcfcf;
+		}
+	}
+	tfoot {
+		tr:first-child > td {
+			height: .6rem;
+			border: none;
+			background-color: transparent;
+		}
+	}
+}
+.cell-right { text-align: right; }
+
+scroll-x {
+	display: inline-flex;
+	overflow-x: hidden;
+	background-color: white;
+	border-bottom: 2px solid black;
+}
+tab {
+	display: inline-block;
+	width: max-content;
+	color: black;
+	padding: .4rem .6rem;
+	height: 100%;
+	cursor: pointer;
+	border-right: 2px solid;
+}
+tab:hover {
+	background-color: rgb(187, 187, 187);
+}

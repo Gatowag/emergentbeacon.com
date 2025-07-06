@@ -100,17 +100,49 @@
 
 <!-- SCRIPTS -->
 	<script>
-		var i = 0;
+		var i = 3;
+		const frame = document.getElementById("video-embed");
+		const list = [
+			{id: "CE3D-tLVTQk", page: "/videos/tenere.html"},
+			{id: "WaM9Gc3y2xo", page: "/videos/sun-spotter.html"},
+			{id: "LNuR-0LHnss", page: "/videos/sungazer.html"},
+			{id: "mFMGs9e5PLY", page: "/videos/trailer.html"},
+			{id: "WD1g4poEjDE", page: "/videos/sedna.html"},
+			{id: "FH5RN9KE5D0", page: "/videos/the-search.html"},
+			{id: "9czNEtiD-jo", page: "/videos/art.html"},
+			{id: "Vfmfdb_dEek", page: "/videos/no-frames-no-boundaries.html"},
+			{id: "_4b2nVOHjdE", page: "/videos/critical-curves.html"},
+			{id: "yCHYmlwjUcI", page: "/videos/einstein-cross.html"}
+		];
+		const btnPage = document.getElementById("btn-vid");
+		var shown = [0,1,2,4,5,6,7,8,9];
 
 		function randomVideo() {
-			let frame = document.getElementById("video-embed");
-			let list = ["mFMGs9e5PLY", "yCHYmlwjUcI", "_4b2nVOHjdE", "Vfmfdb_dEek", "9czNEtiD-jo", "FH5RN9KE5D0", "WD1g4poEjDE", "LNuR-0LHnss", "WaM9Gc3y2xo", "CE3D-tLVTQk"];
-			let ind = Math.round(Math.random() * (list.length - 2));
-			if (ind >= i) {
-				ind = ind + 1;
-			};
-			i = ind;
-			frame.src = "https://www.youtube.com/embed/" + list[ind];
+			if (i < 5) {document.querySelector(`playlist-items li:nth-child(${i + 1})`).classList.remove("selected")};
+			if (shown.length == 0) {
+				shown = [0,1,2,3,4,5,6,7,8,9];
+			}
+			let indx = Math.floor(Math.random() * (shown.length - 1));
+			i = shown[indx];
+			shown.splice(indx, 1);
+			frame.src = "https://www.youtube.com/embed/" + list[i].id;
+			btnPage.setAttribute("href", list[i].page);
+
+			if (i < 5) {
+				document.querySelector(`playlist-items li:nth-child(${i + 1})`).classList.add("selected");
+			}
+		}
+		function playlist(id) {
+			if (i < 5) {document.querySelector(`playlist-items li:nth-child(${i + 1})`).classList.remove("selected")};
+			frame.src = "https://www.youtube.com/embed/" + id;
+			let indx = list
+				.map(function (element) {return element.id;})
+				.indexOf(id);
+			let url = list[indx].page;
+			btnPage.setAttribute("href", url)
+			i = indx;
+
+			document.querySelector(`playlist-items li:nth-child(${indx + 1})`).classList.add("selected");
 		}
 	</script>
 </html>

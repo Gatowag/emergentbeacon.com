@@ -28,7 +28,60 @@
 				<span><a href="/music.html">/ music</a></span>
 				<span><a href="/about.html">/ about</a></span>
 			</nav>
-			<div class="socials">
+		</div> <!-- content column -->
+		<main>
+			<!-- header and video embed -->
+			<h1 style="margin-top: .5em;">Emergent Beacon</h1>
+			<section>
+				<aside class="extrude roboto-mono-400">
+					Directly support the show by <a href="http://patreon.com/emergentbeacon" class="support-link"><strong>pledging to Patreon!</strong></a>
+				</aside>
+				<iframe class="yt-player extrude" id="video-embed" width="800" height="400" src="https://www.youtube.com/embed/mFMGs9e5PLY" title="YouTube video player for featured video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				<playlist class="extrude">
+					<playlist-buttons>
+						<button id="btn" onclick="randomVideo()">random video</button>
+						<a id="btn-vid" href="/videos/trailer.html"><button>this video's page</button></a>
+						<a href="/videos.html"><button>all videos</button></a>
+					</playlist-buttons>
+
+					<playlist-items>
+						<ul>
+							<li onclick="playlist('CE3D-tLVTQk')">
+								<a>
+									<strong>The Myth of the Loneliest Tree on Earth</strong>
+									<time datetime="PT26M">26 min</time>
+								</a>
+							</li>
+							<li onclick="playlist('WaM9Gc3y2xo')">
+								<a>
+									<strong>I Built a Device to See The Sun</strong>
+									<time datetime="PT59M">59 min</time>
+								</a>
+							</li>
+							<li onclick="playlist('LNuR-0LHnss')">
+								<a>
+									<strong>Why Am I Staring at the Sun?</strong>
+									<time datetime="PT48M">48 min</time>
+								</a>
+							</li>
+							<li onclick="playlist('mFMGs9e5PLY')" class="selected">
+								<a>
+									<strong>channel trailer: The World Remembers</strong>
+									<time datetime="PT3M">3 min</time>
+								</a>
+							</li>
+							<li onclick="playlist('WD1g4poEjDE')">
+								<a>
+									<strong>The Mystery of Sedna's Orbit</strong>
+									<time datetime="PT6M">6 min</time>
+								</a>
+							</li>
+						</ul>
+					</playlist-items>
+				</playlist-buttons>
+			</section>
+		</main>
+
 		<footer>
 			<p>
 				<a href="/home.html">home</a><a href="/videos.html">videos</a><a href="/music.html">music</a><a href="/about.html">about</a><br>
@@ -41,51 +94,6 @@
 				<div class="tooltip"><a href="https://discord.emergentbeacon.com/"><image src="/assets/social/social--discord.svg"></a><span class="tooltip-text">discord</span></div>
 				<div class="tooltip"><a href="https://bsky.app/profile/brandthughes.bsky.social"><image src="/assets/social/social--bsky.svg"></a><span class="tooltip-text">bluesky</span></div>
 				<div class="tooltip"><a href="https://youtube.com/@BrandtHughes"><image src="/assets/social/social--yt2.svg"></a><span class="tooltip-text">youtube 2</span></div>
-			</div>
-			<!-- header and video embed -->
-			<h1 style="margin-top: .2em;">Emergent Beacon</h1>
-			<div class="support-container slate extrude roboto-mono-400">
-				Directly support the show by <a href="http://patreon.com/emergentbeacon" class="support-link">pledging to Patreon!</a>
-			</div>
-			<iframe class="yt-player extrude" id="video-embed" width="800" height="400" src="https://www.youtube.com/embed/mFMGs9e5PLY" title="YouTube video player for featured video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-			<br><button id="btn" class="btn-random outline roboto-400" style="font-weight:500" onclick="randomVideo()">show me a random video</button>
-
-			<h1 style="margin-top: 1em;">Latest Videos</h1>
-			<div class="vid-block">
-				<div class="vid-entry">
-					<a href="/videos/tenere.html">
-						<image class="outline" src="/assets/vidThumbs.jpg"></image>
-					</a>
-					<div class="vid-details">
-						<a class="outline" href="/videos/tenere.html">The Myth of the Loneliest Tree on Earth</a>
-						<div class="vid-date">2024-10-11</div>
-						<div class="vid-descript">What does it mean to exist? What if that existence is under extraordinary circumstances? What if it's fleeting?</div>
-					</div>
-				</div>
-
-				<div class="vid-entry">
-					<a href="/videos/sun-spotter.html">
-						<image class="outline" src="/assets/vidThumbs.jpg"></image>
-					</a>
-					<div class="vid-details">
-						<a class="outline" href="/videos/sun-spotter.html">I Built a Device to See The Sun</a>
-						<div class="vid-date">2024-06-09</div>
-						<div class="vid-descript">A brick of wood and glass can tame the most brilliant thing in the solar system.</div>
-					</div>
-				</div>
-				
-				<div class="vid-entry">
-					<a href="/videos/sungazer.html">
-						<image class="outline" src="/assets/vidThumbs.jpg"></image>
-					</a>
-					<div class="vid-details">
-						<a class="outline" href="/videos/sungazer.html">Why Am I Staring at the Sun?</a>
-						<div class="vid-date">2024-01-25</div>
-						<div class="vid-descript">I was intrigued by the disparity between how comfortable it is to look at stars at night, and how uncomfortable it is to look at one during the day. Surely, there must be a place where the two become one.</div>
-					</div>
-				</div>
-			</div>
-		</div> <!-- content column -->
 			</socials>
 		</footer>
 	</body>

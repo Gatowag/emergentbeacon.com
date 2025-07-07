@@ -1,0 +1,55 @@
+/*_____________________
+ |__ COLOR PALETTES __|
+*/
+:root {
+	--title: #bdbdbd;
+	--plaque: #111111;
+}
+.mode-light {
+	--title: #919090;
+	--plaque: #ffffff;
+}
+.mode-contrast {
+	--title: #bdbdbd;
+	--plaque: var(--secondary);
+}
+
+about {
+	display: block;
+	width: 20rem;
+	margin: auto;
+	text-align: justify;
+
+	span {
+		color: var(--title);
+		font-size: 1.2rem;
+		letter-spacing: .1rem;
+	}
+}
+contact {
+	display: block;
+	width: 20rem;
+	margin: auto;
+	margin-top:3rem;
+	border-radius: .2rem;
+	padding: 1rem;
+	background-color: var(--plaque);
+
+	a {
+		color: var(--link);
+	}
+}
+
+logo {
+	svg {
+		width: 6rem;
+		fill: var(--logo);
+	}
+}
+button:hover {
+	background-color: var(--internal-link);
+	transform: translateY(-.2em);
+}
+button:active {
+	transform: translateY(.1em);
+}

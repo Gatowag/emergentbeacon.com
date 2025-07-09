@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/styles/main.css">
+		<link rel="stylesheet" href="/styles/music.css">
+		<script type="text/javascript" src="color-palettes.js" defer></script>
+	</head>
+
+<!-- HTML -->
+	<body class="rubik-400">
+		<nav class="nav-desktop">
+			<span>
+				<a href="/home.html">/ home</a><br>
+				<a href="/videos.html">/ videos</a><br>
+				/ music<br>
+				<a href="/about.html">/ about</a>
+			</span>
+		</nav>
+
+		<main>
+			<header class="content-column">
+				<nav class="nav-mobile">
+					<span><a href="/home.html">/ home</a></span>
+					<span><a href="/videos.html">/ videos</a></span>
+					<span>/ music</span>
+					<span><a href="/about.html">/ about</a></span>
+				</nav>
+
+				<button id="theme">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M380-880q83 0 156 31.5T663-763q54 54 85.5 127T780-480q0 83-31.5 156T663-197q-54 54-127 85.5T380-80q-53 0-103.5-13.5T180-134q93-54 146.5-146T380-480q0-108-53.5-200T180-826q46-27 96.5-40.5T380-880Z"/></svg>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm40-83q119-15 199.5-104.5T800-480q0-123-80.5-212.5T520-797v634Z"/></svg>
+				</button>
+			</header>
+			
+			<!-- header and video embed -->
+			<h1>MUSIC</h1>
+			
+			<music>
+				<iframe id="bandcamp-player" class="extrude" src="https://bandcamp.com/EmbeddedPlayer/album=2488943393/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="https://emergentbeacon.bandcamp.com/album/what-exactly-is-art">What Exactly is Art? by Emergent Beacon</a></iframe>
+			</music>
+
+			<section id="vid-grid">
+				<vid-grid>
+					<grid-item onclick="bandcamp('1641446729')">
+						<img src="/assets/album covers/eb009--music-cover--960-1x1.jpg"><br>
+						<strong>Dunefall</strong>
+						<time datetime="PT21M">21 min</time>
+						<info>10 tracks</info>
+					</grid-item>
+
+					<grid-item onclick="bandcamp('3362000190')">
+						<img src="/assets/album covers/eb007--music-cover--960-1x1.jpg"><br>
+						<strong>Sun Spotter</strong>
+						<time datetime="PT18M">18 min</time>
+						<info>7 tracks</info>
+					</grid-item>
+
+					<grid-item onclick="bandcamp('2259063483')">
+						<img src="/assets/album covers/eb006--music-cover--960-1x1.jpg"><br>
+						<strong>Sungazer</strong>
+						<time datetime="PT27M">27 min</time>
+						<info>9 tracks</info>
+					</grid-item>
+
+					<grid-item onclick="bandcamp('3543157314')">
+						<img src="/assets/album covers/eb008--music-cover--960-1x1.jpg"><br>
+						<strong>The World Remembers</strong>
+						<time datetime="PT2M">2 min</time>
+						<info>2 tracks</info>
+					</grid-item>
+
+					<grid-item onclick="bandcamp('825353223')">
+						<img src="/assets/album covers/eb005--music-cover--960-1x1.jpg"><br>
+						<strong>Mystery of Sedna's Orbit</strong>
+						<time datetime="PT6M">6 min</time>
+						<info>4 tracks</info>
+					</grid-item>
+
+					<grid-item onclick="bandcamp('1958114715')">
+						<img src="/assets/album covers/eb004--music-cover--960-1x1.jpg"><br>
+						<strong>The Search</strong>
+						<time datetime="PT6M">6 min</time>
+						<info>2 tracks</info>
+					</grid-item>
+
+					<grid-item onclick="bandcamp('2488943393')">
+						<img src="/assets/album covers/eb003--music-cover--960-1x1.jpg"><br>
+						<strong>What Exactly is Art?</strong>
+						<time datetime="PT32M">32 min</time>
+						<info>13 tracks</info>
+					</grid-item>
+
+					<grid-item onclick="bandcamp('591914931')">
+						<img src="/assets/album covers/eb002--music-cover--960-1x1.jpg"><br>
+						<strong>Critical Curves</strong>
+						<time datetime="PT12M">12 min</time>
+						<info>2 tracks</info>
+					</grid-item>
+
+					<grid-item onclick="bandcamp('3567384720')">
+						<img src="/assets/album covers/eb001--music-cover--960-1x1.jpg"><br>
+						<strong>Cosmic Mirage</strong>
+						<time datetime="PT17M">17 min</time>
+						<info>5 tracks</info>
+					</grid-item>
+				</vid-grid>
+			</section>
+		</main>
+
+		<footer>
+			<p>
+				<a href="/home.html">home</a><a href="/videos.html">videos</a><a href="/music.html">music</a><a href="/about.html">about</a><br>
+				<a href="/finance.html">financial reports</a><a href="/media.html">media kit</a>
+			</p>
+			<logo>
+				<svg id="v3-5:_white" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 629.56 629.56">
+					<path id="shell" class="st0" d="M314.78,54.77c-140.47,0-254.34,113.87-254.34,254.34,0,37.42,8.09,72.95,22.61,104.94,0,0,0,0,.01.01,8.93,20.73,32.84,39.17,69.52,53.13,37.63,14.32,85.78,23.08,137.59,25.2-.22,1.35-.35,2.76-.39,4.24-.28,9.99,5.33,44.71,8.52,57.73.94,3.85,1.81,7.7,2.85,11.55,1.45,6.09,3.08,12.25,7.51,17.32,1.58,1.92,3.48,3.85,6.12,5.77,4.58-3.38,7.52-7.03,9.92-11.55,2.01-3.85,2.61-7.7,3.7-11.55,1.04-3.85,1.9-7.7,2.85-11.55,4.26-18.99,7.98-38.29,8.52-57.73-.04-1.48-.18-2.88-.39-4.23,51.94-2.1,100.22-10.86,137.93-25.22,39.53-15.05,64.22-35.29,71.32-58,13.17-30.72,20.48-64.55,20.48-100.09,0-140.47-113.87-254.34-254.34-254.34ZM314.94,457.36c-85.35,0-162.96-20.39-190.34-49.68.53-2.31,1.33-4.75,2.86-6.47,4.25-4.95,9.06-10.43,14.73-14.97,8.56-6.84,18.45-12.4,28.45-17.14,3.52-1.74,7.2-2.97,10.68-4.85,2.26-1.28,3.79-3.7,3.79-6.48.01-9.08-10.23-7.37-13.66-6.9-14.71,2.03-28.69,6.22-42.6,11.74-6.94,2.79-14.12,5.62-20.99,9.69-6.71-21.32-35.48-129.41,53.58-218.46,46.5-46.5,104.23-63.52,153.35-63.52,60.86,0,114.62,24.79,153.35,63.52,78.43,78.43,67.18,175.19,53.61,218.36-6.81-4.02-13.93-6.83-20.81-9.59-13.91-5.52-27.89-9.71-42.6-11.74-4.49-.7-10.07-1.58-12.7,3.24-2.01,3.59-.74,8.13,2.85,10.14,3.47,1.88,7.15,3.11,10.66,4.84,10,4.74,19.88,10.3,28.45,17.14,5.67,4.54,10.48,10.02,14.73,14.97,1.55,1.74,2.36,4.22,2.88,6.56-15.01,15.99-71.22,49.59-190.25,49.59Z"/>
+					<path id="core" class="st0" d="M314.78,210.76c-62.76,0-113.08,50.9-113.08,113.08,0,21.93,6.29,43.2,18.19,61.52,23.24,35.78,64.65,35.78,94.89,35.78,36.54,0,73.19-2.25,95-35.96,11.83-18.28,18.08-39.5,18.08-61.35,0-62.88-51-113.08-113.08-113.08Z"/>
+				</svg>
+			</logo>
+			<socials>
+				<div class="tooltip">
+					<a href="https://youtube.com/emergentbeacon">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 176 124">
+							<path class="st0" d="M172.5,19.4h-.2c-2-7.6-8-13.6-15.6-15.7C143,0,88,0,88,0c0,0-55,0-68.8,3.7-7.6,2-13.5,8-15.6,15.7C0,33.2,0,62,0,62c0,0,0,28.8,3.7,42.6,2,7.6,8,13.6,15.6,15.7,13.7,3.7,68.8,3.7,68.8,3.7,0,0,55,0,68.8-3.7,7.6-2,13.5-8,15.6-15.7,3.7-13.8,3.7-42.6,3.7-42.6,0,0,0-28.8-3.7-42.6ZM70,88.2v-52.4l46,26.2-46,26.2Z"/>
+						</svg>
+					</a>
+					<span class="tooltip-text">youtube</span>
+				</div>
+				<div class="tooltip">
+					<a href="https://patreon.com/emergentbeacon">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1080" xml:space="preserve">
+							<path class="st0" d="M1033.05,324.45c-0.19-137.9-107.59-250.92-233.6-291.7c-156.48-50.64-362.86-43.3-512.28,27.2 C106.07,145.41,49.18,332.61,47.06,519.31c-1.74,153.5,13.58,557.79,241.62,560.67c169.44,2.15,194.67-216.18,273.07-321.33 c55.78-74.81,127.6-95.94,216.01-117.82C929.71,603.22,1033.27,483.3,1033.05,324.45z"/>
+						</svg>
+					</a>
+					<span class="tooltip-text">patreon</span>
+				</div>
+				<div class="tooltip">
+					<a href="https://discord.emergentbeacon.com/">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36">
+							<path class="cls-1" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/>
+						</svg>
+					</a>
+					<span class="tooltip-text">discord</span>
+				</div>
+				<div class="tooltip">
+					<a href="https://bsky.app/profile/brandthughes.bsky.social">
+						<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568 500.117">
+							<path class="cls-1" d="M123.121,33.664c65.12,48.889,135.16,148.017,160.879,201.209,25.719-53.192,95.759-152.32,160.879-201.209,46.987-35.276,123.121-62.57,123.121,24.283,0,17.345-9.945,145.713-15.778,166.555-20.275,72.453-94.155,90.933-159.875,79.748,114.875,19.551,144.097,84.311,80.986,149.071-119.86,122.992-172.272-30.859-185.702-70.281-2.462-7.227-3.614-10.608-3.631-7.733-.017-2.875-1.169.506-3.631,7.733-13.43,39.422-65.842,193.273-185.702,70.281-63.111-64.76-33.889-129.52,80.986-149.071-65.72,11.185-139.599-7.295-159.875-79.748C9.945,203.659,0,75.292,0,57.946,0-28.906,76.134-1.612,123.121,33.664Z"/>
+						</svg>
+					</a>
+					<span class="tooltip-text">bluesky</span>
+				</div>
+				<div class="tooltip">
+					<a href="https://youtube.com/@BrandtHughes">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 176 124">
+							<path class="st0" d="M172.3,19.4c-2-7.6-8-13.6-15.6-15.7C143,0,88,0,88,0c0,0-55,0-68.8,3.7-7.6,2-13.5,8-15.6,15.7C0,33.2,0,62,0,62c0,0,0,28.8,3.7,42.6,2,7.6,8,13.6,15.6,15.7,13.7,3.7,68.8,3.7,68.8,3.7,0,0,55,0,68.8-3.7,7.6-2,13.5-8,15.6-15.7,3.7-13.8,3.7-42.6,3.7-42.6,0,0,0-28.8-3.7-42.6h0ZM117.3,98c-1.8,1.8-3.9,2.7-6.4,2.7h-45c-3,0-5.4-.9-7.2-2.6-1.8-1.7-2.7-4.1-2.7-7.1v-3c0-3.4.8-6.7,2.4-9.8,1.6-3.1,4.3-6.5,8.3-10.3,4-3.7,9.5-8,16.7-13l.8-.6c4.1-2.9,7.1-5.1,9-6.6,1.9-1.5,3.2-2.9,4-4.1.8-1.3,1.2-2.6,1.2-4.2,0-2.6-1-4.7-2.9-6.3-1.9-1.6-4.4-2.4-7.6-2.4s-5.2.6-6.9,1.8c-1.7,1.2-3.4,2.8-5,4.7-.2.2-.4.5-.6.7-.5.6-1,1.1-1.5,1.7-1.1,1.5-2.1,2.6-3.1,3.3-1,.8-2.4,1.2-4.2,1.2s-4.4-.7-5.8-2.2c-1.5-1.5-2.2-3.5-2.2-6s1.5-6.8,4.4-10.3c2.5-2.9,6-5.5,10.4-7.7,4.4-2.2,9.5-3.3,15.2-3.3s10.1,1,14.3,3c4.2,2,7.5,4.8,10,8.4,2.4,3.6,3.7,7.8,3.8,12.6,0,3.3-.6,6.4-1.7,9.3-1.1,2.9-2.8,5.5-4.9,8-2.1,2.5-4.8,5-8.1,7.5l-1.1.8c-2.6,1.9-5.2,3.7-7.9,5.6-5.4,3.6-9.3,6.6-11.8,8.9-1.4,1.3-2.4,2.7-3,4.2l32.4-.4c2.5,0,4.7.9,6.4,2.7,1.8,1.8,2.7,3.9,2.7,6.4s-.9,4.7-2.7,6.4h0Z"/>
+						</svg>
+					</a>
+					<span class="tooltip-text">youtube 2</span>
+				</div>
+			</socials>
+		</footer>
+	</body>
+
+	<script>
+		var bcamp = document.getElementById("bandcamp-player");
+		function bandcamp(id) {
+			let s = bcamp.src;
+			let a = s.indexOf("/album=");
+			let aEnd = s.indexOf("/", a + 1);
+			bcamp.src = s.slice(0, a + 7) + id + s.slice(aEnd);
+		}
+	</script>
+</html>

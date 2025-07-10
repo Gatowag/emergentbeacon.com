@@ -1,3 +1,33 @@
+/*_____________________
+ |__ COLOR PALETTES __|
+*/
+:root {
+	--synopsis-fill: var(--playlist-item);
+	--synopsis-txt: #bdaa84;
+	--correction-fill: #6b2520;
+	--correction-txt: #ffffff;
+	--container-fill: var(--synopsis-txt);
+	--container-txt: var(--playlist-item);
+	--h2-fill: #141414;
+	--h2-txt: #e6e5e2;
+}
+.mode-light {
+	--synopsis-fill: #ced6cb;
+	--synopsis-txt: var(--txt);
+	--container-fill: var(--playlist-item);
+	--container-txt: var(--txt);
+	--h2-fill: var(--playlist-select-back);
+	--h2-txt: #141414;
+}
+.mode-contrast {
+	--synopsis-fill: var(--playlist-item);
+	--synopsis-txt: var(--txt);
+	--container-fill: var(--playlist-item);
+	--container-txt: var(--txt);
+	--h2-fill: var(--secondary);
+	--h2-txt: var(--text);
+}
+
 /*__________________
  |__ GRID LAYOUT __|
 */

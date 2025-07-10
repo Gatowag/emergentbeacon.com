@@ -62,6 +62,8 @@ h1 {
 }
 synopsis {
 	grid-area: synopsis;
+	background-color: var(--synopsis-fill);
+	color: var(--synopsis-txt);
 	padding: 1rem 1rem;
 	font-size: .9rem;
 	line-height: 1.3rem;
@@ -78,6 +80,8 @@ time {
 */
 correction-area {
 	grid-area: corrections;
+	background-color: var(--correction-fill);
+	color: var(--correction-txt);
 	border: .2rem solid black;
 	padding: .2rem 1rem 0 0;
 	margin-top: -.8rem;
@@ -124,6 +128,8 @@ correction-area {
 }
 
 h2 {
+	background-color: var(--h2-fill);
+	color: var(--h2-txt);
 	text-align: center;
 	margin: 0 0 -3px;
 	padding: .15rem 0;
@@ -150,6 +156,10 @@ h2 {
 	border: .2rem solid black;
 	padding: 0 1rem;
 	scrollbar-width: 15px;
+}
+container {
+	background-color: var(--container-fill);
+	color: var(--container-txt);
 }
 
 sources-info {

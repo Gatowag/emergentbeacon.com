@@ -1,0 +1,163 @@
+html {
+	scroll-behavior: smooth;
+	background-color: #1c1e1f;
+}
+
+* { box-sizing: border-box; }
+/* * { border: 1px solid red }
+*/
+
+body {
+	width: 85vw;
+	margin: 0 auto;
+}
+header {
+	text-align: center;
+	position: sticky;
+	top: 0;
+	padding: 1rem;
+	margin-top: .5rem;
+
+	button:nth-child(4) {
+		background: #e6e5e2;
+		color: #ee2719;
+	}
+	button:nth-child(4):hover {
+		background: #ff2314;
+		color: white;
+	}
+}
+
+fieldset {
+	color: white;
+	padding: .5rem .5rem;
+	border: none;
+}
+
+label {
+	text-align: right;
+	width: 13rem;
+	padding-right: 1rem;
+}
+input {
+	width: calc(100vw - 30rem);
+	flex: 30%;
+	max-width: 100%;
+	text-wrap: wrap;
+}
+.rowgroup input:first-of-type {
+	flex: 3rem;
+	width: 3rem;
+	margin-right: .2rem;
+}
+.rowgroup input:nth-child(3) {
+	flex: 50%;
+}
+.add-new-button {
+	margin: .4rem .2rem;
+}
+.correction-inputs {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+.label { font-size: 80%; }
+
+.input { width:100%; }
+
+.row {
+	display: flex;
+	width: 100%;
+}
+.button-row {
+	width: 100%;
+	padding-left: 12.85rem;
+}
+
+
+footer {
+	text-align: center;
+	position: sticky;
+	bottom: 0;
+	padding: 1rem;
+	z-index: 1;
+
+	button {
+		background: #2ad7ee;
+	}
+}
+
+.button-group {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 4em;
+	margin: 1.05em 0 0 1em;
+}
+
+button {
+	background:#e6e5e2;
+	color: #141414;
+	border: none;
+	border-radius: .15rem;
+	padding: .3rem .8rem;
+	margin: 0 .1rem;
+	font-size: .9rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: .2s ease;
+}
+button:hover {
+	background: #FFDB12;
+	color: #141414;
+}
+
+.hidden { display: none; }
+
+.processing {
+	text-align: center;
+	width: 8em;
+	position: fixed;
+	left: 2em;
+	bottom: 2em;
+	background-color: white;
+	color: black;
+	z-index: 2;
+}
+
+::placeholder {
+	background-color: #575d61;
+	color: white;
+	opacity: .4;
+}
+
+
+.roboto-400 {
+	font-family: "Roboto", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings:
+	  "wdth" 100;
+}
+.rubik-400 {
+	font-family: "Rubik", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+.roboto-mono-400 {
+	font-family: "Roboto Mono", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+.roboto-condensed-500 {
+	font-family: "Roboto Condensed", serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+}

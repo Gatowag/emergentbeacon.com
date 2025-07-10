@@ -31,7 +31,7 @@
 /*__________________
  |__ GRID LAYOUT __|
 */
-.video-grid {
+main {
 	display: grid;
 	gap: .6em;
 	grid-template-areas:
@@ -47,11 +47,11 @@
 		"transcript"
 		"bonus";
 }
-.video-title {
+h1 {
 	grid-area: vid-title;
 	margin-top: .3em;
 }
-.yt-embed {
+#yt-player {
 	grid-area: vid-embed;
 	border-radius: 1rem 1rem 0 0;
 	border: .2rem solid black;
@@ -59,7 +59,7 @@
 	width: calc(100% - .4rem);
 	height: 100%;
 }
-.synopsis {
+synopsis {
 	grid-area: synopsis;
 	padding: 1rem 1rem;
 	font-size: .9rem;
@@ -68,22 +68,25 @@
 	margin-top: -.4rem;
 }
 
+time {
+}
+
 
 /*__________________
  |__ CORRECTIONS __|
 */
-.corrections-area {
+correction-area {
 	grid-area: corrections;
 	border: .2rem solid black;
 	padding: .2rem 1rem 0 0;
 	margin-top: -.8rem;
 	text-align: left;
-}
-	.corrections-area h4 {
+
+	h4 {
 		text-align: center;
 		margin: .5rem 0 0;
 	}
-	.corrections-area a {
+	a {
 		color: #7ff5ce;
 		background-color: #000000;
 		border-radius: .25rem;
@@ -91,11 +94,12 @@
 		border: .15rem solid #000000;
 		text-decoration: none;
 	}
-	.corrections-area a:hover {
+	a:hover {
 		background-color: #33ffbb;
 		color: black;
 		border: .15rem solid black;
 	}
+}
 .corrections-entry {
 	display: inline-block;
 	padding: 0 1.4rem;
@@ -103,21 +107,22 @@
 	font-size: 1rem;
 	line-height: 1.4rem;
 	border-left: .6rem solid black;
-}
-	.corrections-entry ul {
+
+	ul {
 		margin: 0 -1.5rem;
 	}
-	.corrections-entry a {
+	a {
 		font-size: .75rem;
 		font-weight: 500;
 		margin-right: .3rem;
 	}
-	.corrections-entry span {
+	span {
 		font-size: .8rem;
-		font-style:italic;
+		font-style: italic;
 	}
+}
 
-.section-title {
+h2 {
 	text-align: center;
 	margin: 0 0 -3px;
 	padding: .15rem 0;
@@ -146,7 +151,7 @@
 	scrollbar-width: 15px;
 }
 
-.cite-info {
+sources-info {
 	grid-area: source-info;
 	height: 100%;
 	min-width: 12em;
@@ -305,7 +310,7 @@
 		-> download buttons
 	-> error animation class
 */
-.transcript-block {
+transcription {
 	grid-area: transcript;
 }
 .transcript-text {
@@ -344,7 +349,7 @@
 	-> grid block
 	-> bandcamp embed sizing
 */
-.music {
+music {
 	grid-area: music;
 	height: 100%;
 	min-height: fit-content;
@@ -366,6 +371,7 @@
 		-> role
 */
 .credits-block {
+credits {
 	grid-area: credits;
 	height: 100%;
 }
@@ -393,7 +399,7 @@
 		-> elements in each entry
 	-> entry emphasis system
 */
-.bonus-block {
+bonus {
 	grid-area: bonus;
 	width: 100%;
 	max-width: 90vw;
@@ -408,7 +414,7 @@
 	scrollbar-color: hsl(160, 100%, 60%) black;
 }
 
-.bonus-entry {
+bonus-entry {
 	display: inline-block;
 	height: max-content;
 	max-width: 400px;
@@ -543,7 +549,7 @@
 	-> establish every grid element's size/pos
 */
 @media screen and (min-width: 37rem) {
-	.video-grid {
+	main {
 		grid-template-columns: repeat(12, [col-start] 1fr);
 		grid-template-areas:
 			"socials socials"

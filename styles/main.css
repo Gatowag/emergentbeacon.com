@@ -94,6 +94,28 @@ nav {
 }
 
 
+#theme {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 2em;
+	width: 5em;
+	padding: .2em;
+	border-radius: .5em;
+	border: none;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	background-color: var(--txt);
+	opacity: .8;
+
+	svg {
+		fill: var(--background);
+		padding: 0 .1rem;
+	}
+}
+
+
 /*___________________
  |__ SOCIAL LINKS __|
 	-> icons

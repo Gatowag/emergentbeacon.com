@@ -158,8 +158,18 @@ h2 {
 	scrollbar-width: 15px;
 }
 container {
+	display: block;
 	background-color: var(--container-fill);
 	color: var(--container-txt);
+	height: fit-content;
+	min-height: 12rem;
+	max-height: 24.3rem;
+	overflow-y: scroll;
+	scroll-padding-top: 1rem;
+	text-align: left;
+	border: .2rem solid black;
+	padding: 0 1rem;
+	scrollbar-width: 15px;
 }
 
 sources-info {

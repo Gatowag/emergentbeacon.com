@@ -47,9 +47,9 @@
 				<iframe class="yt-player extrude" id="video-embed" width="800" height="400" src="https://www.youtube.com/embed/mFMGs9e5PLY" title="YouTube video player for featured video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 				<playlist class="extrude">
 					<playlist-buttons>
-						<button id="btn" onclick="randomVideo()">random video</button>
-						<a id="btn-vid" href="/videos/trailer.html"><button>this video's page</button></a>
-						<a href="/videos.html"><button>all videos</button></a>
+						<button id="btn" type="button" onclick="randomVideo()">random video</button>
+						<button id="btn-details" type="button" onclick="document.location='/videos/trailer.html'">this video's page</button>
+						<button onclick="document.location='/videos.html'">all videos</button type="button">
 					</playlist-buttons>
 
 					<playlist-items>
@@ -162,7 +162,7 @@
 			{id: "_4b2nVOHjdE", page: "/videos/critical-curves.html"},
 			{id: "yCHYmlwjUcI", page: "/videos/einstein-cross.html"}
 		];
-		const btnPage = document.getElementById("btn-vid");
+		const btnPage = document.getElementById("btn-details");
 		var shown = [0,1,2,4,5,6,7,8,9];
 
 		function randomVideo() {

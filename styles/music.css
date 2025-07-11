@@ -51,7 +51,7 @@ grid-item {
 		opacity: 80%;
 	}
 	strong {
-		color: var(--text);
+		color: var(--txt);
 		font-optical-sizing: auto;
 		font-weight: 500;
 	}
@@ -82,7 +82,7 @@ button {
 	font-weight: 600;
 }
 button:hover {
-	background-color: var(--text);
+	background-color: var(--txt);
 	transform: translateY(-.2em);
 }
 button:active {

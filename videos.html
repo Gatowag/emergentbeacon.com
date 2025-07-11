@@ -48,6 +48,7 @@
 					<a href="/videos/tenere.html" class="vid-title catalog-title">The Myth of the Loneliest Tree on Earth</a>
 					<div class="vid-date">26 min</div>
 				</div>
+			<button onclick="viewButton('shorts')">shorts</button>
 
 				<div class="catalog-entry">
 					<a class="vid-title catalog-title" href="/videos/sun-spotter.html">I Built a Device to See The Sun</a>
@@ -139,6 +140,15 @@
 					<a class="gallery-title" href="/videos/the-search.html">
 						<img src="/assets/vid-grid.jpg" style="object-position: 0 55.55%;"><br>
 						The Search
+			<section id="vid-shorts" class="hidden">
+				<shorts>
+					<iframe id="shortsVideoFrame1" width="200" height="358" src="https://www.youtube.com/embed/7WkIcTEcm9E?playlist=7WkIcTEcm9E&loop=1" title="YouTube video player for shorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					<iframe id="shortsVideoFrame2" width="200" height="358" src="https://www.youtube.com/embed/3DLzUItehYk?playlist=3DLzUItehYk&loop=1" title="YouTube video player for shorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					<iframe id="shortsVideoFrame3" width="200" height="358" src="https://www.youtube.com/embed/7-clP0PkYNg?playlist=7-clP0PkYNg&loop=1" title="YouTube video player for shorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</shorts>
+			</section>
+		</main>
+
 		<footer>
 			<p>
 				<a href="/home.html">home</a><a href="/videos.html">videos</a><a href="/music.html">music</a><a href="/about.html">about</a><br>
@@ -222,9 +232,10 @@
 <!-- SCRIPT -->
 	<script>
 		function viewButton(type) {
-			let x, y, list, grid;
+			let x, y, list, grid, shorts;
 			list = document.getElementById("vid-list");
 			grid = document.getElementById("vid-grid");
+			shorts = document.getElementById("vid-shorts");
 
 			if (type === "list") {
 				list.classList.remove("hidden");
@@ -232,10 +243,16 @@
 				grid.classList.add("hidden");
 				grid.classList.remove("vid-grid");
 			} else {
+				shorts.classList.add("hidden");
 				grid.classList.remove("hidden");
 				grid.classList.add("vid-grid");
 				list.classList.add("hidden");
 				list.classList.remove("vid-list");
+				shorts.classList.add("hidden");
+			} else {
+				list.classList.add("hidden");
+				grid.classList.add("hidden");
+				shorts.classList.remove("hidden");
 			};
 		}
 	</script>

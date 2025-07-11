@@ -28,7 +28,7 @@ select {
 
 report {
 	display: block;
-	background-color: white;
+	background-color: var(--report);
 	color: black;
 	text-align: left;
 	padding: 1rem 2rem 2rem;
@@ -76,7 +76,8 @@ table {
 		}
 		td[colspan] {
 			padding-left: .5rem;
-			background-color: #cfcfcf;
+			background-color: var(--table-cat);
+			color: var(--table-cat-txt);
 		}
 	}
 	tfoot {

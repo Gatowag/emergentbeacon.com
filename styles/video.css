@@ -181,99 +181,119 @@ sources-info {
 	height: 100%;
 	min-width: 12em;
 }
-	.info-number {
-		text-align: center;
-		background-color: #141414;
-		color: white;
-		font-size: .8rem;
-		margin: 1em 0 0;
-		padding: .2em 1em;
-		border-radius: 3px 3px 0 0;
-	}
-	.cite-info a, .cite-media a, .to-top a {
-		color: hsl(160, 86%, 73%);
-		background-color: hsl(180, 30%, 18%);
-		border-radius: .2rem;
-		padding: 0 .2rem;
-		border: .2em solid black;
-		text-decoration: none;
-	}
-	.cite-info a:hover, .cite-media a:hover, .to-top a:hover {
-		background-color: hsl(160, 100%, 60%);
-		color: black;
-		border: .2em solid black;
-	}
-	.cite-box {
-		margin: 0;
-		padding: .3rem .6rem;
-		border: 2px solid;
-		background: white;
-	}
+citation {
+	display: block;
+}
+number {
+	display: inline-block;
+	text-align: center;
+	background-color: #141414;
+	color: white;
+	font-size: .8rem;
+	margin: 1em 0 0;
+	padding: .2em 1em;
+	border-radius: 3px 3px 0 0;
+}
+sources-info a, sources-media a, .to-top a {
+	color: hsl(160, 86%, 73%);
+	background-color: hsl(180, 30%, 18%);
+	border-radius: .2rem;
+	padding: 0 .2rem;
+	border: .2em solid black;
+	text-decoration: none;
+}
+sources-info a:hover, sources-media a:hover, .to-top a:hover {
+	background-color: hsl(160, 100%, 60%);
+	color: black;
+	border: .2em solid black;
+}
+.cite-box {
+	margin: 0;
+	padding: .3rem .6rem;
+	border: 2px solid;
+	background: white;
+}
+blockquote {
+	margin: 0;
+	padding: .3rem .6rem;
+	border: 2px solid;
+	background: white;
 
-	/* multi-cited aligns tab to source box*/
-	.cite-tab-align {
-		display: flex;
-		align-items: center;
-		margin: -2px 0 -2px 0;
+	time {
+		font-size: .7rem;
+		padding-left: 1rem;
 	}
-	/* letter tab for citing the same source multiple times */
-	.cite-box-multi-tab {
-		width: 15px;
-		vertical-align: top;
-		background: hsl(180, 30%, 18%);
-		color: white;
-		padding: .3rem .5rem;
-		line-height: 2.2rem;
-		font-size: 1.5rem;
-		font-weight: 500;
-		border: 2px solid black;
-	}
-	/* quote from the video that needs substantiating */
-	.cite-box-multi-quote {
-		vertical-align: top;
-		width: 100%;
-		background: white;
-		padding: .3rem .6rem;
-		margin-left: -2px;
-		border: 2px solid;
-	}
+}
 
-	.cite-details {
-		line-height: 1.3rem;
-		margin: 1rem 0 1rem 2rem;
-	}
-	.cite-identifier {
-		font-size: 1.2rem;
-	}
-	.cite-credits {
-		font-size: 0.9rem;
-		word-wrap: break-word;
-	}
+/* multi-cited aligns tab to source box*/
+.cite-tab-align {
+	display: flex;
+	align-items: center;
+	margin: -2px 0 -2px 0;
+}
+/* letter tab for citing the same source multiple times */
+.cite-box-multi-tab {
+	width: 15px;
+	vertical-align: top;
+	background: hsl(180, 30%, 18%);
+	color: white;
+	padding: .3rem .5rem;
+	line-height: 2.2rem;
+	font-size: 1.5rem;
+	font-weight: 500;
+	border: 2px solid black;
+}
+/* quote from the video that needs substantiating */
+.cite-box-multi-quote {
+	vertical-align: top;
+	width: 100%;
+	background: white;
+	padding: .3rem .6rem;
+	margin-left: -2px;
+	border: 2px solid;
+}
 
-.cite-media {
+.cite-details {
+	line-height: 1.3rem;
+	margin: 1rem 0 1rem 2rem;
+}
+.cite-identifier {
+	font-size: 1.2rem;
+}
+.cite-credits {
+	font-size: 0.9rem;
+	word-wrap: break-word;
+}
+
+sources-media {
 	grid-area: source-media;
 	height: 100%;
 	min-width: 12em;
-}
-	.media-anchor {
-		display: flex;
-		align-items: center;
-		margin: 1em 0 0;
-		font-size: .8rem;
-		line-height: 1.2em;
-	}
-	.media-time {
+
+	time {
 		display: inline-block;
 		height: 1.2em;
 	}
-	.media-indx {
-		display: inline-block;
-		width: 100%;
-		margin-left: .4em;
-		padding: .2em 1em;
-		font-size: .8rem;
-		border-radius: 3px;
-	}
+}
+.media-anchor {
+	display: flex;
+	align-items: center;
+	margin: 1em 0 0;
+	font-size: .8rem;
+	line-height: 1.2em;
+}
+.media-time {
+	display: inline-block;
+	height: 1.2em;
+}
+.media-indx {
+	display: inline-block;
+	width: 100%;
+	margin-left: .4em;
+	padding: .2em 1em;
+	font-size: .8rem;
+	border-radius: 3px;
+}
 
 .timecode {
 	font-size: .7rem;
@@ -349,20 +369,20 @@ transcription {
 	scrollbar-width: 15px;
 	scrollbar-color: #33ffbb black;
 }
-	a.button:link, a.button:visited {
-		display: inline-block;
-		background: #2a2c35;
-		color: #33ffbb;
-		border-radius: .2rem;
-		padding: .3rem .6rem;
-		margin: .1rem;
-		font-size: .7rem;
-		text-decoration: none;
-	}
-	a.button:hover, a.button:active {
-		background: hsl(160, 100%, 60%);
-		color: black;
-	}
+a.button:link, a.button:visited {
+	display: inline-block;
+	background: #2a2c35;
+	color: #33ffbb;
+	border-radius: .2rem;
+	padding: .3rem .6rem;
+	margin: .1rem;
+	font-size: .7rem;
+	text-decoration: none;
+}
+a.button:hover, a.button:active {
+	background: hsl(160, 100%, 60%);
+	color: black;
+}
 .error {
 	color: #e03b3b;
 	animation: error 2s ease-in-out 0s;
@@ -379,6 +399,14 @@ music {
 	height: 100%;
 	min-height: fit-content;
 	max-width: 40em;
+
+	div {
+		text-align: center;
+		margin: .4em auto 0em;
+	}
+	span {
+		font-size: 80%;
+	}
 }
 .bandcamp-embed {
 	border: 0;
@@ -395,25 +423,28 @@ music {
 		-> name
 		-> role
 */
-.credits-block {
 credits {
 	grid-area: credits;
 	height: 100%;
-}
-.credits {
-	text-align: left;
-	margin: 1em 1em 0;
-	padding-bottom: 1em;
-}
-	.credits-name {
-		font-size: 1.2rem;
-		border-radius: .1rem;
-		padding: 0 .4rem;
+
+	p {
+		display: block;
+		text-align: left;
+		margin: 1em 1em 0;
+		padding-bottom: 1em;
 	}
-	.credits-role {
-		font-size: .8rem;
-		margin: .5rem;
-	}
+}
+credit-name {
+	display: block;
+	font-size: 1.2rem;
+	border-radius: .1rem;
+	padding: 0 .4rem;
+}
+credit-role {
+	display: block;
+	font-size: .8rem;
+	margin: .5rem;
+}
 
 
 /*____________________
@@ -430,13 +461,28 @@ bonus {
 	max-width: 90vw;
 	margin: 0 auto 0;
 }
+bonus-int {
+	display: block;
+	padding-bottom: 1em;
+}
+bonus-plug {
+	display: block;
 
-.bonus-scroll {
+	p {
+		margin-top: .6em;
+	}
+}
+scroll-x {
+	display: block;
 	overflow-x: scroll;
 	padding: .4em;
 	margin: -.1em 1em 0;
 	scrollbar-width: 15px;
 	scrollbar-color: hsl(160, 100%, 60%) black;
+}
+scroll-int {
+	display: block;
+	width: max-content;
 }
 
 bonus-entry {
@@ -446,27 +492,28 @@ bonus-entry {
 	vertical-align: top;
 	margin: .3em;
 	transition: .2s ease;
-}
-	.bonus-entry:hover {
-		color: white;
-		transition: .3s ease;
-	}
-	.bonus-entry p {
-		text-align: center;
-		margin: 0;
-	}
-	.bonus-entry img {
-		height: 10rem;
-		aspect-ratio: 1;
-		object-fit: cover;
-		transition: .4s ease;
-	}
-	.bonus-entry-time {
+
+	time {
 		font-size: .7em;
 	}
-	.bonus-entry-label {
-		font-size: .8em;
-	}
+}
+bonus-entry:hover {
+	color: white;
+	transition: .3s ease;
+}
+bonus-entry p {
+	text-align: center;
+	margin: 0;
+}
+bonus-entry img {
+	height: 10rem;
+	aspect-ratio: 1;
+	object-fit: cover;
+	transition: .4s ease;
+}
+bonus-entry span {
+	font-size: .8em;
+}
 
 scroll-int:hover > bonus-entry img {
 	opacity: 0.5;

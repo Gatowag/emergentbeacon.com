@@ -67,7 +67,7 @@ nav {
 	border-radius: .2rem;
 	padding: .2rem .7rem;
 	margin-top: -.5rem;
-	font-size: .7rem;
+	font-size: .75rem;
 	display: inline-block;
 	position: absolute;
 	top: 1rem;
@@ -154,6 +154,7 @@ nav {
 	opacity: 0;
 	width: 5rem;
 	font-size: .8rem;
+	font-weight: 500;
 	background-color: white;
 	color: black;
 	text-align: center;
@@ -163,7 +164,7 @@ nav {
 
 	position: absolute;
 	z-index: 1;
-	top: -1.7rem;
+	top: -1.5rem;
 	left: 50%;
 	margin-left: -40px;
 }
@@ -179,6 +180,7 @@ nav {
 */
 button {
 	cursor: pointer;
+	border: none;
 	transition: .3s ease;
 }
 

@@ -194,6 +194,9 @@ number {
 	padding: .2em 1em;
 	border-radius: 3px 3px 0 0;
 }
+number:has(+ multi) {
+	margin-left: 2.1rem;
+}
 sources-info a, sources-media a, .to-top a {
 	color: hsl(160, 86%, 73%);
 	background-color: hsl(180, 30%, 18%);

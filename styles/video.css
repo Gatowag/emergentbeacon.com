@@ -454,10 +454,10 @@ bonus-entry {
 		font-size: .8em;
 	}
 
-.bonus-scroll div:hover > .bonus-entry img {
+scroll-int:hover > bonus-entry img {
 	opacity: 0.5;
 }
-.bonus-scroll div:hover > .bonus-entry img:hover {
+scroll-int:hover > bonus-entry img:hover {
 	opacity: 1;
 }
 

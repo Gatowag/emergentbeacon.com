@@ -1,6 +1,24 @@
 html {
 	background: #0f0f0f;
+/*_____________________
+ |__ COLOR PALETTES __|
+*/
+:root {
+	--report: #ecebe8;
+	--table-cat: #bac0c2;
+	--table-cat-txt: #000000;
 }
+.mode-light {
+	--report: #ffffff;
+	--table-cat: #ced6cb;
+	--table-cat-txt: #000000;
+}
+.mode-contrast {
+	--report: #ffffff;
+	--table-cat: #000000;
+	--table-cat-txt: var(--report);
+}
+
 footer {
 	position: absolute;
 	bottom: 0;

@@ -54,35 +54,35 @@
 
 					<playlist-items>
 						<ul>
-							<li onclick="playlist('CE3D-tLVTQk')">
-								<a>
+							<li>
+								<button onclick="playlist('CE3D-tLVTQk')">
 									<strong>The Myth of the Loneliest Tree on Earth</strong>
 									<time datetime="PT26M">26 min</time>
-								</a>
+								</button>
 							</li>
-							<li onclick="playlist('WaM9Gc3y2xo')">
-								<a>
+							<li>
+								<button onclick="playlist('WaM9Gc3y2xo')">
 									<strong>I Built a Device to See The Sun</strong>
 									<time datetime="PT59M">59 min</time>
-								</a>
+								</button>
 							</li>
-							<li onclick="playlist('LNuR-0LHnss')">
-								<a>
+							<li>
+								<button onclick="playlist('LNuR-0LHnss')">
 									<strong>Why Am I Staring at the Sun?</strong>
 									<time datetime="PT48M">48 min</time>
-								</a>
+								</button>
 							</li>
-							<li onclick="playlist('mFMGs9e5PLY')" class="selected">
-								<a>
+							<li class="selected">
+								<button onclick="playlist('mFMGs9e5PLY')">
 									<strong>channel trailer: The World Remembers</strong>
 									<time datetime="PT3M">3 min</time>
-								</a>
+								</button>
 							</li>
-							<li onclick="playlist('WD1g4poEjDE')">
-								<a>
+							<li>
+								<button onclick="playlist('WD1g4poEjDE')">
 									<strong>The Mystery of Sedna's Orbit</strong>
 									<time datetime="PT6M">6 min</time>
-								</a>
+								</button>
 							</li>
 						</ul>
 					</playlist-items>
@@ -174,7 +174,7 @@
 			i = shown[indx];
 			shown.splice(indx, 1);
 			frame.src = "https://www.youtube.com/embed/" + list[i].id;
-			btnPage.setAttribute("href", list[i].page);
+			btnPage.setAttribute("onclick", `document.location='${list[i].page}'`);
 
 			if (i < 5) {
 				document.querySelector(`playlist-items li:nth-child(${i + 1})`).classList.add("selected");
@@ -187,7 +187,7 @@
 				.map(function (element) {return element.id;})
 				.indexOf(id);
 			let url = list[indx].page;
-			btnPage.setAttribute("href", url)
+			btnPage.setAttribute("onclick", `document.location='${url}'`)
 			i = indx;
 
 			document.querySelector(`playlist-items li:nth-child(${indx + 1})`).classList.add("selected");

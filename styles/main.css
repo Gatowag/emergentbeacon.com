@@ -299,27 +299,6 @@ button {
 .cutout { outline-style: dashed; outline-offset: -.125rem; outline-width: .125rem; }
 .extrude { border: .2rem solid black; box-shadow: .125rem .125rem black; }
 .outline { border: .2rem solid black; }
-
-
-/*_________________
- |__ SCROLL BAR __|
-	-> general style
-	-> handhold
-	-> background
-
-::-webkit-scrollbar {
-	width: 15px;
-}
-::-webkit-scrollbar-thumb {
-	background: #33ffbb;
-	border: 2px solid black;
-}
-::-webkit-scrollbar-track {
-	background: black;
-	border: 2px solid black;
-}
-*/
-
 /*________________________
  |__ ANIMATION PRESETS __|
 	-> bounce: support links

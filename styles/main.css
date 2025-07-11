@@ -4,44 +4,44 @@
 :root {
 	--background: #26292e;
 	--secondary: #000000;
-	--text: #ffffff;
+	--txt: #ffffff;
 	--link: #ffdd33;
 	--internal-link: #33ffbb;
 	--pledge: #2d4f63;
 	--playlist-item: #141414;
-	--playlist-buttons: var(--link);
+	--playlist-btn: var(--link);
 	--playlist-select-back: #363420;
-	--playlist-hover-back: var(--text);
+	--playlist-hover-back: var(--txt);
 	--playlist-hover-txt: var(--secondary);
-	--logo: var(--text);
+	--logo: var(--txt);
 }
 .mode-light {
 	--background: #e8e9e0;
 	--secondary: #ffffff;
-	--text: #29292e;
+	--txt: #29292e;
 	--link: #af3727;
 	--internal-link: #33ffbb;
 	--pledge: #d6d2af;
 	--playlist-item: #d6d2af;
-	--playlist-buttons: #ffdd33;
+	--playlist-btn: #ffdd33;
 	--playlist-select-back: #b3ac89;
 	--playlist-hover-back: var(--link);
 	--playlist-hover-txt: var(--secondary);
-	--logo: var(--text);
+	--logo: var(--txt);
 }
 .mode-contrast {
 	--background: #ffffff;
 	--secondary: #dfdfdf;
-	--text: #000000;
+	--txt: #000000;
 	--link: #236dce;
 	--internal-link: #33ffbb;
 	--pledge: var(--background);
 	--playlist-item: var(--background);
-	--playlist-buttons: var(--background);
+	--playlist-btn: var(--background);
 	--playlist-select-back: #ced6cb;
 	--playlist-hover-back: #105cbe;
 	--playlist-hover-txt: var(--background);
-	--logo: var(--text);
+	--logo: var(--txt);
 }
 /*____________________
  |__ PAGE DEFAULTS __|

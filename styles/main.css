@@ -351,12 +351,27 @@ button {
 /*______________________
  |__ SCREENS: MOBILE __|
 */
-	.content-column { width: 90vw; }
 @media screen and (max-width: 41.5rem) {
+	main { width: 90vw; }
+	#theme {
+		top: 2.2rem;
+		right: calc(50% - 2rem);
+	}
+	#theme:hover, #theme:focus-visible {
+		transform: translateY(-.2em);
+	}
+	#theme:active {
+		transform: translateY(.1em);
+	}
 	.nav-desktop { display: none; }
 	.nav-mobile { display: block; }
-	.socials { margin-top: .8rem; }
+	h1 { margin-top: 2.6rem }
 	.gallery { width: 28%; }
+	footer {
+		flex-direction: column;
+		p { text-align: center; margin: 1rem auto; line-height: 2rem; }
+	}
+	footer > img { margin: auto }
 }
 
 

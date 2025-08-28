@@ -53,6 +53,7 @@ main {
 	display: grid;
 	gap: .6em;
 	grid-template-areas:
+		"header"
 		"vid-title"
 		"vid-embed"
 		"synopsis"
@@ -64,6 +65,7 @@ main {
 		"transcript"
 		"bonus";
 }
+header { grid-area: header }
 h1 {
 	grid-area: vid-title;
 	margin-top: 2.5rem;
@@ -598,6 +600,7 @@ footnav {
 	main {
 		grid-template-columns: repeat(12, [col-start] 1fr);
 		grid-template-areas:
+			"header header"
 			"vid-title vid-title"
 			"vid-embed vid-embed"
 			"synopsis synopsis"

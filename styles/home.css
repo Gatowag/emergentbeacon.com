@@ -24,29 +24,10 @@
 
 }
 
-
 /*____________________
- |__ LATEST VIDEOS __|
-	-> container for each video
-		-> system to emphasize hovered entries
-	-> thumbnail styling
-	-> position each thumbnail on sprite sheet
-	-> style title link
-	-> style info text (date, description)
 */
-.vid-entry {
-	display: grid;
-	grid-template-columns: 225px auto auto;
-	padding: .5em .5em;
-	margin-top: .6em;
-	opacity: 1;
-	border-radius: .3em;
-	transition: .2s ease;
 }
 
-	.vid-entry:hover {
-		background: #0000004d;
-		transition: .4s ease;
 playlist-buttons {
 	display: inline-block;
 	margin: .5rem auto;
@@ -60,66 +41,14 @@ playlist-buttons {
 		font-optical-sizing: auto;
 		font-weight: 600;
 	}
-	.vid-block:hover > .vid-entry {
-		opacity: 0.8;
 	button:hover, button:focus-visible {
 		background-color: var(--playlist-btn-hover);
 		color: var(--playlist-hover-txt);
 		transform: translateY(-.2em);
 	}
-	.vid-block:hover > .vid-entry:hover {
-		opacity: 1;
 	button:active {
 		transform: translateY(.1em);
 	}
-
-.vid-block img {
-	width: 220px;
-	height: 124px;
-	border-radius: .45em;
-	object-fit: cover;
-}
-.vid-block img:hover {
-	transform: translateY(-.125em) translateX(-.125em);
-	transition: .2s ease;
-	box-shadow: .125em .125em black;
-}
-
-.vid-block > .vid-entry:nth-of-type(1) img {
-	object-position: 0 0;
-}
-.vid-block > .vid-entry:nth-of-type(2) img {
-	object-position: 0 -124px;
-}
-.vid-block > .vid-entry:nth-of-type(3) img {
-	object-position: 0 -248px;
-}
-
-.vid-details {
-	text-align: left;
-	padding: .2rem 1rem;
-}
-.vid-details a {
-	color: black;
-	background-color: #33ffbb;
-	border-radius: .3rem;
-	padding: 0 .4rem;
-	text-decoration: none;
-	font-weight: 500;
-	margin-left: -.2rem;
-}
-.vid-details a:hover {
-	background-color: #ffdc3e;
-	color: black;
-}
-
-.vid-date {
-	font-size: .8rem;
-	margin-top: .4rem;
-}
-.vid-descript {
-	font-size: .9rem;
-	margin-top: .5rem;
 }
 
 

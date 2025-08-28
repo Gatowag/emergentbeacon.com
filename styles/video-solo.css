@@ -410,23 +410,28 @@ credits {
 		color: var(--synopsis-txt);
 		height: calc(100% - 3.6rem);
 		padding-bottom: 1em;
-	}
-	p {
-		text-align: left;
-		margin: 1em 1em 0;
+	
+		p {
+			text-align: left;
+			margin: 1em 1em 0;
 
-		credit-name {
-			color: #000000;
-			background: #e6e5e2;
-			display: block;
-			font-size: 1.2rem;
-			border-radius: .1rem;
-			padding: 0 .4rem;
+			credit-name {
+				color: #000000;
+				background: #e6e5e2;
+				display: block;
+				font-size: 1.2rem;
+				border-radius: .1rem;
+				padding: 0 .4rem;
+			}
+			credit-role {
+				display: block;
+				font-size: .8rem;
+				margin: .5rem;
+			}
 		}
-		credit-role {
-			display: block;
-			font-size: .8rem;
-			margin: .5rem;
+	}
+}
+
 
 /*____________________
  |__ TRANSCRIPTION __|

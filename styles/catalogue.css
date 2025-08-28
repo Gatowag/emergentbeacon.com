@@ -57,6 +57,14 @@ grid-item {
 		margin-bottom: .6em;
 	}
 }
+#img-tenere {
+	content: url("/assets/vid-grid.jpg");
+	object-position: 0 0;
+	transition: .5s ease;
+}
+#img-tenere:hover {
+	content: url("/assets/video-previews/eb009--preview.gif");
+}
 
 
 button {

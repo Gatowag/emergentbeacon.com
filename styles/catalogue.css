@@ -161,7 +161,11 @@ playlist-items {
 shorts {
 	display: flex;
 	justify-content: space-evenly;
-	margin:3em auto 2em;
+	margin: 3rem auto 2rem;
+	padding: 1rem 1rem 2rem;
+	overflow-x: scroll;
+	border: .2rem solid black;
+	background-color: rgba(0, 0, 0, 0.4);
 
 	iframe {
 		border-radius: 1em;

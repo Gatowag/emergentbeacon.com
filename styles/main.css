@@ -5,7 +5,7 @@
 	--background: #26292e;
 	--secondary: #000000;
 	--txt: #ffffff;
-	--link: #ffdd33;
+	--accent: #ffdd33;
 	--internal-link: #33ffbb;
 	--pledge: #2d4f63;
 	--playlist-item: #141414;
@@ -19,13 +19,13 @@
 	--background: #e8e9e0;
 	--secondary: #ffffff;
 	--txt: #29292e;
-	--link: #af3727;
+	--accent: #af3727;
 	--internal-link: #33ffbb;
 	--pledge: #d6d2af;
 	--playlist-item: #d6d2af;
 	--playlist-btn: #ffdd33;
 	--playlist-select-back: #b3ac89;
-	--playlist-hover-back: var(--link);
+	--playlist-hover-back: var(--accent);
 	--playlist-hover-txt: var(--secondary);
 	--logo: var(--txt);
 }
@@ -33,7 +33,7 @@
 	--background: #ffffff;
 	--secondary: #dfdfdf;
 	--txt: #000000;
-	--link: #236dce;
+	--accent: #236dce;
 	--internal-link: #33ffbb;
 	--pledge: var(--background);
 	--playlist-item: var(--background);
@@ -90,7 +90,7 @@ nav {
 	font-size: .8rem;
 }
 .nav-mobile a:active {
-	color: var(--link);
+	color: var(--accent);
 }
 
 
@@ -200,7 +200,7 @@ button {
  |__ ANIMATED SUPPORT LINKS __|
 */
 .support-link {
-	color: var(--link);
+	color: var(--accent);
 	font-weight: 600;
 	text-decoration: none;
 	position: relative;

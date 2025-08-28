@@ -594,7 +594,7 @@ footnav {
 /*__________________________
  |__ SCREENS: NON-MOBILE __|
 */
-@media screen and (min-width: 37rem) {
+@media screen and (min-width: 41.5rem) {
 	main {
 		grid-template-columns: repeat(12, [col-start] 1fr);
 		grid-template-areas:

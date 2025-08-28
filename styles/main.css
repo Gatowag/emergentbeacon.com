@@ -350,8 +350,8 @@ button {
 /*______________________
  |__ SCREENS: MOBILE __|
 */
-@media screen and (max-width: 37em) {
 	.content-column { width: 90vw; }
+@media screen and (max-width: 41.5rem) {
 	.nav-desktop { display: none; }
 	.nav-mobile { display: block; }
 	.socials { margin-top: .8rem; }

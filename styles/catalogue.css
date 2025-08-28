@@ -184,7 +184,7 @@ shorts {
 /*   ______________________
 	|__ SCREENS: MOBILE __|
 */
-@media screen and (max-width: 34rem) {
+@media screen and (max-width: 41.5rem) {
 	grid-item { width: 94%; }
 }
 

@@ -551,18 +551,18 @@ footnav {
 			top: 120%;
 			transition: .2s ease;
 		}
-		span:first-of-type {
-			text-align: left;
-			left: 0;
-		}
-		span:last-of-type {
-			text-align: right;
-			right: 0;
-		}
 	}
 	tooltip:hover span {
 		visibility: visible;
 		opacity: 1;
+	}
+	tooltip:first-of-type > span {
+		text-align: left;
+		left: 0;
+	}
+	tooltip:last-of-type > span {
+		text-align: right;
+		right: 0;
 	}
 	a {
 		margin-top: -.4rem;

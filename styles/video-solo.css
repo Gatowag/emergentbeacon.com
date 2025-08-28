@@ -58,6 +58,7 @@ main {
 		"vid-embed"
 		"synopsis"
 		"corrections"
+		"clarifications"
 		"source-info"
 		"source-media"
 		"music"
@@ -101,7 +102,7 @@ time {
 /*__________________
  |__ CORRECTIONS __|
 */
-correction-area {
+corrections, clarifications {
 	grid-area: corrections;
 	background-color: var(--correction-fill);
 	color: var(--correction-txt);
@@ -162,6 +163,8 @@ container {
 	background-color: var(--source-fill);
 	color: var(--source-txt);
 	border: .2rem solid black;
+clarifications {
+	grid-area: clarifications;
 }
 
 /*________________
@@ -605,17 +608,18 @@ footnav {
 			"vid-embed vid-embed"
 			"synopsis synopsis"
 			"corrections corrections"
+			"clarifications clarifications"
 			"source-info source-media"
 			"music credits"
 			"music transcript"
 			"bonus bonus";
 	}
-	h1, #yt-player, synopsis, correction-area, bonus { grid-column: col-start / -1; }
 	sources-info { grid-column: col-start / span 6; }
 	sources-media { grid-column: col-start 7 / -1; }
 	music { grid-column: col-start / 8;
 			grid-row: 6 / 8; }
 	credits, transcription { grid-column: col-start 8 / -1; }
+	h1, #yt-player, synopsis, corrections, clarifications, bonus { grid-column: col-start / -1 }
 }
 
 

@@ -174,7 +174,7 @@ sources-info {
 		height: fit-content;
 		min-height: 12rem;
 		max-height: 24.3rem;
-		overflow-y: scroll;
+		overflow-y: auto;
 		scroll-padding-top: 1rem;
 		text-align: left;
 		padding: 0 1rem;
@@ -287,7 +287,7 @@ sources-media {
 		height: fit-content;
 		min-height: 12rem;
 		max-height: 24.3rem;
-		overflow-y: scroll;
+		overflow-y: auto;
 		scroll-padding-top: 1rem;
 		text-align: left;
 		padding: 0 1rem;

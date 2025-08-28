@@ -609,8 +609,6 @@ footnav {
 			"music transcript"
 			"bonus bonus";
 	}
-	music { grid-column: col-start / 8;
-			grid-row: 6 / 8; }
 	credits, transcription { grid-column: col-start 8 / -1; }
 	h1, #yt-player, synopsis, corrections, clarifications, bonus { grid-column: col-start / -1 }
 	sources-info { grid-column: col-start / span 6 }
@@ -621,6 +619,8 @@ footnav {
 	main:not(:has(sources-info)) {
 		sources-media { grid-column: col-start / -1 }
 	}
+	music { grid-column: col-start / 7;
+			grid-row: 8 / 9; }
 }
 
 

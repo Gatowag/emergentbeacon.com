@@ -615,6 +615,12 @@ footnav {
 	h1, #yt-player, synopsis, corrections, clarifications, bonus { grid-column: col-start / -1 }
 	sources-info { grid-column: col-start / span 6 }
 	sources-media { grid-column: col-start 7 / -1 }
+	main:not(:has(sources-media)) {
+		sources-info { grid-column: col-start / -1 }
+	}
+	main:not(:has(sources-info)) {
+		sources-media { grid-column: col-start / -1 }
+	}
 }
 
 

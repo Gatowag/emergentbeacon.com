@@ -1,21 +1,33 @@
 let palette = localStorage.getItem("palette");
 const themeSwitch = document.getElementById("theme");
 
-if (palette === "dark") { enableDark() }
-else if (palette === "light") { enableLight() }
-else if (palette === "contrast") { enableContrast() }
+if (palette === "dark") {
+	enableDark();
+	updateThemeButton("1");
+}
+else if (palette === "light") {
+	enableLight();
+	updateThemeButton("2");
+}
+else if (palette === "contrast") {
+	enableContrast();
+	updateThemeButton("3");
+}
 
 themeSwitch.addEventListener("click", () => {
 	let palette = localStorage.getItem("palette");
 
 	if (palette == "dark") {
 		enableLight();
+		updateThemeButton("2");
 		updateBandcamp(".mode-light");
 	} else if (palette == "light") {
-		enableContrast()
+		enableContrast();
+		updateThemeButton("3");
 		updateBandcamp(".mode-contrast");
 	} else {
-		enableDark()
+		enableDark();
+		updateThemeButton("1");
 		updateBandcamp(":root");
 	}
 })
@@ -29,6 +41,15 @@ function updateBandcamp(b) {
 		let a = s.indexOf("/linkcol=");
 		bcamp.src = (s.slice(0, a + 9) + lColor + s.slice(a + 9 + 6, -1));
 	}
+}
+
+function updateThemeButton(id) {
+	a = [1, 2, 3];
+	b = a.splice(id - 1, 1);
+	document.getElementById("theme" + id).setAttribute("opacity", "1");
+	a.forEach(element => {
+		document.getElementById("theme" + element).setAttribute("opacity", "0.4");
+	});
 }
 
 function enableLight() {

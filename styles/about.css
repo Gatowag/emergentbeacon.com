@@ -43,7 +43,15 @@ contact {
 logo {
 	svg {
 		width: 6rem;
-		fill: var(--logo);
+		
+		#shell {
+			fill: var(--logo-form);
+			stroke: #ffffff;
+			stroke-width: var(--logo-stroke);
+		}
+		#interior {
+			fill: var(--logo-int)
+		}
 	}
 }
 button:hover {

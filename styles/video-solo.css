@@ -377,31 +377,6 @@ button:hover, button:active {
 
 
 /*____________________
- |__ TRANSCRIPTION __|
-*/
-transcription {
-	grid-area: transcript;
-
-	container {
-		padding: .2em 0 1em;
-		background: #000000;
-
-		aside {
-			background:#e6e5e2;
-			color: #141414;
-			height: 18rem;
-			padding: 0 1rem;
-			margin: 1rem 1rem;
-			text-align: left;
-			line-height: 1rem;
-			font-size: .9rem;
-			overflow-y: scroll;
-		}
-	}
-}
-
-
-/*____________________
  |__ MUSIC PREVIEW __|
 */
 music {
@@ -457,6 +432,27 @@ credits {
 			display: block;
 			font-size: .8rem;
 			margin: .5rem;
+
+/*____________________
+ |__ TRANSCRIPTION __|
+*/
+transcription {
+	grid-area: transcript;
+
+	container {
+		padding: .2rem 0 1rem;
+		background: #000000;
+
+		aside {
+			background:#e6e5e2;
+			color: #141414;
+			height: 18rem;
+			padding: 0 1rem;
+			margin: 1rem 1rem;
+			text-align: left;
+			line-height: 1rem;
+			font-size: .9rem;
+			overflow-y: scroll;
 		}
 	}
 }

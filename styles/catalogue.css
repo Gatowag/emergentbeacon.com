@@ -181,17 +181,15 @@ shorts {
 	opacity: 1;
 }
 
-/*______________________
+/*   ______________________
 	|__ SCREENS: MOBILE __|
-	-> adjust grid size
 */
 @media screen and (max-width: 34rem) {
 	grid-item { width: 94%; }
 }
 
-/*______________________
+/*   ______________________
 	|__ SCREENS: >1080p __|
-	-> adjust grid size
 */
 @media screen and (min-width: 121em) {
 	grid-item {

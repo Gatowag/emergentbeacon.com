@@ -1,13 +1,3 @@
-/*____________________
- |__ YOUTUBE EMBED __|
-*/
-.yt-player {
-	border-radius: 0 0 1rem 1rem;
-	aspect-ratio: 2;
-	width: calc(100% - .4rem);
-	height: 100%;
-}
-
 }
 
 
@@ -25,7 +15,16 @@
 }
 
 /*____________________
+ |__ YOUTUBE EMBED __|
 */
+.yt-player {
+	display: flex;
+	border-radius: 0 0 2rem 2rem;
+	aspect-ratio: 2;
+	width: calc(100% - .4rem);
+	height: 100%;
+	background-color: black;
+	margin-bottom: 1rem;
 }
 
 playlist-buttons {

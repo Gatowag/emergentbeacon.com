@@ -71,6 +71,12 @@ h1 {
 	grid-area: vid-title;
 	margin-top: 2.5rem;
 }
+time {
+	font-family: "Roboto Mono", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
 #yt-player {
 	grid-area: vid-embed;
 	background-color: black;
@@ -90,12 +96,6 @@ synopsis {
 	line-height: 1.3rem;
 	border: .2rem solid black;
 	margin-top: -1.1em;
-}
-time {
-	font-family: "Roboto Mono", serif;
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-style: normal;
 }
 
 

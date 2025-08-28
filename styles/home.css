@@ -22,19 +22,6 @@
 	font-size: .8rem;
 }
 
-
-/*____________________
- |__ SHORTS EMBEDS __|
-	-> container style
-	-> hover animation
-*/
-.shorts-frame {
-	border-radius: 1em;
-	opacity: 0.7;
-	transition: .5s ease;
-}
-.shorts-frame:hover, .shorts-frame:active {
-	opacity: 1;
 }
 
 

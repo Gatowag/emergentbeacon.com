@@ -1,16 +1,3 @@
-/*_____________________
- |__ COLOR PALETTES __|
-*/
-:root {
-	--bcampLink: #236dce;
-}
-.mode-light {
-	--bcampLink: var(--link);
-}
-.mode-contrast {
-	--bcampLink: var(--link);
-}
-
 main {
 	width: 80vw;
 }

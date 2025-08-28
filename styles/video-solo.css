@@ -71,12 +71,27 @@ h1 {
 	grid-area: vid-title;
 	margin-top: 2.5rem;
 }
+h2 {
+	background-color: var(--h2-fill);
+	color: var(--h2-txt);
+	text-align: center;
+	margin: 0 0 -3px;
+	padding: .15rem 0;
+	border: .2rem solid black;
+}
 time {
 	font-family: "Roboto Mono", serif;
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
 }
+container {
+	display: block;
+	background-color: var(--source-fill);
+	color: var(--source-txt);
+	border: .2rem solid black;
+}
+
 #yt-player {
 	grid-area: vid-embed;
 	background-color: black;
@@ -150,19 +165,6 @@ corrections, clarifications {
 		font-style: italic;
 	}
 }
-h2 {
-	background-color: var(--h2-fill);
-	color: var(--h2-txt);
-	text-align: center;
-	margin: 0 0 -3px;
-	padding: .15rem 0;
-	border: .2rem solid black;
-}
-container {
-	display: block;
-	background-color: var(--source-fill);
-	color: var(--source-txt);
-	border: .2rem solid black;
 clarifications {
 	grid-area: clarifications;
 }

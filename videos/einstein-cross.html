@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap">
+		<link rel="stylesheet" href="/styles/main.css">
+		<link rel="stylesheet" href="/styles/video-solo.css">
+		<script type="text/javascript" src="/color-palettes.js" defer></script>
+	</head>
+
+	<body>
+		<nav class="nav-desktop">
+			<span><a href="/home.html">/ home</a> <a href="/videos.html">/ videos</a> / einstein-cross.html</span>
+		</nav>
+
+		<main>
+			<header class="content-column">
+				<nav class="nav-mobile">
+					<span><a href="/home.html">/ home</a></span>
+					<span><a href="/videos.html">/ videos</a></span>
+					<span><a href="/music.html">/ music</a></span>
+					<span>/ einstein-cross.html</span>
+				</nav>
+
+				<button id="theme">
+					<svg id="theme1" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M380-880q83 0 156 31.5T663-763q54 54 85.5 127T780-480q0 83-31.5 156T663-197q-54 54-127 85.5T380-80q-53 0-103.5-13.5T180-134q93-54 146.5-146T380-480q0-108-53.5-200T180-826q46-27 96.5-40.5T380-880Z"/></svg>
+					<svg id="theme2" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+					<svg id="theme3" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm40-83q119-15 199.5-104.5T800-480q0-123-80.5-212.5T520-797v634Z"/></svg>
+				</button>
+			</header>
+
+			<h1>What Is This Cosmic Mirage?</h1>
+			<video id="yt-player"></video>
+
+			<synopsis>
+				You look up into the sky with your telescope and see something unusual, an orderly formation of bright points in the sky. Should this be expected? Have you just never noticed it before? What could be causing it?<br><br>The questions that arise from seeing an Einstein cross point to very revealing mechanics that underlie the large scale interactions of the universe. A simple question, "What is this?" leads to a wealth of knowledge.
+			</synopsis>
+
+			<corrections>
+				<h4>CORRECTIONS</h4>
+				<ul>
+					<li>"Geodesic" and "spectroscopy" both have more commonly accepted pronunciations than was used in the video. You can hear examples of both in their respectively linked dictionary entries. <div style="margin-top:.8em;">Geodesic - <a href="https://dictionary.com/browse/geodesic">dictionary.com/browse/geodesic</a><br> <span style="font-size:90%; font-style:italic; font-weight:500;">jee-uh-des-ik, -dee-sik</span></div> <div style="margin-top:.8em;">Spectroscopy - <a href="https://dictionary.com/browse/spectroscopy">dictionary.com/browse/spectroscopy</a><br> <span style="font-size:90%; font-style:italic; font-weight:500;">spek-tros-kuh-pee, spek-truh-skoh-pee</span></li>
+					<span>(reported by )</span>
+				</ul>
+			</corrections>
+
+			<sources-info>
+				<h2>Info Sources</h2>
+				<container id="infoContainer">
+					<citation id="Info1">
+						<number>1</number>
+						<blockquote>
+							"I was scanning through Wikipedia, where I got distracted by this photo."
+							<time datetime="PT0M33S">timecode <a href="#" onclick="playerSeekTo(player, 33); return false;">0:33</a></time>
+						</blockquote>
+						<info>
+							<cite>the photo that piqued my interest</cite>
+							<info-details>
+								2012, 
+								ESA/Hubble & NASA<br>
+							</info-details>
+							<origin>
+								<a href="https://en.wikipedia.org/wiki/Quasar#/media/File:UZC_J224030.2+032131.jpg">en.wikipedia.org/wiki/Quasar#/media/File:UZC_J224030.2+032131.jpg</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Info2">
+						<number>2</number>
+						<blockquote>
+							"In this case, a spectroscopic analysis reasonably confirms that the redshifted images that we're looking at are a quasar."
+							<time datetime="PT02M36S">timecode <a href="#" onclick="playerSeekTo(player, 156); return false;">02:36</a></time>
+						</blockquote>
+						<info>
+							<cite>2237+0305: a new and unusual gravitational lens</cite>
+							<info-details>
+								1985, Huchra et al.<br>
+								Astronomical Journal, Vol. 90<br>
+								p. 691-696
+							</info-details>
+							<origin>
+								<a href="https://ui.adsabs.harvard.edu/abs/1985AJ.....90..691H/abstract">ui.adsabs.harvard.edu/abs/1985AJ.....90..691H/abstract</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Info3">
+						<number>3</number>
+						<blockquote>
+							"I mean, [Albert Einstein] did have a few things to say about Jesus, but—"
+							<time datetime="PT03M15S">timecode <a href="#" onclick="playerSeekTo(player, 195); return false;">03:15</a></time>
+						</blockquote>
+						<info>
+							<cite>einstein's quote regarding the abuse of religion for personal gain</cite>
+							<info-details>
+								Wikipedia<br>
+								accessed 2020<br>
+								§ Jewish identity
+							</info-details>
+							<origin>
+								<a href="https://en.wikipedia.org/wiki/Religious_and_philosophical_views_of_Albert_Einstein#Jewish_identity">en.wikipedia.org/wiki/Religious_and_philosophical_views_of_Albert_Einstein#Jewish_identity</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Info4">
+						<number>4</number>
+						<multi>
+							<tab-align>
+								<tab-part>A</tab-part>
+								<blockquote>
+									"The path of light being influenced by the gravity of massive objects was theorized, in part, as early as the late 1700s. Back then it was in the context of early ideas of black holes, which were then called 'dark stars.'"<br>
+									<time datetime="PT04M17S">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 257); return false;">04:17</a></time>
+								</blockquote>
+							</tab-align>
+							<tab-align>
+								<tab-part>B</tab-part>
+								<blockquote>
+									"As late as 1936, Einstein is quoted as saying, 'Of course, there is no hope in observing this phenomenon directly.'"<br>
+									<time datetime="PT15M50S">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 257); return false;">15:50</a></time>
+								</blockquote>
+							</tab-align>
+							<info>
+								<cite>the legacy of Einstein's eclipse, gravitational lensing</cite>
+								<info-details>
+									2004, Cervantes-Cota et al.<br>
+									A: §1. Introduction, p. 2, ¶ 2<br>B:  § 9. Czech Mates, p. 14, ¶ 3
+								</info-details>
+								<origin>
+									<a href="https://arxiv.org/abs/1912.07674">arxiv.org/abs/1912.07674</a>
+								</origin>
+							</info>
+						</multi>
+					</citation>
+					<citation id="Info5">
+						<number>5</number>
+						<blockquote>
+							"Quasars are supermassive black holes that ... heat up so much that, in the more extreme cases, can radiate the same amount of light as a thousand galaxies."
+							<time datetime="PT05M14S">timecode <a href="#" onclick="playerSeekTo(player, 314); return false;">05:14</a></time>
+						</blockquote>
+						<info>
+							<cite>Hubble’s observations of bright quasar 3C 273</cite>
+							<info-details>
+								2013, 
+								NASA<br>
+								accessed 2022<br>
+								¶ 3
+							</info-details>
+							<origin>
+								<a href="https://nasa.gov/content/goddard/nasas-hubble-gets-the-best-image-of-bright-quasar-3c-273/#.WoSaPOdG2Uk">nasa.gov/content/goddard/nasas-hubble-gets-the-best-image-of-bright-quasar-3c-273/#.WoSaPOdG2Uk</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Info6">
+						<number>6</number>
+						<multi>
+							<tab-align>
+								<tab-part>A</tab-part>
+								<blockquote>
+									"Gravitational lensing ... tends to both brighten and magnify distant objects."<br>
+									<time datetime="PT05M47S">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 347); return false;">05:47</a></time>
+								</blockquote>
+							</tab-align>
+							<tab-align>
+								<tab-part>B</tab-part>
+								<blockquote>
+									"There are centers to galaxy clusters, but they're never axially-symmetric, they have lumpy mass distributions, and they're home to complex, invisible dark matter structures."<br>
+									<time datetime="PT08M17S">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 347); return false;">08:17</a></time>
+								</blockquote>
+							</tab-align>
+							<tab-align>
+								<tab-part>C</tab-part>
+								<blockquote>
+									"In every multiply-imaged gravitational lens, you're expected to see a total odd number of images."<br>
+									<time datetime="PT11M39S">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 347); return false;">11:39</a></time>
+								</blockquote>
+							</tab-align>
+							<info>
+								<cite>Gravitational Lensing Review</cite>
+								<info-details>
+									2010, Bartelmann M.<br>
+									A: § 6.4 Cosmic magnification<br>B: § 5. Galaxy clusters<br>C: p. 14, ¶ 1
+								</info-details>
+								<origin>
+									<a href="https://arxiv.org/abs/1010.3829">arxiv.org/abs/1010.3829</a>
+								</origin>
+							</info>
+						</multi>
+					</citation>
+					<citation id="Info7">
+						<number>7, 8</number>
+						<blockquote>
+							"We can see [time delay] when the lensed object has intermittent brightness. So if it’s flickering in some sort of way, that interval will show up at different times, and the images from each path can be delayed anywhere from hours to years."
+							<time datetime="PT06M05S">timecode <a href="#" onclick="playerSeekTo(player, 365); return false;">06:05</a></time>
+						</blockquote>
+						<info>
+							<cite>observational determination of the time delays in gravitational lens system Q2237+030</cite>
+							<info-details>
+								2005, Vakulik et al.<br>
+							</info-details>
+							<origin>
+								<a href="https://arxiv.org/abs/astro-ph/0509545">arxiv.org/abs/astro-ph/0509545</a>
+							</origin>
+						</info>
+					</citation>
+						<info>
+							<cite>multiple images of a highly magnified supernova formed by an early-type cluster galaxy lens</cite>
+							<info-details>
+								2014, Kelly et al.<br>
+							</info-details>
+							<origin>
+								<a href="https://arxiv.org/abs/1411.6009">arxiv.org/abs/1411.6009</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Info9">
+						<number>9</number>
+						<blockquote>
+							"Gravitationally lensed time delay 'has been utilized as another method for scientists to get increasingly accurate observations of the cosmological constant.'"
+							<time datetime="PT06M22S">timecode <a href="#" onclick="playerSeekTo(player, 382); return false;">06:22</a></time>
+						</blockquote>
+						<info>
+							<cite>the mass distribution of the cluster 0957+561 from gravitational lensing</cite>
+							<info-details>
+								1996, Fischer et al.<br>
+							</info-details>
+							<origin>
+								<a href="https://arxiv.org/abs/astro-ph/9608117">arxiv.org/abs/astro-ph/9608117</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Info10">
+						<number>10</number>
+						<blockquote>
+							"This expedition was so important" ... "because it was the first experiment to give testable, reliable, convincing data that favored Einstein's theory of general relativity over the Newtonian models."
+							<time datetime="PT14M27S">timecode <a href="#" onclick="playerSeekTo(player, 867); return false;">14:27</a></time>
+						</blockquote>
+						<info>
+							<cite>the deflection of light by the sun's gravitational field, from observations made at the total eclipse of May 29, 1919</cite>
+							<info-details>
+								1919, Dyson F., Eddington A., Davidson C.<br>
+								The Royal Society<br>
+								p. 43, ¶ 1 & fig 2
+							</info-details>
+							<origin>
+								<a href="https://royalsocietypublishing.org/doi/pdf/10.1098/rsta.1920.0009">royalsocietypublishing.org/doi/pdf/10.1098/rsta.1920.0009</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Info11">
+						<number>11, 12</number>
+						<blockquote>
+							"There's a team in the planning phase for this project where they send probes out far enough from our Sun that it can spin around, take a photo of the Sun, and we can observe our own local Einstein rings, which we can then reconstruct into images of stars or planets and we would effectively turn our sun into a solar system-sized telescope."
+							<time datetime="PT14M48S">timecode <a href="#" onclick="playerSeekTo(player, 888); return false;">14:48</a></time>
+						</blockquote>
+						<info>
+							<cite>The Solar Gravitational Lens will Map Exoplanets. Seriously.</cite>
+							<info-details>
+								2020, 
+								Launch Pad Astronomy<br>
+							</info-details>
+							<origin>
+								<a href="https://youtu.be/NQFqDKRAROI">youtu.be/NQFqDKRAROI</a>
+							</origin>
+						</info>
+					</citation>
+						<info>
+							<cite>Direct Multipixel Imaging and Spectroscopy of an Exoplanet with a Solar Gravity Lens Mission</cite>
+							<info-details>
+								2020, Turyshev et al.<br>
+							</info-details>
+							<origin>
+								<a href="https://arxiv.org/abs/2002.11871">arxiv.org/abs/2002.11871</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Info13">
+						<number>13</number>
+						<blockquote>
+							"The talks were advertised as the Scale of the Universe!"
+							<time datetime="PT17M30S">timecode <a href="#" onclick="playerSeekTo(player, 1050); return false;">17:30</a></time>
+						</blockquote>
+						<info>
+							<cite>the great debate: <a href="https://web.archive.org/web/20160629152137/http://www.nasonline.org/assets/content-images/archives/great-debate-agenda-1.jpg">program agenda</a></cite>
+							<info-details>
+								1920, 
+								National Academy of Sciences<br>
+								accessed 2020<br>
+							</info-details>
+							<origin>
+								<a href="https://web.archive.org/web/20200808200748/http://www.nasonline.org/about-nas/history/archives/milestones-in-NAS-history/the-great-debate-of-1920.html">web.archive.org/web/20200808200748/http://www.nasonline.org/about-nas/history/archives/milestones-in-NAS-history/the-great-debate-of-1920.html</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Info14">
+						<number>14</number>
+						<blockquote>
+							"Curtis wanted a real spirited debate, he wanted to get people really riled up. He was a lively guy, a great speaker, and he intuitively understood that the friction between the two competing visions of the universe would just make for an exciting show for the audience."
+							<time datetime="PT18M54S">timecode <a href="#" onclick="playerSeekTo(player, 1134); return false;">18:54</a></time>
+						</blockquote>
+						<info>
+							<cite>the great debate: what really happened</cite>
+							<info-details>
+								1976, Hoskin M.<br>
+								J. Hist. Astron., 7, 169-182 / NASA<br>
+								accessed 2020<br>
+							</info-details>
+							<origin>
+								<a href="https://apod.nasa.gov/debate/1920/cs_real.html">apod.nasa.gov/debate/1920/cs_real.html</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Info15">
+						<number>15</number>
+						<blockquote>
+							"He thought that the Milky Way was way smaller than we believe it to be, and he had a bit of an anthropocentric belief that we're located in the center of the Milky Way kind of near the galactic core."
+							<time datetime="PT20M59S">timecode <a href="#" onclick="playerSeekTo(player, 1259); return false;">20:59</a></time>
+						</blockquote>
+						<info>
+							<cite>NRC transcripts of the great debate</cite>
+							<info-details>
+								1921, Shapley H., Curtis H.<br>
+								National Research Council Vol. 2, Part 3, Number 11, pp 171-194 / NASA<br>
+								accessed 2022<br>
+								§ PART II: DIMENSIONS AND STRUCTURE OF THE GALAXY
+							</info-details>
+							<origin>
+								<a href="https://apod.nasa.gov/htmltest/gifcity/cs_nrc.html">apod.nasa.gov/htmltest/gifcity/cs_nrc.html</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Info16">
+						<number>16, 17, 18</number>
+						<blockquote>
+							"Current estimates suggest a thickness of ~900 light-years and a stellar disk diameter of up to 200,000 light-years (or as large as 1,900,00 light-years including the dark halo)."
+							<time datetime="PT21M02S">timecode <a href="#" onclick="playerSeekTo(player, 1262); return false;">21:02</a></time>
+						</blockquote>
+						<info>
+							<cite>disk stars in the Milky Way detected beyond 25 kpc from its center</cite>
+							<info-details>
+								2018, López-Corredoira et al.<br>
+								A&A Volume 612, April 2018<br>
+							</info-details>
+							<origin>
+								<a href="https://aanda.org/articles/aa/abs/2018/04/aa32880-18/aa32880-18.html">aanda.org/articles/aa/abs/2018/04/aa32880-18/aa32880-18.html</a>
+							</origin>
+						</info>
+						<info>
+							<cite>the edge of the galaxy</cite>
+							<info-details>
+								2020, Deason et al.<br>
+							</info-details>
+							<origin>
+								<a href="https://arxiv.org/abs/2002.09497">arxiv.org/abs/2002.09497</a>
+							</origin>
+						</info>
+						<info>
+							<cite>the Milky Way's stellar disk</cite>
+							<info-details>
+								2013, Rix H., Bovy J.<br>
+							</info-details>
+							<origin>
+								<a href="https://arxiv.org/abs/1301.3168">arxiv.org/abs/1301.3168</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Info19">
+						<number>19</number>
+						<blockquote>
+							"In many ways, they were operating in the dark. Both figuratively and literally, thanks to a lack of light pollution."
+							<time datetime="PT22M05S">timecode <a href="#" onclick="playerSeekTo(player, 1325); return false;">22:05</a></time>
+						</blockquote>
+						<info>
+							<cite>Urban Lighting, Light Pollution and Society</cite>
+							<info-details>
+								2014, Pottharst et al.<br>
+								Taylor & Francis<br>
+								p. 1
+							</info-details>
+							<origin>
+								<a href="https://google.com/books/edition/Urban_Lighting_Light_Pollution_and_Socie/V7wbBQAAQBAJ">google.com/books/edition/Urban_Lighting_Light_Pollution_and_Socie/V7wbBQAAQBAJ</a>
+							</origin>
+						</info>
+					</citation>
+				</container>
+				<form id="infoSearchBanner">
+					<input id="infoInput" placeholder="#" onfocus="this.value=''">
+					<button id="infoBtn" type="submit" onclick="infoSearch()">go to</button>
+				</form>
+			</sources-info>
+
+			<music>
+				<h2>Music</h2>
+				<iframe id="bandcamp-player" src="https://bandcamp.com/EmbeddedPlayer/album=3567384720/size=large/bgcol=333333/linkcol=6decc2/artwork=small/transparent=true/" seamless><a href="https://emergentbeacon.bandcamp.com/album/cosmic-mirage">Cosmic Mirage by Emergent Beacon</a></iframe>
+				<download>
+					available on all major platforms<br>
+					<button type="button" onclick="document.location='/music/cosmic-mirage.html'" value="Go to music details page.">buy or stream</button>
+				</download>
+			</music>
+
+			<credits>
+				<h2>Credits</h2>
+				<container>
+					<p>
+						<credit-name>Brandt Hughes</credit-name>
+						<credit-role>research, writing, host, camera operator, audio engineer, music producer, editor</credit-role>
+						<credit-name>Jason Murphy</credit-name>
+						<credit-role>additional audio engineering</credit-role>
+						<credit-name>Bryce Castillo</credit-name>
+						<credit-role>additional audio engineering, additional camera operating</credit-role>
+						<credit-name>Michael Merrifield</credit-name>
+						<credit-role>twitter advice</credit-role>
+					</p>
+				</container>
+			</credits>
+
+			<transcription>
+				<h2>Transcript</h2>
+				<container>
+					<aside>
+						<p>
+							The vastness of the cosmos is home to unexpected outcomes, unseen observers, and improbable anomalies.<br><br>Despite knowing that, despite embodying its very truth, maybe even for that reason, I can't help but be inescapably paired  to any sort of phenomenon that's as rare as I am.<br><br>And I found just such a thing.<br><br>This is an Einstein Cross.<br><br>I was scanning through Wikipedia, where I got distracted by this photo.<br><br>It was simply described as "a cosmic mirage," where these four surrounding spots were all actually the same object.<br><br>Hmm, curious.<br><br>To me, one of the beautiful truisms of science is that any sort of surprising result, clearly exposes an incomplete understanding of the mechanics that led to that outcome.<br><br>So, if I find something like this that I don't particularly understand very well, I'm going to start speculating.<br><br>So my first thought is, if I'm looking through a telescope and I happen to observe four identical objects in the sky that maybe are the same thing, I'm thinking, "You know what?<br><br>I [garbled] up.<br><br>"Maybe there's a scratch in the optics or something  giving me a little bit of a "blurred double vision, "because let's just be honest, that's a more plausible explanation." But we probably wouldn't even be talking about this if it just amounted to user error or bad glass, so I think we can safely rule those explanations out.<br><br>I can see other galaxies just fine and other astronomers, they can see the same anomaly as I do.<br><br>So we should probably get around to actually confirming that these four different objects are from the same source.<br><br>Otherwise, this video would kind of just be, "I saw four different things in the sky," and...<br><br>you could probably do that right now.<br><br>And we can try to confirm that these are duplicates  with this really clever technique called spectroscopy, where they measure the spectrum of light coming from a source.<br><br>It's important to remember that every celestial body we can see is detected by a combination of emitting light, reflecting light, and absorbing light.<br><br>The resulting spectrum of light can help identify cosmic bodies and establish a variety of properties of those materials whether they be stars, planets, nebulae, galaxies, and whatever else might be out there.<br><br>We can also use these readouts to establish its redshift, which is when the frequency of light gets elongated.<br><br>This is used in cosmology to determine an object's distance and movement.<br><br>In this case, a spectroscopic analysis reasonably confirms that the redshifted images that we're looking at are a quasar.<br><br>And what do you know, they are the same quasar.<br><br>Now, I should probably tell you that this whole time, those clever astronomers, they already had a pretty good idea of what was going on.<br><br>And despite how convincing an idea it may be, four galaxy-sized mirrors just isn't that feasible.<br><br>So what else could there be?<br><br>Well there's a hint in the name...<br><br>"Einstein Cross?" Might have a little something to do with, you guessed it...<br><br>Jesus.<br><br>Hold on, that-- that can't be right.<br><br>I mean he did have a few things to say about Jesus but-- Oh, oh.<br><br>Here it is.<br><br>Sorry, I misread that.<br><br>That's so embarrassing.<br><br>Relativity.<br><br>That thing that Einstein was always going on about.<br><br>This is actually one of a few natural consequences that arose out of general relativity, and it's called light deflection by means of gravitational lensing.<br><br>General relativity provides a framework for how we view spacetime, such that it gives a really useful description of how gravity works.<br><br>Matter distorts the curvature of spacetime, and objects naturally fall along that shape in what are called "geodesics." Which are, if we're simplifying, they're about the closest thing you can get to straight lines, when looking at an irregularly-shaped spacetime.<br><br>So from our perspective, it looks like a light takes a curved path to us when passing near massive objects, because the light is following its geodesic that dips into the curvature of that spacetime, and goes fast enough to escape  that massive object's sphere of influence.<br><br>All of this to say, the path of light is effected by gravity.<br><br>The path of light being influenced by the gravity of massive objects was theorized, in part, as early as the late 1700s.<br><br>Back then it was in the context of early ideas of black holes which were then called "dark stars." However, this ended up being a rudimentary description as it was constrained by Newtonian physics.<br><br>It wasn't until Einstein's general theory of relativity was published in 1915, that scientific theory had culminated in a rigorous-enough tool set to be able to more reliably describe this interaction.<br><br>What we're seeing here is a quasar hiding behind a nearby galaxy.<br><br>The galaxy is known as Huchra's Lens, which is the hazy point of light in the center of this image.<br><br>You can see the structure of that galaxy a little bit better with this photo.<br><br>The warped spacetime of that galaxy is redirecting the light from the quasar that would otherwise travel right past us, back to Earth from four apparent sources.<br><br>Quasars are supermassive black holes that developed accretion disks where a bunch of space junk just falls into it and heats up so much that in the more extreme cases can radiate the same amount of light as a thousand galaxies.<br><br>And they're really useful candidates for being lensed, because they tend to not only be extraordinarily far away, especially when aided by the expansion of the universe, but they're also immensely bright.<br><br>And since distant objects appear dimmer, these pose some of our best chances at seeing far distant and therefore early universe formations.<br><br>And gravitational lensing helps with that by tending to both brighten and magnify distant objects.<br><br>There's a lot we can learn from this phenomenon.<br><br>Not only by seeing much earlier into the universe's development, but also because each path the light takes introduces its own time delay from the perspective of the observer.<br><br>We can see this when the lensed object has  intermittent brightness, so if it's flickering in some sort of way, that interval will show up at different times and the images from each path can be delayed anywhere from hours to years depending on the specifics of the light's path through spacetime.<br><br>This has been utilized as another method for scientists to get increasingly accurate observations of the cosmological constant, and on the flashier side of science, we've even observed a supernova lensed through an Einstein Cross, allowing us to see the same supernova more than once.<br><br>This isn't the only way that gravitational lensing shows itself, though.<br><br>It can get a little messy, but to simplify, there are four types of imaging phenomena that I read about.<br><br>They all follow the same rules, and every system will have three components: a source of light, a lensing mass, and an observer.<br><br>There are two primary variables  that determine what type an observer will see: alignment, and symmetry.<br><br>First is the Einstein cross, which, of course, is what we've been discussing.<br><br>This usually occurs when the lensing mass is a galaxy, as galaxies are elliptical and tend to be axially-asymmetric from Earth's perspective, but also have a centralized mass distribution making it more likely for light to travel around each side of the core.<br><br>There is a little wiggle room in the alignment of the variables here, but I should stress that on cosmic scales, a little bit of wiggle room is still unbelievably close to perfect alignment.<br><br>This effect can also be seen with only two duplicate images.<br><br>Then we have the Einstein ring, one of the more stunning visual phenomena in astronomy.<br><br>This operates on the same principles, but is typically seen when the lensing mass is a star which is axially-symmetric from all perspectives,  because they're spheres.<br><br>This certainly can be seen with galaxies as the lensing mass, but the galaxy needs to be oriented just right so that its distribution of mass is symmetrical from the perspective of the observer.<br><br>Complete unbroken Einstein rings are kind of the holy grail of gravitational lensing and they require perfect alignment.<br><br>Then we have sheared arcs and elongated distortions.<br><br>Now this is the messy, sloppy light soup that works its way through galaxy clusters.<br><br>There are centers to galaxy clusters, but they're never axially-symmetric, they have lumpy mass distributions, and they're home to complex, invisible dark matter structures.<br><br>So light takes many paths through and around that aren't always obvious.<br><br>And lastly, there's the most extreme scenario of luminous accretion disks impressively warping around black holes.<br><br>All these same rules define the arcs of light that we see both above and beneath the black holes, and the surreal distorting of background cosmos seen in black hole simulations.<br><br>So I was having a hard time wrapping my mind around some of these dynamics, and I spoke very briefly to Michael Merrifield, the Professor of Astronomy over at the University of Nottingham and he recommended I try this demonstration.<br><br>So I've got safety equipment on, because who knows what happens with glass.<br><br>I value my eyes, so I'm going to put goggles on as well.<br><br>I'm supposed to score just above the base of the wine glass, and then I will break it.<br><br>It will shatter along this score.<br><br>You want to be careful of glass dust, which I guess is a thing.<br><br>That's probably not good to breathe in.<br><br>Okay.<br><br>It is scored, um, now you have to break it.<br><br>I don't really know the best method for breaking this, so I'm just kind of going to crunch down into it.<br><br>All right!<br><br>That is a clean cut!<br><br>You love to see it, folks.<br><br>You love to see it.<br><br>So now we have our very own lensing mass.<br><br>Sort of...<br><br>it's not exactly the same thing, but it's pretty close.<br><br>The funnel shape of the glass is going to give us a nice simulation, as I approach the flame from the left.<br><br>The candle and flame are wrapping around the left side of the bulge before I actually get to it.<br><br>And now that we're lined up, you can see we've got a bit of a ring forming here.<br><br>Now ideally this would be done with a point source of light, as we would experience with  a distant quasar or something like that, but also, the shape of the base of the wine glass can vary.<br><br>You might see some ripples of light that don't exactly adhere to the look that we're kind of going for.<br><br>Another test we can try is drawing a large dot on this beautiful dot grid paper.<br><br>I'll also put a cross-hair in the center so that we can have a frame of reference.<br><br>Then as we roll over the dot, we should be able to see exactly what's going on.<br><br>As the center of the lens gets closer, it's actually bowing the dot out further to the right.<br><br>And then we have this really nice arc here  as the image starts splitting into two just as it did with the candle.<br><br>Ah, look at that.<br><br>There you go!<br><br>That is our Einstein ring.<br><br>It is a ring of darkness, so kind of the opposite of an Einstein ring.<br><br>So now if we raise the lens above the paper you can see the inky black ring a bit more clearly since it isn't visually competing with the dot grid.<br><br>It's really a pretty stunning visual, especially when you consider that you're also seeing a small duplicate image of the dot through the center post.<br><br>Which, funny enough, is supposed to be present in the Einstein cross.<br><br>I'm not sure about the Einstein rings, but in every multiply-imaged gravitational lens, you're expected to see a total odd number of images.<br><br>The fifth image is rarely seen it's very faint when it is seen, and it all depends on steepness of the lensing mass's uh...<br><br>central density profile.<br><br>Although, speaking of Einstein crosses, here at this very extreme, oblique angle, we've found just the right set of circumstances that we need to simulate those as well.<br><br>This is that axial asymmetry I referred to earlier.<br><br>And we can quite nicely see four duplicate images of our light source, although depending on how you break the base of the wine glass, the stem may obscure the image on the far side.<br><br>And this just shows how dramatic the angles of galaxies have to be before you can actually see these effects.<br><br>So now we have an intuitive understanding of the mechanics, but earlier I briefly mentioned cosmic scale and I think it's worth adding additional context to that as well.<br><br>So to aid me, I brought a five centavos coin.<br><br>From this distance it has the same angular diameter, or the apparent size, as the moon.<br><br>But that's not terribly helpful for us, so instead I'm going to have it represent the galactic bulge of Huchra's Lens, so the core of our lensing galaxy.<br><br>But to get it to be the right size, I've got to go about...<br><br>oof.<br><br>This is horrible.<br><br>Who thought this was a good idea‽ Cosmic scales are a pain in the [garbled]...<br><br>About 465 meters away, assuming I did the math right, which is no guarantee.<br><br>That's the easy part though, seeing the galaxy itself is one thing, but for the system to be complete, we need a quasar as well.<br><br>So let's use this same coin to represent the quasar.<br><br>To get it to be the right size from your perspective, I would need to haul it about 7.4 million kilometers in that direction.<br><br>That's over 19 times further than the distance to the moon.<br><br>Now it's important to keep in mind, this is not a direct comparison of the quasar's size to the galaxy's size, instead it's a  comparison of their angular diameters, so how large they appear in the sky.<br><br>But we don't even have to look quite so far from home to see the effects of gravitational lensing.<br><br>Quite famously an expedition was led  by Arthur Eddington in 1919, where he and some other scientists set out to take these absolutely gorgeous, stunning photos of a solar eclipse wherein, some well-known, prominent stars, near the sun, appeared slightly shifted from where they were supposed to be in the sky.<br><br>So the whole reason that this expedition was so important, is because it was the first experiment to give testable, reliable, convincing data that favored Einstein's theory of general relativity over the Newtonian models.<br><br>It was circulated in newspapers and made Einstein world famous.<br><br>There's a whole backstory behind it, and it's totally worth looking into.<br><br>Now however, there's a team in the planning phase for this project where they send probes out far enough from our sun that it can spin around, take a photo of the sun, and we can observe our own local Einstein rings, which we can then reconstruct into images of stars or planets and we would effectively turn our sun into a solar system-sized telescope.<br><br>Which, man I...<br><br>I really hope that becomes a thing, because that's maybe one of the coolest things I've ever heard of.<br><br>It took us a while to even get to this nascent era of observing gravitational lensing, so it should come as no surprise that in the early 1900s, when gravitational lensing first started to seriously enter the scientific discussion, that there were some reservations about being able to observe them or utilize them in any way beyond theory.<br><br>As I was researching this video, I kept reading these reservations so I think it's worth pausing for a moment to seriously consider the context and prevailing worldview at the time.<br><br>As late as 1936, Einstein is quoted as saying "Of course, there is no hope in observing this phenomenon directly." Damn, really got you on that one, Einstein.<br><br>But I have to say the nature of reality looked quite different to us back then and if he had the insights that we have today, he probably wouldn't have been quite so pessimistic about this.<br><br>And admittedly, it did take another 50 years after that quote for us to directly observe gravitational lensing and phenomena such as Einstein crosses and Einstein rings are so rare that it's still quite a big deal for us to find them today.<br><br>But even the rarest of occurrences necessarily  become abundant in large enough sample sizes, and although our understanding of the  universe has historically been small, isolated, and shrouded in uncertainty, every step along the way as we come to understand it better we realize that it is both larger in scale than previously thought, and filled with more things.<br><br>So I read about this beautiful little flash of friction in the scientific community that I think really exemplifies the nature of our ambiguous  and shifting perception of the universe over the years.<br><br>It was in 1920, five years after general relativity was published, and one year after the solar eclipse photos were circulated.<br><br>The Smithsonian held a public forum that came to be known as The Great Debate.<br><br>Take yourselves back for a moment to a still April night.<br><br>It's 8 PM, 100 years ago, and two astronomy nerds are giving 40-minute presentations back-to-back to both academics and the public alike.<br><br>The talks were advertised as the Scale of the Universe!<br><br>But the heart of the conversations really focused on the island universe theory, the then sort-of-fringe idea that "You know what?<br><br>"There might be other galaxies that exist outside of our own." They could actually see nearby galaxies,  such as Andromeda, our galactic neighbor, but their telescopes weren't quite good enough to be able to resolve many of the stars within those galaxies, and they were dealing with scales well beyond what was conventionally accepted at the time.<br><br>So as best as they could tell, they were just looking at these blurry clouds of gas within the Milky Way and as such, they became labeled "spiral nebulae" after their apparent formation.<br><br>First up to present was a gentleman named Harlow Shapley, who defended the prevailing idea that the universe consisted only of the Milky Way.<br><br>That they effectively shared the same boundary and were the same thing, however, he stipulated that the Milky Way was actually much larger than previously believed.<br><br>He was then rebutted by a fella named Heber Curtis, who argued that galaxies did actually exist outside of the Milky Way.<br><br>Now, he was by no means the first person to make this claim but he was very enthusiastic to be able to argue this stance after having collected years of data that supported it.<br><br>Curtis wanted a real spirited debate, he wanted to get people really riled up.<br><br>He was a lively guy, a great speaker, and he intuitively understood that the friction between the two competing visions of the universe would just make for an exciting show for the audience.<br><br>He wanted to be a bit of a showman.<br><br>Shapley, on the other hand, well...<br><br>he was just kind of nervous about possibly losing a job opportunity, so he didn't really want to get roasted too bad.<br><br>He started taking this cooperative angle.<br><br>He was like, "Look, man.<br><br>"It's not a debate, we're just science pals talking about science ideas.<br><br>"This is just a friendly discussion." And then he spent the first third of his talk  technically defining what a light year is, to establish with such certainty that the Milky Way was so much larger than previously thought that it would be improbable for equally large structures  to exist even beyond that.<br><br>He strategically talked his way around the island universe theory.<br><br>So they both go through with their presentations and there are nuances in the back-and-forth, but at the end of the day, here's the beautiful thing about it: by all accounts, these were two smart dudes who were studying at the forefronts of their field, and their conclusions weren't exactly mutually exclusive.<br><br>So in a way they were both kind of right and kind of wrong about different things.<br><br>And I think, at the end of the day, both of them pushed science forward in their own right.<br><br>It wasn't until a few years later that Edwin Hubble would use the then-recently built Hooker telescope, which was at the time, the world's largest telescope, to resolve some stars within Andromeda with which he could approximate their distance.<br><br>With the help of other astronomers, of course, especially Henrietta Leavitt, and her important research on cepheid variable stars.<br><br>And those observations helped convince  both the public and scientific community over the course of the 1920s and '30s that yes, galaxies do, in fact, exist outside of the Milky Way.<br><br>Now Curtis, whose arguments mostly focus on that, well he got that right, but he got some of the details wrong.<br><br>He thought that the Milky Way was way smaller  than we believe it to be, and he had a bit of an anthropocentric belief that we're located in the center of the Milky Way kind of near the galactic core, but the modern consensus is that no, that's--that's not right at all.<br><br>We're actually located out on a spiral arm, though Shapley, who mostly focused his arguments on our galaxy, well he got that detail right.<br><br>So this was a snapshot of big, plausible ideas meeting face-to-face in an effort to better understand the reality within which we exist.<br><br>It was a moment when our ambitious curiosities asked more than our tools could answer for, and it was the construction of ideological scaffolding from which future knowledge would be built.<br><br>And see, they didn't have the advantage of impressive telescopes orbiting around the planet, allowing them to see into the deep reaches of the cosmos.<br><br>And they didn't have advanced computers, allowing them to parse tremendous amounts of data, not only faster than humans can, but more accurately as well.<br><br>In many ways, they were operating in the dark.<br><br>Both figuratively and literally, thanks to a lack of light pollution.<br><br>But these days, and I'm sure there are exceptions to this, I think you would be hard-pressed to find too many people who don't just have an inherited  knowledge of the existence of galaxies.<br><br>So imagine what could be such a fundamental  building block of knowledge that we'll take for granted in just another hundred years.<br><br>When I think it's quite likely that technology will outpace our imagination, and we may pierce yet another veil of darkness.<br><br>Surely, there's a lot that could happen.<br><br>So, all of my sources are cited in the description below and one I want to point out specifically is a historical analysis of the theory of gravitational lensing.<br><br>It's one of the last sources that I found, and I think it strikes a really good balance between being much more thorough than a surface-level pop science article, but far more approachable than a maths heavy research paper.<br><br>So if you're interested in this kind of thing, it's a cool 45 pages, 7 of which are citations, and I promise you it's an easy and informative read.
+						</p>
+					</aside>
+					<button type="button" onclick="location.href='https://www.dropbox.com/s/rprclv3buqbqehn/EB003__main--cc_en_captions.srt?dl=0'" value="download english captions">captions</button>
+					<button type="button" onclick="location.href='https://www.dropbox.com/s/3w1rg1r7hn5160u/EB003__main--cc_en_sub.srt?dl=0'" value="download english subtitles">subtitles</button>
+					<button type="button" onclick="document.location='/translations'" value="details about translations">info</button>
+				</container>
+			</transcription>
+
+			<bonus>
+				<h2>Bonus Material</h2>
+				<container>
+					<p>
+						<a href="https://patreon.com/emergentbeacon" class="support-link" title="patreon.com/emergentbeacon">Pledge now</a> for these behind the scenes exclusives!
+					</p>
+					<items>
+						<bonus-entry>
+							<a href="https://patreon.com/posts/47936287">
+								<img src="/assets/" style="object-position: 0rem 0;">
+							</a>
+							<p>
+								<time datetime="PT2Hm M2sS">27m 02s</time><br>
+								<span>VFX Breakdown</span>
+							</p>
+						</bonus-entry>
+						<bonus-entry>
+							<a href="https://patreon.com/posts/46888350">
+								<img src="/assets/" style="object-position: -7rem 0;">
+							</a>
+							<p>
+								<time datetime="PT7mS">17m</time><br>
+								<span>Music Pack</span>
+							</p>
+						</bonus-entry>
+						<bonus-entry>
+							<a href="https://patreon.com/posts/47816328">
+								<img src="/assets/" style="object-position: -14rem 0;">
+							</a>
+							<p>
+								<time datetime="PT4mS">14m</time><br>
+								<span>Rehearsal Edit</span>
+							</p>
+						</bonus-entry>
+						<bonus-entry>
+							<a href="https://patreon.com/posts/46858351">
+								<img src="/assets/" style="object-position: -21rem 0;">
+							</a>
+							<p>
+								<time datetime="PT1HpaMesS">16 pages</time><br>
+								<span>Script</span>
+							</p>
+						</bonus-entry>
+					</items>
+				</container>
+			</bonus>
+		</main>
+
+		<footnav>
+			<tooltip>
+				<a href="/videos/tenere.html">← Most Recent</a>
+				<span>The Myth of the Loneliest Tree on Earth</span>
+			</tooltip>
+			<a href="#">TO TOP</a>
+			<tooltip>
+				<a href="/videos/critical-curves.html">Next →</a>
+				<span>How Does Light Ripple Through Deep Space?</span>
+			</tooltip>
+		</footnav>
+
+		<footer>
+			<p>
+				<a href="/home.html">home</a><a href="/videos.html">videos</a><a href="/music.html">music</a><a href="/about.html">about</a><br>
+				<a href="/finance.html">financial reports</a><a href="/media.html">media kits</a>
+			</p>
+			<logo>
+				<svg id="v1-7:organic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 629.556 629.556">
+					<g id="shell">
+						<path d="M315.278,54.768c157.266,0,257.812,132.423,257.812,251.739,0,69.898-21.842,116.519-35.044,131.193-19.516,21.693-69.086,44.678-139.686,55.245-74.033,12.457-42.047,96.064-83.149,96.064-39.952,0-7.966-83.607-81.453-95.808-67.092-9.784-117.119-31.118-140.771-55.592-13.288-13.749-35.519-58.2-35.519-137.79,0-90.102,80.989-245.051,257.812-245.051Z"/>
+					</g>
+					<g id="interior">
+						<path d="M479.619,405.623c-7.956-17.388-35.482-18.367-35.482-34.859,0-9.255,11.786-12.784,27.882-12.784,20.229,0,36.868,6.96,45.182,14.55,6.614-18.266,9.507-39.998,9.507-65.593,0-119.849-91.189-211.43-211.43-211.43-119.266,0-211.43,91.582-211.43,218.828,0,22.437,2.619,41.824,8.51,58.409,8.233-7.673,24.99-14.764,45.409-14.764,16.096,0,27.882,3.53,27.882,12.784,0,16.492-27.526,17.471-35.482,34.859-2.749,6.009.352,16.893,12.877,23.416,33.185,16.74,82.314,24.299,152.234,24.299s118.625-7.428,151.725-24.446c12.298-6.538,15.345-17.304,12.615-23.269ZM315.278,410.801c-83.744,0-114.894-37.32-114.894-101.125,0-63.454,49.208-114.894,114.894-114.894,59.14,0,114.894,47.327,114.894,114.894,0,63.805-29.796,101.125-114.894,101.125Z"/>
+					</g>
+				</svg>
+			</logo>
+			<socials>
+				<div class="tooltip">
+					<a href="https://youtube.com/emergentbeacon">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 176 124">
+							<path class="st0" d="M172.5,19.4h-.2c-2-7.6-8-13.6-15.6-15.7C143,0,88,0,88,0c0,0-55,0-68.8,3.7-7.6,2-13.5,8-15.6,15.7C0,33.2,0,62,0,62c0,0,0,28.8,3.7,42.6,2,7.6,8,13.6,15.6,15.7,13.7,3.7,68.8,3.7,68.8,3.7,0,0,55,0,68.8-3.7,7.6-2,13.5-8,15.6-15.7,3.7-13.8,3.7-42.6,3.7-42.6,0,0,0-28.8-3.7-42.6ZM70,88.2v-52.4l46,26.2-46,26.2Z"/>
+						</svg>
+					</a>
+					<span class="tooltip-text">youtube</span>
+				</div>
+				<div class="tooltip">
+					<a href="https://patreon.com/emergentbeacon">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1080" xml:space="preserve">
+							<path class="st0" d="M1033.05,324.45c-0.19-137.9-107.59-250.92-233.6-291.7c-156.48-50.64-362.86-43.3-512.28,27.2 C106.07,145.41,49.18,332.61,47.06,519.31c-1.74,153.5,13.58,557.79,241.62,560.67c169.44,2.15,194.67-216.18,273.07-321.33 c55.78-74.81,127.6-95.94,216.01-117.82C929.71,603.22,1033.27,483.3,1033.05,324.45z"/>
+						</svg>
+					</a>
+					<span class="tooltip-text">patreon</span>
+				</div>
+				<div class="tooltip">
+					<a href="https://discord.emergentbeacon.com/">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36">
+							<path class="cls-1" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/>
+						</svg>
+					</a>
+					<span class="tooltip-text">discord</span>
+				</div>
+				<div class="tooltip">
+					<a href="https://bsky.app/profile/brandthughes.bsky.social">
+						<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568 500.117">
+							<path class="cls-1" d="M123.121,33.664c65.12,48.889,135.16,148.017,160.879,201.209,25.719-53.192,95.759-152.32,160.879-201.209,46.987-35.276,123.121-62.57,123.121,24.283,0,17.345-9.945,145.713-15.778,166.555-20.275,72.453-94.155,90.933-159.875,79.748,114.875,19.551,144.097,84.311,80.986,149.071-119.86,122.992-172.272-30.859-185.702-70.281-2.462-7.227-3.614-10.608-3.631-7.733-.017-2.875-1.169.506-3.631,7.733-13.43,39.422-65.842,193.273-185.702,70.281-63.111-64.76-33.889-129.52,80.986-149.071-65.72,11.185-139.599-7.295-159.875-79.748C9.945,203.659,0,75.292,0,57.946,0-28.906,76.134-1.612,123.121,33.664Z"/>
+						</svg>
+					</a>
+					<span class="tooltip-text">bluesky</span>
+				</div>
+				<div class="tooltip">
+					<a href="https://youtube.com/@BrandtHughes">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 176 124">
+							<path class="st0" d="M172.3,19.4c-2-7.6-8-13.6-15.6-15.7C143,0,88,0,88,0c0,0-55,0-68.8,3.7-7.6,2-13.5,8-15.6,15.7C0,33.2,0,62,0,62c0,0,0,28.8,3.7,42.6,2,7.6,8,13.6,15.6,15.7,13.7,3.7,68.8,3.7,68.8,3.7,0,0,55,0,68.8-3.7,7.6-2,13.5-8,15.6-15.7,3.7-13.8,3.7-42.6,3.7-42.6,0,0,0-28.8-3.7-42.6h0ZM117.3,98c-1.8,1.8-3.9,2.7-6.4,2.7h-45c-3,0-5.4-.9-7.2-2.6-1.8-1.7-2.7-4.1-2.7-7.1v-3c0-3.4.8-6.7,2.4-9.8,1.6-3.1,4.3-6.5,8.3-10.3,4-3.7,9.5-8,16.7-13l.8-.6c4.1-2.9,7.1-5.1,9-6.6,1.9-1.5,3.2-2.9,4-4.1.8-1.3,1.2-2.6,1.2-4.2,0-2.6-1-4.7-2.9-6.3-1.9-1.6-4.4-2.4-7.6-2.4s-5.2.6-6.9,1.8c-1.7,1.2-3.4,2.8-5,4.7-.2.2-.4.5-.6.7-.5.6-1,1.1-1.5,1.7-1.1,1.5-2.1,2.6-3.1,3.3-1,.8-2.4,1.2-4.2,1.2s-4.4-.7-5.8-2.2c-1.5-1.5-2.2-3.5-2.2-6s1.5-6.8,4.4-10.3c2.5-2.9,6-5.5,10.4-7.7,4.4-2.2,9.5-3.3,15.2-3.3s10.1,1,14.3,3c4.2,2,7.5,4.8,10,8.4,2.4,3.6,3.7,7.8,3.8,12.6,0,3.3-.6,6.4-1.7,9.3-1.1,2.9-2.8,5.5-4.9,8-2.1,2.5-4.8,5-8.1,7.5l-1.1.8c-2.6,1.9-5.2,3.7-7.9,5.6-5.4,3.6-9.3,6.6-11.8,8.9-1.4,1.3-2.4,2.7-3,4.2l32.4-.4c2.5,0,4.7.9,6.4,2.7,1.8,1.8,2.7,3.9,2.7,6.4s-.9,4.7-2.7,6.4h0Z"/>
+						</svg>
+					</a>
+					<span class="tooltip-text">youtube 2</span>
+				</div>
+			</socials>
+		</footer>
+	</body>
+
+	<script>
+		// 2. This code loads the IFrame Player API code asynchronously.
+		var tag = document.createElement('script');
+		tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		// 3. This function creates an <iframe> (and YouTube player)
+		//    after the API code downloads.
+		var player;
+		function onYouTubeIframeAPIReady() {
+		player = new YT.Player('yt-player', {
+			height: '400',
+			width: '100%',
+			videoId: 'yCHYmlwjUcI',
+			playerVars: {
+				'playsinline': 1
+			},
+			events: {
+				'onReady': onPlayerReady,
+				'onStateChange': onPlayerStateChange
+			}
+		});
+		}
+
+		// 4. The API will call this function when the video player is ready.
+		function onPlayerReady(event) {}
+		function onPlayerStateChange(event) {}
+
+		//generic seekTo function taking a player element and seconds as parameters
+		function playerSeekTo(player, seconds) {
+			player.seekTo(seconds);
+			player.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start',
+				inline: 'nearest'
+			});
+		}
+
+		const iSearch = document.getElementById("infoSearchBanner");
+
+		function infoSearch() {
+			let input = document.getElementById("infoInput");
+			let inputVal = input.value;
+			let container = document.documentElement;
+			let containerPos = container.scrollTop;
+			let anchor = document.getElementById('Info' + inputVal);
+
+			if (anchor == null) {
+				iSearch.classList.add("error");
+			} else {
+				anchor.scrollIntoView({
+					behavior: 'smooth',
+					block: 'start',
+					inline: 'nearest'
+				});
+				container.scrollTop = containerPos;
+			}
+		}
+
+		const mSearch = document.getElementById("mediaSearchBanner");
+		function mediaSearch() {
+			let input = document.getElementById("mediaInput");
+			let inputVal = input.value;
+			let container = document.documentElement;
+			let containerPos = container.scrollTop;
+			let anchor = document.getElementById('Media' + inputVal);
+
+			if (anchor == null) {
+				mSearch.classList.add("error");
+			} else {
+				anchor.scrollIntoView({
+					behavior: 'smooth',
+					block: 'start',
+					inline: 'nearest'
+				});
+				container.scrollTop = containerPos;
+			}
+		}
+
+		// source lookup behavior: disable form submit on "Enter," replace with function
+		document.getElementById("infoInput").addEventListener("keydown", function (e) {
+			if (e.code === "Enter") {
+				e.preventDefault();
+				infoSearch();
+			}
+		});
+		document.getElementById("mediaInput").addEventListener("keydown", function (e) {
+			if (e.code === "Enter") {
+				e.preventDefault();
+				mediaSearch();
+			}
+		});
+
+		// remove css color animation class when animation finishes
+		iSearch.addEventListener("animationend", listener, false);
+		mSearch.addEventListener("animationend", listener, false);
+		function listener(event) {
+			switch (event.type) {
+				case "animationend":
+					mSearch.classList.remove("error");
+					iSearch.classList.remove("error");
+					break;
+			}
+		}
+	</script>
+</html>

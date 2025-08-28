@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap">
+		<link rel="stylesheet" href="/styles/main.css">
+		<link rel="stylesheet" href="/styles/video-solo.css">
+		<script type="text/javascript" src="/color-palettes.js" defer></script>
+	</head>
+
+	<body>
+		<nav class="nav-desktop">
+			<span><a href="/home.html">/ home</a> <a href="/videos.html">/ videos</a> / critical-curves.html</span>
+		</nav>
+
+		<main>
+			<header class="content-column">
+				<nav class="nav-mobile">
+					<span><a href="/home.html">/ home</a></span>
+					<span><a href="/videos.html">/ videos</a></span>
+					<span><a href="/music.html">/ music</a></span>
+					<span>/ critical-curves.html</span>
+				</nav>
+
+				<button id="theme">
+					<svg id="theme1" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M380-880q83 0 156 31.5T663-763q54 54 85.5 127T780-480q0 83-31.5 156T663-197q-54 54-127 85.5T380-80q-53 0-103.5-13.5T180-134q93-54 146.5-146T380-480q0-108-53.5-200T180-826q46-27 96.5-40.5T380-880Z"/></svg>
+					<svg id="theme2" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+					<svg id="theme3" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm40-83q119-15 199.5-104.5T800-480q0-123-80.5-212.5T520-797v634Z"/></svg>
+				</button>
+			</header>
+
+			<h1>How Does Light Ripple Through Deep Space?</h1>
+			<video id="yt-player"></video>
+
+			<synopsis>
+				We previously discussed how gravity bends light around various cosmic bodies, but what happens at the boundaries that determine exactly what we see as an observer?
+			</synopsis>
+
+			<clarifications>
+				<h4>CLARIFICATIONS</h4>
+				<ul>
+					<li>the caustic and critical curve diagram at 6:14 has been modified from its original appearance<br><span style="margin-top:.5em; margin-left:2em; display:block; font-size:92%">The green and yellow dots were the same color in the original diagram; they could have represented a double-lensed source, but that wasn’t mentioned, so I’ve separated them (maybe naively) under the assumption that the same color was in error. I also added a small dark blue dot in the inner critical curve, which was not originally present, but I believe should have been as consistent with the diagrams at 12:18.</span></li>
+				</ul>
+			</clarifications>
+
+			<sources-info>
+				<h2>Info Sources</h2>
+				<container id="infoContainer">
+					<citation id="Info1">
+						<number>1</number>
+						<blockquote>
+							"Vortices in water have been used to simulate wave interactions with black holes before."
+							<time datetime="PT02M32S">timecode <a href="#" onclick="playerSeekTo(player, 152); return false;">02:32</a></time>
+						</blockquote>
+						<info>
+							<cite>Scientists Simulate a Black Hole in a Water Tank</cite>
+							<info-details>
+								2019, Arantes, J.<br>
+								accessed 2021<br>
+							</info-details>
+							<origin>
+								<a href="https://phys.org/news/2019-02-scientists-simulate-black-hole-tank.html">phys.org/news/2019-02-scientists-simulate-black-hole-tank.html</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Info2">
+						<number>2</number>
+						<blockquote>
+							"A lot of times you'll see diagrams where light is bent.” ... “It is a thin lens approximation, so that is basically taking into account the vast, vast distances in between objects in the cosmos."
+							<time datetime="PT03M06S">timecode <a href="#" onclick="playerSeekTo(player, 186); return false;">03:06</a></time>
+						</blockquote>
+						<info>
+							<cite>Fermat’s Principle, Caustics, and the Classification of Gravitational Lens Images</cite>
+							<info-details>
+								1986, Blandford, R. & Narayan, R.<br>
+								Astrophysical Journal, Part 1 (ISSN 0004-637X), vol. 310, Nov. 15, 1986<br>
+								p. 569, fig. 1
+							</info-details>
+							<origin>
+								<a href="http://articles.adsabs.harvard.edu//full/1986ApJ...310..568B/0000568.000.html">articles.adsabs.harvard.edu//full/1986ApJ...310..568B/0000568.000.html</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Info3">
+						<number>3</number>
+						<blockquote>
+							"I found these two side-by-side diagrams and a paper on the basics of lensing."
+							<time datetime="PT05M33S">timecode <a href="#" onclick="playerSeekTo(player, 333); return false;">05:33</a></time>
+						</blockquote>
+						<info>
+							<cite>The Basics of Lensing</cite>
+							<info-details>
+								2003, Kuijken, K.<br>
+								ARXIV<br>
+								p. 10, fig. 6
+							</info-details>
+							<origin>
+								<a href="https://arxiv.org/abs/astro-ph/0304438">arxiv.org/abs/astro-ph/0304438</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Info4">
+						<number>4</number>
+						<blockquote>
+							"Here is an interactive simulator that can trace paths of light to help you visualize some of the shapes that [light caustics] can make in space."
+							<time datetime="PT06M59S">timecode <a href="#" onclick="playerSeekTo(player, 419); return false;">06:59</a></time>
+						</blockquote>
+						<info>
+							<cite>Gravy: A Ray-Traced Gravitational Lens Demo</cite>
+							<info-details>
+								2017, Portsmouth J.<br>
+								Github<br>
+								accessed 2021<br>
+							</info-details>
+							<origin>
+								<a href="https://github.com/portsmouth/gravy">github.com/portsmouth/gravy</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Info5">
+						<number>5</number>
+						<blockquote>
+							"First we have this little java lensing model that can let you see the interactions [of light and gravity] at the edges of these thresholds."
+							<time datetime="PT10M42S">timecode <a href="#" onclick="playerSeekTo(player, 642); return false;">10:42</a></time>
+						</blockquote>
+						<info>
+							<cite>Java Lens Simulation</cite>
+							<info-details>
+								2014, Sancho M.<br>
+								Open Source Physics<br>
+								accessed 2021<br>
+								(requires download to use)
+							</info-details>
+							<origin>
+								<a href="https://compadre.org/osp/items/detail.cfm?ID=11451">compadre.org/osp/items/detail.cfm?ID=11451</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Info6">
+						<number>6</number>
+						<blockquote>
+							"This next tool [allows you to] see critical curves overlaid on top of an image of a galaxy cluster, and you move a light source behind it to great effect"
+							<time datetime="PT11M08S">timecode <a href="#" onclick="playerSeekTo(player, 668); return false;">11:08</a></time>
+						</blockquote>
+						<info>
+							<cite>Galaxy Cluster Simple Lens</cite>
+							<info-details>
+								2014, slowe, drphilmarshall, and aprajita<br>
+								Github<br>
+								accessed 2021<br>
+							</info-details>
+							<origin>
+								<a href="https://slowe.github.io/LensToy">slowe.github.io/LensToy</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Info7">
+						<number>7</number>
+						<blockquote>
+							"This nice demo [allows you to] add lesnes and modify their properties to simultaneously see both the resulting image and the hidden caustics at play."
+							<time datetime="PT11M18S">timecode <a href="#" onclick="playerSeekTo(player, 678); return false;">11:18</a></time>
+						</blockquote>
+						<info>
+							<cite>WebGL Lens with Caustics</cite>
+							<info-details>
+								2021, Ben Barsdell et al.<br>
+							</info-details>
+							<origin>
+								<a href="https://eb.v32.dev/lensing-sim/">eb.v32.dev/lensing-sim/</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Info8">
+						<number>8</number>
+						<blockquote>
+							"Here's a more orderly example, as well, and [if] you draw comparisons between each side, you can really start to build an intuition for these concepts” of thresholds like critical curves.
+							<time datetime="PT12M18S">timecode <a href="#" onclick="playerSeekTo(player, 738); return false;">12:18</a></time>
+						</blockquote>
+						<info>
+							<cite>Introduction to Gravitational Lensing (PDF)</cite>
+							<info-details>
+								2015, Meneghetti M.<br>
+								p. 48, fig. 3.8
+							</info-details>
+							<origin>
+								<a href="https://www.ita.uni-heidelberg.de/~jmerten/misc/meneghetti_lensing.pdf">ita.uni-heidelberg.de/~jmerten/misc/meneghetti_lensing.pdf</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Info9">
+						<number>9</number>
+						<blockquote>
+							"Gravitational lensing doesn't have a focal plane or a focal point. It has a focal line.” ... “Once you get a certain distance away, the light will actually start to converge into what can be seen as an Einstein ring from a very specific point in space. But as you move further and further away from the star, different rays of light are also being bent at a different amount."
+							<time datetime="PT13M32S">timecode <a href="#" onclick="playerSeekTo(player, 812); return false;">13:32</a></time>
+						</blockquote>
+						<info>
+							<cite>Diffraction of Electromagnetic Waves in the Gravitational Field of the Sun</cite>
+							<info-details>
+								2018, Turyshev S., Toth V.<br>
+								ARXIV<br>
+								p. 16, fig. 4
+							</info-details>
+							<origin>
+								<a href="https://arxiv.org/abs/1704.06824">arxiv.org/abs/1704.06824</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Info10">
+						<number>10</number>
+						<multi>
+							<tab-align>
+								<tab-part>A</tab-part>
+								<blockquote>
+									"Before that big expedition, there were multiple expeditions, and they all kind of failed in their own ways."<br>
+									<time datetime="PT14M44S">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 884); return false;">14:44</a></time>
+								</blockquote>
+							</tab-align>
+							<tab-align>
+								<tab-part>B</tab-part>
+								<blockquote>
+									"Just a few months later, he sent it to the publication Science and in his opening paragraph of this paper, he leaves a little note to Mr. Mandel which reads as” ...<br>
+									<time datetime="PT20M52S">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 884); return false;">20:52</a></time>
+								</blockquote>
+							</tab-align>
+							<info>
+								<cite>The Legacy of Einstein's Eclipse, Gravitational Lensing</cite>
+								<info-details>
+									2019, Cervantes-Cota J., Galindo-Uribarri S., Smoot G.<br>
+									ARXIV<br>
+									A: § 6. The 1919 Eclipse. A Scientific Milestone<br>B: § 9. Czech Mates, p. 14, ¶ 3
+								</info-details>
+								<origin>
+									<a href="https://arxiv.org/abs/1912.07674">arxiv.org/abs/1912.07674</a>
+								</origin>
+							</info>
+						</multi>
+					</citation>
+					<citation id="Info11">
+						<number>11</number>
+						<blockquote>
+							"They had left the observatory doors open and the sunlight had heated up and warped the telescope's mirror, totally ruining the image. Not permanently, however."
+							<time datetime="PT17M47S">timecode <a href="#" onclick="playerSeekTo(player, 1067); return false;">17:47</a></time>
+						</blockquote>
+						<info>
+							<cite>Building the 100-inch Telescope</cite>
+							<info-details>
+								2019, Simmons M.<br>
+								Mount Wilson Observatory<br>
+								accessed 2021<br>
+							</info-details>
+							<origin>
+								<a href="https://mtwilson.edu/building-the-100-inch-telescope/">mtwilson.edu/building-the-100-inch-telescope/</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Info12">
+						<number>12</number>
+						<blockquote>
+							"You know, some time has gone by and Einstein is approached by this fella, Robert Mandel."
+							<time datetime="PT19M46S">timecode <a href="#" onclick="playerSeekTo(player, 1186); return false;">19:46</a></time>
+						</blockquote>
+						<info>
+							<cite>The Amateur Who Helped Einstein See the Light</cite>
+							<info-details>
+								2015, Siegfried T.<br>
+								Science News<br>
+								accessed 2021<br>
+							</info-details>
+							<origin>
+								<a href="https://sciencenews.org/blog/context/amateur-who-helped-einstein-see-light">sciencenews.org/blog/context/amateur-who-helped-einstein-see-light</a>
+							</origin>
+						</info>
+					</citation>
+				</container>
+				<form id="infoSearchBanner">
+					<input id="infoInput" placeholder="#" onfocus="this.value=''">
+					<button id="infoBtn" type="submit" onclick="infoSearch()">go to</button>
+				</form>
+			</sources-info>
+
+			<sources-media>
+				<h2>Media Sources</h2>
+				<container id="media-container">
+					<citation id="Media1">
+						<anchor>
+							<a href="#" onclick="playerSeekTo(player, 286); return false;"><time datetime="PT04M46S">04:46</time></a><indx>m1</indx>
+						</anchor>
+						<info>
+							<cite>twin quasar and surrounding area captured by Hubble</cite>
+							<info-details>
+								2014
+								ESA/Hubble & NASA<br>
+							</info-details>
+							<origin>
+								<a href="https://esahubble.org/images/potw1403a/">esahubble.org/images/potw1403a/</a>
+							</origin>
+						</info>
+					</citation>
+				</container>
+			</sources-media>
+
+			<music>
+				<h2>Music</h2>
+				<iframe id="bandcamp-player" src="https://bandcamp.com/EmbeddedPlayer/album=591914931/size=large/bgcol=333333/linkcol=6decc2/artwork=small/transparent=true/" seamless><a href="https://emergentbeacon.bandcamp.com/album/critical-curves">Critical Curves by Emergent Beacon</a></iframe>
+				<download>
+					available on all major platforms<br>
+					<button type="button" onclick="document.location='/music/critical-curves.html'" value="Go to music details page.">buy or stream</button>
+				</download>
+			</music>
+
+			<credits>
+				<h2>Credits</h2>
+				<container>
+					<p>
+						<credit-name>Brandt Hughes</credit-name>
+						<credit-role>research, writing, host, cam op, audio engineer, music prod, editor</credit-role>
+					</p>
+				</container>
+			</credits>
+
+			<transcription>
+				<h2>Transcript</h2>
+				<container>
+					<aside>
+						<p>
+							Oh, hey.<br><br>There you are.<br><br>So I've got a couple things to go over from the Cosmic Mirage video.<br><br>A little bit of a brief addendum.<br><br>Okay, so first and foremost, I have a couple very minor corrections.<br><br>We have two mispronunciations throughout the video.<br><br>I use the terms spectroscopy and geodesic, they're actually supposed to be pronounced spec-tros-kuh-pee and gee-uh-des-ik, respectively.<br><br>I don't feel too awfully bad about this.<br><br>When you're just reading a bunch of research papers, they typically don't have pronunciation guides.<br><br>I also think we could all stand to be a little bit more descriptivist in our language rather than prescriptivist.<br><br>But that said, I also understand how frustrating it can be sometimes.<br><br>If somebody were talking about a computer program, and they kept pronouncing it egs-yekute-able instead of exe-cute-able, you might be a little peeved.<br><br>It's a little grating to the ears, and also there are probably plenty of people who saw the Cosmic Mirage video who had never heard those terms before.<br><br>So I've pinned a comment on the video that corrects that, and of course it is posted here, in this addendum.<br><br>Then we've got some footnotes, just some little extra bits of information that I wasn't able to work into the video.<br><br>First and foremost: hey, I survived a once-in-a-generation winter storm in Texas.<br><br>It was kind of a natural disaster.<br><br>I'm fine, now, but during that, I had to conserve water, because we were without water for five days.<br><br>And in having a bucket of water, I discovered another way to simulate gravitational lensing that I didn't quite expect.<br><br>So if you get a bucket of water here, and you just spin it around, eventually you get a bit of a water vortex going.<br><br>And this just happens to create the shape of a funnel, not unlike our wine glass base.<br><br>Once the turbulence goes away, and the spinning slows down, we get this really smooth dip in the surface of the water.<br><br>And that lends itself really nicely to this warped reflection that bows out in a circle and looks a bit like a gravitationally lensed image.<br><br>Now as cool as that is, I probably should have expected that something like that could be possible, because vortices in water have been used to simulate wave interactions with black holes before.<br><br>Again, it's not exactly a perfect simulation.<br><br>In this case, we're reflecting light rather than deflecting light, but it is kind of an interesting low-fi way to see an Einstein ring wherever you happen to have a bit of water.<br><br>Next, we have this little bit of information that I realized as I was going through research papers and stuff, a lot of times you'll see diagrams where light is bent.<br><br>Of course, that's -- that's what the whole phenomenon is, but I noticed that every time I saw a diagram the light was bent at a sharp angle.<br><br>It was very pointed, and initially I just had this gut reaction of, "Oh, that's simplified," because you don't want to show the complexity of the ways in which the light is being bent.<br><br>But actually it is a thin lens approximation, so that is basically taking into account the vast, vast distances in between objects in the cosmos.<br><br>The space between each variable is so incredibly large, that for most applications, you can treat the lensing mass as a plane.<br><br>So light isn't being bent kind of as a curve over all of this space, once it hits the actual mass of the galaxy is when it's being bent.<br><br>So it looks like it's sharp, because it's basically zoomed way, way, way, way, way out.<br><br>Now I did mention that in most multiply-imaged lensing systems, you typically have the far distant object creating three to -- three or five separate images.<br><br>But...<br><br>that's not all that can exist, of course.<br><br>In fact, the very first multiply-lensed image that we were able to directly observe, I say -- I just want to say, I keep saying, "we."<br><br>I mean "we" as in humanity, not me.<br><br>I'm not an astronomer.<br><br>I'm not a researcher.<br><br>I'm just a human being, like you are.<br><br>The first multiply-imaged system that we collectively observed, uh, actually only had two images.<br><br>It's called the Twin Quasar, and I don't know a whole lot about it, to be honest.<br><br>But, some of you may be wondering okay, yes, we know some of the factors that go into determining how many objects we see.<br><br>There's symmetry, there's distance, alignment, all of that stuff.<br><br>Okay I understand that these are the variables in the system, but I don't really understand how that maps from point A to point B.<br><br>So, I tried to look into it a little bit more and I kept running across two terms that I think apply to this in particular, and that is caustics and critical curves or critical lines.<br><br>I found these two side-by-side diagrams and a paper on the basics of lensing and it kind of helped me wrap my mind around this so I'm going to try to convey that to you.<br><br>But first, a quick reminder for two pieces of a lensing system that we'll be talking about.<br><br>We have the source plane, which is where all of our background light sources are.<br><br>In reality, these sources are all at varying distances but we're simplifying it to a plane.<br><br>And then we have the image plane, which is in the foreground where our lens is.<br><br>With that out of the way, let's look at each of those planes.<br><br>On the left, we have our source plane and on the right, our image.<br><br>In the source plane, we have seven different light sources, each with a different identifying color.<br><br>In the image plane, we have a simple lens that can only be seen by the distortion of the source plane.<br><br>We can see some features of this lens already, but to better understand it, we'll want to overlay caustics and critical curves for context.<br><br>I think these are derived from lens mapping, which are observations of the lens mass, and lens models, which are approximated behaviors for various lens systems.<br><br>I know this all looks a little hectic, but bear with me, as I try to pull these threads together.<br><br>Caustics are bundles of light that are from one light source, reflected or deflected by a curved or uneven surface and then concentrated elsewhere.<br><br>Here is an interactive simulator that can trace paths of light to help you visualize some of the shapes that this can make in space.<br><br>You can get some very pretty results, but it can be somewhat abstract.<br><br>Although you're probably familiar with caustics already, just...<br><br>on a smaller scale interaction.<br><br>Anybody who's looked at the bottom of a pool or a clear body of water, has seen these as any sort of movement in the water either caused by the water jets circulating the water in the pool or a breeze blowing across the surface will cause small deformations in the shape of the surface of the water.<br><br>Then when light travels through the water, with these varied entry points, they converge into a shimmering ripple pattern.<br><br>These are caustics!<br><br>Now let's get to the bottom of these lines.<br><br>I think it's safe to say that you can think of them as thresholds, theoretical limits where things happen.<br><br>And they have an inverse relationship with each other, where the inner of one corresponds to the outer of the other.<br><br>So I will color coordinate them as such.<br><br>Let's start with the outer caustic.<br><br>This is a boundary, that once a light source crosses to the interior of it, an additional pair of images is created in the image plane, and if the light source exits this boundary, the pair is destroyed.<br><br>So anything positioned within this caustic is going to end up having multiple images.<br><br>Good examples of this would be to compare the green source and the red source.<br><br>The green source is merely pushed downhill, a term that they use in the paper, that I quite like, from the lens and it's squeezed tangential to the critical curve.<br><br>The red source is also pushed somewhat downhill and squeezed, but we can see a pair of additional images down here.<br><br>The additional images are created right at the border of the inner critical curve, which is called the radial critical curve.<br><br>This happens on the opposite side of the lens from its origin in the source plane, and as the source gets closer to the center, its additional images split, where a small faint image retreats to the center of the image plane and the other approaches the outer critical curve.<br><br>This outer critical curve is called the tangential critical curve.<br><br>This is the boundary where an image can be stretched tangentially along the curve more than anywhere else.<br><br>An image can be magnified infinitely along this line, under the right conditions, to make an Einstein ring.<br><br>This threshold corresponds to the inner caustic, which assumes a diamond shape in elliptical systems, and if a light crosses this threshold, a new pair of images is created yet again, giving us a cross formation.<br><br>In axially symmetric lenses, like with stars, this inner caustic is reduced to a point.<br><br>Now magnification is more pronounced along the points of the diamond, so our yellow source along the flat edge of the inner caustic has two of its five images merging in this small arc, however the pink source which is just as close to the center, but lies along the point of the diamond has enough magnification that three of its five images have converged.<br><br>The blue source is outside of that inner caustic, so we're back down to three images in the image plane, but even though it is further from the diamond than the yellow image, because it lies along the point the downhill blue image is stretched even more than any of the yellow images.<br><br>Now, charts and diagrams can only go so far for a lot of folks.<br><br>So here are three interactive demos to help you better understand what's going on.<br><br>First we have this little java lensing model that can let you see the interactions at the edges of these thresholds in motion.<br><br>It doesn't have an elliptical lens model, so you won't be able to make five images, but you can see brightening, magnification, convergence, and divergence of a light source.<br><br>This demo requires some downloads and it's not super flexible, but it's fairly straightforward.<br><br>But if you want something that's as simple as it gets try this next tool, where you can see critical curves overlaid on top of an image of a galaxy cluster and you move a light source behind it to great effect.<br><br>And finally we have this nice demo where you can add lenses and modify their properties to simultaneously see both the resulting image and the hidden caustics at play.<br><br>With this, you can set the source to a single point source of light and easily recreate rings and crosses.<br><br>You can also effectively recreate the wine glass demo from the Cosmic Mirage video.<br><br>Then you can lens the unmodified light sources from the diagram, which we used to explain caustics and critical curves, and you can match the image plane that we saw throughout that.<br><br>Or you can just set the background to be the M51 galaxy and see how you can completely warp the image.<br><br>The big downside with this demo is that it isn't very clear where the outer caustic is, but it's so clean and intuitive, that it's a real delight to play with.<br><br>I know this is a lot to take in and I'm omitting a lot, because these are just the parts that I think that I understand.<br><br>But I really think if you look at these diagrams and here's a more orderly example, as well, and you draw comparisons between each side, you can really start to build an intuition for these concepts.<br><br>And if you're still having trouble, get your hands on these demos, look over the papers, and trust that I believe in you.<br><br>Next, I want to mention that "gravitational lens" is a little bit of a misnomer.<br><br>Typically lenses, they will collect a bunch of light, and they will focus it into a point or on a focal plane, right?<br><br>So with like a camera, you have a lens, and it focuses the light onto a plane and that plane is exactly where the sensor or the film is.<br><br>And it happens to be very in focus, but if you had the lens and you moved it slightly forward, suddenly everything looks out of focus, because that image is being projected to a very specific point in space.<br><br>Gravitational lensing doesn't really work like that, because it is bending light around an object, there's not quite that-- that hard perimeter that you would have with a traditional lens.<br><br>So gravitational lensing doesn't have a focal plane or a focal point.<br><br>It has a focal line.<br><br>So, gravitational lensing, if let's say you have a star, and you want to get an Einstein ring from a star.<br><br>If you're as close as Earth, you're not going to see it.<br><br>It doesn't work close up, otherwise we would constantly see a ring of light around our star, basically at all times.<br><br>But once you get a certain distance away, the light will actually start to converge into what can be seen as an Einstein ring from a very specific point in space but as you move further and further away from the star, different rays of light are also being bent at a different amount.<br><br>So at a certain point it doesn't even really matter how far away you are, as long as you're in perfect alignment, the geometry just happens to work out such that it stays in focus.<br><br>There there are some little things that change like how close the Einstein ring is to the object, but it does stay in focus in a line pointing away from the lensing mass, which is a weird, interesting thing.<br><br>All right, next point.<br><br>When I started talking about the solar eclipse expeditions where scientists went out across the planet and imaged a solar eclipse, and saw that the stars were...<br><br>deflected to a different point in the sky, slightly.<br><br>During that I mentioned that there's actually a bit of a backstory to it.<br><br>And specifically, I wanted to kind of mention that before that big expedition, there were multiple expeditions, and they all kind of failed in their own ways.<br><br>You know, whether it be...<br><br>cloudy stormy skies, or in one case, German astronomer Erwin Finlay...<br><br>Freundlich.<br><br>I...<br><br>froin-lik?<br><br>Froin-lik.<br><br>Sorry, I've got to look this up.<br><br>Y'all are going to destroy me.<br><br>[robotic voice] Freund-lich.<br><br>Erwin fin-ley.<br><br>Freund-lich.<br><br>Freun-lich!<br><br>Freuund lich.<br><br>Okay, I've consulted the Encyclopedia.<br><br>German astronomer, Erwin Finlay Freundlich traveled out to Russia in 1914, when...<br><br>oh let's say, World War One started.<br><br>There was also a team from Argentina, and a team from America.<br><br>The America team went to Ukraine, and let's just say it didn't work out.<br><br>Freundlich was jailed and he was eventually released as a-- in part of a prisoner exchange, and basically the Argentina team and the American team, they they weren't able to capture anything and they just booked it out of there and all of their equipment got confiscated.<br><br>It seemed like a whole big deal.<br><br>Next, I wanted to bring up two little minor deleted scenes from this episode that got left on the cutting room floor.<br><br>First, I've got a scene about a scratched eye.<br><br>Last year, a branch scratched my eye pretty bad and everything looked a bit like an Einstein cross, but it healed great and I'm not experiencing any side effects whatsoever, so please don't ask me about it.<br><br>So this shot was in reference to a moment when I was recording a Modern Rogue episode a year and a half-- two years ago, where a branch scratched my cornea pretty badly but it totally threw off the pacing of the early parts of the video, so I scrapped it.<br><br>Next we have this really interesting story that I was considering including, but I just-- it just didn't fit into the episode right.<br><br>It was kind of redundant to the scratched eye story, but I kind of wanted another example in which...<br><br>I could give you a really tangible, real example of second guessing your equipment if that is the more likely outcome, than seeing clones of stars or quasars in the sky.<br><br>-- That's a more plausible explanation.<br><br>However, there are some other explanations that might give you a bit of a blurred vision.<br><br>When the 100-inch Hooker telescope was first unveiled, it was a big deal!<br><br>It was the world's largest telescope.<br><br>Everybody gathered around really excitedly, it took a long time to complete, and they looked through it...<br><br>and it looks like a kaleidoscope.<br><br>All the images are jumbled up, it just doesn't look right.<br><br>Turns out, they left the observatory doors open and the sunlight had heated up and warped the telescope's mirror, totally ruining the image.<br><br>Not permanently, however.<br><br>They did just give it some time, let it cool down, and hey!<br><br>It works.<br><br>But there are plenty of explanations why you maybe shouldn't trust seeing multiple of the same thing.<br><br>And of course, that story mentions the Hooker telescope, which you will recognize that name from the little bit at the end about The Great Debate and Edwin Hubble.<br><br>He used the Hooker telescope.<br><br>I kind of didn't want to introduce the Hooker telescope too early, but that is kind of the story of the Hooker telescope's grand debut.<br><br>So one last final footnote, and I want there to be just a little, minor lesson to go along with this one.<br><br>If anybody ever brings up a quote, particularly a famous quote or a quote from a famous person, you should always be very skeptical of that.<br><br>You should consider that it is intrinsically being taken out of context by another person saying it and attributing it to their work.<br><br>You know, if somebody is using a quote from Einstein they're probably using it to give themselves credibility, and a good general rule of thumb is, the shorter the quote, the more there is context and story behind that quote which is not being told to you.<br><br>So, that being said, in the Cosmic Mirage video I did have a big Einstein quote.<br><br>Of course, there is no hope in observing this phenomenon directly.<br><br>Now I did try to use that in a faithful context and not misinterpret his intents when he said that, but there is a little story behind it to give you a bigger picture of why he said that, and it's very funny to me.<br><br>So it's 1936, some time has passed since the solar eclipse photos, since general relativity, all that.<br><br>You know, some time has gone by and Einstein is approached by this fella, Robert Mandel.<br><br>He's a Czech electrical engineer, and...<br><br>this guy, he just really got it in his head that "You know what, Einstein, you should really really write a paper about gravitational lensing."<br><br>And he reached out to Einstein personally, and he kind of pestered him and bugged him.<br><br>I think at some point he also reached out to the inventor of the television to tell him about gravitational lensing, as well.<br><br>He was just-- he was very into Einstein writing about this phenomenon.<br><br>He thought it was very important.<br><br>Now, Einstein was still very skeptical of this idea, of course he had some writings that sort of determined that, yes, light can be bent, but he didn't take it so seriously, because again as mentioned earlier the idea of galaxies was still new, so a lot of times he was thinking about it in the context of stars.<br><br>But he did write this paper.<br><br>Like, Mandel got to him enough that he wrote this paper.<br><br>Just a few months later, he sent it to the publication Science and in his opening paragraph of this paper, he leaves a little note to Mr. Mandel which reads as, "Some time ago, R. W. Mandel paid me a visit and asked me to publish the results of a little calculation, which I made at his request.<br><br>This note complies with his wish.<br><br>Of course, there is no hope in observing this phenomenon directly."<br><br>Like, a bit passive aggressive from Einstein but to his credit, he did write the paper.<br><br>Directly after that, he wrote a letter to the editor of Science which had a little note, regarding this, saying, "Let me also thank you for your cooperation with the little publication which Mr. Mandel squeezed out of me.<br><br>It is of little value, but it makes the poor guy happy."<br><br>So yeah, I just love little notes like this that really breathe a lot of character and life into what is otherwise, sort of a nebulous...<br><br>figure, just like a historical name that you don't really know anything about, other than some big ideas that are attributed to them.<br><br>And uh, and I don't know, that just made me very happy to read.<br><br>Even though it's maybe not the-- maybe not the kindest reaction.<br><br>Anyway, that's going to be it for this video.<br><br>Thank you for watching.<br><br>If you haven't watched the video in which this is entirely in reference to then obviously, watch that as well.<br><br>You can join some like-minded folks and chat in our Discord, if you'd like, or you can follow me on Twitter and Instagram.<br><br>If none of those, then you know, just stick around here and eventually there will be another video.<br><br>Thanks so much...<br><br>bye!
+						</p>
+					</aside>
+					<button type="button" onclick="location.href='https://www.dropbox.com/s/rprclv3buqbqehn/EB003__main--cc_en_captions.srt?dl=0'" value="download english captions">captions</button>
+					<button type="button" onclick="location.href='https://www.dropbox.com/s/3w1rg1r7hn5160u/EB003__main--cc_en_sub.srt?dl=0'" value="download english subtitles">subtitles</button>
+					<button type="button" onclick="document.location='/translations'" value="details about translations">info</button>
+				</container>
+			</transcription>
+
+			<bonus>
+				<h2>Bonus Material</h2>
+				<container>
+					<p>
+						<a href="https://patreon.com/emergentbeacon" class="support-link" title="patreon.com/emergentbeacon">Pledge now</a> for these behind the scenes exclusives!
+					</p>
+					<items>
+						<bonus-entry>
+							<a href="https://patreon.com/posts/51623178">
+								<img src="/assets/" style="object-position: 0rem 0;">
+							</a>
+							<p>
+								<time datetime="PT2mS">12m</time><br>
+								<span>Music Pack</span>
+							</p>
+						</bonus-entry>
+					</items>
+				</container>
+			</bonus>
+		</main>
+
+		<footnav>
+			<tooltip>
+				<a href="/videos/einstein-cross.html">← Previous</a>
+				<span>What Is This Cosmic Mirage?</span>
+			</tooltip>
+			<a href="#">TO TOP</a>
+			<tooltip>
+				<a href="/videos/no-frames-no-boundaries.html">Next →</a>
+				<span>No Frames, No Boundaries</span>
+			</tooltip>
+		</footnav>
+
+		<footer>
+			<p>
+				<a href="/home.html">home</a><a href="/videos.html">videos</a><a href="/music.html">music</a><a href="/about.html">about</a><br>
+				<a href="/finance.html">financial reports</a><a href="/media.html">media kits</a>
+			</p>
+			<logo>
+				<svg id="v1-7:organic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 629.556 629.556">
+					<g id="shell">
+						<path d="M315.278,54.768c157.266,0,257.812,132.423,257.812,251.739,0,69.898-21.842,116.519-35.044,131.193-19.516,21.693-69.086,44.678-139.686,55.245-74.033,12.457-42.047,96.064-83.149,96.064-39.952,0-7.966-83.607-81.453-95.808-67.092-9.784-117.119-31.118-140.771-55.592-13.288-13.749-35.519-58.2-35.519-137.79,0-90.102,80.989-245.051,257.812-245.051Z"/>
+					</g>
+					<g id="interior">
+						<path d="M479.619,405.623c-7.956-17.388-35.482-18.367-35.482-34.859,0-9.255,11.786-12.784,27.882-12.784,20.229,0,36.868,6.96,45.182,14.55,6.614-18.266,9.507-39.998,9.507-65.593,0-119.849-91.189-211.43-211.43-211.43-119.266,0-211.43,91.582-211.43,218.828,0,22.437,2.619,41.824,8.51,58.409,8.233-7.673,24.99-14.764,45.409-14.764,16.096,0,27.882,3.53,27.882,12.784,0,16.492-27.526,17.471-35.482,34.859-2.749,6.009.352,16.893,12.877,23.416,33.185,16.74,82.314,24.299,152.234,24.299s118.625-7.428,151.725-24.446c12.298-6.538,15.345-17.304,12.615-23.269ZM315.278,410.801c-83.744,0-114.894-37.32-114.894-101.125,0-63.454,49.208-114.894,114.894-114.894,59.14,0,114.894,47.327,114.894,114.894,0,63.805-29.796,101.125-114.894,101.125Z"/>
+					</g>
+				</svg>
+			</logo>
+			<socials>
+				<div class="tooltip">
+					<a href="https://youtube.com/emergentbeacon">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 176 124">
+							<path class="st0" d="M172.5,19.4h-.2c-2-7.6-8-13.6-15.6-15.7C143,0,88,0,88,0c0,0-55,0-68.8,3.7-7.6,2-13.5,8-15.6,15.7C0,33.2,0,62,0,62c0,0,0,28.8,3.7,42.6,2,7.6,8,13.6,15.6,15.7,13.7,3.7,68.8,3.7,68.8,3.7,0,0,55,0,68.8-3.7,7.6-2,13.5-8,15.6-15.7,3.7-13.8,3.7-42.6,3.7-42.6,0,0,0-28.8-3.7-42.6ZM70,88.2v-52.4l46,26.2-46,26.2Z"/>
+						</svg>
+					</a>
+					<span class="tooltip-text">youtube</span>
+				</div>
+				<div class="tooltip">
+					<a href="https://patreon.com/emergentbeacon">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1080" xml:space="preserve">
+							<path class="st0" d="M1033.05,324.45c-0.19-137.9-107.59-250.92-233.6-291.7c-156.48-50.64-362.86-43.3-512.28,27.2 C106.07,145.41,49.18,332.61,47.06,519.31c-1.74,153.5,13.58,557.79,241.62,560.67c169.44,2.15,194.67-216.18,273.07-321.33 c55.78-74.81,127.6-95.94,216.01-117.82C929.71,603.22,1033.27,483.3,1033.05,324.45z"/>
+						</svg>
+					</a>
+					<span class="tooltip-text">patreon</span>
+				</div>
+				<div class="tooltip">
+					<a href="https://discord.emergentbeacon.com/">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36">
+							<path class="cls-1" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/>
+						</svg>
+					</a>
+					<span class="tooltip-text">discord</span>
+				</div>
+				<div class="tooltip">
+					<a href="https://bsky.app/profile/brandthughes.bsky.social">
+						<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568 500.117">
+							<path class="cls-1" d="M123.121,33.664c65.12,48.889,135.16,148.017,160.879,201.209,25.719-53.192,95.759-152.32,160.879-201.209,46.987-35.276,123.121-62.57,123.121,24.283,0,17.345-9.945,145.713-15.778,166.555-20.275,72.453-94.155,90.933-159.875,79.748,114.875,19.551,144.097,84.311,80.986,149.071-119.86,122.992-172.272-30.859-185.702-70.281-2.462-7.227-3.614-10.608-3.631-7.733-.017-2.875-1.169.506-3.631,7.733-13.43,39.422-65.842,193.273-185.702,70.281-63.111-64.76-33.889-129.52,80.986-149.071-65.72,11.185-139.599-7.295-159.875-79.748C9.945,203.659,0,75.292,0,57.946,0-28.906,76.134-1.612,123.121,33.664Z"/>
+						</svg>
+					</a>
+					<span class="tooltip-text">bluesky</span>
+				</div>
+				<div class="tooltip">
+					<a href="https://youtube.com/@BrandtHughes">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 176 124">
+							<path class="st0" d="M172.3,19.4c-2-7.6-8-13.6-15.6-15.7C143,0,88,0,88,0c0,0-55,0-68.8,3.7-7.6,2-13.5,8-15.6,15.7C0,33.2,0,62,0,62c0,0,0,28.8,3.7,42.6,2,7.6,8,13.6,15.6,15.7,13.7,3.7,68.8,3.7,68.8,3.7,0,0,55,0,68.8-3.7,7.6-2,13.5-8,15.6-15.7,3.7-13.8,3.7-42.6,3.7-42.6,0,0,0-28.8-3.7-42.6h0ZM117.3,98c-1.8,1.8-3.9,2.7-6.4,2.7h-45c-3,0-5.4-.9-7.2-2.6-1.8-1.7-2.7-4.1-2.7-7.1v-3c0-3.4.8-6.7,2.4-9.8,1.6-3.1,4.3-6.5,8.3-10.3,4-3.7,9.5-8,16.7-13l.8-.6c4.1-2.9,7.1-5.1,9-6.6,1.9-1.5,3.2-2.9,4-4.1.8-1.3,1.2-2.6,1.2-4.2,0-2.6-1-4.7-2.9-6.3-1.9-1.6-4.4-2.4-7.6-2.4s-5.2.6-6.9,1.8c-1.7,1.2-3.4,2.8-5,4.7-.2.2-.4.5-.6.7-.5.6-1,1.1-1.5,1.7-1.1,1.5-2.1,2.6-3.1,3.3-1,.8-2.4,1.2-4.2,1.2s-4.4-.7-5.8-2.2c-1.5-1.5-2.2-3.5-2.2-6s1.5-6.8,4.4-10.3c2.5-2.9,6-5.5,10.4-7.7,4.4-2.2,9.5-3.3,15.2-3.3s10.1,1,14.3,3c4.2,2,7.5,4.8,10,8.4,2.4,3.6,3.7,7.8,3.8,12.6,0,3.3-.6,6.4-1.7,9.3-1.1,2.9-2.8,5.5-4.9,8-2.1,2.5-4.8,5-8.1,7.5l-1.1.8c-2.6,1.9-5.2,3.7-7.9,5.6-5.4,3.6-9.3,6.6-11.8,8.9-1.4,1.3-2.4,2.7-3,4.2l32.4-.4c2.5,0,4.7.9,6.4,2.7,1.8,1.8,2.7,3.9,2.7,6.4s-.9,4.7-2.7,6.4h0Z"/>
+						</svg>
+					</a>
+					<span class="tooltip-text">youtube 2</span>
+				</div>
+			</socials>
+		</footer>
+	</body>
+
+	<script>
+		// 2. This code loads the IFrame Player API code asynchronously.
+		var tag = document.createElement('script');
+		tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		// 3. This function creates an <iframe> (and YouTube player)
+		//    after the API code downloads.
+		var player;
+		function onYouTubeIframeAPIReady() {
+		player = new YT.Player('yt-player', {
+			height: '400',
+			width: '100%',
+			videoId: '_4b2nVOHjdE',
+			playerVars: {
+				'playsinline': 1
+			},
+			events: {
+				'onReady': onPlayerReady,
+				'onStateChange': onPlayerStateChange
+			}
+		});
+		}
+
+		// 4. The API will call this function when the video player is ready.
+		function onPlayerReady(event) {}
+		function onPlayerStateChange(event) {}
+
+		//generic seekTo function taking a player element and seconds as parameters
+		function playerSeekTo(player, seconds) {
+			player.seekTo(seconds);
+			player.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start',
+				inline: 'nearest'
+			});
+		}
+
+		const iSearch = document.getElementById("infoSearchBanner");
+
+		function infoSearch() {
+			let input = document.getElementById("infoInput");
+			let inputVal = input.value;
+			let container = document.documentElement;
+			let containerPos = container.scrollTop;
+			let anchor = document.getElementById('Info' + inputVal);
+
+			if (anchor == null) {
+				iSearch.classList.add("error");
+			} else {
+				anchor.scrollIntoView({
+					behavior: 'smooth',
+					block: 'start',
+					inline: 'nearest'
+				});
+				container.scrollTop = containerPos;
+			}
+		}
+
+		const mSearch = document.getElementById("mediaSearchBanner");
+		function mediaSearch() {
+			let input = document.getElementById("mediaInput");
+			let inputVal = input.value;
+			let container = document.documentElement;
+			let containerPos = container.scrollTop;
+			let anchor = document.getElementById('Media' + inputVal);
+
+			if (anchor == null) {
+				mSearch.classList.add("error");
+			} else {
+				anchor.scrollIntoView({
+					behavior: 'smooth',
+					block: 'start',
+					inline: 'nearest'
+				});
+				container.scrollTop = containerPos;
+			}
+		}
+
+		// source lookup behavior: disable form submit on "Enter," replace with function
+		document.getElementById("infoInput").addEventListener("keydown", function (e) {
+			if (e.code === "Enter") {
+				e.preventDefault();
+				infoSearch();
+			}
+		});
+		document.getElementById("mediaInput").addEventListener("keydown", function (e) {
+			if (e.code === "Enter") {
+				e.preventDefault();
+				mediaSearch();
+			}
+		});
+
+		// remove css color animation class when animation finishes
+		iSearch.addEventListener("animationend", listener, false);
+		mSearch.addEventListener("animationend", listener, false);
+		function listener(event) {
+			switch (event.type) {
+				case "animationend":
+					mSearch.classList.remove("error");
+					iSearch.classList.remove("error");
+					break;
+			}
+		}
+	</script>
+</html>

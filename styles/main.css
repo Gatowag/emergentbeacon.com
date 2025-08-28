@@ -7,13 +7,22 @@
 	--txt: #ffffff;
 	--accent: #ffdd33;
 	--internal-link: #33ffbb;
+	--nav-current: #bec3c4;
+	--nav-fill: var(--secondary);
+	--nav-border: none;
 	--pledge: #2d4f63;
 	--playlist-item: #141414;
-	--playlist-btn: var(--link);
+	--playlist-btn: var(--accent);
+	--playlist-btn-hover: var(--txt);
 	--playlist-select-back: #363420;
 	--playlist-hover-back: var(--txt);
 	--playlist-hover-txt: var(--secondary);
-	--logo: var(--txt);
+	--bcampLink: #236dce;
+	--logo-form: #000000;
+	--logo-int: #2af2a5;
+	--logo-stroke: 1rem;
+	--social-icon: var(--txt);
+	--active-theme: 1;
 }
 .mode-light {
 	--background: #e8e9e0;
@@ -21,13 +30,22 @@
 	--txt: #29292e;
 	--accent: #af3727;
 	--internal-link: #33ffbb;
+	--nav-current: #8f5f5f;
+	--nav-fill: var(--secondary);
+	--nav-border: none;
 	--pledge: #d6d2af;
 	--playlist-item: #d6d2af;
 	--playlist-btn: #ffdd33;
+	--playlist-btn-hover: var(--accent);
 	--playlist-select-back: #b3ac89;
 	--playlist-hover-back: var(--accent);
 	--playlist-hover-txt: var(--secondary);
-	--logo: var(--txt);
+	--bcampLink: var(--accent);
+	--logo-form: #000000;
+	--logo-int: #2af2a5;
+	--logo-stroke: 0;
+	--social-icon: #000000;
+	--active-theme: 2;
 }
 .mode-contrast {
 	--background: #ffffff;
@@ -35,13 +53,22 @@
 	--txt: #000000;
 	--accent: #236dce;
 	--internal-link: #33ffbb;
+	--nav-current: #256ca5;
+	--nav-fill: white;
+	--nav-border: .15rem solid black;
 	--pledge: var(--background);
 	--playlist-item: var(--background);
 	--playlist-btn: var(--background);
+	--playlist-btn-hover: var(--accent);
 	--playlist-select-back: #ced6cb;
 	--playlist-hover-back: #105cbe;
 	--playlist-hover-txt: var(--background);
-	--logo: var(--txt);
+	--bcampLink: var(--accent);
+	--logo-form: #000000;
+	--logo-int: #2af2a5;
+	--logo-stroke: 0;
+	--social-icon: var(--txt);
+	--active-theme: 3;
 }
 /*____________________
  |__ PAGE DEFAULTS __|

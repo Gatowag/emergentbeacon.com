@@ -65,11 +65,11 @@ grid-item {
 	}
 }
 grid-item:hover {
-	color: var(--link);
+	color: var(--accent);
 }
 
 button {
-	background-color: var(--link);
+	background-color: var(--accent);
 	color: var(--background);
 	border: none;
 	border-radius: .1rem;

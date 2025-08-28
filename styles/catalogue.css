@@ -27,8 +27,6 @@ vid-grid img {
 	object-fit: cover;
 	background: green;
 }
-vid-grid:hover > grid-item { opacity: 0.7; filter:saturate(40%) }
-vid-grid:hover > grid-item:hover { opacity: 1; filter:none }
 grid-item {
 	display: block;
 	width: 31%;

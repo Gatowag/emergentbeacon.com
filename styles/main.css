@@ -70,6 +70,25 @@
 	--social-icon: var(--txt);
 	--active-theme: 3;
 }
+
+@media (prefers-color-scheme: light) {
+	body {
+		background: var(--background);
+		color: var(--txt);
+	}
+	nav {
+		background-color: white;
+		a { color: black }
+		a:hover { color: rgb(0, 141, 184) }
+	}
+	footer {
+		background-color: #ffffff;
+		color: black;
+		img { filter: invert() }
+		p > a { color: black }
+	}
+}
+
 /*____________________
  |__ PAGE DEFAULTS __|
 */
@@ -339,23 +358,6 @@ button {
 @keyframes error {
 	from {background-color: #ff0000;}
 	to {background-color: #131313;}
-}
-
-
-/*_________________
- |__ LIGHT MODE __|
-	-> whole page colors
-	-> social link colors
-*/
-@media (prefers-color-scheme: light) {
-	html {
-		background: #e7f2e7;
-		background-image: radial-gradient(#ffffff, #d1dfd7);
-		color: #29292e;
-	}
-	.socials {
-		filter: invert();
-	}
 }
 
 

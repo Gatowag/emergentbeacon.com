@@ -239,15 +239,11 @@
 
 			if (type === "list") {
 				list.classList.remove("hidden");
-				list.classList.add("vid-list");
 				grid.classList.add("hidden");
-				grid.classList.remove("vid-grid");
-			} else {
 				shorts.classList.add("hidden");
+			} else if (type === "grid") {
 				grid.classList.remove("hidden");
-				grid.classList.add("vid-grid");
 				list.classList.add("hidden");
-				list.classList.remove("vid-list");
 				shorts.classList.add("hidden");
 			} else {
 				list.classList.add("hidden");

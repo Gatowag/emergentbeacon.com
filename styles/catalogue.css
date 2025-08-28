@@ -43,7 +43,7 @@ grid-item {
 	}
 	a {
 		text-decoration: none;
-		color: #ffdc3e;
+		color: var(--txt);
 		background: none;
 		border: none;
 		font-optical-sizing: auto;
@@ -51,7 +51,7 @@ grid-item {
 		transition: .2s ease;
 	}
 	a:hover {
-		color: #33ffbb;
+		color: var(--accent);
 	}
 	img {
 		margin-bottom: .6em;
@@ -60,7 +60,7 @@ grid-item {
 
 
 button {
-	background-color: #e4c945;
+	background-color: var(--accent);
 	border: none;
 	border-radius: .1rem;
 	color: black;
@@ -73,7 +73,7 @@ button {
 	font-weight: 600;
 }
 button:hover {
-	background-color: white;
+	background-color: var(--txt);
 	transform: translateY(-.2em);
 }
 button:active {
@@ -90,7 +90,7 @@ playlist-items {
 	ul {
 		list-style: none;
 		cursor: pointer;
-		background-color: hsl(0, 0%, 8%);
+		background-color: var(--playlist-item);
 		line-height: 1rem;
 		margin: 0;
 		padding: 0;
@@ -107,7 +107,7 @@ playlist-items {
 		gap: 6px;
 		padding: var(--item-padding);
 		text-align: left;
-		color: white;
+		color: var(--txt);
 		text-decoration: none;
 	}
 	time {
@@ -116,7 +116,7 @@ playlist-items {
 		right: var(--item-padding);
 		width: var(--time-width);
 		overflow: hidden;
-		color:rgba(255, 255, 255, 0.61);
+		color:hsl(from var(--txt) h s l / 0.8);
 		text-wrap: nowrap;
 		text-align: right;
 
@@ -128,7 +128,7 @@ playlist-items {
 	}
 	a:hover,
 	a:focus-visible {
-		background: rgba(149, 185, 206, 0.233);
+		background: var(--playlist-hover-back);
 	}
 	a:hover strong,
 	a:focus-visible strong {
@@ -136,20 +136,20 @@ playlist-items {
 	}
 	a:hover time,
 	a:focus-visible time {
-		color: white;
+		color: var(--playlist-hover-txt);
 	}
 }
 .selected {
 	background-color: #d9dbdf;
-	color: black;
-	a {color: black;}
-	time {color: black;}
 	a:hover time, a:focus-visible time {
 		color: black;
 	}
 }
 .selected a:hover, .selected:focus-visible {
 	background-color: white;
+	color: var(--txt);
+	a {color: var(--txt);}
+	time {color: hsl(from var(--txt) h s l / 0.8);}
 }
 
 

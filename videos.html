@@ -39,91 +39,94 @@
 
 			<h1>VIDEOS</h1>
 			<button onclick="viewButton('grid')">grid</button>
-			<div id="vid-list" class="hidden">
-				<div class="catalog-entry">
-					<a href="/videos/tenere.html" class="vid-title catalog-title">The Myth of the Loneliest Tree on Earth</a>
-					<div class="vid-date">26 min</div>
-				</div>
 			<button onclick="viewButton('list')">list</button>
 			<button onclick="viewButton('shorts')">shorts</button>
 
-				<div class="catalog-entry">
-					<a class="vid-title catalog-title" href="/videos/sun-spotter.html">I Built a Device to See The Sun</a>
-					<div class="vid-date">59 min</div>
-				</div>
+			<section id="vid-grid">
+				<vid-grid>
+					<grid-item>
+						<a href="/videos/tenere.html">
+							<img id="img-tenere"><br>
+							The Myth of the Loneliest Tree on Earth
+						</a>
+						<time datetime="PT26M">26 min</time>
+					</grid-item>
 
-				<div class="catalog-entry">
-					<a class="vid-title catalog-title" href="/videos/sungazer.html">Why Am I Staring at the Sun?</a>
-					<div class="vid-date">48 min</div>
-				</div>
+					<grid-item>
+						<a href="/videos/sun-spotter.html">
+							<img src="/assets/vid-grid.jpg" style="object-position: 0 11.11%;"><br>
+							I Built a Device to See The Sun
+						</a>
+						<time datetime="PT59M">59 min</time>
+					</grid-item>
 
-				<div class="catalog-entry">
-					<a class="vid-title catalog-title" href="/videos/trailer.html">channel trailer: The World Remembers</a>
-					<div class="vid-date">3 min</div>
-				</div>
+					<grid-item>
+						<a href="/videos/sungazer.html">
+							<img src="/assets/vid-grid.jpg" style="object-position: 0 22.22%;"><br>
+							Why Am I Staring at the Sun?
+						</a>
+						<time datetime="PT48M">48 min</time>
+					</grid-item>
 
-				<div class="catalog-entry">
-					<a class="vid-title catalog-title" href="/videos/sedna.html">The Mystery of Sedna’s Orbit</a>
-					<div class="vid-date">7 min</div>
-				</div>
+					<grid-item>
+						<a href="/videos/trailer.html">
+							<img src="/assets/vid-grid.jpg" style="object-position: 0 33.33%;"><br>
+							channel trailer: The World Remembers
+						</a>
+						<time datetime="PT3M">3 min</time>
+					</grid-item>
 
-				<div class="catalog-entry">
-					<a class="vid-title catalog-title" href="/videos/the-search.html">The Search</a>
-					<div class="vid-date">8 min</div>
-				</div>
+					<grid-item>
+						<a href="/videos/sedna.html">
+							<img src="/assets/vid-grid.jpg" style="object-position: 0 44.44%;"><br>
+							The Mystery of Sedna’s Orbit
+						</a>
+						<time datetime="PT7M">7 min</time>
+					</grid-item>
 
-				<div class="catalog-entry">
-					<a class="vid-title catalog-title" href="/videos/art.html">What Exactly is Art?</a>
-					<div class="vid-date">1 hour 11 min</div>
-				</div>
+					<grid-item>
+						<a href="/videos/the-search.html">
+							<img src="/assets/vid-grid.jpg" style="object-position: 0 55.55%;"><br>
+							The Search
+						</a>
+						<time datetime="PT8M">8 min</time>
+					</grid-item>
 
-				<div class="catalog-entry">
-					<a class="vid-title catalog-title" href="/videos/no-frames-no-boundaries.html">No Frames, No Boundaries</a>
-					<div class="vid-date">6 min</div>
-				</div>
+					<grid-item>
+						<a href="/videos/art.html">
+							<img src="/assets/vid-grid.jpg" style="object-position: 0 66.66%;"><br>
+							What Exactly is Art?
+						</a>
+						<time datetime="PT1H11M">1 hour 11 min</time>
+					</grid-item>
 
-				<div class="catalog-entry">
-					<a class="vid-title catalog-title" href="/videos/critical-curves.html">How Does Light Ripple Through Deep Space?</a>
-					<div class="vid-date">23 min</div>
-				</div>
+					<grid-item>
+						<a href="/videos/no-frames-no-boundaries.html">
+							<img src="/assets/vid-grid.jpg" style="object-position: 0 77.77%;"><br>
+							No Frames, No Boundaries
+						</a>
+						<time datetime="PT6M">6 min</time>
+					</grid-item>
 
-				<div class="catalog-entry">
-					<a class="vid-title catalog-title" href="/videos/einstein-cross.html">What Is This Cosmic Mirage?</a>
-					<div class="vid-date">23 min</div>
-				</div>
-			</div>
-			<div id="vid-grid" class="vid-grid">
-				<div class="gallery outline">
-					<a href="/videos/tenere.html" class="gallery-title">
-						<img src="/assets/vid-grid.jpg" style="object-position: 0 0;"><br>
-						The Myth of the Loneliest Tree on Earth
-					</a>
-					<div class="vid-date">26 min</div>
-				</div>
+					<grid-item>
+						<a href="/videos/critical-curves.html">
+							<img src="/assets/vid-grid.jpg" style="object-position: 0 88.88%;"><br>
+							How Does Light Ripple Through Deep Space?
+						</a>
+						<time datetime="PT23M">23 min</time>
+					</grid-item>
 
-				<div class="gallery outline">
-					<a class="gallery-title" href="/videos/sun-spotter.html">
-						<img src="/assets/vid-grid.jpg" style="object-position: 0 11.11%;"><br>
-						I Built a Device to See The Sun
-					</a>
-					<div class="vid-date">59 min</div>
-				</div>
+					<grid-item>
+						<a href="/videos/einstein-cross.html">
+							<img src="/assets/vid-grid.jpg" style="object-position: 0 100%;"><br>
+							What Is This Cosmic Mirage?
+						</a>
+						<time datetime="PT23M">23 min</time>
+					</grid-item>
+				</vid-grid>
+			</section>
 
-				<div class="gallery outline">
-					<a class="gallery-title" href="/videos/sungazer.html">
-						<img src="/assets/vid-grid.jpg" style="object-position: 0 22.22%;"><br>
-						Why Am I Staring at the Sun?
-					</a>
-					<div class="vid-date">48 min</div>
-				</div>
 
-				<div class="gallery outline">
-					<a class="gallery-title" href="/videos/trailer.html">
-						<img src="/assets/vid-grid.jpg" style="object-position: 0 33.33%;"><br>
-						channel trailer: The World Remembers
-					</a>
-					<div class="vid-date">3 min</div>
-				</div>
 			<section id="vid-list" class="hidden">
 				<playlist class="extrude">
 					<playlist-items>
@@ -193,18 +196,7 @@
 				</playlist>
 			</section>
 
-				<div class="gallery outline">
-					<a class="gallery-title" href="/videos/sedna.html">
-						<img src="/assets/vid-grid.jpg" style="object-position: 0 44.44%;"><br>
-						The Mystery of Sedna’s Orbit
-					</a>
-					<div class="vid-date">7 min</div>
-				</div>
 
-				<div class="gallery outline">
-					<a class="gallery-title" href="/videos/the-search.html">
-						<img src="/assets/vid-grid.jpg" style="object-position: 0 55.55%;"><br>
-						The Search
 			<section id="vid-shorts" class="hidden">
 				<shorts>
 					<iframe id="shortsVideoFrame1" width="200" height="358" src="https://www.youtube.com/embed/7WkIcTEcm9E?playlist=7WkIcTEcm9E&loop=1" title="YouTube video player for maps of nowhere" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -236,62 +228,38 @@
 							<path class="st0" d="M172.5,19.4h-.2c-2-7.6-8-13.6-15.6-15.7C143,0,88,0,88,0c0,0-55,0-68.8,3.7-7.6,2-13.5,8-15.6,15.7C0,33.2,0,62,0,62c0,0,0,28.8,3.7,42.6,2,7.6,8,13.6,15.6,15.7,13.7,3.7,68.8,3.7,68.8,3.7,0,0,55,0,68.8-3.7,7.6-2,13.5-8,15.6-15.7,3.7-13.8,3.7-42.6,3.7-42.6,0,0,0-28.8-3.7-42.6ZM70,88.2v-52.4l46,26.2-46,26.2Z"/>
 						</svg>
 					</a>
-					<div class="vid-date">8 min</div>
+					<span class="tooltip-text">youtube</span>
 				</div>
-
-				<div class="gallery outline">
-					<a class="gallery-title" href="/videos/art.html">
-						<img src="/assets/vid-grid.jpg" style="object-position: 0 66.66%;"><br>
-						What Exactly is Art?
 				<div class="tooltip">
 					<a href="https://patreon.com/emergentbeacon">
 						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1080" xml:space="preserve">
 							<path class="st0" d="M1033.05,324.45c-0.19-137.9-107.59-250.92-233.6-291.7c-156.48-50.64-362.86-43.3-512.28,27.2 C106.07,145.41,49.18,332.61,47.06,519.31c-1.74,153.5,13.58,557.79,241.62,560.67c169.44,2.15,194.67-216.18,273.07-321.33 c55.78-74.81,127.6-95.94,216.01-117.82C929.71,603.22,1033.27,483.3,1033.05,324.45z"/>
 						</svg>
 					</a>
-					<div class="vid-date">1 hour 11 min</div>
 					<span class="tooltip-text">patreon</span>
 				</div>
-
-				<div class="gallery outline">
-					<a class="gallery-title" href="/videos/no-frames-no-boundaries.html">
-						<img src="/assets/vid-grid.jpg" style="object-position: 0 77.77%;"><br>
-						No Frames, No Boundaries
 				<div class="tooltip">
 					<a href="https://discord.emergentbeacon.com/">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36">
 							<path class="cls-1" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/>
 						</svg>
 					</a>
-					<div class="vid-date">6 min</div>
 					<span class="tooltip-text">discord</span>
 				</div>
-
-				<div class="gallery outline">
-					<a class="gallery-title" href="/videos/critical-curves.html">
-						<img src="/assets/vid-grid.jpg" style="object-position: 0 88.88%;"><br>
-						How Does Light Ripple Through Deep Space?
 				<div class="tooltip">
 					<a href="https://bsky.app/profile/brandthughes.bsky.social">
 						<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568 500.117">
 							<path class="cls-1" d="M123.121,33.664c65.12,48.889,135.16,148.017,160.879,201.209,25.719-53.192,95.759-152.32,160.879-201.209,46.987-35.276,123.121-62.57,123.121,24.283,0,17.345-9.945,145.713-15.778,166.555-20.275,72.453-94.155,90.933-159.875,79.748,114.875,19.551,144.097,84.311,80.986,149.071-119.86,122.992-172.272-30.859-185.702-70.281-2.462-7.227-3.614-10.608-3.631-7.733-.017-2.875-1.169.506-3.631,7.733-13.43,39.422-65.842,193.273-185.702,70.281-63.111-64.76-33.889-129.52,80.986-149.071-65.72,11.185-139.599-7.295-159.875-79.748C9.945,203.659,0,75.292,0,57.946,0-28.906,76.134-1.612,123.121,33.664Z"/>
 						</svg>
 					</a>
-					<div class="vid-date">23 min</div>
 					<span class="tooltip-text">bluesky</span>
 				</div>
-
-				<div class="gallery outline">
-					<a class="gallery-title" href="/videos/einstein-cross.html">
-						<img src="/assets/vid-grid.jpg" style="object-position: 0 100%;"><br>
-						What Is This Cosmic Mirage?
 				<div class="tooltip">
 					<a href="https://youtube.com/@BrandtHughes">
 						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 176 124">
 							<path class="st0" d="M172.3,19.4c-2-7.6-8-13.6-15.6-15.7C143,0,88,0,88,0c0,0-55,0-68.8,3.7-7.6,2-13.5,8-15.6,15.7C0,33.2,0,62,0,62c0,0,0,28.8,3.7,42.6,2,7.6,8,13.6,15.6,15.7,13.7,3.7,68.8,3.7,68.8,3.7,0,0,55,0,68.8-3.7,7.6-2,13.5-8,15.6-15.7,3.7-13.8,3.7-42.6,3.7-42.6,0,0,0-28.8-3.7-42.6h0ZM117.3,98c-1.8,1.8-3.9,2.7-6.4,2.7h-45c-3,0-5.4-.9-7.2-2.6-1.8-1.7-2.7-4.1-2.7-7.1v-3c0-3.4.8-6.7,2.4-9.8,1.6-3.1,4.3-6.5,8.3-10.3,4-3.7,9.5-8,16.7-13l.8-.6c4.1-2.9,7.1-5.1,9-6.6,1.9-1.5,3.2-2.9,4-4.1.8-1.3,1.2-2.6,1.2-4.2,0-2.6-1-4.7-2.9-6.3-1.9-1.6-4.4-2.4-7.6-2.4s-5.2.6-6.9,1.8c-1.7,1.2-3.4,2.8-5,4.7-.2.2-.4.5-.6.7-.5.6-1,1.1-1.5,1.7-1.1,1.5-2.1,2.6-3.1,3.3-1,.8-2.4,1.2-4.2,1.2s-4.4-.7-5.8-2.2c-1.5-1.5-2.2-3.5-2.2-6s1.5-6.8,4.4-10.3c2.5-2.9,6-5.5,10.4-7.7,4.4-2.2,9.5-3.3,15.2-3.3s10.1,1,14.3,3c4.2,2,7.5,4.8,10,8.4,2.4,3.6,3.7,7.8,3.8,12.6,0,3.3-.6,6.4-1.7,9.3-1.1,2.9-2.8,5.5-4.9,8-2.1,2.5-4.8,5-8.1,7.5l-1.1.8c-2.6,1.9-5.2,3.7-7.9,5.6-5.4,3.6-9.3,6.6-11.8,8.9-1.4,1.3-2.4,2.7-3,4.2l32.4-.4c2.5,0,4.7.9,6.4,2.7,1.8,1.8,2.7,3.9,2.7,6.4s-.9,4.7-2.7,6.4h0Z"/>
 						</svg>
 					</a>
-					<div class="vid-date">23 min</div>
 					<span class="tooltip-text">youtube 2</span>
 				</div>
 			</socials>

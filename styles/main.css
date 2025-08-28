@@ -105,9 +105,6 @@ html {
 
 /*________________________
  |__ TOP LEFT NAV MENU __|
-	-> navigation container
-	-> clickable links
-	-> highlight links on hover
 */
 nav {
 	border-radius: .2rem;
@@ -164,8 +161,6 @@ nav {
 
 /*___________________
  |__ SOCIAL LINKS __|
-	-> icons
-	-> container
 */
 .socials {
 	grid-area: socials;
@@ -185,11 +180,6 @@ nav {
 
 /*_______________
  |__ TOOLTIPS __|
-	-> container specific structure
-	-> container and text
-		-> appearance
-		-> position
-	-> appear on hover
 */
 .tooltip {
 	position: relative;
@@ -260,8 +250,6 @@ button {
 /*___________________________
  |__ DARK HIGHLIGHT LINKS __|
  (commonly used in media/info sources)
-	-> link style
-	-> hover style
 */
 .dark-link {
 	color: #7ff5ce;
@@ -280,8 +268,6 @@ button {
 
 /*____________________________
  |__ SELECTION / HIGHLIGHT __|
-	-> general style
-	-> firefox specific
 */
 ::selection {
 	background: #111111; color: #ffdc3e; }
@@ -363,8 +349,6 @@ button {
 
 /*______________________
  |__ SCREENS: MOBILE __|
-	-> embiggen content column
-	-> hide navigation menu
 */
 @media screen and (max-width: 37em) {
 	.content-column { width: 90vw; }
@@ -377,7 +361,6 @@ button {
 
 /*______________________
  |__ SCREENS: >1080p __|
-	-> embiggen content column
 */
 @media screen and (min-width: 121em) {
 	.content-column {

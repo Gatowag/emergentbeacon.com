@@ -20,13 +20,7 @@ vid-grid {
 	flex-flow: row wrap;
 	justify-content: space-evenly;
 }
-vid-grid img {
-	width: 100%;
-	aspect-ratio: 16/9;
-	border-radius: .4rem;
-	object-fit: cover;
-	background: green;
-}
+
 grid-item {
 	display: block;
 	width: 31%;
@@ -52,7 +46,13 @@ grid-item {
 		color: var(--accent);
 	}
 	img {
+		width: 100%;
+		border-radius: .4rem;
+		object-fit: cover;
 		margin-bottom: .6em;
+		border: .15rem solid black;
+		aspect-ratio: 2/1;
+		background-color: black;
 	}
 }
 #img-tenere {

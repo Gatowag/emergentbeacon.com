@@ -505,16 +505,9 @@ bonus {
 			}
 		}
 		bonus-entry:hover {
-			span {
-				color: var(--accent);
-			}
+			opacity: 70%;
+			transform: scale(96%);
 		}
-	}
-	items:hover > bonus-entry {
-		opacity: 0.8;
-	}
-	items:hover > bonus-entry:hover {
-		opacity: 1;
 	}
 }
 

@@ -1,6 +1,7 @@
 html {
 	scroll-behavior: smooth;
-	background-color: #1c1e1f;
+	background-color: #e8e9e0;
+	color: black;
 }
 
 * { box-sizing: border-box; }
@@ -29,11 +30,9 @@ header {
 }
 
 fieldset {
-	color: white;
 	padding: .5rem .5rem;
 	border: none;
 }
-
 row {
 	display: flex;
 	flex-direction: row;
@@ -42,11 +41,10 @@ row {
 }
 label {
 	text-align: right;
-	width: 13rem;
+	width: 12rem;
 	padding-right: 1rem;
 }
 input {
-	width: calc(100vw - 30rem);
 	flex: 30%;
 	max-width: 100%;
 	text-wrap: wrap;
@@ -69,10 +67,12 @@ input {
 	width: 100%;
 	flex-wrap: wrap;
 }
+corrections {
+	display: block;
+}
 
 .label { font-size: 80%; }
 
-.input { width:100%; }
 button-row {
 	display: block;
 	width: 100%;

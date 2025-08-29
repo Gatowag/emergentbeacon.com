@@ -578,21 +578,122 @@
 				console.log(">!< ERROR, buildSources: " + err);
 			}
 		}
+		function buildSourcesInfo() {
+			diag && console.log("| building info sources");
+			let output =
+				`\n\n${tabs(3)}<sources-info>` +
+				`\n${tabs(4)}<h2>Info Sources</h2>` +
+				`\n${tabs(4)}<container id="infoContainer">`;
 
+			// loop through info data, source by source
+			let multiSources = 0;
+			for (srcI = 0; srcI < srcCountI; srcI++) {
+				let s = srcI + 1;
+				let rowTotal = file[0][srcI].length - 2;
+				let tcode;
+				if (file[0][srcI][iTimecode] == null) {
+					tcode = "0:00"
+				} else {
+					tcode = file[0][srcI][iTimecode]
+				}
+				let tcodeSeconds = Number(tcode.slice(-2)) + (Number(tcode.slice(0,tcode.length-3)) * 60);
+				let part = "ABCDEFGHIJKLMNO";
+				let instCount = (rowTotal - 8) / 4;
+				let specifics = "";
+				let instSpecifics = file[0][srcI][iSpecifics];
+				let instSpecificsURL = file[0][srcI][iSpecificsURL];
+				let sLinkState = file[0][srcI][iLinkState];
+				let sLinks = Number(file[0][srcI][iLinks]);
+				let displayURL = urlSanitize(file[0][srcI][iURL]);
 
-						output +=
-								} else {
-								}
-								} else {
-								}
-
-							output +=
+				// if this source isn't a child in a link chain
+				// create a box for the claim and source number 
+				if (multiSources == 0) {
+					diag && console.log(file[0][srcI]);
+					// if one source is used for multiple citations
+					if (sLinks > 0) {
+						multiSources = sLinks;
+						output += `\n${tabs(5)}<citation id="Info${s}">`;
+						output += `\n${tabs(6)}<number>${s}`;
+						for (sX = 1; sX < sLinks + 1; sX++){ output += ", " + (s + sX) }
+						output += `</number>`;
+					// if one source has one citation
+					} else {
+						output += `\n${tabs(5)}<citation id="Info${s}">`;
+						output += `\n${tabs(6)}<number>${s}</number>`;
 					}
 
+					if (rowTotal < 12) {
+						if (instSpecifics && instSpecificsURL) {
+							specifics = `<a href="${instSpecificsURL}">${instSpecifics}</a>`
+						} else {
+							specifics = instSpecifics
+						}
 
+						output +=
+							`\n${tabs(6)}<blockquote>` +
+							`\n${tabs(7)}${file[0][srcI][iClaim]}` +
+							`\n${tabs(7)}<time datetime="${genDateTime(tcode)}">timecode <a href="#" onclick="playerSeekTo(player, ${tcodeSeconds}); return false;">${tcode}</a></time>` +
+							`\n${tabs(6)}</blockquote>`;
+					} else {
+						output += `\n${tabs(6)}<multi>`;
 
+						for (x = 0; x < instCount; x++) {
+							let instClaim, instTime;
 
+							if (x == 0) {
+								if (instSpecifics && instSpecificsURL) {
+									specifics = part[x] + ": " + "<a href=\"" + instSpecificsURL + "\">" + instSpecifics + "</a>";
+								} else if (instSpecifics) {
+									specifics = part[x] + ": " + instSpecifics;
+								};
+								if (file[0][srcI][iClaim]) {
+									instClaim = file[0][srcI][iClaim];
+								} else {
+									instClaim = "No specific claim."
+								}
+								instTime = tcode;
+							} else {
+								if (file[0][srcI][7 + (x * 4)] && file[0][srcI][8 + (x * 4)]) {
+									if (specifics.length > 0) { specifics += "<br>" };
+									specifics += part[x] + ": " + "<a href=\"" + file[0][srcI][8 + (x * 4)] + "\">" + file[0][srcI][7 + (x * 4)] + "</a>";
+								} else if (file[0][srcI][7 + (x * 4)]) {
+									if (specifics.length > 0) { specifics += "<br>" };
+									specifics += part[x] + ": " + file[0][srcI][7 + (x * 4)];
+								};
+								if (file[0][srcI][9 + (x * 4)]) {
+									instClaim = file[0][srcI][9 + (x * 4)];
+								} else {
+									instClaim = "No specific claim."
+								}
+								instTime = file[0][srcI][10 + (x * 4)];
+							}
 
+							output +=
+								`\n${tabs(7)}<tab-align>` +
+								`\n${tabs(8)}<tab-part>${part[x]}</tab-part>` +
+								`\n${tabs(8)}<blockquote>` +
+								`\n${tabs(9)}${instClaim}<br>` +
+								`\n${tabs(9)}<time datetime="${genDateTime(instTime)}">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, ${tcodeSeconds}); return false;">${instTime}</a></time>` +
+								`\n${tabs(8)}</blockquote>` +
+								`\n${tabs(7)}</tab-align>`;
+						}
+					}
+				} else { multiSources-- }
+
+				let infoTabs = [6,7,8];
+				if (rowTotal > 12) {infoTabs = [7,8,9]}
+
+				output += buildSourcesInfoDetails(infoTabs, srcI, specifics, displayURL);
+
+				if (rowTotal > 12) {output += `\n${tabs(6)}</multi>`}
+				output += `\n${tabs(5)}</citation>`;
+			}
+
+			output += `\n${tabs(4)}</container>`;
+
+			return output;
+		}
 
 				}
 			}

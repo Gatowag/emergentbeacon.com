@@ -1132,4 +1132,14 @@
 			for (i = 0; i < num; i++) { output += x; }
 			return output;
 		}
+
+		function genDateTime(t) {
+			let S, M, H;
+			S = t.slice(-2) + "S";
+			(t.length > 3) ? M = t.slice(-5,-3) + "M" : M = "";
+			(t.length > 5) ? H = t.slice(0,1) + "H" : H = "";
+			let output = `PT${H}${M}${S}`;
+			return output;
+		}
+
 </html>

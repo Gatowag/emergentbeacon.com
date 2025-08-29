@@ -151,16 +151,18 @@
 <!-- SCRIPTING -->
 
 		<script>
-			let xSources;
-			let iSources = [], mSources = [], load = [], fileImport, file, reader;
-			let fileName = "page-data--.txt", clipboardHTML = "";
-			let diag = true;
 
 			function save() {
 				console.log("... SAVE PRESSED");
 				document.getElementById("processing").classList.remove("hidden");
 
 				let dataCollect = collectData();
+		let xSources, iSources = [], mSources = [], load = [], fileImport, file, reader;
+		let fileName = "page-data--.txt", clipboardHTML = "";
+		let srcCountI, srcCountM;
+		let iURL = 0, iTitle = 1, iPub = 2, iAuthor = 3, iYear = 4, iSpecifics = 5, iSpecificsURL = 6, iAccessed = 7, iClaim = 8, iTimecode = 9, iLinkState = 11, iLinks = 12;
+		let mURL = 0, mTitle = 1, mPub = 2, mAuthor = 3, mYear = 4, mMods = 6, mTimecode = 7;
+		let diag = true;
 
 				// take info from data and write it to a txt file
 				let dataString = JSON.stringify(dataCollect);

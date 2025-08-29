@@ -768,6 +768,15 @@
 
 			return output;
 		}
+		function buildSourcesSearchBar(t) {
+			let output = 
+				`\n${tabs(4)}<form id="${t}SearchBanner">` +
+				`\n${tabs(5)}<input id="${t}Input" placeholder="#" onfocus="this.value=''">` +
+				`\n${tabs(5)}<button id="${t}Btn" type="submit" onclick="${t}Search()">go to</button>` +
+				`\n${tabs(4)}</form>`;
+
+			return output;
+		}
 
 		function buildMusic() {
 			diag && console.log("| building music");

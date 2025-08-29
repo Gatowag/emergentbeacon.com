@@ -490,18 +490,20 @@
 				return output;
 			}
 
-			function buildVidWithSynopsis() {
-				diag && console.log("| building video and synopsis");
-				let synopsis = document.getElementById("input-synopsis").value;
-				let output =
-					`\n${tabs(3)}<div id="yt-player" class="yt-embed"></div>` +
-					`\n\n${tabs(3)}<div class="synopsis slate">` +
-					`\n${tabs(4)}${synopsis}` +
-					`\n${tabs(3)}</div>`;
 
-				return output;
-			}
+		function buildVidWithSynopsis() {
+			diag && console.log("| building video and synopsis");
+			let title = document.getElementById("input-title").value;
+			let synopsis = document.getElementById("input-synopsis").value;
+			let output =
+				`\n${tabs(3)}<h1>${title}</h1>` +
+				`\n${tabs(3)}<video id="yt-player"></video>` +
+				`\n\n${tabs(3)}<synopsis>` +
+				`\n${tabs(4)}${synopsis}` +
+				`\n${tabs(3)}</synopsis>`;
 
+			return output;
+		}
 
 		function buildCorrections() {
 			diag && console.log("| building corrections");

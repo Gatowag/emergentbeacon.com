@@ -1,7 +1,5 @@
 /*_____________________
  |__ COLOR PALETTES __|
-background-color: var(--fill-light);
-	color: var(--txt-dark);
 */
 :root {
 	--synopsis-fill: var(--playlist-item);

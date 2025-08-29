@@ -718,10 +718,56 @@
 			
 			return output;
 		}
-
+		function buildSourcesMedia() {
+			diag && console.log("| building media sources");
+			let output = `\n` +
+				`\n${tabs(3)}<sources-media>` +
+				`\n${tabs(4)}<h2>Media Sources</h2>` +
+				`\n${tabs(4)}<container id="media-container">`;
+			
+			// loop through media data, source by source
+			for (srcM = 0; srcM < srcCountM; srcM++) {
+				let s = srcM + 1;
+				let rowTotal = file[1][srcM].length;
+				let tcode;
+				if (file[1][srcM][mTimecode] == null) {
+					tcode = "0:00"
+				} else {
+					tcode = file[1][srcM][mTimecode]
 				}
+
+				let tcodeSeconds = Number(tcode.slice(-2)) + (Number(tcode.slice(0,tcode.length-3)) * 60);
+				let displayURL = urlSanitize(file[1][srcM][mURL]);
+
+				output +=
+					`\n${tabs(5)}<citation id="Media${s}">` +
+					`\n${tabs(6)}<anchor>` +
+					`\n${tabs(7)}<a href="#" onclick="playerSeekTo(player, ${tcodeSeconds}); return false;"><time datetime="${genDateTime(tcode)}">${tcode}</time></a><indx>m${s}</indx>` +
+					`\n${tabs(6)}</anchor>` +
+					`\n${tabs(6)}<info>` +
+					`\n${tabs(7)}<cite>${file[1][srcM][mTitle]}</cite>` +
+					`\n${tabs(7)}<info-details>`;
+
+				if (file[1][srcM][mYear]) {output += `\n${tabs(8)}${file[1][srcM][mYear]}`}
+				if (file[1][srcM][mYear] && file[1][srcM][mAuthor]) {output += ", "}
+				if (file[1][srcM][mAuthor]) {output += file[1][srcM][mAuthor] + "<br>"}
+				if (file[1][srcM][mPub]) {output += `\n${tabs(8)}${file[1][srcM][mPub]}<br>`}
+				if (file[1][srcM][mMods]) {output += `\n${tabs(8)}<i>modifications: ${file[1][srcM][mMods]}</i><br>`}
+
+				output += `\n${tabs(7)}</info-details>`;
+				if (file[1][srcM][mURL]) {
+					output +=
+						`\n${tabs(7)}<origin>` +
+						`\n${tabs(8)}<a href="${file[1][srcM][mURL]}">${displayURL}</a>` +
+						`\n${tabs(7)}</origin>`;
+				}
+				output +=
+					`\n${tabs(6)}</info>` +
+					`\n${tabs(5)}</citation>`;
 			}
 
+			return output;
+		}
 
 		function buildMusic() {
 			diag && console.log("| building music");

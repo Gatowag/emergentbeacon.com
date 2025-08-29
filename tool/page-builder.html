@@ -10,151 +10,150 @@
 		<link rel="stylesheet" href="/tool/tool.css">
 	</head>
 
-<!-- HTML -->
-	<body class="rubik-400">
-		<div>
-			<div class="buttons-top">
-				<button type="button" class="roboto-condensed-500" onclick="save()">SAVE</button>
-				<input type="file" id="load-input" value="load" name="load" class="hidden" onchange="loading()">
-				<button type="button" id="load-button" class="roboto-condensed-500" onclick="document.getElementById('load-input').click();">LOAD</button>
-				<button type="reset" value="Reset" class="danger roboto-condensed-500" onclick="clearAll();">CLEAR</button>
-			</div>
+	<body class="roboto-400">
+		<header>
+			<button type="button" onclick="save()">SAVE</button>
+			<input type="file" id="load-input" value="load" hidden onchange="loading()">
+			<button type="button" id="load-button" onclick="document.getElementById('load-input').click()">LOAD</button>
+			<button type="reset" value="Reset" onclick="clearAll()">CLEAR</button>
+		</header>
 
-			<div>
-				<input name="correction group count" id="correction-group-count" type="hidden" value="1">
-				<input name="clarification count" id="clarification-count" type="hidden" value="1">
-				<input name="credit count" id="credit-count" type="hidden" value="1">
-				<input name="patreon count" id="patreon-count" type="hidden" value="1">
-				<fieldset id="data" style="color:white; padding:.5em .5em; border: none;">
-						<div class="row">
-							<label>Video Title:</label>
-							<input id="input-title" class="input" autocomplete="off">
-						</div>
-						<div class="row">
-							<label>Video URL:</label>
-							<input id="input-url" class="input" autocomplete="off">
-						</div>
-						<div class="row">
-							<label>Synopsis:</label>
-							<input id="input-synopsis" class="input" autocomplete="off">
-						</div>
-						<div id="correction-container">
-							<div id="correction1-group">
-								<div id="correction1-rows" class="rowgroup">
-									<div class="row">
-										<label>Correction:</label>
-										<input id="input-correction1-tcode1" autocomplete="off"><input id="input-correction1-details1" autocomplete="off">
-									</div>
-								</div>
-								<div class="row">
-									<label>Correction credit:</label>
-									<input id="input-correction1-credit" class="input" autocomplete="off">
-								</div>
-								<div class="button-row" id="correction-buttons">
-									<button id="btn-correction1" class="add-new-button roboto-condensed-500" value="1" onclick="addNewField('correction',1)">add correction</button>
-									<button id="btn-correction1-group" class="add-new-button roboto-condensed-500" value="1" onclick="addNewField('correction-group',1)">new correction group</button>
-								</div>
+		<main>
+			<input value="1" name="correction group count" id="correction-group-count" type="hidden">
+			<input value="1" name="clarification count" id="clarification-count" type="hidden">
+			<input value="1" name="credit count" id="credit-count" type="hidden">
+			<input value="1" name="patreon count" id="patreon-count" type="hidden">
+			<fieldset id="data">
+					<row>
+						<label>Video Title:</label>
+						<input id="input-title" autocomplete="off">
+					</row>
+					<row>
+						<label>Video URL:</label>
+						<input id="input-url" autocomplete="off">
+					</row>
+					<row>
+						<label>Nav ID:</label>
+						<input id="input-nav-id" autocomplete="off">
+					</row>
+					<row>
+						<label>Synopsis:</label>
+						<input id="input-synopsis" autocomplete="off">
+					</row>
+					<corrections id="corrections">
+						<div id="correction1-group">
+							<div id="correction1-rows" class="rowgroup">
+								<row>
+									<label>Correction:</label>
+									<input id="input-correction1-tcode1" autocomplete="off"><input id="input-correction1-details1" autocomplete="off">
+								</row>
 							</div>
+							<row>
+								<label>Correction credit:</label>
+								<input id="input-correction1-credit" autocomplete="off">
+							</row>
+							<button-row id="correction-buttons">
+								<button id="btn-correction1" class="add-new-button" value="1" onclick="addNewField('correction',1)">add correction</button>
+								<button id="btn-correction1-group" class="add-new-button" value="1" onclick="addNewField('correction-group',1)">new correction group</button>
+							</button-row>
 						</div>
-						<div class="row">
-							<label>Clarifications:</label>
-							<input id="input-clarification1" class="input" autocomplete="off">
-						</div>
-						<div class="row">
-							<label>Bandcamp Embed Code:</label>
-							<input id="input-bandcamp" class="input" autocomplete="off">
-						</div>
-						<div class="row">
-							<label>Patreon Music Link:</label>
-							<input id="input-patreon-music" class="input" autocomplete="off">
-						</div>
-						<div id="credit-container">
-							<div class="row">
-								<label>Credit (name):</label>
-								<input id="input-credit1-name" class="input" autocomplete="off">
-							</div>
-							<div class="row">
-								<label>Credit (role):</label>
-								<input id="input-credit1-role" class="input" autocomplete="off">
-							</div>
-						</div>
-						<div class="button-row">
-							<button id="btn-credit" class="add-new-button roboto-condensed-500" onclick="addNewField('credit')">add credit</button>
-						</div>
-						<div class="row">
-							<label>Transcript:</label>
-							<input id="input-transcript" class="input" autocomplete="off">
-						</div>
-						<div class="row">
-							<label>EN Captions:</label>
-							<input id="input-en-captions" class="input" autocomplete="off">
-						</div>
-						<div class="row">
-							<label>EN Subtitles:</label>
-							<input id="input-en-subtitles" class="input" autocomplete="off">
-						</div>
-						<div id="patreon-container">
-							<div class="row">
-								<label>Patreon Image File:</label>
-								<input id="input-patreon-image" class="input" autocomplete="off">
-							</div>
-							<div class="row">
-								<label>Patreon URL:</label>
-								<input id="input-patreon1-url" class="input" autocomplete="off">
-							</div>
-							<div class="row">
-								<label>Patreon Title:</label>
-								<input id="input-patreon1-title" class="input" autocomplete="off">
-							</div>
-							<div class="row">
-								<label>Patreon Duration:</label>
-								<input id="input-patreon1-duration" class="input" autocomplete="off">
-							</div>
-						</div>
-						<div class="button-row">
-							<button id="btn-patreon" class="add-new-button roboto-condensed-500" onclick="addNewField('patreon')">add reward</button>
-						</div>
-						<div class="row">
-							<label>Next Page Title:</label>
-							<input id="input-next-title" class="input" autocomplete="off">
-						</div>
-						<div class="row">
-							<label>Next Page Link:</label>
-							<input id="input-next-link" class="input" autocomplete="off">
-						</div>
-						<div class="row">
-							<label>Previous Page Title:</label>
-							<input id="input-prev-title" class="input" autocomplete="off">
-						</div>
-						<div class="row">
-							<label>Previous Page Link:</label>
-							<input id="input-prev-link" class="input" autocomplete="off">
-						</div>
-				</fieldset>
-			</div>
+					</corrections>
+					<row>
+						<label>Clarifications:</label>
+						<input id="input-clarification1" autocomplete="off">
+					</row>
+					<row>
+						<label>Bandcamp Embed Code:</label>
+						<input id="input-bandcamp" autocomplete="off">
+					</row>
+					<row>
+						<label>Patreon Music Link:</label>
+						<input id="input-patreon-music" autocomplete="off">
+					</row>
+					<div id="credit-container">
+						<row>
+							<label>Credit (name):</label>
+							<input id="input-credit1-name" autocomplete="off">
+						</row>
+						<row>
+							<label>Credit (role):</label>
+							<input id="input-credit1-role" autocomplete="off">
+						</row>
+					</div>
+					<button-row>
+						<button id="btn-credit" class="add-new-button" onclick="addNewField('credit')">add credit</button>
+					</button-row>
+					<row>
+						<label>Transcript:</label>
+						<input id="input-transcript" autocomplete="off">
+					</row>
+					<row>
+						<label>EN Captions:</label>
+						<input id="input-en-captions" autocomplete="off">
+					</row>
+					<row>
+						<label>EN Subtitles:</label>
+						<input id="input-en-subtitles" autocomplete="off">
+					</row>
+					<div id="patreon-container">
+						<row>
+							<label>Patreon Image File:</label>
+							<input id="input-patreon-image" autocomplete="off">
+						</row>
+						<row>
+							<label>Patreon URL:</label>
+							<input id="input-patreon1-url" autocomplete="off">
+						</row>
+						<row>
+							<label>Patreon Title:</label>
+							<input id="input-patreon1-title" autocomplete="off">
+						</row>
+						<row>
+							<label>Patreon Duration:</label>
+							<input id="input-patreon1-duration" autocomplete="off">
+						</row>
+					</div>
+					<button-row>
+						<button id="btn-patreon" class="add-new-button" onclick="addNewField('patreon')">add reward</button>
+					</button-row>
+					<row>
+						<label>Next Page Title:</label>
+						<input id="input-next-title" autocomplete="off">
+					</row>
+					<row>
+						<label>Next Page Link:</label>
+						<input id="input-next-link" autocomplete="off">
+					</row>
+					<row>
+						<label>Previous Page Title:</label>
+						<input id="input-prev-title" autocomplete="off">
+					</row>
+					<row>
+						<label>Previous Page Link:</label>
+						<input id="input-prev-link" autocomplete="off">
+					</row>
+			</fieldset>
+		</main>
 
-			<div class="processing hidden" role="status" id="processing">
-				Processing ...
-			</div>
-
-			<div id="import-confirmation" class="hidden" style="text-align: center; color: white; padding: 1rem 0">
-				sources imported: 
-			</div>
-
-			<div id="buttons-bottom" class="buttons-bottom">
-				<input type="file" id="export-with-source" value="export-with-source" name="export-with-source" class="hidden" onchange="exportHTMLwithSources()">
-				<button type="button" id="export-button-with-source" class="btn-export roboto-condensed-500" onclick="document.getElementById('export-with-source').click();">Export with Sources</button>
-				<button type="button" id="export-button-no-source" onclick="exportHTML(false);"  class="btn-export roboto-condensed-500">Export</button>
-			</div>
+		<div class="processing hidden" role="status" id="processing">
+			Processing ...
 		</div>
 
 <!-- SCRIPTING -->
 
 		<script>
+		<div id="import-confirmation" class="hidden" style="text-align: center; color: white; padding: 1rem 0">
+			sources imported: 
+		</div>
 
 			function save() {
 				console.log("... SAVE PRESSED");
 				document.getElementById("processing").classList.remove("hidden");
+		<footer>
+			<input type="file" id="export-with-source" value="export-with-source" hidden onchange="exportHTMLwithSources()">
+			<button type="button" onclick="document.getElementById('export-with-source').click();">Attach Sources and Export</button>
+		</footer>
+	</body>
 
 				let dataCollect = collectData();
 		let xSources, iSources = [], mSources = [], load = [], fileImport, file, reader;

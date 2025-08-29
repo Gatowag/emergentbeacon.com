@@ -427,20 +427,22 @@
 				console.log(">!< ERROR: " + err.message);
 			}
 
-			function exportHTMLwithSources() {
-				console.log("... IMPORTING SOURCES");
-				let fileImport = document.getElementById("export-with-source").files[0];
-				fileName = fileImport.name;
-				let reader = new FileReader();
-				reader.onloadend = function(){
-					file = JSON.parse(reader.result);
-					exportHTML(true);
-					diag && console.log("| file: " + file);
-				}
+			console.log("/// EXPORT HTML DONE");
+		}
 
-				reader.readAsText(fileImport);
+		function exportHTMLwithSources() {
+			console.log("... IMPORTING SOURCES");
+			let fileImport = document.getElementById("export-with-source").files[0];
+			fileName = fileImport.name;
+			let reader = new FileReader();
+			reader.onloadend = function(){
+				file = JSON.parse(reader.result);
+				exportHTML(true);
+				diag && console.log("| file: " + file);
 			}
 
+			reader.readAsText(fileImport);
+		}
 
 		function buildHead() {
 			diag && console.log("| building head");

@@ -14,21 +14,37 @@ else if (palette === "contrast") {
 	updateThemeButton("3");
 }
 
-themeSwitch.addEventListener("click", () => {
+themeSwitch.addEventListener("click", (e) => {
 	let palette = localStorage.getItem("palette");
 
-	if (palette == "dark") {
-		enableLight();
-		updateThemeButton("2");
-		updateBandcamp(".mode-light");
-	} else if (palette == "light") {
-		enableContrast();
-		updateThemeButton("3");
-		updateBandcamp(".mode-contrast");
+	if (e.ctrlKey) {
+		if (palette == "dark") {
+			enableContrast();
+			updateThemeButton("3");
+			updateBandcamp(".mode-contrast");
+		} else if (palette == "light") {
+			enableDark();
+			updateThemeButton("1");
+			updateBandcamp(":root");
+		} else {
+			enableLight();
+			updateThemeButton("2");
+			updateBandcamp(".mode-light");
+		}
 	} else {
-		enableDark();
-		updateThemeButton("1");
-		updateBandcamp(":root");
+		if (palette == "dark") {
+			enableLight();
+			updateThemeButton("2");
+			updateBandcamp(".mode-light");
+		} else if (palette == "light") {
+			enableContrast();
+			updateThemeButton("3");
+			updateBandcamp(".mode-contrast");
+		} else {
+			enableDark();
+			updateThemeButton("1");
+			updateBandcamp(":root");
+		}
 	}
 })
 

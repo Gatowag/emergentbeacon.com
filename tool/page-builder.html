@@ -146,16 +146,12 @@
 			sources imported: 
 		</div>
 
-			function save() {
-				console.log("... SAVE PRESSED");
-				document.getElementById("processing").classList.remove("hidden");
 		<footer>
 			<input type="file" id="export-with-source" value="export-with-source" hidden onchange="exportHTMLwithSources()">
 			<button type="button" onclick="document.getElementById('export-with-source').click();">Attach Sources and Export</button>
 		</footer>
 	</body>
 
-				let dataCollect = collectData();
 		let xSources, iSources = [], mSources = [], load = [], fileImport, file, reader;
 		let fileName = "page-data--.txt", clipboardHTML = "";
 		let srcCountI, srcCountM;
@@ -163,19 +159,23 @@
 		let mURL = 0, mTitle = 1, mPub = 2, mAuthor = 3, mYear = 4, mMods = 6, mTimecode = 7;
 		let diag = true;
 
-				// take info from data and write it to a txt file
-				let dataString = JSON.stringify(dataCollect);
-				let file = new Blob([dataString],{type:"text"});
-				let anchor = document.createElement("a");
-				anchor.href = URL.createObjectURL(file);
-				anchor.download = fileName;
-				anchor.click();
+		function save() {
+			console.log("... SAVE PRESSED");
+			document.getElementById("processing").classList.remove("hidden");
 
-				document.getElementById("processing").classList.add("hidden");
-				console.log("/// SAVE DONE");
-			}
+			let dataCollect = collectData();
 
+			// take info from data and write it to a txt file
+			let dataString = JSON.stringify(dataCollect);
+			let file = new Blob([dataString],{type:"text"});
+			let anchor = document.createElement("a");
+			anchor.href = URL.createObjectURL(file);
+			anchor.download = fileName;
+			anchor.click();
 
+			document.getElementById("processing").classList.add("hidden");
+			console.log("/// SAVE DONE");
+		}
 
 		function collectData() {
 			try {

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap">
+		<link rel="stylesheet" href="/styles/main.css">
+		<link rel="stylesheet" href="/styles/video-solo.css">
+		<script type="text/javascript" src="/color-palettes.js" defer></script>
+	</head>
+
+	<body>
+		<nav class="nav-desktop">
+			<span><a href="/home.html">/ home</a> <a href="/videos.html">/ videos</a> / the-search.html</span>
+		</nav>
+
+		<main>
+			<header class="content-column">
+				<nav class="nav-mobile">
+					<span><a href="/home.html">/ home</a></span>
+					<span><a href="/videos.html">/ videos</a></span>
+					<span><a href="/music.html">/ music</a></span>
+					<span>/ the-search.html</span>
+				</nav>
+
+				<button id="theme">
+					<svg id="theme1" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M380-880q83 0 156 31.5T663-763q54 54 85.5 127T780-480q0 83-31.5 156T663-197q-54 54-127 85.5T380-80q-53 0-103.5-13.5T180-134q93-54 146.5-146T380-480q0-108-53.5-200T180-826q46-27 96.5-40.5T380-880Z"/></svg>
+					<svg id="theme2" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+					<svg id="theme3" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm40-83q119-15 199.5-104.5T800-480q0-123-80.5-212.5T520-797v634Z"/></svg>
+				</button>
+			</header>
+
+			<h1>The Search</h1>
+			<video id="yt-player"></video>
+
+			<synopsis>
+				Do you know what to do with data cubes and transmission spectra? Most people don't, but there’s something else you can get out of new space telescopes.
+			</synopsis>
+
+			<sources-media>
+				<h2>Media Sources</h2>
+				<container id="media-container">
+					<citation id="Media1">
+						<anchor>
+							<a href="#" onclick="playerSeekTo(player, 165); return false;"><time datetime="PT2M45S">2:45</time></a><indx>m1</indx>
+						</anchor>
+						<info>
+							<cite>PHOTO: Webb's First Deep Field</cite>
+							<info-details>
+								2022
+								NASA, ESA, CSA, STScI<br>
+							</info-details>
+							<origin>
+								<a href="https://webbtelescope.org/contents/media/images/2022/035/01G7DCWB7137MYJ05CSH1Q5Z1Z">webbtelescope.org/contents/media/images/2022/035/01G7DCWB7137MYJ05CSH1Q5Z1Z</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Media2">
+						<anchor>
+							<a href="#" onclick="playerSeekTo(player, 212); return false;"><time datetime="PT3M32S">3:32</time></a><indx>m2</indx>
+						</anchor>
+						<info>
+							<cite>gallery of JWST photos</cite>
+							<info-details>
+								2022
+								NASA, ESA, CSA, STScI<br>
+							</info-details>
+							<origin>
+								<a href="https://webbtelescope.org/resource-gallery/images">webbtelescope.org/resource-gallery/images</a>
+							</origin>
+						</info>
+					</citation>
+					<citation id="Media3">
+						<anchor>
+							<a href="#" onclick="playerSeekTo(player, 212); return false;"><time datetime="PT3M32S">3:32</time></a><indx>m3</indx>
+						</anchor>
+						<info>
+							<cite>Webb’s Jupiter Images</cite>
+							<info-details>image processing by Judy Schmidt<br>
+								NASA, ESA, CSA, Jupiter ERS Team<br>
+							</info-details>
+							<origin>
+								<a href="https://blogs.nasa.gov/webb/2022/08/22/webbs-jupiter-images-showcase-auroras-hazes">blogs.nasa.gov/webb/2022/08/22/webbs-jupiter-images-showcase-auroras-hazes</a>
+							</origin>
+						</info>
+					</citation>
+				</container>
+				<form id="mediaSearchBanner">
+					<input id="mediaInput" placeholder="#" onfocus="this.value=''">
+					<button id="mediaBtn" type="submit" onclick="mediaSearch()">go to</button>
+				</form>
+			</sources-media>
+
+			<music>
+				<h2>Music</h2>
+				<iframe id="bandcamp-player" src="https://bandcamp.com/EmbeddedPlayer/album=1958114715/size=large/bgcol=333333/linkcol=6decc2/artwork=small/transparent=true/" seamless><a href="https://emergentbeacon.bandcamp.com/album/the-search">The Search by Emergent Beacon</a></iframe>
+				<download>
+					available on all major platforms<br>
+					<button type="button" onclick="document.location='/music/the-search.html'" value="Go to music details page.">buy or stream</button>
+				</download>
+			</music>
+
+			<credits>
+				<h2>Credits</h2>
+				<container>
+					<p>
+						<credit-name>Brandt Hughes</credit-name>
+						<credit-role>writer, host, camera operator, audio engineer, music production, editor</credit-role>
+						<credit-name>Jeff McLaughlin</credit-name>
+						<credit-role>production assistance</credit-role>
+					</p>
+				</container>
+			</credits>
+
+			<transcription>
+				<h2>Transcript</h2>
+				<container>
+					<aside>
+						<p>
+							I am engaged in The Search inescapably.<br><br>As days go by faster and faster, my joints creak and my memory stutters.<br><br>My skin stubbornly refuses to heal in monument to my frailty.<br><br>Nonetheless, the Search continues, maybe even more now than ever before.<br><br>I squint, but I can't see past my nose.<br><br>How could I?<br><br>Self-preservation forbids it.<br><br>It's a failing of my species, I suppose.<br><br>But I try.<br><br>The Search gives me that courage.<br><br>It lures me beyond my insignificant sphere of influence.<br><br>My eyes can hardly be faulted for not being able to see beyond myself as I am adrift in a sea of unthinkable nothingness.<br><br>And yet, the Search has given me new eyes.<br><br>And with them, I see that in every possible direction glistening maelstroms are swirling in oblivion.<br><br>There are too many to count.<br><br>Their enormity, if I let it, overwhelms.<br><br>They teeter on the precipice of calamity and awe.<br><br>Each one is teeming with glints of light staring back at me with that all-too-familiar inflated self-importance.<br><br>But maybe also the same uncertainty.<br><br>Definitely the same isolation in this beautiful, cold sea.<br><br>It would be easy to forget all I have seen and slip back into the comforting warmth of my home, my community, places where I have some control.<br><br>But doing so would give something up, because the Search emboldens my protest against living thoughtlessly in service only to myself.<br><br>That simply is not enough.<br><br>The Search confronts the unfathomable where yielding is so inconsequential that instead of closing the distance of that vastness, it creates new distance within you.<br><br>Without the Search, my small troubles would appear large, maybe even overwhelming, if I let it.<br><br>And I would forfeit an immutable truth of the self that I so ardently preserve.<br><br>There is so much and we play such a small role.<br><br>I, too, find myself lost in that chasm.<br><br>But the Search is the beacon that reassures me to carry on through this unrelenting night.<br><br>In July of 2022 the first batch of photos from the James Webb Space Telescope, or JWST, or the Webb Telescope, whatever you want to call it, were released and they're gorgeous.<br><br>This video really features one of them, but you should really take the time to like open all of them up in full resolution and just really soak in them because they're really phenomenal.<br><br>Now, there's a lot of reasons why astronomers and researchers are really excited about this new data that we can get from JWST.<br><br>We can see different things than we could before, and we can see them in higher resolution and more importantly, maybe we can see them a lot faster.<br><br>But I think there is a reason for laypeople, people who are not researchers, people who are just normal citizens like I am, to be excited about this sort of advancement as well.<br><br>And...<br><br>you know, astronomy is an extraordinarily distant field of research.<br><br>More so than any other I can think of.<br><br>It entirely consists of looking outward and seeing all of these extraordinary places that we'll never be able to go to, that we'll never be able to experience for ourselves.<br><br>It's all about learning about everything other than us.<br><br>And I think there's an isolation that comes with that.<br><br>And that can be a bit scary, understandably.<br><br>But in astronomy, we we feel this -- this friction, this contrast between seeing the enormity of everything and seeing how quiet it seems.<br><br>It's there's a chaotic tumult with all of these spinning planets and black holes and galaxies, and yet we don't see anything that we inherently recognize within ourself.<br><br>And I think it would be easy to fall into the despair of that, but I think that contrast is a really important tool.<br><br>Um.<br><br>Something that we can just carry with us in our day-to-day lives and can help enrich our lives and allow us to be more caring and empathetic people.<br><br>It's an extraordinary tool for empathy.<br><br>And so that's why I wrote the Search.<br><br>If you like videos like this, consider pledging to patreon.com/emergentbeacon.<br><br>Not only will you be supporting me, so I can you know, pay rent and try to eat food, but you'll also be supporting these kinds of videos that can be viewed for free by anybody.<br><br>And I think that's something that's really special, and if you think that's special, then you can help fund it, and make more of that in this world.<br><br>Also, you can join the Discord at discord.emergentbeacon.com, you can follow the Twitter or Instagram, whatever.<br><br>As I leave as I leave you with your thoughts, I would ask you to consider that nothing can ever improve in your life or the life of those around you without something inherently changing.<br><br>As always, thank you for your time.
+						</p>
+					</aside>
+					<button type="button" onclick="location.href='https://www.dropbox.com/s/rprclv3buqbqehn/EB003__main--cc_en_captions.srt?dl=0'" value="download english captions">captions</button>
+					<button type="button" onclick="location.href='https://www.dropbox.com/s/3w1rg1r7hn5160u/EB003__main--cc_en_sub.srt?dl=0'" value="download english subtitles">subtitles</button>
+					<button type="button" onclick="document.location='/translations'" value="details about translations">info</button>
+				</container>
+			</transcription>
+
+			<bonus>
+				<h2>Bonus Material</h2>
+				<container>
+					<p>
+						<a href="https://patreon.com/emergentbeacon" class="support-link" title="patreon.com/emergentbeacon">Pledge now</a> for these behind the scenes exclusives!
+					</p>
+					<items>
+						<bonus-entry>
+							<a href="https://patreon.com/posts/72403096">
+								<img src="/assets/" style="object-position: 0rem 0;">
+							</a>
+							<p>
+								<time datetime="PT7mS">7m</time><br>
+								<span>MUSIC PACK: "The Search"</span>
+							</p>
+						</bonus-entry>
+					</items>
+				</container>
+			</bonus>
+		</main>
+
+		<footnav>
+			<tooltip>
+				<a href="/videos/art.html">← Previous</a>
+				<span>What Exactly is Art?</span>
+			</tooltip>
+			<a href="#">TO TOP</a>
+			<tooltip>
+				<a href="/videos/sedna.html">Next →</a>
+				<span>The Mystery of Sedna’s Orbit</span>
+			</tooltip>
+		</footnav>
+
+		<footer>
+			<p>
+				<a href="/home.html">home</a><a href="/videos.html">videos</a><a href="/music.html">music</a><a href="/about.html">about</a><br>
+				<a href="/finance.html">financial reports</a><a href="/media.html">media kits</a>
+			</p>
+			<logo>
+				<svg id="v1-7:organic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 629.556 629.556">
+					<g id="shell">
+						<path d="M315.278,54.768c157.266,0,257.812,132.423,257.812,251.739,0,69.898-21.842,116.519-35.044,131.193-19.516,21.693-69.086,44.678-139.686,55.245-74.033,12.457-42.047,96.064-83.149,96.064-39.952,0-7.966-83.607-81.453-95.808-67.092-9.784-117.119-31.118-140.771-55.592-13.288-13.749-35.519-58.2-35.519-137.79,0-90.102,80.989-245.051,257.812-245.051Z"/>
+					</g>
+					<g id="interior">
+						<path d="M479.619,405.623c-7.956-17.388-35.482-18.367-35.482-34.859,0-9.255,11.786-12.784,27.882-12.784,20.229,0,36.868,6.96,45.182,14.55,6.614-18.266,9.507-39.998,9.507-65.593,0-119.849-91.189-211.43-211.43-211.43-119.266,0-211.43,91.582-211.43,218.828,0,22.437,2.619,41.824,8.51,58.409,8.233-7.673,24.99-14.764,45.409-14.764,16.096,0,27.882,3.53,27.882,12.784,0,16.492-27.526,17.471-35.482,34.859-2.749,6.009.352,16.893,12.877,23.416,33.185,16.74,82.314,24.299,152.234,24.299s118.625-7.428,151.725-24.446c12.298-6.538,15.345-17.304,12.615-23.269ZM315.278,410.801c-83.744,0-114.894-37.32-114.894-101.125,0-63.454,49.208-114.894,114.894-114.894,59.14,0,114.894,47.327,114.894,114.894,0,63.805-29.796,101.125-114.894,101.125Z"/>
+					</g>
+				</svg>
+			</logo>
+			<socials>
+				<div class="tooltip">
+					<a href="https://youtube.com/emergentbeacon">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 176 124">
+							<path d="M172.5,19.4h-.2c-2-7.6-8-13.6-15.6-15.7C143,0,88,0,88,0c0,0-55,0-68.8,3.7-7.6,2-13.5,8-15.6,15.7C0,33.2,0,62,0,62c0,0,0,28.8,3.7,42.6,2,7.6,8,13.6,15.6,15.7,13.7,3.7,68.8,3.7,68.8,3.7,0,0,55,0,68.8-3.7,7.6-2,13.5-8,15.6-15.7,3.7-13.8,3.7-42.6,3.7-42.6,0,0,0-28.8-3.7-42.6ZM70,88.2v-52.4l46,26.2-46,26.2Z"/>
+						</svg>
+					</a>
+					<span class="tooltip-text">youtube</span>
+				</div>
+				<div class="tooltip">
+					<a href="https://patreon.com/emergentbeacon">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1080" xml:space="preserve">
+							<path d="M1033.05,324.45c-0.19-137.9-107.59-250.92-233.6-291.7c-156.48-50.64-362.86-43.3-512.28,27.2 C106.07,145.41,49.18,332.61,47.06,519.31c-1.74,153.5,13.58,557.79,241.62,560.67c169.44,2.15,194.67-216.18,273.07-321.33 c55.78-74.81,127.6-95.94,216.01-117.82C929.71,603.22,1033.27,483.3,1033.05,324.45z"/>
+						</svg>
+					</a>
+					<span class="tooltip-text">patreon</span>
+				</div>
+				<div class="tooltip">
+					<a href="https://discord.emergentbeacon.com/">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36">
+							<path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/>
+						</svg>
+					</a>
+					<span class="tooltip-text">discord</span>
+				</div>
+				<div class="tooltip">
+					<a href="https://bsky.app/profile/brandthughes.bsky.social">
+						<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568 500.117">
+							<path d="M123.121,33.664c65.12,48.889,135.16,148.017,160.879,201.209,25.719-53.192,95.759-152.32,160.879-201.209,46.987-35.276,123.121-62.57,123.121,24.283,0,17.345-9.945,145.713-15.778,166.555-20.275,72.453-94.155,90.933-159.875,79.748,114.875,19.551,144.097,84.311,80.986,149.071-119.86,122.992-172.272-30.859-185.702-70.281-2.462-7.227-3.614-10.608-3.631-7.733-.017-2.875-1.169.506-3.631,7.733-13.43,39.422-65.842,193.273-185.702,70.281-63.111-64.76-33.889-129.52,80.986-149.071-65.72,11.185-139.599-7.295-159.875-79.748C9.945,203.659,0,75.292,0,57.946,0-28.906,76.134-1.612,123.121,33.664Z"/>
+						</svg>
+					</a>
+					<span class="tooltip-text">bluesky</span>
+				</div>
+				<div class="tooltip">
+					<a href="https://youtube.com/@BrandtHughes">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 176 124">
+							<path d="M172.3,19.4c-2-7.6-8-13.6-15.6-15.7C143,0,88,0,88,0c0,0-55,0-68.8,3.7-7.6,2-13.5,8-15.6,15.7C0,33.2,0,62,0,62c0,0,0,28.8,3.7,42.6,2,7.6,8,13.6,15.6,15.7,13.7,3.7,68.8,3.7,68.8,3.7,0,0,55,0,68.8-3.7,7.6-2,13.5-8,15.6-15.7,3.7-13.8,3.7-42.6,3.7-42.6,0,0,0-28.8-3.7-42.6h0ZM117.3,98c-1.8,1.8-3.9,2.7-6.4,2.7h-45c-3,0-5.4-.9-7.2-2.6-1.8-1.7-2.7-4.1-2.7-7.1v-3c0-3.4.8-6.7,2.4-9.8,1.6-3.1,4.3-6.5,8.3-10.3,4-3.7,9.5-8,16.7-13l.8-.6c4.1-2.9,7.1-5.1,9-6.6,1.9-1.5,3.2-2.9,4-4.1.8-1.3,1.2-2.6,1.2-4.2,0-2.6-1-4.7-2.9-6.3-1.9-1.6-4.4-2.4-7.6-2.4s-5.2.6-6.9,1.8c-1.7,1.2-3.4,2.8-5,4.7-.2.2-.4.5-.6.7-.5.6-1,1.1-1.5,1.7-1.1,1.5-2.1,2.6-3.1,3.3-1,.8-2.4,1.2-4.2,1.2s-4.4-.7-5.8-2.2c-1.5-1.5-2.2-3.5-2.2-6s1.5-6.8,4.4-10.3c2.5-2.9,6-5.5,10.4-7.7,4.4-2.2,9.5-3.3,15.2-3.3s10.1,1,14.3,3c4.2,2,7.5,4.8,10,8.4,2.4,3.6,3.7,7.8,3.8,12.6,0,3.3-.6,6.4-1.7,9.3-1.1,2.9-2.8,5.5-4.9,8-2.1,2.5-4.8,5-8.1,7.5l-1.1.8c-2.6,1.9-5.2,3.7-7.9,5.6-5.4,3.6-9.3,6.6-11.8,8.9-1.4,1.3-2.4,2.7-3,4.2l32.4-.4c2.5,0,4.7.9,6.4,2.7,1.8,1.8,2.7,3.9,2.7,6.4s-.9,4.7-2.7,6.4h0Z"/>
+						</svg>
+					</a>
+					<span class="tooltip-text">youtube 2</span>
+				</div>
+			</socials>
+		</footer>
+	</body>
+
+	<script>
+		// 2. This code loads the IFrame Player API code asynchronously.
+		var tag = document.createElement('script');
+		tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		// 3. This function creates an <iframe> (and YouTube player)
+		//    after the API code downloads.
+		var player;
+		function onYouTubeIframeAPIReady() {
+		player = new YT.Player('yt-player', {
+			height: '400',
+			width: '100%',
+			videoId: 'FH5RN9KE5D0',
+			playerVars: {
+				'playsinline': 1
+			},
+			events: {
+				'onReady': onPlayerReady,
+				'onStateChange': onPlayerStateChange
+			}
+		});
+		}
+
+		// 4. The API will call this function when the video player is ready.
+		function onPlayerReady(event) {}
+		function onPlayerStateChange(event) {}
+
+		//generic seekTo function taking a player element and seconds as parameters
+		function playerSeekTo(player, seconds) {
+			player.seekTo(seconds);
+			player.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start',
+				inline: 'nearest'
+			});
+		}
+
+		const iSearch = document.getElementById("infoSearchBanner");
+
+		function infoSearch() {
+			let input = document.getElementById("infoInput");
+			let inputVal = input.value;
+			let container = document.documentElement;
+			let containerPos = container.scrollTop;
+			let anchor = document.getElementById('Info' + inputVal);
+
+			if (anchor == null) {
+				iSearch.classList.add("error");
+			} else {
+				anchor.scrollIntoView({
+					behavior: 'smooth',
+					block: 'start',
+					inline: 'nearest'
+				});
+				container.scrollTop = containerPos;
+			}
+		}
+
+		const mSearch = document.getElementById("mediaSearchBanner");
+		function mediaSearch() {
+			let input = document.getElementById("mediaInput");
+			let inputVal = input.value;
+			let container = document.documentElement;
+			let containerPos = container.scrollTop;
+			let anchor = document.getElementById('Media' + inputVal);
+
+			if (anchor == null) {
+				mSearch.classList.add("error");
+			} else {
+				anchor.scrollIntoView({
+					behavior: 'smooth',
+					block: 'start',
+					inline: 'nearest'
+				});
+				container.scrollTop = containerPos;
+			}
+		}
+
+		// source lookup behavior: disable form submit on "Enter," replace with function
+		document.getElementById("infoInput").addEventListener("keydown", function (e) {
+			if (e.code === "Enter") {
+				e.preventDefault();
+				infoSearch();
+			}
+		});
+		document.getElementById("mediaInput").addEventListener("keydown", function (e) {
+			if (e.code === "Enter") {
+				e.preventDefault();
+				mediaSearch();
+			}
+		});
+
+		// remove css color animation class when animation finishes
+		iSearch.addEventListener("animationend", listener, false);
+		mSearch.addEventListener("animationend", listener, false);
+		function listener(event) {
+			switch (event.type) {
+				case "animationend":
+					mSearch.classList.remove("error");
+					iSearch.classList.remove("error");
+					break;
+			}
+		}
+	</script>
+</html>

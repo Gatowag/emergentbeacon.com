@@ -176,75 +176,83 @@
 				console.log("/// SAVE DONE");
 			}
 
-			function collectData() {
-				try {
-					let data = [], vidInfo = [], vidCorrections = [], vidClarifications = [], vidMusic = [], vidCredits = [], vidCaptions = [], vidPatreon = [], nav = [];
 
-					vidInfo.push(document.getElementById("input-title").value);
-					vidInfo.push(document.getElementById("input-url").value);
-					vidInfo.push(document.getElementById("input-synopsis").value);
-					vidMusic.push(document.getElementById("input-bandcamp").value);
-					vidMusic.push(document.getElementById("input-patreon-music").value);
-					vidCaptions.push(document.getElementById("input-transcript").value);
-					vidCaptions.push(document.getElementById("input-en-captions").value);
-					vidCaptions.push(document.getElementById("input-en-subtitles").value);
-					vidPatreon.push(document.getElementById("input-patreon-image").value);
-					nav.push(document.getElementById("input-next-title").value)
-					nav.push(document.getElementById("input-next-link").value)
-					nav.push(document.getElementById("input-prev-title").value)
-					nav.push(document.getElementById("input-prev-link").value)
-					console.log("finished push block");
 
-					let correctionGroupCount = Number.parseInt(document.getElementById("correction-group-count").value);
-					let clarificationCount = Number.parseInt(document.getElementById("clarification-count").value);
-					let creditCount = Number.parseInt(document.getElementById("credit-count").value);
-					let patreonCount = Number.parseInt(document.getElementById("patreon-count").value);
-					console.log("defined terms");
+		function collectData() {
+			try {
+				let data = [], vidInfo = [], vidCorrections = [], vidClarifications = [], vidMusic = [], vidCredits = [], vidCaptions = [], vidPatreon = [], nav = [];
 
-					for (g = 1; g < (correctionGroupCount + 1); g++) {
-						console.log("started corrections");
-						let entries = Number(document.getElementById(`btn-correction${g}`).value);
-						let credit = document.getElementById(`input-correction${g}-credit`).value;
-						let group = [];
+				vidInfo.push(document.getElementById("input-title").value);
+				vidInfo.push(document.getElementById("input-url").value);
+				vidInfo.push(document.getElementById("input-nav-id").value);
+				vidInfo.push(document.getElementById("input-synopsis").value);
+				vidMusic.push(document.getElementById("input-bandcamp").value);
+				vidMusic.push(document.getElementById("input-patreon-music").value);
+				vidCaptions.push(document.getElementById("input-transcript").value);
+				vidCaptions.push(document.getElementById("input-en-captions").value);
+				vidCaptions.push(document.getElementById("input-en-subtitles").value);
+				vidPatreon.push(document.getElementById("input-patreon-image").value);
+				nav.push(document.getElementById("input-next-title").value)
+				nav.push(document.getElementById("input-next-link").value)
+				nav.push(document.getElementById("input-prev-title").value)
+				nav.push(document.getElementById("input-prev-link").value)
+				diag && console.log("| finished push block");
 
-						for (e = 1; e < entries + 1; e++) {
-							let eTcode = document.getElementById(`input-correction${g}-tcode${e}`).value;
-							if (eTcode == null) { eTcode = "0:00" };
-							let eDetails = document.getElementById(`input-correction${g}-details${e}`).value;
-							group.push(eTcode);
-							group.push(eDetails);
-						}
-						group.push(credit);
-						vidCorrections.push(group);
+				let correctionGroupCount = Number.parseInt(document.getElementById("correction-group-count").value);
+				let clarificationCount = Number.parseInt(document.getElementById("clarification-count").value);
+				let creditCount = Number.parseInt(document.getElementById("credit-count").value);
+				let patreonCount = Number.parseInt(document.getElementById("patreon-count").value);
+				diag && console.log("| defined terms");
+
+				diag && console.log("| correctionGroupCount: " + correctionGroupCount);
+				for (g = 1; g < (correctionGroupCount + 1); g++) {
+					diag && console.log("| started corrections");
+					diag && console.log("| g: " + g);
+					let entries = Number(document.getElementById(`btn-correction${g}`).value);
+					diag && console.log("| 1");
+					let credit = document.getElementById(`input-correction${g}-credit`).value;
+					diag && console.log("| 2");
+					let group = [];
+
+					for (e = 1; e < entries + 1; e++) {
+						diag && console.log("| 3");
+						let eTcode = document.getElementById(`input-correction${g}-tcode${e}`).value;
+						if (eTcode == null) { eTcode = "0:00" };
+						let eDetails = document.getElementById(`input-correction${g}-details${e}`).value;
+						group.push(eTcode);
+						group.push(eDetails);
 					}
-					
-					for (j = 1; j < (clarificationCount + 1); j++) {
-						console.log("started clarifications");
-						vidClarifications.push(document.getElementById(`input-clarification${j}`).value);
-					}
-					for (k = 1; k < (creditCount + 1); k++) {
-						console.log("started credits");
-						vidCredits.push(document.getElementById(`input-credit${k}-name`).value);
-						vidCredits.push(document.getElementById(`input-credit${k}-role`).value);
-					}
-					for (l = 1; l < (patreonCount + 1); l++) {
-						console.log("started patreon posts");
-						vidPatreon.push(document.getElementById(`input-patreon${l}-url`).value);
-						vidPatreon.push(document.getElementById(`input-patreon${l}-title`).value);
-						vidPatreon.push(document.getElementById(`input-patreon${l}-duration`).value);
-					}
-
-					data.push(vidInfo, vidCorrections, vidClarifications, vidMusic, vidCredits, vidCaptions, vidPatreon, nav);
-
-					return data;
-				} catch(err) {
-					console.log(">!< ERROR: " + err);
+					diag && console.log("| 4");
+					group.push(credit);
+					diag && console.log("| 5");
+					vidCorrections.push(group);
+					diag && console.log("| 6");
 				}
-			}
+				
+				diag && console.log("| 7");
+				for (j = 1; j < (clarificationCount + 1); j++) {
+					diag && console.log("| started clarifications");
+					vidClarifications.push(document.getElementById(`input-clarification${j}`).value);
+				}
+				for (k = 1; k < (creditCount + 1); k++) {
+					diag && console.log("| started credits");
+					vidCredits.push(document.getElementById(`input-credit${k}-name`).value);
+					vidCredits.push(document.getElementById(`input-credit${k}-role`).value);
+				}
+				for (l = 1; l < (patreonCount + 1); l++) {
+					diag && console.log("| started patreon posts");
+					vidPatreon.push(document.getElementById(`input-patreon${l}-url`).value);
+					vidPatreon.push(document.getElementById(`input-patreon${l}-title`).value);
+					vidPatreon.push(document.getElementById(`input-patreon${l}-duration`).value);
+				}
 
-					}
+				data.push(vidInfo, vidCorrections, vidClarifications, vidMusic, vidCredits, vidCaptions, vidPatreon, nav);
 
+				return data;
+			} catch(err) {
+				console.log(">!< ERROR: " + err);
 			}
+		}
 
 			function clearAll() {
 				var elements = document.getElementsByTagName("input");

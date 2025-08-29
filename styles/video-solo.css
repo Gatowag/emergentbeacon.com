@@ -14,6 +14,12 @@ background-color: var(--fill-light);
 	--h2-txt: #e6e5e2;
 	--btn-fill: var(--accent);
 	--btn-txt: #000000;
+	--patreon-fill: #000000;
+	--patreon-txt: #ffffff;
+	--credits-fill: #000000;
+	--credits-txt: var(--synopsis-txt);
+	--credits-name-fill: #ffffff;
+	--credits-name-txt: #000000;
 }
 .mode-light {
 	--source-fill: var(--playlist-item);
@@ -26,6 +32,12 @@ background-color: var(--fill-light);
 	--h2-txt: #141414;
 	--btn-fill: var(--accent);
 	--btn-txt: white;
+	--patreon-fill: var(--source-fill);
+	--patreon-txt: var(--source-txt);
+	--credits-fill: var(--source-fill);
+	--credits-txt: var(--txt);
+	--credits-name-fill: #ffffff;
+	--credits-name-txt: #000000;
 }
 .mode-contrast {
 	--source-fill: white;
@@ -38,6 +50,12 @@ background-color: var(--fill-light);
 	--h2-txt: var(--text);
 	--btn-fill: hsl(from var(--accent) h s 40 / 1);
 	--btn-txt: white;
+	--patreon-fill: var(--source-fill);
+	--patreon-txt: var(--source-txt);
+	--credits-fill: #ffffff;
+	--credits-txt: #000000;
+	--credits-name-fill: #e4e4e4;
+	--credits-name-txt: #000000;
 }
 
 /*__________________
@@ -406,8 +424,8 @@ credits {
 
 	container {
 		display: block;
-		background: var(--synopsis-fill);
-		color: var(--synopsis-txt);
+		background: var(--credits-fill);
+		color: var(--credits-txt);
 		height: calc(100% - 3.6rem);
 		padding-bottom: 1em;
 	
@@ -416,8 +434,8 @@ credits {
 			margin: 1em 1em 0;
 
 			credit-name {
-				color: #000000;
-				background: #e6e5e2;
+				background: var(--credits-name-fill);
+				color: var(--credits-name-txt);
 				display: block;
 				font-size: 1.2rem;
 				border-radius: .1rem;
@@ -441,7 +459,7 @@ transcription {
 
 	container {
 		padding: .2rem 0 1rem;
-		background: #000000;
+		background: var(--credits-fill);
 
 		aside {
 			background:#e6e5e2;
@@ -467,12 +485,12 @@ bonus {
 	width: 100%;
 	max-width: 90vw;
 	margin: 0 auto 0;
-	background-color: var(--source-fill);
-	color: var(--source-txt);
 
 	container {
 		display: block;
 		padding-bottom: 1rem;
+		background-color: var(--patreon-fill);
+		color: var(--patreon-txt);
 		
 		p { margin-top: .6rem }
 		items { display: block }

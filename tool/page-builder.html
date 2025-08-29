@@ -351,42 +351,42 @@
 				document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 			}
 
-			function addListeners(src, t, rows) {
-				if (t == "i") {
-					document.getElementById(t + src + "-AddInst").addEventListener("click", addInstance.bind(this, src, t) );
-					document.getElementById(t + src + "-RmvInst").addEventListener("click", removeInstance.bind(this, src, t) );
-					document.getElementById(t + src + "-Bulk").addEventListener("click", removeAllInstances.bind(this, src, t) );
-					if (src != 1) {document.getElementById(t + src + "-Link").addEventListener("click", linkSource.bind(this, src, t) ); };
-					document.getElementById(t + src + "-Unlink").addEventListener("click", unlinkSource.bind(this, src, t) );
-					if (rows < 12) {
-						document.getElementById(t + src + "F6").addEventListener("input", function(e) {
+		function addListeners(src, t, rows) {
+			if (t == "i") {
+				document.getElementById(t + src + "-AddInst").addEventListener("click", addInstance.bind(this, src, t) );
+				document.getElementById(t + src + "-RmvInst").addEventListener("click", removeInstance.bind(this, src, t) );
+				document.getElementById(t + src + "-Bulk").addEventListener("click", removeAllInstances.bind(this, src, t) );
+				if (src != 1) {document.getElementById(t + src + "-Link").addEventListener("click", linkSource.bind(this, src, t) ); };
+				document.getElementById(t + src + "-Unlink").addEventListener("click", unlinkSource.bind(this, src, t) );
+				if (rows < 12) {
+					document.getElementById(t + src + "F6").addEventListener("input", function(e) {
+						if (e.target.value == "") {
+							document.getElementById(t + src + "URL7").classList.add("hidden");
+						} else {
+							document.getElementById(t + src + "URL7").classList.remove("hidden");
+						}
+					});
+				} else {
+					let instCount = (rows - 8) / 4;
+					for (x = 0; x < instCount; x++) {
+						let r;
+						if (x == 0) {r = 7} else {r = 8 + (4 * x)}
+						document.getElementById(t + src + "F" + r).addEventListener("input", function(e) {
 							if (e.target.value == "") {
-								document.getElementById(t + src + "URL7").classList.add("hidden");
+								document.getElementById(t + src + "URL" + (r + 1)).classList.add("hidden");
 							} else {
-								document.getElementById(t + src + "URL7").classList.remove("hidden");
+								document.getElementById(t + src + "URL" + (r + 1)).classList.remove("hidden");
 							}
 						});
-					} else {
-						let instCount = (rows - 8) / 4;
-						for (x = 0; x < instCount; x++) {
-							let r;
-							if (x == 0) {r = 7} else {r = 8 + (4 * x)};
-							document.getElementById(t + src + "F" + r).addEventListener("input", function(e) {
-								if (e.target.value == "") {
-									document.getElementById(t + src + "URL" + (r + 1)).classList.add("hidden");
-								} else {
-									document.getElementById(t + src + "URL" + (r + 1)).classList.remove("hidden");
-								}
-							});
-						}
 					}
 				}
-				
-				document.getElementById(t + src + "-Clear").addEventListener("click", clearInputs.bind(this, src, t) );
-				document.getElementById(t + src + "-Reorder").addEventListener("click", reorderToggle.bind(this, src, t) );
-				document.getElementById(t + src + "-ReorderConfirm").addEventListener("click", pushOrder.bind(this, src, t) );
-				document.getElementById(t + src + "-Delete").addEventListener("click", deleteSource.bind(this, src, t) );
 			}
+			
+			document.getElementById(t + src + "-Clear").addEventListener("click", clearInputs.bind(this, src, t) );
+			document.getElementById(t + src + "-Reorder").addEventListener("click", reorderToggle.bind(this, src, t) );
+			document.getElementById(t + src + "-ReorderConfirm").addEventListener("click", pushOrder.bind(this, src, t) );
+			document.getElementById(t + src + "-Delete").addEventListener("click", deleteSource.bind(this, src, t) );
+		}
 
 			function exportHTML(state) {
 				console.log("... EXPORT HTML PRESSED, STATE: " + state);

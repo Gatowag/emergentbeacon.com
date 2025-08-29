@@ -540,20 +540,20 @@
 			return output;
 		}
 
-			function buildClarifications() {
-				diag && console.log("| building clarifications");
-				if (!document.getElementById(`input-clarification1`).value) { return "" };
-				let clarificationInput = document.getElementById("input-clarification1").value;
-				let output = `\n` +
-					`\n${tabs(3)}<div class="corrections-area islate">` +
-					`\n${tabs(4)}<h4>CLARIFICATIONS</h4>` +
-					`\n${tabs(4)}<div class="corrections-entry">` +
-					`\n${tabs(5)}<ul style="margin: 0 -1.5em">` +
-					`\n${tabs(6)}<li>${clarificationInput}</li>` +
-					`\n${tabs(5)}</ul>` +
-					`\n${tabs(4)}</div>` +
-					`\n${tabs(3)}</div>`;
+		function buildClarifications() {
+			diag && console.log("| building clarifications");
+			if (!document.getElementById(`input-clarification1`).value) { return "" }
+			let clarificationInput = document.getElementById("input-clarification1").value;
+			let output = `\n` +
+				`\n${tabs(3)}<clarifications>` +
+				`\n${tabs(4)}<h4>CLARIFICATIONS</h4>` +
+				`\n${tabs(4)}<ul>` +
+				`\n${tabs(5)}<li>${clarificationInput}</li>` +
+				`\n${tabs(4)}</ul>` +
+				`\n${tabs(3)}</clarifications>`;
 
+			return output;
+		}
 				return output;
 			}
 

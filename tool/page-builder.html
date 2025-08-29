@@ -694,6 +694,30 @@
 
 			return output;
 		}
+		function buildSourcesInfoDetails(t, s, specifics, url) {
+			let output =
+				`\n${tabs(t[0])}<info>` +
+				`\n${tabs(t[1])}<cite>${file[0][s][iTitle]}</cite>` +
+				`\n${tabs(t[1])}<info-details>`;
+			
+			if (file[0][s][iYear]) { output += `\n${tabs(t[2])}${file[0][s][iYear]}` }
+			if (file[0][s][iYear] && file[0][s][iAuthor] || file[0][s][iYear] && file[0][s][iPub]) { output += ", " }
+			if (file[0][s][iAuthor]) { output += file[0][s][iAuthor] + "<br>" }
+			if (file[0][s][iPub]) { output += `\n${tabs(t[2])}${file[0][s][iPub]}<br>` }
+			if (file[0][s][iAccessed]) { output += `\n${tabs(t[2])}accessed ${file[0][s][iAccessed]}<br>` }
+
+			if (specifics) { output += `\n${tabs(t[2])}${specifics}` }
+			output += `\n${tabs(t[1])}</info-details>`;
+			if (file[0][s][iURL]) {
+				output +=
+					`\n${tabs(t[1])}<origin>` +
+					`\n${tabs(t[2])}<a href="${file[0][s][iURL]}">${url}</a>` +
+					`\n${tabs(t[1])}</origin>` +
+					`\n${tabs(t[0])}</info>`
+			}
+			
+			return output;
+		}
 
 				}
 			}

@@ -502,44 +502,43 @@
 				return output;
 			}
 
-			function buildCorrections() {
-				diag && console.log("| building corrections");
-				if (!document.getElementById(`input-correction1-details1`).value) { return "" };
-				let groups = Number(document.getElementById("correction-group-count").value);
-				let output = `\n` +
-					`\n${tabs(3)}<div class="corrections-area bee">` +
-					`\n${tabs(4)}<h4>CORRECTIONS</h4>`;
 
-				diag && console.log("# groups: " + groups);
-				for (g = 1; g < groups + 1; g++) {
-					diag && console.log("# group " + g + " started");
-					let entries = Number(document.getElementById(`btn-correction${g}`).value);
-					let credit = document.getElementById(`input-correction${g}-credit`).value;
+		function buildCorrections() {
+			diag && console.log("| building corrections");
+			if (!document.getElementById(`input-correction1-details1`).value) { return "" }
+			let groups = Number(document.getElementById("correction-group-count").value);
+			let output = `\n` +
+				`\n${tabs(3)}<corrections>` +
+				`\n${tabs(4)}<h4>CORRECTIONS</h4>`;
 
+			diag && console.log("# groups: " + groups);
+			for (g = 1; g < groups + 1; g++) {
+				diag && console.log("# group " + g + " started");
+				let entries = Number(document.getElementById(`btn-correction${g}`).value);
+				let credit = document.getElementById(`input-correction${g}-credit`).value;
+
+				output +=
+					`\n${tabs(4)}<ul>`;
+
+				for (e = 1; e < entries + 1; e++) {
+					diag && console.log("# entry " + e + " of group " + g + " started");
+					let eTcode = document.getElementById(`input-correction${g}-tcode${e}`).value;
+					if (eTcode == null) { eTcode = "0:00" }
+					let eTcodeSec = Number(eTcode.slice(-2)) + (Number(eTcode.slice(0,eTcode.length-3)) * 60);
+					let eDetails = document.getElementById(`input-correction${g}-details${e}`).value;
 					output +=
-						`\n${tabs(4)}<div class="corrections-entry">` +
-						`\n${tabs(5)}<ul>`;
-
-					for (e = 1; e < entries + 1; e++) {
-						diag && console.log("# entry " + e + " of group " + g + " started");
-						let eTcode = document.getElementById(`input-correction${g}-tcode${e}`).value;
-						if (eTcode == null) { eTcode = "0:00" };
-						let eTcodeSec = Number(eTcode.slice(-2)) + (Number(eTcode.slice(0,eTcode.length-3)) * 60);
-						let eDetails = document.getElementById(`input-correction${g}-details${e}`).value;
-						output +=
-							`\n${tabs(6)}<li><a class="roboto-mono-400" href="#" onclick="playerSeekTo(player, ${eTcodeSec}); return false;">${eTcode}</a> ${eDetails}</li>`;
-					}
-
-					output +=
-						`\n${tabs(6)}<span>(noticed by ${credit})</span>` +
-						`\n${tabs(5)}</ul>` +
-						`\n${tabs(4)}</div>`;
-					diag && console.log("# credit written");
+						`\n${tabs(5)}<li><a class="roboto-mono-400" href="#" onclick="playerSeekTo(player, ${eTcodeSec}); return false;">${eTcode}</a> ${eDetails}</li>`;
 				}
-				diag && console.log("# outputting");
-				output += `\n${tabs(3)}</div>`;
-				return output;
+
+				output +=
+					`\n${tabs(5)}<span>(reported by ${credit})</span>` +
+					`\n${tabs(4)}</ul>`;
+				diag && console.log("# credit written");
 			}
+			diag && console.log("# outputting");
+			output += `\n${tabs(3)}</corrections>`;
+			return output;
+		}
 
 			function buildClarifications() {
 				diag && console.log("| building clarifications");

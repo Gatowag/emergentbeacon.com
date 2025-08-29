@@ -139,9 +139,6 @@
 			Processing ...
 		</div>
 
-<!-- SCRIPTING -->
-
-		<script>
 		<div id="import-confirmation" class="hidden" style="text-align: center; color: white; padding: 1rem 0">
 			sources imported: 
 		</div>
@@ -152,6 +149,8 @@
 		</footer>
 	</body>
 
+<!-- SCRIPTING -->
+	<script>
 		let xSources, iSources = [], mSources = [], load = [], fileImport, file, reader;
 		let fileName = "page-data--.txt", clipboardHTML = "";
 		let srcCountI, srcCountM;
@@ -1193,9 +1192,6 @@
 			} catch(err) {
 				console.log(">!< ERROR: " + err);
 			}
-
-		</script>
-	</body>
 		}
 
 		function urlSanitize(url) {
@@ -1229,4 +1225,5 @@
 			return output;
 		}
 
+	</script>
 </html>

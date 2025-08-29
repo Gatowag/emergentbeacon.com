@@ -945,115 +945,136 @@
 			return output;
 		}
 
+		function buildScript() {
+			diag && console.log("| building script");
+			let output =
+				`\n${tabs(1)}<script>`;
 
+			output += buildScriptYTEmbed();
+			output += buildScriptInfoSearch();
+			output += buildScriptMediaSearch();
+			output += buildScriptEventListeners();
 
+			output +=
+				`\n${tabs(1)}<\/script>` +
+				`\n</html>`;
 
+			return output;
+		}
+		function buildScriptYTEmbed() {
+			let output =
+				`\n${tabs(2)}// 2. This code loads the IFrame Player API code asynchronously.` +
+				`\n${tabs(2)}var tag = document.createElement('script');` +
+				`\n${tabs(2)}tag.src = "https://www.youtube.com/iframe_api";` +
+				`\n${tabs(2)}var firstScriptTag = document.getElementsByTagName('script')[0];` +
+				`\n${tabs(2)}firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);\n` +
+				`\n${tabs(2)}// 3. This function creates an <iframe> (and YouTube player)` +
+				`\n${tabs(2)}//    after the API code downloads.` +
+				`\n${tabs(2)}var player;` +
+				`\n${tabs(2)}function onYouTubeIframeAPIReady() {` +
+				`\n${tabs(2)}player = new YT.Player('yt-player', {` +
+				`\n${tabs(3)}height: '400',` +
+				`\n${tabs(3)}width: '100%',` +
+				`\n${tabs(3)}videoId: '${extractID(document.getElementById("input-url").value)}',` +
+				`\n${tabs(3)}playerVars: {` +
+				`\n${tabs(4)}'playsinline': 1` +
+				`\n${tabs(3)}},` +
+				`\n${tabs(3)}events: {` +
+				`\n${tabs(4)}'onReady': onPlayerReady,` +
+				`\n${tabs(4)}'onStateChange': onPlayerStateChange` +
+				`\n${tabs(3)}}` +
+				`\n${tabs(2)}});` +
+				`\n${tabs(2)}}\n` +
+				`\n${tabs(2)}// 4. The API will call this function when the video player is ready.` +
+				`\n${tabs(2)}function onPlayerReady(event) {}` +
+				`\n${tabs(2)}function onPlayerStateChange(event) {}\n` +
+				`\n${tabs(2)}//generic seekTo function taking a player element and seconds as parameters` +
+				`\n${tabs(2)}function playerSeekTo(player, seconds) {` +
+				`\n${tabs(3)}player.seekTo(seconds);` +
+				`\n${tabs(3)}player.scrollIntoView({` +
+				`\n${tabs(4)}behavior: 'smooth',` +
+				`\n${tabs(4)}block: 'start',` +
+				`\n${tabs(4)}inline: 'nearest'` +
+				`\n${tabs(3)}});` +
+				`\n${tabs(2)}}\n`;
+			return output;
+		}
+		function buildScriptInfoSearch() {
+			let output =
+				`\n${tabs(2)}const iSearch = document.getElementById("infoSearchBanner");\n` +
+				`\n${tabs(2)}function infoSearch() {` +
+				`\n${tabs(3)}let input = document.getElementById("infoInput");` +
+				`\n${tabs(3)}let inputVal = input.value;` +
+				`\n${tabs(3)}let container = document.documentElement;` +
+				`\n${tabs(3)}let containerPos = container.scrollTop;` +
+				`\n${tabs(3)}let anchor = document.getElementById('Info' + inputVal);\n` +
+				`\n${tabs(3)}if (anchor == null) {` +
+				`\n${tabs(4)}iSearch.classList.add("error");` +
+				`\n${tabs(3)}} else {` +
+				`\n${tabs(4)}anchor.scrollIntoView({` +
+				`\n${tabs(5)}behavior: 'smooth',` +
+				`\n${tabs(5)}block: 'start',` +
+				`\n${tabs(5)}inline: 'nearest'` +
+				`\n${tabs(4)}});` +
+				`\n${tabs(4)}container.scrollTop = containerPos;` +
+				`\n${tabs(3)}}` +
+				`\n${tabs(2)}}\n`;
 
+			return output;
+		}
+		function buildScriptMediaSearch() {
+			let output =
+				`\n${tabs(2)}const mSearch = document.getElementById("mediaSearchBanner");` +
+				`\n${tabs(2)}function mediaSearch() {` +
+				`\n${tabs(3)}let input = document.getElementById("mediaInput");` +
+				`\n${tabs(3)}let inputVal = input.value;` +
+				`\n${tabs(3)}let container = document.documentElement;` +
+				`\n${tabs(3)}let containerPos = container.scrollTop;` +
+				`\n${tabs(3)}let anchor = document.getElementById('Media' + inputVal);\n` +
+				`\n${tabs(3)}if (anchor == null) {` +
+				`\n${tabs(4)}mSearch.classList.add("error");` +
+				`\n${tabs(3)}} else {` +
+				`\n${tabs(4)}anchor.scrollIntoView({` +
+				`\n${tabs(5)}behavior: 'smooth',` +
+				`\n${tabs(5)}block: 'start',` +
+				`\n${tabs(5)}inline: 'nearest'` +
+				`\n${tabs(4)}});` +
+				`\n${tabs(4)}container.scrollTop = containerPos;` +
+				`\n${tabs(3)}}` +
+				`\n${tabs(2)}}\n`;
+			
+			return output;
+		}
+		function buildScriptEventListeners() {
+			let output = 
+				`\n${tabs(2)}// source lookup behavior: disable form submit on "Enter," replace with function` +
+				`\n${tabs(2)}document.getElementById("infoInput").addEventListener("keydown", function (e) {` +
+				`\n${tabs(3)}if (e.code === "Enter") {` +
+				`\n${tabs(4)}e.preventDefault();` +
+				`\n${tabs(4)}infoSearch();` +
+				`\n${tabs(3)}}` +
+				`\n${tabs(2)}});` +
+				`\n${tabs(2)}document.getElementById("mediaInput").addEventListener("keydown", function (e) {` +
+				`\n${tabs(3)}if (e.code === "Enter") {` +
+				`\n${tabs(4)}e.preventDefault();` +
+				`\n${tabs(4)}mediaSearch();` +
+				`\n${tabs(3)}}` +
+				`\n${tabs(2)}});\n` +
+				`\n${tabs(2)}// remove css color animation class when animation finishes` +
+				`\n${tabs(2)}iSearch.addEventListener("animationend", listener, false);` +
+				`\n${tabs(2)}mSearch.addEventListener("animationend", listener, false);` +
+				`\n${tabs(2)}function listener(event) {` +
+				`\n${tabs(3)}switch (event.type) {` +
+				`\n${tabs(4)}case "animationend":` +
+				`\n${tabs(5)}mSearch.classList.remove("error");` +
+				`\n${tabs(5)}iSearch.classList.remove("error");` +
+				`\n${tabs(5)}break;` +
+				`\n${tabs(3)}}` +
+				`\n${tabs(2)}}`;
 
-			function buildScript() {
-				diag && console.log("| building script");
-				let output =
-					`\n<!-- SCRIPTS -->` +
-					`\n${tabs(1)}<script>` +
-					`\n${tabs(2)}// 2. This code loads the IFrame Player API code asynchronously.` +
-					`\n${tabs(2)}var tag = document.createElement('script');` +
-					`\n${tabs(2)}tag.src = "https://www.youtube.com/iframe_api";` +
-					`\n${tabs(2)}var firstScriptTag = document.getElementsByTagName('script')[0];` +
-					`\n${tabs(2)}firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);\n` +
-					`\n${tabs(2)}// 3. This function creates an <iframe> (and YouTube player)` +
-					`\n${tabs(2)}//    after the API code downloads.` +
-					`\n${tabs(2)}var player;` +
-					`\n${tabs(2)}function onYouTubeIframeAPIReady() {` +
-					`\n${tabs(2)}player = new YT.Player('yt-player', {` +
-					`\n${tabs(3)}height: '400',` +
-					`\n${tabs(3)}width: '100%',` +
-					`\n${tabs(3)}videoId: '${extractID(document.getElementById("input-url").value)}',` +
-					`\n${tabs(3)}playerVars: {` +
-					`\n${tabs(4)}'playsinline': 1` +
-					`\n${tabs(3)}},` +
-					`\n${tabs(3)}events: {` +
-					`\n${tabs(4)}'onReady': onPlayerReady,` +
-					`\n${tabs(4)}'onStateChange': onPlayerStateChange` +
-					`\n${tabs(3)}}` +
-					`\n${tabs(2)}});` +
-					`\n${tabs(2)}}\n` +
-					`\n${tabs(2)}// 4. The API will call this function when the video player is ready.` +
-					`\n${tabs(2)}function onPlayerReady(event) {}` +
-					`\n${tabs(2)}function onPlayerStateChange(event) {}\n` +
-					`\n${tabs(2)}//generic seekTo function taking a player element and seconds as parameters` +
-					`\n${tabs(2)}function playerSeekTo(player, seconds) {` +
-					`\n${tabs(3)}player.seekTo(seconds);` +
-					`\n${tabs(3)}player.scrollIntoView({` +
-					`\n${tabs(4)}behavior: 'smooth',` +
-					`\n${tabs(4)}block: 'start',` +
-					`\n${tabs(4)}inline: 'nearest'` +
-					`\n${tabs(3)}});` +
-					`\n${tabs(2)}}\n` +
-					`\n${tabs(2)}const mSearch = document.getElementById("mediaSearchBanner");` +
-					`\n${tabs(2)}const iSearch = document.getElementById("infoSearchBanner");\n` +
-					`\n${tabs(2)}function infoSearch() {` +
-					`\n${tabs(3)}let input = document.getElementById("infoInput");` +
-					`\n${tabs(3)}let inputVal = input.value;` +
-					`\n${tabs(3)}let container = document.documentElement;` +
-					`\n${tabs(3)}let containerPos = container.scrollTop;` +
-					`\n${tabs(3)}let anchor = document.getElementById('Info' + inputVal);\n` +
-					`\n${tabs(3)}if (anchor == null) {` +
-					`\n${tabs(4)}iSearch.classList.add("error");` +
-					`\n${tabs(3)}} else {` +
-					`\n${tabs(4)}anchor.scrollIntoView({` +
-					`\n${tabs(5)}behavior: 'smooth',` +
-					`\n${tabs(5)}block: 'start',` +
-					`\n${tabs(5)}inline: 'nearest'` +
-					`\n${tabs(4)}});` +
-					`\n${tabs(4)}container.scrollTop = containerPos;` +
-					`\n${tabs(3)}}` +
-					`\n${tabs(2)}}\n` +
-					`\n${tabs(2)}function mediaSearch() {` +
-					`\n${tabs(3)}let input = document.getElementById("mediaInput");` +
-					`\n${tabs(3)}let inputVal = input.value;` +
-					`\n${tabs(3)}let container = document.documentElement;` +
-					`\n${tabs(3)}let containerPos = container.scrollTop;` +
-					`\n${tabs(3)}let anchor = document.getElementById('Media' + inputVal);\n` +
-					`\n${tabs(3)}if (anchor == null) {` +
-					`\n${tabs(4)}mSearch.classList.add("error");` +
-					`\n${tabs(3)}} else {` +
-					`\n${tabs(4)}anchor.scrollIntoView({` +
-					`\n${tabs(5)}behavior: 'smooth',` +
-					`\n${tabs(5)}block: 'start',` +
-					`\n${tabs(5)}inline: 'nearest'` +
-					`\n${tabs(4)}});` +
-					`\n${tabs(4)}container.scrollTop = containerPos;` +
-					`\n${tabs(3)}}` +
-					`\n${tabs(2)}}\n` +
-					`\n${tabs(2)}// source lookup behavior: disable form submit on "Enter," replace with function` +
-					`\n${tabs(2)}document.getElementById("infoInput").addEventListener("keydown", function (e) {` +
-					`\n${tabs(3)}if (e.code === "Enter") {` +
-					`\n${tabs(4)}e.preventDefault();` +
-					`\n${tabs(4)}infoSearch();` +
-					`\n${tabs(3)}}` +
-					`\n${tabs(2)}});` +
-					`\n${tabs(2)}document.getElementById("mediaInput").addEventListener("keydown", function (e) {` +
-					`\n${tabs(3)}if (e.code === "Enter") {` +
-					`\n${tabs(4)}e.preventDefault();` +
-					`\n${tabs(4)}mediaSearch();` +
-					`\n${tabs(3)}}` +
-					`\n${tabs(2)}});\n` +
-					`\n${tabs(2)}// remove css color animation class when animation finishes` +
-					`\n${tabs(2)}iSearch.addEventListener("animationend", listener, false);` +
-					`\n${tabs(2)}mSearch.addEventListener("animationend", listener, false);` +
-					`\n${tabs(2)}function listener(event) {` +
-					`\n${tabs(3)}switch (event.type) {` +
-					`\n${tabs(4)}case "animationend":` +
-					`\n${tabs(5)}mSearch.classList.remove("error");` +
-					`\n${tabs(5)}iSearch.classList.remove("error");` +
-					`\n${tabs(5)}break;` +
-					`\n${tabs(3)}}` +
-					`\n${tabs(2)}}` +
-					`\n${tabs(1)}<\/script>` +
-					`\n</html>`;
+			return output;
+		}
 
-				return output;
-			}
 		function addNewField(type, group) {
 			try {
 				document.getElementById("processing").classList.remove("hidden");

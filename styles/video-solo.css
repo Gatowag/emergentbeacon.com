@@ -462,6 +462,7 @@ transcription {
 		aside {
 			background:#e6e5e2;
 			color: #141414;
+			border: 2px solid black;
 			height: 18rem;
 			padding: 0 1rem;
 			margin: 1rem 1rem;

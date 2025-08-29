@@ -941,47 +941,8 @@
 			return output;
 		}
 
-			function buildPatreon() {
-				diag && console.log("| building patreon bonus");
-				let output = `\n` +
-					`\n${tabs(3)}<div class="bonus-block">` +
-					`\n${tabs(4)}<h2 class="section-title inewspaper">Bonus Material</h2>` +
-					`\n${tabs(4)}<div style="padding-bottom: 1em;" class="dark outline">` +
-					`\n${tabs(5)}<div>` +
-					`\n${tabs(6)}<p class="synopsis-text" style="margin-top: .6em;">` +
-					`\n${tabs(7)}<a href="https://patreon.com/emergentbeacon" class="support-link" title="patreon.com/emergentbeacon">Pledge now</a> for these behind the scenes exclusives!` +
-					`\n${tabs(6)}</p>` +
-					`\n${tabs(5)}</div>` +
-					`\n${tabs(5)}<div class="bonus-scroll slate cutout">` +
-					`\n${tabs(6)}<div style="width: max-content;">`;
 
-				let patreonCount = Number.parseInt(document.getElementById("patreon-count").value);
-				let patreonImage = document.getElementById("input-patreon-image").value;
-				for (pa = 1; pa < patreonCount + 1; pa++) {
-					let patreonURL = document.getElementById(`input-patreon${pa}-url`).value;
-					let patreonTitle = document.getElementById(`input-patreon${pa}-title`).value;
-					let patreonDuration = document.getElementById(`input-patreon${pa}-duration`).value;
-					let imageOffset = (pa - 1) * -10;
-					output +=
-						`\n${tabs(7)}<div class="bonus-entry">` +
-						`\n${tabs(8)}<a href="${patreonURL}">` +
-						`\n${tabs(9)}<img src="/assets/${patreonImage}" style="object-position: ${imageOffset}rem 0;">` +
-						`\n${tabs(8)}</a>` +
-						`\n${tabs(8)}<p>` +
-						`\n${tabs(9)}<span class="bonus-entry-time">${patreonDuration}</span><br>` +
-						`\n${tabs(9)}<span class="bonus-entry-label">${patreonTitle}</span>` +
-						`\n${tabs(8)}</p>` +
-						`\n${tabs(7)}</div>`;
-					}
-				
-					output +=
-						`\n${tabs(6)}</div>` +
-						`\n${tabs(5)}</div>` +
-						`\n${tabs(4)}</div>` +
-						`\n${tabs(3)}</div>`;
 
-				return output;
-			}
 
 
 

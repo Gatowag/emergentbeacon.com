@@ -1107,11 +1107,6 @@
 			}
 				
 
-			function tabs(num) {
-				let x = `	`;
-				let output = "";
-				for (i = 0; i < num; i++) { output += x; }
-				return output;
 				document.getElementById("processing").classList.add("hidden");
 			} catch(err) {
 				console.log(">!< ERROR: " + err);
@@ -1127,5 +1122,12 @@
 			else if (url.indexOf("http://") != -1) { return url.slice(7) }
 			else if (url.indexOf("www.") != -1) { return url.slice(4) }
 			else { return url }
+		}
+
+		function tabs(num) {
+			let x = `	`;
+			let output = "";
+			for (i = 0; i < num; i++) { output += x; }
+			return output;
 		}
 </html>

@@ -779,31 +779,30 @@
 					`\n${tabs(3)}</div>`;
 
 				return output;
+		function buildCredits() {
+			diag && console.log("| building credits");
+			let output = `\n` +
+				`\n${tabs(3)}<credits>` +
+				`\n${tabs(4)}<h2>Credits</h2>` +
+				`\n${tabs(4)}<container>` +
+				`\n${tabs(5)}<p>`;
+			let creditCount = Number.parseInt(document.getElementById("credit-count").value);
+			for (cr = 1; cr < (creditCount + 1); cr++) {
+				let creditName = document.getElementById(`input-credit${cr}-name`).value;
+				let creditRole = document.getElementById(`input-credit${cr}-role`).value;
+				output +=
+					`\n${tabs(6)}<credit-name>${creditName}</credit-name>` +
+					`\n${tabs(6)}<credit-role>${creditRole}</credit-role>`;
 			}
+			output +=
+				`\n${tabs(5)}</p>` +
+				`\n${tabs(4)}</container>` +
+				`\n${tabs(3)}</credits>`;
+			return output;
+		}
 
-			function buildCredits() {
-				diag && console.log("| building credits");
-				let output = `\n` +
-					`\n${tabs(3)}<div class="credits-block">` +
-					`\n${tabs(4)}<h2 class="section-title inewspaper">Credits</h2>` +
-					`\n${tabs(4)}<div class="outline dark">` +
-					`\n${tabs(5)}<div class="credits">`;
-				let creditCount = Number.parseInt(document.getElementById("credit-count").value);
-				for (cr = 1; cr < (creditCount + 1); cr++) {
-					let creditName = document.getElementById(`input-credit${cr}-name`).value;
-					let creditRole = document.getElementById(`input-credit${cr}-role`).value;
-					output +=
-						`\n${tabs(6)}<div class="credits-name newspaper">${creditName}</div>` +
-						`\n${tabs(6)}<div class="credits-role">` +
-						`\n${tabs(7)}${creditRole}` +
-						`\n${tabs(6)}</div>`;
 				}
 				output +=
-					`\n${tabs(5)}</div>` +
-					`\n${tabs(4)}</div>` +
-					`\n${tabs(3)}</div>`;
-				return output;
-			}
 
 			function buildTranscript() {
 				diag && console.log("| building transcript");

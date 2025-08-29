@@ -395,39 +395,36 @@
 			document.getElementById(t + src + "-Delete").addEventListener("click", deleteSource.bind(this, src, t) );
 		}
 
-			function exportHTML(state) {
-				console.log("... EXPORT HTML PRESSED, STATE: " + state);
+		function exportHTML(state) {
+			console.log("... EXPORT HTML PRESSED, STATE: " + state);
 
-				try {
-					document.getElementById("processing").classList.remove("hidden");
+			try {
+				document.getElementById("processing").classList.remove("hidden");
 
-					let clipboardHTML = buildHead();
-					clipboardHTML += buildHeaderWithNav();
-					clipboardHTML += buildVidWithSynopsis();
-					clipboardHTML += buildCorrections();
-					clipboardHTML += buildClarifications();
-					if (!state == false) { clipboardHTML += buildSources(); }
-					clipboardHTML += buildMusic();
-					clipboardHTML += buildCredits();
-					clipboardHTML += buildTranscript();
-					clipboardHTML += buildPatreon();
-					clipboardHTML += `\n${tabs(2)}</div>`;
-					clipboardHTML += buildFooter();
-					clipboardHTML += buildScript();
+				let clipboardHTML = buildHead();
+				clipboardHTML += buildHeaderWithNav();
+				clipboardHTML += buildVidWithSynopsis();
+				clipboardHTML += buildCorrections();
+				clipboardHTML += buildClarifications();
+				if (!state == false) { clipboardHTML += buildSources() }
+				clipboardHTML += buildMusic();
+				clipboardHTML += buildCredits();
+				clipboardHTML += buildTranscript();
+				clipboardHTML += buildBonus();
+				clipboardHTML += `\n${tabs(2)}</main>`;
+				clipboardHTML += buildFooter();
+				clipboardHTML += buildScript();
 
-					navigator.clipboard.writeText(clipboardHTML); // copy to clipboard
+				navigator.clipboard.writeText(clipboardHTML); // copy to clipboard
 
-					let confirm = document.getElementById("import-confirmation");
-					confirm.classList.remove("hidden");
-					confirm.innerText = "sources imported: " + fileName;
-					
-					alert("HTML successfully copied!");
-					document.getElementById("processing").classList.add("hidden");
-				} catch(err) {
-					console.log(">!< ERROR: " + err.message);
-				}
-
-				console.log("/// EXPORT HTML DONE");
+				let confirm = document.getElementById("import-confirmation");
+				confirm.classList.remove("hidden");
+				confirm.innerText = "sources imported: " + fileName;
+				
+				alert("HTML successfully copied!");
+				document.getElementById("processing").classList.add("hidden");
+			} catch(err) {
+				console.log(">!< ERROR: " + err.message);
 			}
 
 			function exportHTMLwithSources() {

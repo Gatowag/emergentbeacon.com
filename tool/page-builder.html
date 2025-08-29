@@ -1100,15 +1100,6 @@
 				}
 			}
 
-			function urlSanitize(url) {
-				if (url.indexOf("https://www.") != -1) { return url.slice(12) }
-				else if (url.indexOf("https://") != -1) { return url.slice(8) }
-				else if (url.indexOf("http://www.") != -1) { return url.slice(11) }
-				else if (url.indexOf("http://") != -1) { return url.slice(7) }
-				else if (url.indexOf("www.") != -1) { return url.slice(4) }
-				else { return url }
-			}
-
 			function extractID(url) {
 				let ID = url;
 				if (url.indexOf("?si=") != -1) { ID = url.slice(0,-20) }
@@ -1128,4 +1119,13 @@
 
 		</script>
 	</body>
+
+		function urlSanitize(url) {
+			if (url.indexOf("https://www.") != -1) { return url.slice(12) }
+			else if (url.indexOf("https://") != -1) { return url.slice(8) }
+			else if (url.indexOf("http://www.") != -1) { return url.slice(11) }
+			else if (url.indexOf("http://") != -1) { return url.slice(7) }
+			else if (url.indexOf("www.") != -1) { return url.slice(4) }
+			else { return url }
+		}
 </html>

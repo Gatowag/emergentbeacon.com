@@ -34,6 +34,12 @@ fieldset {
 	border: none;
 }
 
+row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	width: 100%;
+}
 label {
 	text-align: right;
 	width: 13rem;
@@ -67,12 +73,6 @@ input {
 .label { font-size: 80%; }
 
 .input { width:100%; }
-
-.row {
-	display: flex;
-	width: 100%;
-}
-.button-row {
 button-row {
 	display: block;
 	width: 100%;

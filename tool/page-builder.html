@@ -557,215 +557,43 @@
 
 			return output;
 		}
+
+		function buildSources() {
+			try {
+				diag && console.log("| building sources");
+				srcCountI = file[0].length;
+				srcCountM = file[1].length;
+				let vidLink = file[0][0][0];
+				let output = "";
+
+				if (srcCountI) { output += buildSourcesInfo() }
+				if (srcCountI > 2) { output += buildSourcesSearchBar("info") }
+				output += `\n${tabs(3)}</sources-info>`;
+				if (srcCountM) { output += buildSourcesMedia() } 
+				output += `\n${tabs(4)}</container>`;
+				if (srcCountM > 2) { output += buildSourcesSearchBar("media") }
+				output += `\n${tabs(3)}</sources-media>`;
 				return output;
+			} catch(err) {
+				console.log(">!< ERROR, buildSources: " + err);
 			}
+		}
 
-			function buildSources() {
-				try {
-					diag && console.log("| building sources");
-					let srcCountI = file[0].length;
-					let srcCountM = file[1].length;
-					let iURL = 0, iTitle = 1, iPub = 2, iAuthor = 3, iYear = 4, iSpecifics = 5, iSpecificsURL = 6, iAccessed = 7, iClaim = 8, iTimecode = 9, iLinkState = 11, iLinks = 12;
-					let mURL = 0, mTitle = 1, mPub = 2, mAuthor = 3, mYear = 4, mMods = 6, mTimecode = 7;
-					let vidLink = file[0][0][0];
 
-					let output = `\n\n${tabs(3)}<div class="cite-info">`
-
-					if (srcCountI) {
-						diag && console.log("| srcCountI detected");
 						output +=
-							`\n${tabs(4)}<h2 class="section-title inewspaper">Info Sources</h2>` +
-							`\n${tabs(4)}<div class="source-container islate" id="infoContainer">`;
-
-						// loop through info data, source by source
-						let linkedChildren = 0;
-						for (srcI = 0; srcI < srcCountI; srcI++) {
-							let s = srcI + 1;
-							let rowTotal = file[0][srcI].length - 2;
-							let tcode;
-							if (file[0][srcI][iTimecode] == null) {
-								tcode = "0:00"
-							} else {
-								tcode = file[0][srcI][iTimecode]
-							}
-							let tcodeSeconds = Number(tcode.slice(-2)) + (Number(tcode.slice(0,tcode.length-3)) * 60);
-							let part = "ABCDEFGHIJKLMNO";
-							let instCount = (rowTotal - 8) / 4;
-							let specifics = "";
-							let instSpecifics = file[0][srcI][iSpecifics];
-							let instSpecificsURL = file[0][srcI][iSpecificsURL];
-							let sLinkState = file[0][srcI][iLinkState];
-							let sLinks = Number(file[0][srcI][iLinks]);
-							let displayURL = urlSanitize(file[0][srcI][iURL]);
-
-							// if this source isn't a child in a link chain
-							// create a box for the claim and source number 
-							if (linkedChildren == 0) {
-								diag && console.log(file[0][srcI]);
-								if (sLinks > 0) {
-									linkedChildren = sLinks;
-									output += `\n${tabs(5)}<div class="info-number" id="Info${s}">${s}`;
-										for (sX = 1; sX < sLinks + 1; sX++){
-											output += ", " + (s + sX);
-										}
-										output += `</div>`;
 								} else {
-									output += `\n${tabs(5)}<div class="info-number" id="Info${s}">${s}</div>`;
 								}
-							
-								if (rowTotal < 12) {
-									if (instSpecifics && instSpecificsURL) {
-										specifics = `<a href="${instSpecificsURL}">${instSpecifics}</a>`;
-									} else {
-										specifics = instSpecifics;
-									}
-
-									output +=
-										`\n${tabs(5)}<div class="cite-box">` +
-										`\n${tabs(6)}${file[0][srcI][iClaim]}<br>` +
-										`\n${tabs(6)}<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, ${tcodeSeconds}); return false;">${tcode}</a></span>` +
-										`\n${tabs(5)}</div>`;
 								} else {
-									for (x = 0; x < instCount; x++) {
-										let instClaim, instTime;
-
-										if (x == 0) {
-											if (instSpecifics && instSpecificsURL) {
-												specifics = part[x] + ": " + "<a href=\"" + instSpecificsURL + "\">" + instSpecifics + "</a>";
-											} else if (instSpecifics) {
-												specifics = part[x] + ": " + instSpecifics;
-											};
-											if (file[0][srcI][iClaim]) {
-												instClaim = file[0][srcI][iClaim];
-											} else {
-												instClaim = "No specific claim."
-											}
-											instTime = tcode;
-										} else {
-											if (file[0][srcI][7 + (x * 4)] && file[0][srcI][8 + (x * 4)]) {
-												if (specifics.length > 0) { specifics += "<br>" };
-												specifics += part[x] + ": " + "<a href=\"" + file[0][srcI][8 + (x * 4)] + "\">" + file[0][srcI][7 + (x * 4)] + "</a>";
-											} else if (file[0][srcI][7 + (x * 4)]) {
-												if (specifics.length > 0) { specifics += "<br>" };
-												specifics += part[x] + ": " + file[0][srcI][7 + (x * 4)];
-											};
-											if (file[0][srcI][9 + (x * 4)]) {
-												instClaim = file[0][srcI][9 + (x * 4)];
-											} else {
-												instClaim = "No specific claim."
-											}
-											instTime = file[0][srcI][10 + (x * 4)];
-										}
-
-										output +=
-											`\n${tabs(5)}<div class="cite-tab-align">` +
-											`\n${tabs(6)}<div class="cite-box-multi-tab">${part[x]}</div>` +
-											`\n${tabs(6)}<div class="cite-box-multi-quote">` +
-											`\n${tabs(7)}${instClaim}<br>` +
-											`\n${tabs(7)}<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, ${tcodeSeconds}); return false;">${instTime}</a></span>` +
-											`\n${tabs(6)}</div>` +
-											`\n${tabs(5)}</div>`;
-									}
 								}
-							} else { linkedChildren-- }
 
 							output +=
-								`\n${tabs(5)}<div class="cite-details">` +
-								`\n${tabs(6)}<span class="cite-identifier">${file[0][srcI][iTitle]}<br></span>` +
-								`\n${tabs(6)}<span class="cite-credits">`;
-
-							if (file[0][srcI][iYear]) {output += `\n${tabs(7)}${file[0][srcI][iYear]}`};
-							if (file[0][srcI][iYear] && file[0][srcI][iAuthor] || file[0][srcI][iYear] && file[0][srcI][iPub]) {output += ", "};
-							if (file[0][srcI][iAuthor]) {output += file[0][srcI][iAuthor] + "<br>"};
-							if (file[0][srcI][iPub]) {output += `\n${tabs(6)}${file[0][srcI][iPub]}<br>`};
-							if (file[0][srcI][iAccessed]) {output += `\n${tabs(6)}accessed ${file[0][srcI][iAccessed]}<br>`};
-							if (specifics) {output += `\n${tabs(7)}${specifics}`};
-							output += `\n${tabs(6)}</span>`;
-							if (file[0][srcI][iURL]) {
-								output +=
-									`\n${tabs(6)}<div class="source-link roboto-mono-400">` +
-									`\n${tabs(7)}<a href="${file[0][srcI][iURL]}">${displayURL}</a>` +
-									`\n${tabs(6)}</div>` +
-									`\n${tabs(5)}</div>`;
-							};
-						};
-					};
-
-					output += `\n${tabs(4)}</div>`;
-
-					if (srcCountI > 2) {
-						output +=
-							`\n${tabs(4)}<form class="search-banner" id="infoSearchBanner">` +
-							`\n${tabs(5)}<input id="infoInput" class="search-input" placeholder="#" onfocus="this.value=''">` +
-							`\n${tabs(5)}<button id="infoBtn" class="search-button" type="button" onclick="infoSearch()">go to</button>` +
-							`\n${tabs(4)}</form>`;
 					}
 
-					output += `\n${tabs(3)}</div>`;
 
-					if (srcCountM) {
-						diag && console.log("| srcCountM detected");
-						output += `\n` +
-							`\n${tabs(3)}<div class="cite-media">` +
-							`\n${tabs(4)}<h2 class="section-title inewspaper">Media Sources</h2>` +
-							`\n${tabs(4)}<div class="source-container islate" id="media-container">`;
-						
-						// loop through media data, source by source
-						for (srcM = 0; srcM < srcCountM; srcM++) {
-							let s = srcM + 1;
-							let rowTotal = file[1][srcM].length;
-							let tcode;
-							if (file[1][srcM][mTimecode] == null) {
-								tcode = "0:00"
-							} else {
-								tcode = file[1][srcM][mTimecode]
-							}
 
-							let tcodeSeconds = Number(tcode.slice(-2)) + (Number(tcode.slice(0,tcode.length-3)) * 60);
-							let displayURL = urlSanitize(file[1][srcM][mURL]);
 
-							output +=
-								`\n${tabs(5)}<div id="Media${s}">` +
-								`\n${tabs(6)}<div class="media-anchor">` +
-								`\n${tabs(7)}<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, ${tcodeSeconds}); return false;">${tcode}</a><span class="inewspaper media-indx">m${s}</span>` +
-								`\n${tabs(6)}</div>` +
-								`\n${tabs(6)}<div class="cite-details">` +
-								`\n${tabs(7)}<span class="cite-identifier">${file[1][srcM][mTitle]}<br></span>` +
-								`\n${tabs(7)}<span class="cite-credits">`;
 
-							if (file[1][srcM][mYear]) {output += `\n${tabs(8)}${file[1][srcM][mYear]}`};
-							if (file[1][srcM][mYear] && file[1][srcM][mAuthor]) {output += ", "};
-							if (file[1][srcM][mAuthor]) {output += file[1][srcM][mAuthor] + "<br>"};
-							if (file[1][srcM][mPub]) {output += `\n${tabs(8)}${file[1][srcM][mPub]}<br>`};
-							if (file[1][srcM][mMods]) {output += `\n${tabs(8)}<i>modifications: ${file[1][srcM][mMods]}</i><br>`};
 
-							output += `\n${tabs(7)}</span>`;
-							if (file[1][srcM][mURL]) {
-								output +=
-									`\n${tabs(7)}<div class="source-link roboto-mono-400">` +
-									`\n${tabs(8)}<a href="${file[1][srcM][mURL]}">${displayURL}</a>` +
-									`\n${tabs(7)}</div>`;
-							};
-							output +=
-								`\n${tabs(6)}</div>` +
-								`\n${tabs(5)}</div>`;
-						};
-					};
-
-					output += `\n${tabs(4)}</div>`;
-
-					if (srcCountM > 2) {
-						output +=
-							`\n${tabs(4)}<form class="search-banner" id="mediaSearchBanner">` +
-							`\n${tabs(5)}<input id="mediaInput" class="search-input" placeholder="#" onfocus="this.value=''">` +
-							`\n${tabs(5)}<button id="mediaBtn" class="search-button" type="button" onclick="mediaSearch()">go to</button>` +
-							`\n${tabs(4)}</form>`;
-					}
-
-					output += `\n${tabs(3)}</div>`;
-					return output;
-				} catch(err) {
-					console.log(">!< ERROR, buildSources: " + err);
 				}
 			}
 

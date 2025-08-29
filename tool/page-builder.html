@@ -242,78 +242,8 @@
 				}
 			}
 
-			function loading() {
-				console.log("... LOADING PRESSED");
-				document.getElementById("processing").classList.remove("hidden");
-				clearAll();
-				file = document.getElementById("load-input").files[0];
-				fileName = file.name;
-				reader = new FileReader();
-				reader.onloadend = function(){
-					load = JSON.parse(reader.result);
-
-					document.getElementById("input-title").value = load[0][0];
-					document.getElementById("input-url").value = load[0][1];
-					document.getElementById("input-synopsis").value = load[0][2];
-					document.getElementById("input-bandcamp").value = load[3][0];
-					document.getElementById("input-patreon-music").value = load[3][1];
-					document.getElementById("input-transcript").value = load[5][0];
-					document.getElementById("input-en-captions").value = load[5][1];
-					document.getElementById("input-en-subtitles").value = load[5][2];
-					document.getElementById("input-patreon-image").value = load[6][0];
-					document.getElementById("input-next-title").value = load[7][0];
-					document.getElementById("input-next-link").value = load[7][1];
-					document.getElementById("input-prev-title").value = load[7][2];
-					document.getElementById("input-prev-link").value = load[7][3];
-
-					let correctionGroupCount = load[1].length;
-					let clarificationCount = load[2].length;
-					let creditCount = load[4].length / 2;
-					let patreonCount = (load[6].length - 1) / 3;
-					console.log("# group count: " + correctionGroupCount);
-
-					// add +1 to for loop when correction groups are accounted for
-					for (a = 1; a < correctionGroupCount + 1; a++) {
-						console.log("# group (a): " + a);
-						if (a > 1) { addNewField("correction-group", a - 1) }
-						let entries = (load[1][a-1].length - 1) / 2;
-						console.log("# group entries: " + entries);
-						for (e = 1; e < entries + 1; e++) {
-							console.log("# entry: " + e);
-							if (e > 1) { addNewField("correction", a) }
-							console.log("# time: " + load[1][a-1][(e * 2) - 2]);
-							document.getElementById(`input-correction${a}-tcode${e}`).value = load[1][a-1][(e * 2) - 2];
-							console.log("# details: " + load[1][a-1][(e * 2) - 1]);
-							document.getElementById(`input-correction${a}-details${e}`).value = load[1][a-1][(e * 2) - 1];
-						}
-						console.log("# credit: " + load[1][a-1][load[1][a-1].length - 1]);
-						document.getElementById(`input-correction${a}-credit`).value = load[1][a-1][load[1][a-1].length - 1];
 					}
-					for (b = 1; b < clarificationCount + 1; b++) {
-						if (b > 1) { addNewField("clarification") }
-						document.getElementById(`input-clarification${b}`).value = load[2][b - 1];
-					}
-					for (c = 1; c < creditCount + 1; c++) {
-						if (c > 1) { addNewField("credit") }
-						let nameNum = c * 2 - 2;
-						let roleNum = c * 2 - 1;
-						document.getElementById(`input-credit${c}-name`).value = load[4][nameNum];
-						document.getElementById(`input-credit${c}-role`).value = load[4][roleNum];
-					}
-					for (d = 1; d < patreonCount + 1; d++) {
-						if (d > 1) { addNewField("patreon") }
-						let urlNum = d * 3 - 2;
-						let titleNum = d * 3 - 1;
-						let durationNum = d * 3;
-						document.getElementById(`input-patreon${d}-url`).value = load[6][urlNum];
-						document.getElementById(`input-patreon${d}-title`).value = load[6][titleNum];
-						document.getElementById(`input-patreon${d}-duration`).value = load[6][durationNum];
-					}
-				};
-				reader.readAsText(file);
 
-				document.getElementById("processing").classList.add("hidden");
-				console.log("/// LOADING DONE");
 			}
 
 			function clearAll() {
@@ -321,7 +251,53 @@
 				for (e = 0; e < elements.length; e++) {
 					if (elements[e].type == "text") {
 						elements[e].value = "";
+		function loading() {
+			console.log("... LOADING PRESSED");
+			document.getElementById("processing").classList.remove("hidden");
+			clearAll();
+			file = document.getElementById("load-input").files[0];
+			fileName = file.name;
+			reader = new FileReader();
+			reader.onloadend = function(){
+				load = JSON.parse(reader.result);
+
+				document.getElementById("input-title").value = load[0][0];
+				document.getElementById("input-url").value = load[0][1];
+				document.getElementById("input-nav-id").value = load[0][2];
+				document.getElementById("input-synopsis").value = load[0][3];
+				document.getElementById("input-bandcamp").value = load[3][0];
+				document.getElementById("input-patreon-music").value = load[3][1];
+				document.getElementById("input-transcript").value = load[5][0];
+				document.getElementById("input-en-captions").value = load[5][1];
+				document.getElementById("input-en-subtitles").value = load[5][2];
+				document.getElementById("input-patreon-image").value = load[6][0];
+				document.getElementById("input-next-title").value = load[7][0];
+				document.getElementById("input-next-link").value = load[7][1];
+				document.getElementById("input-prev-title").value = load[7][2];
+				document.getElementById("input-prev-link").value = load[7][3];
+
+				let correctionGroupCount = load[1].length;
+				let clarificationCount = load[2].length;
+				let creditCount = load[4].length / 2;
+				let patreonCount = (load[6].length - 1) / 3;
+				console.log("# group count: " + correctionGroupCount);
+
+				// add +1 to for loop when correction groups are accounted for
+				for (a = 1; a < correctionGroupCount + 1; a++) {
+					console.log("# group (a): " + a);
+					if (a > 1) { addNewField("correction-group", a - 1) }
+					let entries = (load[1][a-1].length - 1) / 2;
+					console.log("# group entries: " + entries);
+					for (e = 1; e < entries + 1; e++) {
+						console.log("# entry: " + e);
+						if (e > 1) { addNewField("correction", a) }
+						console.log("# time: " + load[1][a-1][(e * 2) - 2]);
+						document.getElementById(`input-correction${a}-tcode${e}`).value = load[1][a-1][(e * 2) - 2];
+						console.log("# details: " + load[1][a-1][(e * 2) - 1]);
+						document.getElementById(`input-correction${a}-details${e}`).value = load[1][a-1][(e * 2) - 1];
 					}
+					console.log("# credit: " + load[1][a-1][load[1][a-1].length - 1]);
+					document.getElementById(`input-correction${a}-credit`).value = load[1][a-1][load[1][a-1].length - 1];
 				}
 				refreshCounts();
 			}
@@ -330,18 +306,41 @@
 				let correctionCount = document.getElementById("correction-group-count");
 				for (i = 1; i < Number.parseInt(correctionCount.value + 1); i++) {
 					if (document.getElementById(`input-correction${i}`)) {correctionCount.value = i;}
+				for (b = 1; b < clarificationCount + 1; b++) {
+					if (b > 1) { addNewField("clarification") }
+					document.getElementById(`input-clarification${b}`).value = load[2][b - 1];
 				}
 				let clarificationCount = document.getElementById("clarification-count");
 				for (j = 1; j < Number.parseInt(clarificationCount.value + 1); j++) {
 					if (document.getElementById(`input-clarification${j}`)) {clarificationCount.value = j;}
+				for (c = 1; c < creditCount + 1; c++) {
+					if (c > 1) { addNewField("credit") }
+					let nameNum = c * 2 - 2;
+					let roleNum = c * 2 - 1;
+					document.getElementById(`input-credit${c}-name`).value = load[4][nameNum];
+					document.getElementById(`input-credit${c}-role`).value = load[4][roleNum];
 				}
 				let creditCount = document.getElementById("credit-count");
 				for (k = 1; k < Number.parseInt(creditCount.value + 1); k++) {
 					if (document.getElementById(`input-credit${k}-name`)) {creditCount.value = k;}
+				for (d = 1; d < patreonCount + 1; d++) {
+					if (d > 1) { addNewField("patreon") }
+					let urlNum = d * 3 - 2;
+					let titleNum = d * 3 - 1;
+					let durationNum = d * 3;
+					document.getElementById(`input-patreon${d}-url`).value = load[6][urlNum];
+					document.getElementById(`input-patreon${d}-title`).value = load[6][titleNum];
+					document.getElementById(`input-patreon${d}-duration`).value = load[6][durationNum];
 				}
 				let patreonCount = document.getElementById("patreon-count");
 				for (p = 1; p < Number.parseInt(patreonCount.value + 1); p++) {
 					if (document.getElementById(`input-patreon${p}-url`)) {patreonCount.value = p;}
+			};
+			reader.readAsText(file);
+
+			document.getElementById("processing").classList.add("hidden");
+			console.log("/// LOADING DONE");
+		}
 				}
 			}
 

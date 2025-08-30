@@ -48,6 +48,7 @@
 					<playlist-buttons>
 						<button id="btn" type="button" onclick="randomVideo()">random video</button>
 						<button id="btn-details" type="button" onclick="document.location='/videos/trailer.html'">this video's page</button>
+						<button id="btn-music" type="button" onclick="document.location='/videos/trailer.html'">this video's music</button>
 						<button onclick="document.location='/videos.html'">all videos</button type="button">
 					</playlist-buttons>
 
@@ -154,16 +155,16 @@
 		var i = 3;
 		const frame = document.getElementById("video-embed");
 		const list = [
-			{id: "CE3D-tLVTQk", page: "/videos/tenere.html"},
-			{id: "WaM9Gc3y2xo", page: "/videos/sun-spotter.html"},
-			{id: "LNuR-0LHnss", page: "/videos/sungazer.html"},
-			{id: "mFMGs9e5PLY", page: "/videos/trailer.html"},
-			{id: "WD1g4poEjDE", page: "/videos/sedna.html"},
-			{id: "FH5RN9KE5D0", page: "/videos/the-search.html"},
-			{id: "9czNEtiD-jo", page: "/videos/art.html"},
-			{id: "Vfmfdb_dEek", page: "/videos/no-frames-no-boundaries.html"},
-			{id: "_4b2nVOHjdE", page: "/videos/critical-curves.html"},
-			{id: "yCHYmlwjUcI", page: "/videos/einstein-cross.html"}
+			{id: "CE3D-tLVTQk", page: "/videos/tenere.html", music: ""},
+			{id: "WaM9Gc3y2xo", page: "/videos/sun-spotter.html", music: ""},
+			{id: "LNuR-0LHnss", page: "/videos/sungazer.html", music: ""},
+			{id: "mFMGs9e5PLY", page: "/videos/trailer.html", music: ""},
+			{id: "WD1g4poEjDE", page: "/videos/sedna.html", music: ""},
+			{id: "FH5RN9KE5D0", page: "/videos/the-search.html", music: ""},
+			{id: "9czNEtiD-jo", page: "/videos/art.html", music: ""},
+			{id: "Vfmfdb_dEek", page: "/videos/no-frames-no-boundaries.html", music: ""},
+			{id: "_4b2nVOHjdE", page: "/videos/critical-curves.html", music: ""},
+			{id: "yCHYmlwjUcI", page: "/videos/einstein-cross.html", music: "/music/cosmic-mirage.html"}
 		];
 		const btnPage = document.getElementById("btn-details");
 		var shown = [0,1,2,4,5,6,7,8,9];

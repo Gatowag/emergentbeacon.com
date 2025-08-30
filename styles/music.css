@@ -53,6 +53,8 @@ grid-item {
 }
 grid-item:hover {
 	color: var(--accent);
+	opacity: 70%;
+	transform: scale(96%);
 }
 
 button {

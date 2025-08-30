@@ -67,8 +67,62 @@ playlist-buttons {
 		transform: translateY(.1em);
 	}
 }
+playlist-items {
+	ul {
+		list-style: none;
+		cursor: pointer;
+		background-color: var(--playlist-item);
+		line-height: 1rem;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		background-color: var(--playlist-item);
+		color: var(--txt);
+		border-bottom: solid 1px black;
+		--item-padding: .8rem;
+		--time-width: 9ch;
+	}
+	button {
+		background-color: var(--playlist-item);
+		color: var(--txt);
+		display: block;
+		width: 100%;
+		position: relative;
+		gap: 6px;
+		padding: var(--item-padding);
+		transition: .1s ease;
+		text-align: left;
+		font-size: 1rem;
+		text-decoration: none;
+		font-family: "Rubik", serif;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
+	}
+	button:hover, button:focus-visible {
+		background: var(--playlist-hover-back);
+		color: var(--playlist-hover-txt);
 
+		strong { text-decoration: underline }
+		time { color: var(--playlist-hover-txt) }
+	}
+	time {
+		position: absolute;
+		top: var(--item-padding);
+		right: var(--item-padding);
+		width: var(--time-width);
+		overflow: hidden;
+		color: hsl(from var(--txt) h s l / 0.85);
+		text-wrap: nowrap;
+		text-align: right;
 
+		font-family: "Roboto Mono", serif;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
+		font-size: .8rem;
+	}
 }
 .selected {
 	button {

@@ -350,60 +350,60 @@
 				</form>
 			</div>
 
-			<div class="cite-media">
-				<h2 class="section-title inewspaper">Media Sources</h2>
-				<div class="source-container islate" id="media-container">
-					<div id="Media1">
-						<div class="media-anchor">
-							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 616); return false;">10:16</a><span class="inewspaper media-indx">m1</span>
-						</div>
-						<div class="cite-details">
-							<span class="cite-identifier">Hertzsprung-Russell diagram<br></span>
-							<span class="cite-credits">
+			<sources-media>
+				<h2>Media Sources</h2>
+				<container id="media-container">
+					<citation id="Media1">
+						<anchor>
+							<a href="#" onclick="playerSeekTo(player, 616); return false;"><time datetime="PT10M16S">10:16</time></a><indx>m1</indx>
+						</anchor>
+						<info>
+							<cite>Hertzsprung-Russell diagram</cite>
+							<info-details>
 								2006, Richard Powell<br>
 								<i>modifications: vectorized and given new visual treatment</i><br>
-							</span>
-							<div class="source-link roboto-mono-400">
+							</info-details>
+							<origin>
 								<a href="http://www.atlasoftheuniverse.com/hr.html">atlasoftheuniverse.com/hr.html</a>
-							</div>
-						</div>
-					</div>
-					<div id="Media2">
-						<div class="media-anchor">
-							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 710); return false;">11:50</a><span class="inewspaper media-indx">m2</span>
-						</div>
-						<div class="cite-details">
-							<span class="cite-identifier">proxima centauri photo<br></span>
-							<span class="cite-credits">
+							</origin>
+						</info>
+					</citation>
+					<citation id="Media2">
+						<anchor>
+							<a href="#" onclick="playerSeekTo(player, 710); return false;"><time datetime="PT11M50S">11:50</time></a><indx>m2</indx>
+						</anchor>
+						<info>
+							<cite>proxima centauri photo</cite>
+							<info-details>
 								2013
 								ESA/Hubble & NASA<br>
-							</span>
-							<div class="source-link roboto-mono-400">
+							</info-details>
+							<origin>
 								<a href="https://esahubble.org/images/potw1343a/">esahubble.org/images/potw1343a/</a>
-							</div>
-						</div>
-					</div>
-					<div id="Media3">
-						<div class="media-anchor">
-							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 2544); return false;">42:24</a><span class="inewspaper media-indx">m3</span>
-						</div>
-						<div class="cite-details">
-							<span class="cite-identifier">solar telescope photos<br></span>
-							<span class="cite-credits">
+							</origin>
+						</info>
+					</citation>
+					<citation id="Media3">
+						<anchor>
+							<a href="#" onclick="playerSeekTo(player, 2544); return false;"><time datetime="PT42M24S">42:24</time></a><indx>m3</indx>
+						</anchor>
+						<info>
+							<cite>solar telescope photos</cite>
+							<info-details>
 								2022
 								Lunt<br>
-							</span>
-							<div class="source-link roboto-mono-400">
+							</info-details>
+							<origin>
 								<a href="https://luntsolarsystems.com/">luntsolarsystems.com/</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<form class="search-banner" id="mediaSearchBanner">
-					<input id="mediaInput" class="search-input" placeholder="#" onfocus="this.value=''">
-					<button id="mediaBtn" class="search-button" type="button" onclick="mediaSearch()">go to</button>
+							</origin>
+						</info>
+					</citation>
+				</container>
+				<form id="mediaSearchBanner">
+					<input id="mediaInput" placeholder="#" onfocus="this.value=''">
+					<button id="mediaBtn" type="submit" onclick="mediaSearch()">go to</button>
 				</form>
-			</div>
+			</sources-media>
 
 			<music>
 				<h2>Music</h2>

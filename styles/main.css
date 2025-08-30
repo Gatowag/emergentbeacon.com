@@ -276,6 +276,7 @@ socials {
 	visibility: visible;
 	opacity: 1;
 	transition: .4s ease;
+	transform: translateY(-.2em);
 }
 
 

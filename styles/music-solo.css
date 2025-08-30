@@ -93,6 +93,13 @@ section {
 		}
 	}
 }
+.disabled-link {
+	cursor: not-allowed;
+	filter: saturate(0);
+}
+.disabled {
+	opacity: .4;
+}
 
 
 /*______________________

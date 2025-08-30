@@ -120,8 +120,13 @@ button:active {
 	|__ SCREENS: MOBILE __|
 	-> adjust grid size
 */
-@media screen and (max-width: 41.5rem) {
-	grid-item { width: 94%; }
+@media screen and (max-width: 51rem) {
+	grid-item { width: 30.9%; }
+	music {
+		flex-direction: column;
+		iframe { width: 100% }
+		ul { width: 100% }
+	}
 }
 
 /*______________________

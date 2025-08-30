@@ -156,21 +156,27 @@ nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 2em;
-	width: 5em;
-	padding: .2em;
-	border-radius: .5em;
+	padding: .2rem;
+	border-radius: .4rem;
 	border: none;
-	position: fixed;
-	top: 20px;
-	right: 20px;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
 	background-color: var(--txt);
 	opacity: .8;
 
 	svg {
 		fill: var(--background);
+		height: 1.2rem;
+		width: .8rem;
 		padding: 0 .1rem;
 	}
+}
+#theme:hover, #theme:focus-visible {
+	transform: translateY(-.2em);
+}
+#theme:active {
+	transform: translateY(.1em);
 }
 
 

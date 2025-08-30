@@ -75,6 +75,7 @@ function enableLight() {
 }
 function enableDark() {
 	document.body.classList.remove("mode-contrast");
+	document.body.classList.remove("mode-light");
 	localStorage.setItem("palette", "dark");
 }
 function enableContrast() {

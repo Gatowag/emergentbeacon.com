@@ -39,62 +39,64 @@
 				</ul>
 			</clarifications>
 
-			<div class="cite-info">
-				<h2 class="section-title inewspaper">Info Sources</h2>
-				<div class="source-container islate" id="infoContainer">
-					<div class="info-number" id="Info1">1</div>
-					<div class="cite-box">
-						"But up there you go around every hour and a half" ...<br>
-						<span class="timecode">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 8); return false;">00:08</a></span>
-					</div>
-					<div class="cite-details">
-						<span class="cite-identifier">No Frames, No Boundaries lecture<br></span>
-						<span class="cite-credits">
-							1974, Russel Schweickart<br>
-							<a href="http://youtu.be/IvcHuzrv_gM?t=1965">performed section starts at timecode 32:45</a>
-						</span>
-						<div class="source-link roboto-mono-400">
-							<a href="https://youtu.be/IvcHuzrv_gM">youtu.be/IvcHuzrv_gM</a>
-						</div>
-					</div>
-				</div>
-			</div>
+			<sources-info>
+				<h2>Info Sources</h2>
+				<container id="infoContainer">
+					<citation id="Info1">
+						<number>1</number>
+						<blockquote>
+							But up there you go around every hour and a half
+							<time datetime="PT00M08S">timecode <a href="#" onclick="playerSeekTo(player, 8); return false;">00:08</a></time>
+						</blockquote>
+						<info>
+							<cite>No Frames, No Boundaries lecture</cite>
+							<info-details>
+								1974, Russel Schweickart<br>
+								<a href="http://youtu.be/IvcHuzrv_gM?t=1965">performed section starts at timecode 32:45</a>
+							</info-details>
+							<origin>
+								<a href="https://youtu.be/IvcHuzrv_gM">youtu.be/IvcHuzrv_gM</a>
+							</origin>
+						</info>
+					</citation>
+				</container>
+			</sources-info>
 
-			<div class="cite-media">
-				<h2 class="section-title inewspaper">Media Sources</h2>
-				<div class="source-container islate" id="media-container">
-					<div id="Media1">
-						<div class="media-anchor">
-							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 274); return false;">04:34</a><span class="inewspaper media-indx">m1</span>
-						</div>
-						<div class="cite-details">
-							<span class="cite-identifier">PHOTO: Russel Schweickart<br></span>
-							<span class="cite-credits">
+			<sources-media>
+				<h2>Media Sources</h2>
+				<container id="media-container">
+					<citation id="Media1">
+						<anchor>
+							<a href="#" onclick="playerSeekTo(player, 274); return false;"><time datetime="PT04M34S">04:34</time></a><indx>m1</indx>
+						</anchor>
+						<info>
+							<cite>PHOTO: Russel Schweickart</cite>
+							<info-details>
 								1971
 								NASA<br>
-							</span>
-							<div class="source-link roboto-mono-400">
+							</info-details>
+							<origin>
 								<a href="https://commons.wikimedia.org/wiki/File:RustySchweickart.jpg">commons.wikimedia.org/wiki/File:RustySchweickart.jpg</a>
-							</div>
-						</div>
-					</div>
-					<div id="Media2">
-						<div class="media-anchor">
-							<a class="media-time roboto-mono-400" href="#" onclick="playerSeekTo(player, 88); return false;">01:28</a><span class="inewspaper media-indx">m2</span>
-						</div>
-						<div class="cite-details">
-							<span class="cite-identifier">photos from the Apollo 9 and Apollo 15 missions<br></span>
-							<span class="cite-credits">
+							</origin>
+						</info>
+					</citation>
+					<citation id="Media2">
+						<anchor>
+							<a href="#" onclick="playerSeekTo(player, 88); return false;"><time datetime="PT01M28S">01:28</time></a><indx>m2</indx>
+						</anchor>
+						<info>
+							<cite>photos from the Apollo 9 and Apollo 15 missions</cite>
+							<info-details>
 								1969/1971
 								NASA<br>
-							</span>
-							<div class="source-link roboto-mono-400">
+							</info-details>
+							<origin>
 								<a href="http://apolloarchive.com/apollo_gallery.html">apolloarchive.com/apollo_gallery.html</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+							</origin>
+						</info>
+					</citation>
+				</container>
+			</sources-media>
 
 			<music>
 				<h2>Music</h2>

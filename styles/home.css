@@ -58,23 +58,7 @@ playlist-buttons {
 }
 
 
-/*_________________
- |__ VIDEO LIST __|
-	-> 
-*/
-.catalog-title {
-	color: #ffdc3e;
-	background: none;
-	border: none;
-	padding-left: 0;
-	font-optical-sizing: auto;
-	font-weight: 500;
-	transition: .2s ease;
 }
-.catalog-title:hover {
-	background: #51f5be;
-	color: black;
-	transition: .2s ease;
 }
 
 

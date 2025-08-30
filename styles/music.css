@@ -6,12 +6,78 @@ section {
 }
 
 music {
+	display: flex;
+	align-items: center;
+	margin: auto;
+	gap: 0 .6rem;
+
 	iframe {
 		border: 0;
-		width: 400px;
+		width: 50%;
+		height: 27.8rem;
+		min-width: 22rem;
 		aspect-ratio: 1/1;
 		border-radius: .5rem;
 	}
+	ul {
+		display: block;
+		min-width: 18rem;
+		width: 28rem;
+		line-height: 2rem;
+		margin: 1rem auto;
+		padding: 0;
+		border-radius: .5rem;
+		background-color: var(--playlist-item);
+		color: var(--txt);
+
+		li {
+			list-style: none;
+			border-bottom: solid 1px black;
+			display: flex;
+			gap: 8rem;
+			position: relative;
+			padding: .4rem 1.4rem;
+			transition: .1s ease;
+			text-align: left;
+			text-decoration: none;
+
+			span {
+				color: yellow;
+			}
+			a {
+				cursor: pointer;
+				color: var(--txt);
+				display: inline-block;
+				position: absolute;
+				right: .8rem;
+				width: 6rem;
+				border: .12rem solid var(--txt);
+				border-radius: .2rem;
+
+				overflow: hidden;
+				text-decoration: none;
+				text-wrap: nowrap;
+				text-align: center;
+				font-family: "Roboto Mono", serif;
+				font-optical-sizing: auto;
+				font-weight: 400;
+				font-style: normal;
+				font-size: .8rem;
+			}
+			a:hover, a:focus-visible {
+				background-color: var(--accent);
+				color: var(--background);
+				border: .12rem solid black;
+				animation:
+					.5s ease .2s forwards a-lift;
+			}
+			a:active { transform: translateY(.1rem) }
+		}
+		li:hover {
+			background-color: hsl(from var(--playlist-hover-back) h s l / 0.1)
+		}
+	}
+}
 
 perma {
 	a {

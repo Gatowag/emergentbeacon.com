@@ -404,6 +404,14 @@ button {
 	from {background-color: #ff0000;}
 	to {background-color: #131313;}
 }
+@keyframes a-lift {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-.2rem);
+	}
+}
 
 
 /*______________________

@@ -4,14 +4,17 @@ const themeSwitch = document.getElementById("theme");
 if (palette === "dark") {
 	enableDark();
 	updateThemeButton("1");
+	console.log("dark mode enabled");
 }
 else if (palette === "light") {
 	enableLight();
 	updateThemeButton("2");
+	console.log("light mode enabled");
 }
 else if (palette === "contrast") {
 	enableContrast();
 	updateThemeButton("3");
+	console.log("high contrast mode enabled");
 }
 
 themeSwitch.addEventListener("click", (e) => {
@@ -22,28 +25,34 @@ themeSwitch.addEventListener("click", (e) => {
 			enableContrast();
 			updateThemeButton("3");
 			updateBandcamp(".mode-contrast");
+			console.log("high contrast mode enabled");
 		} else if (palette == "light") {
 			enableDark();
 			updateThemeButton("1");
 			updateBandcamp(":root");
+			console.log("dark mode enabled");
 		} else {
 			enableLight();
 			updateThemeButton("2");
 			updateBandcamp(".mode-light");
+			console.log("light mode enabled");
 		}
 	} else {
 		if (palette == "dark") {
 			enableLight();
 			updateThemeButton("2");
 			updateBandcamp(".mode-light");
+			console.log("light mode enabled");
 		} else if (palette == "light") {
 			enableContrast();
 			updateThemeButton("3");
 			updateBandcamp(".mode-contrast");
+			console.log("high contrast mode enabled");
 		} else {
 			enableDark();
 			updateThemeButton("1");
 			updateBandcamp(":root");
+			console.log("dark mode enabled");
 		}
 	}
 })

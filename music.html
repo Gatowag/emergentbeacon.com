@@ -329,6 +329,13 @@
 					e.classList.remove("disabled");
 				}
 			});
+
+			perma(id);
+		}
+
+		function perma(id) {
+			let perma = document.getElementsByTagName("perma")[0];
+			perma.children[0].setAttribute("href",list[id].perma + ".html");
 		}
 	</script>
 </html>

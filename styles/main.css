@@ -97,9 +97,6 @@
 html {
 	min-height: 100vh;
 	height: fit-content;
-	background-color: #232527; /* For browsers that do not support gradients */
-	background-image: radial-gradient(#2b343d, #161616);
-	color: white;
 	scroll-behavior: smooth;
 }
 

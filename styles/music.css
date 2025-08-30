@@ -12,6 +12,36 @@ music {
 		aspect-ratio: 1/1;
 		border-radius: .5rem;
 	}
+
+perma {
+	a {
+		cursor: pointer;
+		background-color: var(--playlist-item);
+		color: var(--txt);
+		display: inline-block;
+		width: 4rem;
+		margin: .2rem auto 0;
+		padding: .3rem .7rem;
+		border: .18rem solid black;
+		border-radius: .2rem;
+
+		overflow: hidden;
+		text-decoration: none;
+		text-wrap: nowrap;
+		text-align: center;
+		font-family: "Roboto Mono", serif;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
+		font-size: .8rem;
+	}
+	a:hover, a:focus-visible {
+		background-color: var(--accent);
+		color: var(--background);
+		animation:
+			.5s ease .2s forwards a-lift;
+	}
+	a:active { transform: translateY(.1rem) }
 }
 
 grid {

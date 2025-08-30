@@ -39,6 +39,12 @@ aside {
 	margin-bottom: 1rem;
 }
 
+playlist {
+	display: block;
+	width: calc(100% - .4rem);
+	margin-top: .4rem;
+	background-color: rgb(0, 0, 0);
+}
 playlist-buttons {
 	display: inline-block;
 	margin: .5rem auto;

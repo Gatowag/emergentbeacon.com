@@ -67,9 +67,9 @@ grid-item {
 
 button {
 	background-color: var(--accent);
+	color: var(--background);
 	border: none;
 	border-radius: .1rem;
-	color: black;
 	padding: .3rem .7rem;
 	margin: 0 .2rem 1rem;
 	transition: .2s ease;
@@ -135,6 +135,7 @@ playlist-items {
 	a:hover,
 	a:focus-visible {
 		background: var(--playlist-hover-back);
+		color: var(--playlist-hover-txt);
 	}
 	a:hover strong,
 	a:focus-visible strong {
@@ -147,12 +148,6 @@ playlist-items {
 }
 .selected {
 	background-color: #d9dbdf;
-	a:hover time, a:focus-visible time {
-		color: black;
-	}
-}
-.selected a:hover, .selected:focus-visible {
-	background-color: white;
 	color: var(--txt);
 	a {color: var(--txt);}
 	time {color: hsl(from var(--txt) h s l / 0.8);}
@@ -174,12 +169,8 @@ shorts {
 	background-color: rgba(0, 0, 0, 0.4);
 
 	iframe {
-		border-radius: 1em;
-		opacity: 0.7;
-		transition: .5s ease;
-	}
-	iframe:hover, iframe:active {
-		opacity: 1;
+		border-radius: 1.4rem;
+		margin: 0 .3rem;
 	}
 }
 .shorts-frame {

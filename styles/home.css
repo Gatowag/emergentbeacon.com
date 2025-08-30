@@ -1,3 +1,10 @@
+header {
+	button:hover, button:focus-visible {
+		transform: translateY(-.2em);
+	}
+	button:active {
+		transform: translateY(.1em);
+	}
 }
 
 

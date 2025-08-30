@@ -95,23 +95,6 @@ section {
 }
 
 
-@keyframes a-color {
-	0% {
-		color: var(--txt);
-	}
-	100% {
-		color: var(--background);
-	}
-}
-@keyframes a-lift {
-	0% {
-		transform: translateY(0);
-	}
-	100% {
-		transform: translateY(-.2rem);
-	}
-}
-
 /*______________________
  |__ SCREENS: MOBILE __|
 */

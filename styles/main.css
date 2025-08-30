@@ -104,6 +104,23 @@ html {
 }
 
 
+/*_________________________________
+ |__ CONSTRAINED CONTENT COLUMN __|
+*/
+main {
+	text-align: center;
+	width: 75vw;
+	max-width: 56rem;
+	margin: auto;
+}
+
+body {
+	margin:0;
+	background-color: var(--background);
+	color: var(--txt);
+}
+
+
 /*________________________
  |__ TOP LEFT NAV MENU __|
 */
@@ -219,17 +236,6 @@ button {
 	cursor: pointer;
 	border: none;
 	transition: .3s ease;
-}
-
-
-/*_________________________________
- |__ CONSTRAINED CONTENT COLUMN __|
-*/
-.content-column {
-	text-align: center;
-	width: 75vw;
-	max-width: 56rem;
-	margin: auto;
 }
 
 
@@ -381,7 +387,7 @@ button {
  |__ SCREENS: >1080p __|
 */
 @media screen and (min-width: 121em) {
-	.content-column {
+	main {
 		width: 90vw;
 	}
 }

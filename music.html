@@ -77,64 +77,64 @@
 			<perma><a href="/music/cosmic-mirage.html">solo</a></perma>
 
 			<section>
-					<grid-item onclick="bandcamp('1641446729')">
 				<grid>
+					<grid-item onclick="bandcamp('1641446729');stores('8')">
 						<img src="/assets/album covers/eb009--music-cover--960-1x1.jpg"><br>
 						<strong>Dunefall</strong>
 						<time datetime="PT21M">21 min</time>
 						<info>10 tracks</info>
 					</grid-item>
 
-					<grid-item onclick="bandcamp('3362000190')">
+					<grid-item onclick="bandcamp('3362000190');stores('7')">
 						<img src="/assets/album covers/eb007--music-cover--960-1x1.jpg"><br>
 						<strong>Sun Spotter</strong>
 						<time datetime="PT18M">18 min</time>
 						<info>7 tracks</info>
 					</grid-item>
 
-					<grid-item onclick="bandcamp('2259063483')">
+					<grid-item onclick="bandcamp('2259063483');stores('6')">
 						<img src="/assets/album covers/eb006--music-cover--960-1x1.jpg"><br>
 						<strong>Sungazer</strong>
 						<time datetime="PT27M">27 min</time>
 						<info>9 tracks</info>
 					</grid-item>
 
-					<grid-item onclick="bandcamp('3543157314')">
+					<grid-item onclick="bandcamp('3543157314');stores('5')">
 						<img src="/assets/album covers/eb008--music-cover--960-1x1.jpg"><br>
 						<strong>The World Remembers</strong>
 						<time datetime="PT2M">2 min</time>
 						<info>2 tracks</info>
 					</grid-item>
 
-					<grid-item onclick="bandcamp('825353223')">
+					<grid-item onclick="bandcamp('825353223');stores('4')">
 						<img src="/assets/album covers/eb005--music-cover--960-1x1.jpg"><br>
 						<strong>Mystery of Sedna's Orbit</strong>
 						<time datetime="PT6M">6 min</time>
 						<info>4 tracks</info>
 					</grid-item>
 
-					<grid-item onclick="bandcamp('1958114715')">
+					<grid-item onclick="bandcamp('1958114715');stores('3')">
 						<img src="/assets/album covers/eb004--music-cover--960-1x1.jpg"><br>
 						<strong>The Search</strong>
 						<time datetime="PT6M">6 min</time>
 						<info>2 tracks</info>
 					</grid-item>
 
-					<grid-item onclick="bandcamp('2488943393')">
+					<grid-item onclick="bandcamp('2488943393');stores('2')">
 						<img src="/assets/album covers/eb003--music-cover--960-1x1.jpg"><br>
 						<strong>What Exactly is Art?</strong>
 						<time datetime="PT32M">32 min</time>
 						<info>13 tracks</info>
 					</grid-item>
 
-					<grid-item onclick="bandcamp('591914931')">
+					<grid-item onclick="bandcamp('591914931');stores('1')">
 						<img src="/assets/album covers/eb002--music-cover--960-1x1.jpg"><br>
 						<strong>Critical Curves</strong>
 						<time datetime="PT12M">12 min</time>
 						<info>2 tracks</info>
 					</grid-item>
 
-					<grid-item onclick="bandcamp('3567384720')">
+					<grid-item onclick="bandcamp('3567384720');stores('0')">
 						<img src="/assets/album covers/eb001--music-cover--960-1x1.jpg"><br>
 						<strong>Cosmic Mirage</strong>
 						<time datetime="PT17M">17 min</time>
@@ -205,12 +205,130 @@
 	</body>
 
 	<script>
+		const list = [
+			{ep: "cosmic mirage",
+				patreon: "https://patreon.com/posts/46888350", patreonBtn: "download",
+				bandcamp: "https://emergentbeacon.bandcamp.com/album/cosmic-mirage", bandcampBtn: "buy",
+				apple: "https://geo.music.apple.com/us/album/cosmic-mirage-original-score-ep/1835483528", appleBtn: "play",
+				spotify: "https://open.spotify.com/album/7KgGhYShSIVZYUO1434nT6", spotifyBtn: "play",
+				amazon: "https://www.amazon.com/dp/B0FNNYBM9K", amazonBtn: "download",
+				youtube: "https://www.youtube.com/playlist?list=OLAK5uy_m3MJtlXV53wch46NRdMhy3f_eKxOH8acQ", youtubeBtn: "play",
+				tidal: "http://www.tidal.com/album/456279450", tidalBtn: "play",
+				deezer: "https://www.deezer.com/album/810501631", deezerBtn: "play",
+				pandora: "https://pandora.app.link/?$desktop_url=https%3A%2F%2Fwww.pandora.com%2Fartist%2Femergent-beacon%2Fcosmic-mirage-original-score%2FALmn5h2nzXwVqdX&$ios_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Falbum%3Ftoken%3DAL%3A52618884&$android_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Falbum%3Ftoken%3DAL%3A52618884&~channel=Partner%20Catalog%20Search%20API", pandoraBtn: "play"},
+			{ep: "critical curves",
+				patreon: "https://patreon.com/posts/51623178", patreonBtn: "download",
+				bandcamp: "https://emergentbeacon.bandcamp.com/album/critical-curves", bandcampBtn: "buy",
+				apple: "", appleBtn: "upcoming",
+				spotify: "", spotifyBtn: "upcoming",
+				amazon: "", amazonBtn: "upcoming",
+				youtube: "", youtubeBtn: "upcoming",
+				tidal: "", tidalBtn: "upcoming",
+				deezer: "", deezerBtn: "upcoming",
+				pandora: "", pandoraBtn: "upcoming"},
+			{ep: "art",
+				patreon: "https://patreon.com/posts/70487358", patreonBtn: "download",
+				bandcamp: "https://emergentbeacon.bandcamp.com/album/what-exactly-is-art", bandcampBtn: "buy",
+				apple: "", appleBtn: "upcoming",
+				spotify: "", spotifyBtn: "upcoming",
+				amazon: "", amazonBtn: "upcoming",
+				youtube: "", youtubeBtn: "upcoming",
+				tidal: "", tidalBtn: "upcoming",
+				deezer: "", deezerBtn: "upcoming",
+				pandora: "", pandoraBtn: "upcoming"},
+			{ep: "the search",
+				patreon: "https://patreon.com/posts/72403096", patreonBtn: "download",
+				bandcamp: "https://emergentbeacon.bandcamp.com/album/the-search", bandcampBtn: "buy",
+				apple: "", appleBtn: "upcoming",
+				spotify: "", spotifyBtn: "upcoming",
+				amazon: "", amazonBtn: "upcoming",
+				youtube: "", youtubeBtn: "upcoming",
+				tidal: "", tidalBtn: "upcoming",
+				deezer: "", deezerBtn: "upcoming",
+				pandora: "", pandoraBtn: "upcoming"},
+			{ep: "sedna",
+				patreon: "https://patreon.com/posts/76993864", patreonBtn: "download",
+				bandcamp: "https://emergentbeacon.bandcamp.com/album/sedna", bandcampBtn: "buy",
+				apple: "", appleBtn: "upcoming",
+				spotify: "", spotifyBtn: "upcoming",
+				amazon: "", amazonBtn: "upcoming",
+				youtube: "", youtubeBtn: "upcoming",
+				tidal: "", tidalBtn: "upcoming",
+				deezer: "", deezerBtn: "upcoming",
+				pandora: "", pandoraBtn: "upcoming"},
+			{ep: "trailer",
+				patreon: "https://patreon.com/posts/83054066", patreonBtn: "download",
+				bandcamp: "https://emergentbeacon.bandcamp.com/album/the-world-remembers", bandcampBtn: "buy",
+				apple: "", appleBtn: "upcoming",
+				spotify: "", spotifyBtn: "upcoming",
+				amazon: "", amazonBtn: "upcoming",
+				youtube: "", youtubeBtn: "upcoming",
+				tidal: "", tidalBtn: "upcoming",
+				deezer: "", deezerBtn: "upcoming",
+				pandora: "", pandoraBtn: "upcoming"},
+			{ep: "sungazer",
+				patreon: "https://patreon.com/posts/97323057", patreonBtn: "download",
+				bandcamp: "https://emergentbeacon.bandcamp.com/album/sungazer", bandcampBtn: "buy",
+				apple: "", appleBtn: "upcoming",
+				spotify: "", spotifyBtn: "upcoming",
+				amazon: "", amazonBtn: "upcoming",
+				youtube: "", youtubeBtn: "upcoming",
+				tidal: "", tidalBtn: "upcoming",
+				deezer: "", deezerBtn: "upcoming",
+				pandora: "", pandoraBtn: "upcoming"},
+			{ep: "sun spotter",
+				patreon: "https://patreon.com/posts/106758028", patreonBtn: "download",
+				bandcamp: "https://emergentbeacon.bandcamp.com/album/sun-spotter", bandcampBtn: "buy",
+				apple: "", appleBtn: "upcoming",
+				spotify: "", spotifyBtn: "upcoming",
+				amazon: "", amazonBtn: "upcoming",
+				youtube: "", youtubeBtn: "upcoming",
+				tidal: "", tidalBtn: "upcoming",
+				deezer: "", deezerBtn: "upcoming",
+				pandora: "", pandoraBtn: "upcoming"},
+			{ep: "tenere tree",
+				patreon: "https://patreon.com/posts/113842582", patreonBtn: "download",
+				bandcamp: "https://emergentbeacon.bandcamp.com/album/dunefall", bandcampBtn: "buy",
+				apple: "", appleBtn: "upcoming",
+				spotify: "", spotifyBtn: "upcoming",
+				amazon: "", amazonBtn: "upcoming",
+				youtube: "", youtubeBtn: "upcoming",
+				tidal: "", tidalBtn: "upcoming",
+				deezer: "", deezerBtn: "upcoming",
+				pandora: "", pandoraBtn: "upcoming"},
+		];
+
 		var bcamp = document.getElementById("bandcamp-player");
 		function bandcamp(id) {
 			let s = bcamp.src;
 			let a = s.indexOf("/album=");
 			let aEnd = s.indexOf("/", a + 1);
 			bcamp.src = s.slice(0, a + 7) + id + s.slice(aEnd);
+		}
+
+		function stores(id) {
+			let elements = [document.getElementById("li-patreon"),
+				document.getElementById("li-bandcamp"),
+				document.getElementById("li-apple"),
+				document.getElementById("li-spotify"),
+				document.getElementById("li-amazon"),
+				document.getElementById("li-youtube"),
+				document.getElementById("li-tidal"),
+				document.getElementById("li-deezer"),
+				document.getElementById("li-pandora")];
+			let chart = [["patreon","patreonBtn"],["bandcamp","bandcampBtn"], ["apple","appleBtn"], ["spotify","spotifyBtn"], ["amazon","amazonBtn"], ["youtube","youtubeBtn"], ["tidal","tidalBtn"], ["deezer","deezerBtn"], ["pandora","pandoraBtn"]];
+
+			elements.forEach((e, ind) => {
+				e.children[0].setAttribute("href",list[id][chart[ind][0]]);
+				e.children[0].innerHTML = list[id][chart[ind][1]];
+				if (list[id][chart[ind][0]] == "") {
+					e.children[0].classList.add("disabled-link");
+					e.classList.add("disabled");
+				} else {
+					e.children[0].classList.remove("disabled-link");
+					e.classList.remove("disabled");
+				}
+			});
 		}
 	</script>
 </html>

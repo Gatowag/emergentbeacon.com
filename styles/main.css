@@ -276,6 +276,33 @@ button {
 	background: #111111; color: #ffdc3e; }
 
 
+/*______________________
+ |__ COLOR PALLETTES __|
+*/
+.slate { background-color: #141414; color: #bdaa84; }
+.islate { background-color: #bdaa84; color: #141414; }
+.dslate { background-color: #64553a; color: #e6e5e2; }
+.bee { background:#f1e31e; color: black; }
+.danger { background:#6b2520; color: white; }
+.splash { background:#3fbfe6; color: black; }
+.mint { background:var(--internal-link); color: black; }
+.forrest { background:#92c2ac; color: black; }
+.testing { background:#f51b1b; color: black; }
+.newspaper { background:#e6e5e2; color: #141414; }
+.inewspaper { background: #141414; color: #e6e5e2; }
+.dark { background: #000000; color: #e6e5e2; }
+
+
+/*____________________
+ |__ STYLE MODULES __|
+*/
+.hidden { display: none; }
+.mono { font-family: roboto mono, courier new, monospace; }
+.cutout { outline-style: dashed; outline-offset: -.125rem; outline-width: .125rem; }
+.extrude { border: .2rem solid black; box-shadow: .125rem .125rem black; }
+.outline { border: .2rem solid black; }
+
+
 /*_____________________
  |__ IMPORTED FONTS __|
 */
@@ -307,31 +334,6 @@ button {
 }
 
 
-/*______________________
- |__ COLOR PALLETTES __|
-*/
-.slate { background-color: #141414; color: #bdaa84; }
-.islate { background-color: #bdaa84; color: #141414; }
-.dslate { background-color: #64553a; color: #e6e5e2; }
-.bee { background:#f1e31e; color: black; }
-.leaf { background:#a6c05d; color: black; }
-.splash { background:#3fbfe6; color: black; }
-.mint { background:#33ffbb; color: black; }
-.forrest { background:#92c2ac; color: black; }
-.testing { background:#f51b1b; color: black; }
-.newspaper { background:#e6e5e2; color: #141414; }
-.inewspaper { background: #141414; color: #e6e5e2; }
-.dark { background: #000000; color: #e6e5e2; }
-
-
-/*____________________
- |__ STYLE MODULES __|
-*/
-.hidden { display: none; }
-.mono { font-family: roboto mono, courier new, monospace; }
-.cutout { outline-style: dashed; outline-offset: -.125rem; outline-width: .125rem; }
-.extrude { border: .2rem solid black; box-shadow: .125rem .125rem black; }
-.outline { border: .2rem solid black; }
 /*________________________
  |__ ANIMATION PRESETS __|
 	-> bounce: support links

@@ -70,6 +70,13 @@ playlist-buttons {
 
 
 }
+.selected {
+	button {
+		background-color: var(--playlist-select-back);
+		color: var(--txt);
+	}
+	a { color: var(--txt) }
+	time { color: hsl(from var(--txt) h s l / 0.8) }
 }
 
 

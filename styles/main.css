@@ -180,19 +180,72 @@ nav {
 /*___________________
  |__ SOCIAL LINKS __|
 */
-.socials {
-	grid-area: socials;
-	margin-top: 1.6rem;
+footer {
+	width: calc(100% - 1rem);
+	height: max-content;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin-top: 4rem;
+	padding: .5rem;
+	background-color: var(--secondary);
+	color: var(--txt);
+
+	p {
+		display: flex-inline;
+		justify-content: space-evenly;
+		margin: auto;
+		line-height: 1.8rem;
+
+		a {
+			color: var(--accent);
+			padding: .2rem .5rem;
+			border-radius: .2rem;
+		}
+		a:hover {
+			background-color: var(--accent);
+			color: var(--playlist-hover-txt);
+		}
+	}
+	a {
+		color: var(--accent);
+	}
+	a:hover {
+		color: var(--internal-link);
+	}
 }
-.socials img {
-	cursor: pointer;
-	opacity: 0.4;
-	transition: .4s ease;
-	margin: 0 .2rem;
-	height: .9rem;
+footer > logo {
+	margin: auto;
+	width: 4rem;
+	padding: 0 2rem;
+	
+	#shell {
+		fill: var(--logo-form);
+		stroke: #ffffff;
+		stroke-width: var(--logo-stroke);
+	}
+	#interior {
+		fill: var(--logo-int)
+	}
 }
-.socials img:hover {
-	opacity: 1;
+socials {
+	display: inline-block;
+	text-align: center;
+	margin: 2rem auto;
+	white-space: nowrap;
+
+	svg {
+		cursor: pointer;
+		transition: .4s ease;
+		margin: 0;
+		padding: .4rem;
+		height: 1.1rem;
+		fill: var(--social-icon);
+	}
+	svg:hover, svg:active {
+		fill: var(--accent);
+		transform: translateY(-.2em);
+	}
 }
 
 

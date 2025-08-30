@@ -4,16 +4,19 @@ const themeSwitch = document.getElementById("theme");
 if (palette === "dark") {
 	enableDark();
 	updateThemeButton("1");
+	updateBandcamp(":root");
 	console.log("dark mode enabled");
 }
 else if (palette === "light") {
 	enableLight();
 	updateThemeButton("2");
+	updateBandcamp(".mode-light");
 	console.log("light mode enabled");
 }
 else if (palette === "contrast") {
 	enableContrast();
 	updateThemeButton("3");
+	updateBandcamp(".mode-contrast");
 	console.log("high contrast mode enabled");
 }
 

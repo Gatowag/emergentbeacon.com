@@ -14,18 +14,19 @@ music {
 	}
 }
 
-	margin-top: 2rem;
 grid {
+	margin-top: 0.8rem;
 	padding: .1rem;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 	gap: 0 1rem;
 }
+
 grid-item {
 	display: block;
 	cursor: pointer;
-	width: 19%;
+	width: calc(20% - 1rem);
 	text-align: left;
 	transition: .3s ease;
 	border-radius: .4rem;
@@ -47,6 +48,7 @@ grid-item {
 		object-fit: cover;
 		margin-bottom: .6em;
 		background: black;
+		border: 2px solid black;
 	}
 }
 grid-item:hover {

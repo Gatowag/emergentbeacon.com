@@ -77,6 +77,13 @@ button:hover {
 button:active {
 	transform: translateY(.1em);
 }
+.disabled-link {
+	cursor: not-allowed;
+	filter: saturate(0);
+}
+.disabled {
+	opacity: .4;
+}
 
 
 /*______________________

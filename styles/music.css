@@ -177,6 +177,9 @@ button:active {
 	cursor: not-allowed;
 	filter: saturate(0);
 }
+.disabled-link:hover, .disabled-link:active {
+	animation: a-shake .2s cubic-bezier(0.165, 0.84, 0.44, 1) 0s infinite forwards;
+}
 .disabled {
 	opacity: .4;
 }

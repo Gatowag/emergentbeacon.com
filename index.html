@@ -171,32 +171,28 @@
 		let randomRemaining = [0,1,2,4,5,6,7,8,9];
 		let select = 3;
 
-		function randomVideo() {
-			if (i < 5) {document.querySelector(`playlist-items li:nth-child(${i + 1})`).classList.remove("selected")};
-			if (shown.length == 0) {
-				shown = [0,1,2,3,4,5,6,7,8,9];
-			}
-			let indx = Math.floor(Math.random() * (shown.length - 1));
-			i = shown[indx];
-			shown.splice(indx, 1);
-			frame.src = "https://www.youtube.com/embed/" + list[i].id;
-			btnPage.setAttribute("onclick", `document.location='${list[i].page}'`);
-
-			if (i < 5) {
-				document.querySelector(`playlist-items li:nth-child(${i + 1})`).classList.add("selected");
-			}
+		function randomize() {
+			if (randomRemaining.length == 0) { randomRemaining = [0,1,2,3,4,5,6,7,8,9] }
+			let rndmIndx = Math.floor(Math.random() * (randomRemaining.length - 1));
+			updateDetails(randomRemaining[rndmIndx]);
+			randomRemaining.splice(rndmIndx, 1);
+		}
+		function updateDetails(indx) {
+			playlist(indx);
+			videoEmbed(list[indx].id);
+			soloPageButton(list[indx].page);
 		}
 		function playlist(id) {
-			if (i < 5) {document.querySelector(`playlist-items li:nth-child(${i + 1})`).classList.remove("selected")};
-			frame.src = "https://www.youtube.com/embed/" + id;
-			let indx = list
-				.map(function (element) {return element.id;})
-				.indexOf(id);
-			let url = list[indx].page;
-			btnPage.setAttribute("onclick", `document.location='${url}'`)
-			i = indx;
-
-			document.querySelector(`playlist-items li:nth-child(${indx + 1})`).classList.add("selected");
+			if (select < 5) { console.log("select is < 5: " + select); document.querySelector(`playlist-items li:nth-child(${select + 1})`).classList.remove("selected") }
+			if (id < 5) { console.log("id is > 5"); document.querySelector(`playlist-items li:nth-child(${id + 1})`).classList.add("selected") }
+			select = id;
+		}
+		function videoEmbed(id) {
+			vidEmbed.src = "https://www.youtube.com/embed/" + id;
+		}
+		function soloPageButton(id) {
+			btnPage.setAttribute("onclick", `document.location='${id}'`)
+		}
 		}
 	</script>
 </html>

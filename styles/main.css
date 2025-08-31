@@ -15,6 +15,7 @@
 	--pledge: #2d4f63;
 	--playlist-item: #141414;
 	--playlist-btn: var(--accent);
+	--playlist-btn-txt: var(--secondary);
 	--playlist-btn-hover: var(--txt);
 	--playlist-select-back: #363420;
 	--playlist-hover-back: var(--txt);
@@ -38,6 +39,7 @@
 	--pledge: #d6d2af;
 	--playlist-item: #d6d2af;
 	--playlist-btn: #ffdd33;
+	--playlist-btn-txt: black;
 	--playlist-btn-hover: var(--accent);
 	--playlist-select-back: #b3ac89;
 	--playlist-hover-back: var(--accent);
@@ -61,6 +63,7 @@
 	--pledge: var(--background);
 	--playlist-item: var(--background);
 	--playlist-btn: var(--background);
+	--playlist-btn-txt: var(--txt);
 	--playlist-btn-hover: var(--accent);
 	--playlist-select-back: #ced6cb;
 	--playlist-hover-back: #105cbe;

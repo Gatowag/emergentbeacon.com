@@ -105,6 +105,25 @@ section {
 }
 
 
+@keyframes perma-c {
+	0% {
+		background-color: var(--playlist-item);
+		color: var(--txt)
+	}
+	100% {
+		background-color: var(--accent);
+		color: var(--background);
+	}
+}
+@keyframes list-b {
+	0% {
+		border: .12rem solid var(--txt)
+	}
+	100% {
+		border: .12rem solid black
+	}
+}
+
 /*______________________
  |__ SCREENS: MOBILE __|
 */

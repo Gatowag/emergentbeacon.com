@@ -437,6 +437,16 @@ button {
 		transform: translateY(-.2rem);
 	}
 }
+@keyframes a-btn-color {
+	0% {
+		background-color: var(--playlist-btn);
+		color: var(--playlist-btn-txt);
+	}
+	100% {
+		background-color: var(--playlist-btn-hover);
+		color: var(--playlist-hover-txt);
+	}
+}
 
 
 /*______________________

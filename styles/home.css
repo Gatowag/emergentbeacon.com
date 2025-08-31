@@ -51,6 +51,7 @@ playlist-buttons {
 
 	button {
 		background-color: var(--playlist-btn);
+		color: var(--playlist-btn-txt);
 		margin: .3rem .3rem;
 		padding: .3rem .7rem;
 		transition: .2s ease;
@@ -59,12 +60,12 @@ playlist-buttons {
 		font-weight: 600;
 	}
 	button:hover, button:focus-visible {
-		background-color: var(--playlist-btn-hover);
-		color: var(--playlist-hover-txt);
-		transform: translateY(-.2em);
+		animation:
+			a-btn-color 0s forwards;
+		transform: translateY(-.2rem);
 	}
 	button:active {
-		transform: translateY(.1em);
+		transform: translateY(.1rem);
 	}
 }
 playlist-items {

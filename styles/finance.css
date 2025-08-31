@@ -43,8 +43,7 @@ report {
 	padding: 1rem 2rem 2rem;
 	border-radius: .2rem;
 
-	h2 {margin:.5rem 0;}
-}
+	h2 { margin:.5rem 0 }
 }
 
 table {

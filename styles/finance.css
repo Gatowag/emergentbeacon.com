@@ -20,7 +20,16 @@
 footer {
 	position: absolute;
 	bottom: 0;
+section {
+	margin: 2rem;
+	
+	p {
+		width: 20rem;
+		margin: auto;
+		text-align: justify;
+	}
 }
+
 select {
 	background-color: white;
 	margin-bottom: 2rem;
@@ -36,16 +45,6 @@ report {
 
 	h2 {margin:.5rem 0;}
 }
-
-.about-text {
-	width: 20rem;
-	margin: auto;
-	text-align: justify;
-}
-.about-text span {
-	color: #bdbdbd;
-	font-size: 1.2rem;
-	letter-spacing: .1rem;
 }
 
 table {

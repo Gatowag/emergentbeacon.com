@@ -17,9 +17,6 @@
 	--table-cat-txt: var(--report);
 }
 
-footer {
-	position: absolute;
-	bottom: 0;
 section {
 	margin: 2rem;
 	
@@ -92,4 +89,9 @@ table {
 		}
 	}
 }
+:not(:has(report)) {
+	footer {
+		position: absolute;
+		bottom: 0;
+	}
 }

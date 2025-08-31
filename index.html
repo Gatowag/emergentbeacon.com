@@ -48,7 +48,7 @@
 				<iframe class="yt-player extrude" id="video-embed" width="800" height="400" src="https://www.youtube.com/embed/mFMGs9e5PLY" title="YouTube video player for featured video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 				<playlist class="extrude">
 					<playlist-buttons>
-						<button id="btn" type="button" onclick="randomVideo()">random video</button>
+						<button id="btn" type="button" onclick="randomize()">random video</button>
 						<button id="btn-details" type="button" onclick="document.location='./videos/trailer.html'">this video's page</button>
 						<button id="btn-music" type="button" onclick="document.location='./videos/trailer.html'">this video's music</button>
 						<button onclick="document.location='./videos.html'">all videos</button type="button">
@@ -57,31 +57,31 @@
 					<playlist-items>
 						<ul>
 							<li>
-								<button onclick="playlist('CE3D-tLVTQk')">
+								<button onclick="updateDetails(0)">
 									<strong>The Myth of the Loneliest Tree on Earth</strong>
 									<time datetime="PT26M">26 min</time>
 								</button>
 							</li>
 							<li>
-								<button onclick="playlist('WaM9Gc3y2xo')">
+								<button onclick="updateDetails(1)">
 									<strong>I Built a Device to See The Sun</strong>
 									<time datetime="PT59M">59 min</time>
 								</button>
 							</li>
 							<li>
-								<button onclick="playlist('LNuR-0LHnss')">
+								<button onclick="updateDetails(2)">
 									<strong>Why Am I Staring at the Sun?</strong>
 									<time datetime="PT48M">48 min</time>
 								</button>
 							</li>
 							<li class="selected">
-								<button onclick="playlist('mFMGs9e5PLY')">
+								<button onclick="updateDetails(3)">
 									<strong>channel trailer: The World Remembers</strong>
 									<time datetime="PT3M">3 min</time>
 								</button>
 							</li>
 							<li>
-								<button onclick="playlist('WD1g4poEjDE')">
+								<button onclick="updateDetails(4)">
 									<strong>The Mystery of Sedna's Orbit</strong>
 									<time datetime="PT6M">6 min</time>
 								</button>

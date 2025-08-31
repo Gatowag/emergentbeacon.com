@@ -154,8 +154,6 @@
 
 <!-- SCRIPTS -->
 	<script>
-		var i = 3;
-		const frame = document.getElementById("video-embed");
 		const list = [
 			{id: "CE3D-tLVTQk", page: "./videos/tenere.html", music: "./music/dunefall.html"},
 			{id: "WaM9Gc3y2xo", page: "./videos/sun-spotter.html", music: "./music/sun-spotter.html"},
@@ -168,8 +166,10 @@
 			{id: "_4b2nVOHjdE", page: "./videos/critical-curves.html", music: "./music/critical-curves.html"},
 			{id: "yCHYmlwjUcI", page: "./videos/einstein-cross.html", music: "./music/cosmic-mirage.html"}
 		];
+		const vidEmbed = document.getElementById("video-embed");
 		const btnPage = document.getElementById("btn-details");
-		var shown = [0,1,2,4,5,6,7,8,9];
+		let randomRemaining = [0,1,2,4,5,6,7,8,9];
+		let select = 3;
 
 		function randomVideo() {
 			if (i < 5) {document.querySelector(`playlist-items li:nth-child(${i + 1})`).classList.remove("selected")};

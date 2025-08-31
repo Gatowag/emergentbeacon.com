@@ -274,6 +274,7 @@
 				if (list[id][chart[ind][0]] == "") {
 					e.children[0].classList.add("disabled-link");
 					e.classList.add("disabled");
+					e.children[0].removeAttribute("href");
 				} else {
 					e.children[0].classList.remove("disabled-link");
 					e.classList.remove("disabled");

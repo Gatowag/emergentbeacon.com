@@ -1,12 +1,9 @@
 main {
-	width: 100%;
+	width: 80vw;
 }
 section {
-	width: fit-content;
-	display: block;
-	margin: auto;
+	width: 100%;
 }
-
 h1 {
 	margin: 3rem auto 0;
 }
@@ -22,24 +19,24 @@ p {
 }
 
 music {
-	display: block;
-	width: 28rem;
-	margin: 0 auto;
+	display: flex;
+	align-items: flex-start;
+	margin: auto;
+	gap: 1rem .6rem;
 
 	iframe {
 		border: 0;
-		width: 100%;
+		width: 50%;
+		min-width: 22rem;
 		aspect-ratio: 1/1.6;
 		border-radius: .5rem;
 	}
-}
-
-section {
 	ul {
 		display: block;
+		min-width: 18rem;
 		width: 28rem;
 		line-height: 2rem;
-		margin: 1rem auto;
+		margin: 0 auto;
 		padding: 0;
 		border-radius: .5rem;
 		background-color: var(--playlist-item);
@@ -68,6 +65,7 @@ section {
 				width: 6rem;
 				border: .12rem solid var(--txt);
 				border-radius: .2rem;
+				transition: .2s ease;
 
 				overflow: hidden;
 				text-decoration: none;
@@ -80,11 +78,10 @@ section {
 				font-size: .8rem;
 			}
 			a:hover, a:focus-visible {
-				background-color: var(--accent);
-				color: var(--background);
-				border: .12rem solid black;
 				animation:
-					.5s ease .2s forwards a-lift;
+					perma-c 0s forwards,
+					list-b 0s forwards;
+				transform: translateY(-.2rem);
 			}
 			a:active { transform: translateY(.1rem) }
 		}
@@ -127,18 +124,11 @@ section {
 /*______________________
  |__ SCREENS: MOBILE __|
 */
-@media screen and (max-width: 41.5rem) {
-	/* main { background-color: red; } */
+@media screen and (max-width: 51rem) {
 	music {
-		width: 18rem;
-
-		iframe {
-			aspect-ratio: 1/2;
-		}
-	}
-	section {
-		ul {
-			width: 100%
-		}
+		flex-direction: column;
+		gap: 1rem .6rem;
+		iframe { width: 100% }
+		ul { width: 100% }
 	}
 }

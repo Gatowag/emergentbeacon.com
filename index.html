@@ -168,6 +168,7 @@
 		];
 		const vidEmbed = document.getElementById("video-embed");
 		const btnPage = document.getElementById("btn-details");
+		const btnMusic = document.getElementById("btn-music");
 		let randomRemaining = [0,1,2,4,5,6,7,8,9];
 		let select = 3;
 
@@ -181,6 +182,7 @@
 			playlist(indx);
 			videoEmbed(list[indx].id);
 			soloPageButton(list[indx].page);
+			soloMusicButton(list[indx].music);
 		}
 		function playlist(id) {
 			if (select < 5) { console.log("select is < 5: " + select); document.querySelector(`playlist-items li:nth-child(${select + 1})`).classList.remove("selected") }
@@ -193,6 +195,8 @@
 		function soloPageButton(id) {
 			btnPage.setAttribute("onclick", `document.location='${id}'`)
 		}
+		function soloMusicButton(id) {
+			btnMusic.setAttribute("onclick",`document.location='${id}'`)
 		}
 	</script>
 </html>

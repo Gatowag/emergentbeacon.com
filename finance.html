@@ -47,7 +47,7 @@
 
 			<section>
 				<label for="report-id">Select a report:</label>
-				<select name="report-id" id="report-id" onchange="dropdown()">
+				<select name="report-id" id="report-id" onchange="generateReport()">
 					<option value="default" selected>---</option>
 					<optgroup label="2025">
 						<option value="2025-Q1">2025 Q1 (JAN / FEB / MAR)</option>
@@ -77,227 +77,8 @@
 						<option value="2021-Q1" disabled>2021 Q1 (JAN / FEB / MAR)</option>
 					</optgroup>
 				</select>
-				
-				<report id="2025-Q1" class="hidden">
-					<table>
-						<caption>2025 Q1 Finances</caption>
-						<thead>
-							<tr>
-								<th>Category</th>
-								<th>Value</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td colspan="2"><strong>Income</strong></td>
-							</tr>
-							<tr>
-								<td>Patreon</td>
-								<td>$246.54</td>
-							</tr>
-							<tr>
-								<td>Bandcamp</td>
-								<td>$9.40</td>
-							</tr>
-							<tr>
-								<td colspan="2"><strong>Expenses</strong></td>
-							</tr>
-							<tr>
-								<td>community infrastructure</td>
-								<td>-$28.92</td>
-							</tr>
-							<tr>
-								<td>admin services</td>
-								<td>-$59.25</td>
-							</tr>
-							<tr>
-								<td>creative tools and assets, software</td>
-								<td>-$59.09</td>
-							</tr>
-							<tr>
-								<td>labor: Brandt Hughes</td>
-								<td>-$108.68*</td>
-							</tr>
-						</tbody>
-						<tfoot>
-							<tr>
-								<td colspan="2"></td>
-							</tr>
-							<tr>
-								<td>TOTAL</td>
-								<td class="bee">$0</td>
-							</tr>
-						</tfoot>
-					</table>
-					<sub>*insufficient yield to pay full amount</sub>
-				</report>
-				<report id="2024-Q4" class="hidden">
-					<table>
-						<caption>2024 Q4 Finances</caption>
-						<thead>
-							<tr>
-								<th>Category</th>
-								<th>Value</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td colspan="2"><strong>Income</strong></td>
-							</tr>
-							<tr>
-								<td>Patreon</td>
-								<td>$248.99</td>
-							</tr>
-							<tr>
-								<td>Bandcamp</td>
-								<td>$25.06</td>
-							</tr>
-							<tr>
-								<td colspan="2"><strong>Expenses</strong></td>
-							</tr>
-							<tr>
-								<td>community infrastructure</td>
-								<td>-$28.92</td>
-							</tr>
-							<tr>
-								<td>admin services</td>
-								<td>-$23.37</td>
-							</tr>
-							<tr>
-								<td>creative tools and assets, software</td>
-								<td>-$76.75</td>
-							</tr>
-							<tr>
-								<td>Tenere video supplies</td>
-								<td>-$9.73</td>
-							</tr>
-							<tr>
-								<td>website</td>
-								<td>-$216.67</td>
-							</tr>
-							<tr>
-								<td>labor: Brandt Hughes</td>
-								<td>-$0*</td>
-							</tr>
-						</tbody>
-						<tfoot>
-							<tr>
-								<td colspan="2"></td>
-							</tr>
-							<tr>
-								<td>TOTAL</td>
-								<td class="bee">-$81.39</td>
-							</tr>
-						</tfoot>
-					</table>
-					<sub>*insufficient yield to pay full amount</sub>
-				</report>
-				<report id="2024-Q3" class="hidden">
-					<table>
-						<caption>2024 Q3 Finances</caption>
-						<thead>
-							<tr>
-								<th>Category</th>
-								<th>Value</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td colspan="2"><strong>Income</strong></td>
-							</tr>
-							<tr>
-								<td>Patreon</td>
-								<td>$236.99</td>
-							</tr>
-							<tr>
-								<td colspan="2"><strong>Expenses</strong></td>
-							</tr>
-							<tr>
-								<td>community infrastructure</td>
-								<td>-$28.92</td>
-							</tr>
-							<tr>
-								<td>admin services</td>
-								<td>-$26.89</td>
-							</tr>
-							<tr>
-								<td>creative tools and assets, software</td>
-								<td>-$169.47</td>
-							</tr>
-							<tr>
-								<td>equipment</td>
-								<td>-$37.86</td>
-							</tr>
-							<tr>
-								<td>labor: Brandt Hughes</td>
-								<td>-$0*</td>
-							</tr>
-						</tbody>
-						<tfoot>
-							<tr>
-								<td colspan="2"></td>
-							</tr>
-							<tr>
-								<td>TOTAL</td>
-								<td class="bee">-$26.15</td>
-							</tr>
-						</tfoot>
-					</table>
-					<sub>*insufficient yield to pay full amount</sub>
-				</report>
-				<report id="2024-Q2" class="hidden">
-					<table>
-						<caption>2024 Q2 Finances</caption>
-						<thead>
-							<tr>
-								<th>Category</th>
-								<th>Value</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td colspan="2"><strong>Income</strong></td>
-							</tr>
-							<tr>
-								<td>Patreon</td>
-								<td>$262.89</td>
-							</tr>
-							<tr>
-								<td>Bandcamp</td>
-								<td>$15.71</td>
-							</tr>
-							<tr>
-								<td colspan="2"><strong>Expenses</strong></td>
-							</tr>
-							<tr>
-								<td>community infrastructure</td>
-								<td>-$28.67</td>
-							</tr>
-							<tr>
-								<td>admin services</td>
-								<td>-$23.15</td>
-							</tr>
-							<tr>
-								<td>creative tools and assets, software</td>
-								<td>-$164.89</td>
-							</tr>
-							<tr>
-								<td>labor: Brandt Hughes</td>
-								<td>-$61.89*</td>
-							</tr>
-						</tbody>
-						<tfoot>
-							<tr>
-								<td colspan="2"></td>
-							</tr>
-							<tr>
-								<td>TOTAL</td>
-								<td class="bee">$0</td>
-							</tr>
-						</tfoot>
-					</table>
-					<sub>*insufficient yield to pay full amount</sub>
-				</report>
+				<reports>
+				</reports>
 			</section>
 		</main>
 
@@ -361,18 +142,143 @@
 		</footer>
 	</body>
 	<script>
-		function dropdown() {
-			if (document.querySelector("report:not(.hidden)")) {
-				document.querySelector("report:not(.hidden)").classList.add("hidden");
-			}
+		const reportData = [
+			{id: "2025-Q1", caption: "2025 Q1 Finances",
+			income: [
+				["Patreon","$246.54"],
+				["Bandcamp","$9.40"]],
+			expenses: [
+				["community infrastructure","-$28.92"],
+				["admin services","-$59.25"],
+				["creative tools and assets, software","-$59.09"],
+				["labor: Brandt Hughes","-$108.68","*"]],
+			total: "$0"},
+			{id: "2024-Q4", caption: "2024 Q4 Finances",
+			income: [
+				["Patreon","$248.99"],
+				["Bandcamp","$25.06"]],
+			expenses: [
+				["community infrastructure","-$28.92"],
+				["admin services","-$23.37"],
+				["creative tools and assets, software","-$76.75"],
+				["Tenere video supplies","-$9.73"],
+				["website","-$216.67"],
+				["labor: Brandt Hughes","-$0","*"]],
+			total: "-$81.39"},
+			{id: "2024-Q3", caption: "2024 Q3 Finances",
+			income: [
+				["Patreon","$236.99"]],
+			expenses: [
+				["community infrastructure","-$28.92"],
+				["admin services","-$26.89"],
+				["creative tools and assets, software","-$169.47"],
+				["equipment","-$37.86"],
+				["labor: Brandt Hughes","-$0","*"]],
+			total: "-$26.15"},
+			{id: "2024-Q2", caption: "2024 Q2 Finances",
+			income: [
+				["Patreon","$262.89"],
+				["Bandcamp","$15.71"]],
+			expenses: [
+				["community infrastructure","-$28.67"],
+				["admin services","-$23.15"],
+				["creative tools and assets, software","-$164.89"],
+				["labor: Brandt Hughes","-$61.89","*"]],
+			total: "$0"}
+		];
+		let insufficient = false;
+
+		function generateReport() {
+			insufficient = false;
 			let id = document.getElementById("report-id").value;
-			document.getElementById(id).classList.remove("hidden");
-		}
-		function tabs(id) {
-			if (document.querySelector("report:not(.hidden)")) {
-				document.querySelector("report:not(.hidden)").classList.add("hidden");
+			let indx = reportData
+				.map(function (element) {return element.id;})
+				.indexOf(id);
+			const container = document.getElementsByTagName("reports")[0];
+			if (container.children.length > 0) {
+				container.removeChild(container.firstElementChild)
 			}
-			document.getElementById(id).classList.remove("hidden");
+
+			let report = document.createElement("report");
+			let table = document.createElement("table");
+			let caption = document.createElement("caption");
+				caption.innerHTML = reportData[indx].caption;
+
+			table.append(caption);
+			table.append(createTableHeaders());
+			table.append(createTableBody(indx));
+			table.append(createTableFoot(reportData[indx].total));
+
+			report.append(table);
+			if (insufficient == true) { report.append(createSub()) }
+			container.append(report);
+		}
+		function createTableHeaders() {
+			let output = document.createElement("thead");
+			let tr = document.createElement("tr");
+			let th1 = document.createElement("th");
+				th1.innerHTML = "Category";
+			let th2 = document.createElement("th");
+				th2.innerHTML = "Value";
+			tr.append(th1, th2);
+			output.append(tr);
+
+			return output;
+		}
+		function createTableBody(indx) {
+			let output = document.createElement("tbody");
+			if (reportData[indx].income) {
+				createTableSection(output, indx, "income")
+			}
+			if (reportData[indx].expenses) {
+				createTableSection(output, indx, "expenses")
+			}
+
+			return output;
+		}
+		function createTableSection(output, indx, type) {
+			let trCat = document.createElement("tr");
+			let tdCat = document.createElement("td");
+				tdCat.setAttribute("colspan",2);
+				tdCat.innerHTML = "<strong>" + type + "</strong>";
+			trCat.append(tdCat);
+			output.append(trCat);
+
+			reportData[indx][type].forEach((e, indx) => {
+				let tr = document.createElement("tr");
+				let td1 = document.createElement("td");
+					td1.innerHTML = e[0];
+				let td2 = document.createElement("td");
+					td2.innerHTML = e[1];
+				if (e[2]) {
+					td2.innerHTML = e[1] + e[2];
+					insufficient = true;
+				}
+				tr.append(td1, td2);
+				output.append(tr);
+			});
+		}
+		function createTableFoot(total) {
+			let output = document.createElement("tfoot");
+			let trSpacer = document.createElement("tr");
+			let tdSpacer = document.createElement("td");
+				tdSpacer.setAttribute("colspan",2);
+			trSpacer.append(tdSpacer);
+			let trTotal = document.createElement("tr");
+			let tdTotal1 = document.createElement("td");
+				tdTotal1.innerHTML = "TOTAL";
+			let tdTotal2 = document.createElement("td");
+				tdTotal2.innerHTML = total;
+			trTotal.append(tdTotal1, tdTotal2);
+			output.append(trSpacer, trTotal);
+
+			return output;
+		}
+		function createSub() {
+			let output = document.createElement("sub");
+				output.innerHTML = "*insufficient yield to pay full amount";
+
+			return output;
 		}
 	</script>
 </html>

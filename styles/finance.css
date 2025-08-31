@@ -88,23 +88,4 @@ table {
 		}
 	}
 }
-.cell-right { text-align: right; }
-
-scroll-x {
-	display: inline-flex;
-	overflow-x: hidden;
-	background-color: white;
-	border-bottom: 2px solid black;
-}
-tab {
-	display: inline-block;
-	width: max-content;
-	color: black;
-	padding: .4rem .6rem;
-	height: 100%;
-	cursor: pointer;
-	border-right: 2px solid;
-}
-tab:hover {
-	background-color: rgb(187, 187, 187);
 }

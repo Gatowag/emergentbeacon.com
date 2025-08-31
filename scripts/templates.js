@@ -1,6 +1,6 @@
 function buildFooter(levels) {
 	let a = "";
-	for (l = levels + 1; l > 0; l--) { a += "." }
+	for (l = levels; l > 0; l--) { a += "." }
 	let footer = document.getElementsByTagName("footer")[0];
 	footer.innerHTML =
 `		<p>

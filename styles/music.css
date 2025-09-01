@@ -15,13 +15,12 @@ music {
 		border: 0;
 		width: 50%;
 		height: 27.8rem;
-		min-width: 22rem;
 		aspect-ratio: 1/1;
 		border-radius: .5rem;
 	}
 	ul {
 		display: block;
-		min-width: 18rem;
+		min-width: 16rem;
 		width: 28rem;
 		line-height: 2rem;
 		margin: 1rem auto;
@@ -149,7 +148,7 @@ grid-item {
 }
 grid-item:hover {
 	color: var(--accent);
-	opacity: 70%;
+	opacity: 80%;
 	transform: scale(96%);
 }
 

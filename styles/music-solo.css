@@ -27,15 +27,15 @@ music {
 	iframe {
 		border: 0;
 		width: 50%;
-		min-width: 22rem;
 		aspect-ratio: 1/1.6;
 		border-radius: .5rem;
 	}
 	ul {
 		display: block;
-		min-width: 18rem;
+		min-width: 13rem;
 		width: 28rem;
 		line-height: 2rem;
+		font-size: 1rem;
 		margin: 0 auto;
 		padding: 0;
 		border-radius: .5rem;
@@ -45,7 +45,6 @@ music {
 		li {
 			list-style: none;
 			border-bottom: solid 1px black;
-			display: flex;
 			gap: 8rem;
 			position: relative;
 			padding: .4rem 1.4rem;
@@ -72,9 +71,6 @@ music {
 				text-wrap: nowrap;
 				text-align: center;
 				font-family: "Roboto Mono", serif;
-				font-optical-sizing: auto;
-				font-weight: 400;
-				font-style: normal;
 				font-size: .8rem;
 			}
 			a:hover, a:focus-visible {
@@ -129,6 +125,24 @@ music {
 		flex-direction: column;
 		gap: 1rem .6rem;
 		iframe { width: 100% }
-		ul { width: 100% }
+		ul {
+			width: 100%;
+		}
+	}
+}
+@media screen and (max-width: 28rem) {
+	music {
+		ul {
+			font-size: .85rem;
+			li {
+				padding: .4rem .8rem;
+				a {
+					font-size: .7rem;
+					width: 4.8rem;
+					right: .5rem;
+					border-radius: .3rem;
+				}
+			}
+		}
 	}
 }

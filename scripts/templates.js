@@ -5,7 +5,7 @@ function buildFooter(levels) {
 	footer.innerHTML =
 `		<p>
 			<a href="${a}/home.html">home</a><a href="${a}/videos.html">videos</a><a href="${a}/music.html">music</a><a href="${a}/about.html">about</a><br>
-			<a href="${a}/finance.html">financial reports</a><a href="${a}/media.html">media kit</a>
+			<a href="${a}/finance.html">financial reports</a><a href="https://drive.google.com/drive/folders/1icyr1zHReUEhCLmlI2ActieXJ6NpgQDg?usp=sharing">media kit</a>
 		</p>
 		<logo>
 			<svg id="v1-7:organic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 629.556 629.556">

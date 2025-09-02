@@ -75,7 +75,6 @@ button {
 	transition: .2s ease;
 
 	font-family: "Roboto", serif;
-	font-optical-sizing: auto;
 	font-weight: 600;
 }
 button:hover {
@@ -108,8 +107,8 @@ playlist-items {
 	}
 	a,
 	a:visited {
-		display: block;
-		position: relative;
+		display: flex;
+		justify-content: space-between;
 		gap: 6px;
 		padding: var(--item-padding);
 		text-align: left;
@@ -117,19 +116,11 @@ playlist-items {
 		text-decoration: none;
 	}
 	time {
-		position: absolute;
-		top: var(--item-padding);
-		right: var(--item-padding);
-		width: var(--time-width);
-		overflow: hidden;
+		margin-left: .5rem;
 		color:hsl(from var(--txt) h s l / 0.8);
 		text-wrap: nowrap;
-		text-align: right;
 
 		font-family: "Roboto Mono", serif;
-		font-optical-sizing: auto;
-		font-weight: 400;
-		font-style: normal;
 		font-size: .8rem;
 	}
 	a:hover,

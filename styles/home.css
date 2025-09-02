@@ -21,9 +21,7 @@ aside {
 		border-radius: .2rem;
 		transition: .15s ease;
 	}
-	strong:hover {
-		background-color: black;
-	}
+	strong:hover { background-color: black }
 }
 
 /*____________________
@@ -44,77 +42,74 @@ playlist {
 	width: calc(100% - .4rem);
 	margin-top: .4rem;
 	background-color: rgb(0, 0, 0);
-}
-playlist-buttons {
-	display: inline-block;
-	margin: .5rem auto;
 
-	button {
-		background-color: var(--playlist-btn);
-		color: var(--playlist-btn-txt);
-		margin: .3rem .3rem;
-		padding: .3rem .7rem;
-		transition: .2s ease;
-		font-family: "Roboto", serif;
-		font-optical-sizing: auto;
-		font-weight: 600;
-	}
-	button:hover, button:focus-visible {
-		animation:
-			a-btn-color 0s forwards;
-		transform: translateY(-.2rem);
-	}
-	button:active {
-		transform: translateY(.1rem);
-	}
-}
-playlist-items {
-	ul {
-		list-style: none;
-		cursor: pointer;
-		background-color: var(--playlist-item);
-		line-height: 1rem;
-		margin: 0;
-		padding: 0;
-	}
-	li {
-		background-color: var(--playlist-item);
-		color: var(--txt);
-		border-bottom: solid 1px black;
-		--item-padding: .8rem;
-		--time-width: 9ch;
-	}
-	button {
-		background-color: var(--playlist-item);
-		color: var(--txt);
-		display: flex;
-		justify-content: space-between;
-		width: 100%;
-		position: relative;
-		gap: 6px;
-		padding: var(--item-padding);
-		transition: .1s ease;
-		text-align: left;
-		font-size: 1rem;
-		text-decoration: none;
-		font-family: "Rubik", serif;
-	}
-	button:hover, button:focus-visible {
-		background: var(--playlist-hover-back);
-		color: var(--playlist-hover-txt);
+	playlist-buttons {
+		display: inline-block;
+		margin: .5rem auto;
 
-		strong { text-decoration: underline }
-		time { color: var(--playlist-hover-txt) }
+		button {
+			background-color: var(--playlist-btn);
+			color: var(--playlist-btn-txt);
+			margin: .3rem .3rem;
+			padding: .3rem .7rem;
+			transition: .2s ease;
+			font-family: "Roboto", serif;
+			font-weight: 600;
+		}
+		button:hover, button:focus-visible {
+			animation: a-btn-color 0s forwards;
+			transform: translateY(-.2rem);
+		}
+		button:active { transform: translateY(.1rem) }
 	}
-	time {
-		margin-left: .5rem;
-		color: hsl(from var(--txt) h s l / 0.85);
-		text-wrap: nowrap;
 
-		font-family: "Roboto Mono", serif;
-		font-size: .8rem;
+	playlist-items {
+		ul {
+			list-style: none;
+			cursor: pointer;
+			background-color: var(--playlist-item);
+			line-height: 1rem;
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			background-color: var(--playlist-item);
+			color: var(--txt);
+			border-bottom: solid 1px black;
+		}
+		button {
+			background-color: var(--playlist-item);
+			color: var(--txt);
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			position: relative;
+			gap: 6px;
+			padding: .8rem;
+			transition: .1s ease;
+			text-align: left;
+			font-size: 1rem;
+			text-decoration: none;
+			font-family: "Rubik", serif;
+		}
+		button:hover, button:focus-visible {
+			background: var(--playlist-hover-back);
+			color: var(--playlist-hover-txt);
+
+			strong { text-decoration: underline }
+			time { color: var(--playlist-hover-txt) }
+		}
+		time {
+			margin-left: .5rem;
+			color: hsl(from var(--txt) h s l / 0.85);
+			text-wrap: nowrap;
+
+			font-family: "Roboto Mono", serif;
+			font-size: .8rem;
+		}
 	}
 }
+
 .selected {
 	button {
 		background-color: var(--playlist-select-back);

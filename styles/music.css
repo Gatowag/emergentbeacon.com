@@ -113,47 +113,47 @@ grid {
 	flex-flow: row wrap;
 	justify-content: center;
 	gap: 0 1rem;
-}
 
-grid-item {
-	display: block;
-	cursor: pointer;
-	width: calc(20% - 1rem);
-	text-align: left;
-	transition: .3s ease;
-	border-radius: .4rem;
-	padding-bottom: 1rem;
-
-	time, info {
+	grid-item {
 		display: block;
-		opacity: 80%;
-	}
-	strong {
-		color: var(--txt);
-		font-optical-sizing: auto;
-		font-weight: 500;
-	}
-	img {
-		width: 100%;
-		aspect-ratio: 1/1;
+		cursor: pointer;
+		width: calc(20% - 1rem);
+		text-align: left;
+		transition: .3s ease;
 		border-radius: .4rem;
-		object-fit: cover;
-		margin-bottom: .6em;
-		background: black;
-		border: 2px solid black;
+		padding-bottom: 1rem;
+
+		button {
+			padding: 0;
+			background-color: unset;
+			margin-bottom: .6em;
+			border-radius: .4rem;
+
+			img {
+				width: 100%;
+				aspect-ratio: 1/1;
+				
+				object-fit: cover;
+				background: black;
+				border: 2px solid black;
+			}
+		}
+		button:hover, button:focus-visible { transform: translateY(-.2em) }
+		button:active { transform: translateY(.1em) }
+		time, info {
+			display: block;
+			opacity: 80%;
+		}
+		strong {
+			color: var(--txt);
+			font-weight: 500;
+		}
 	}
-}
-grid-item:hover {
-	color: var(--accent);
-	opacity: 80%;
-	transform: scale(96%);
-}
-button:hover {
-	background-color: var(--txt);
-	transform: translateY(-.2em);
-}
-button:active {
-	transform: translateY(.1em);
+	grid-item:hover {
+		color: var(--accent);
+		opacity: 90%;
+		transform: scale(96%);
+	}
 }
 
 

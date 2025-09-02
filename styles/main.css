@@ -199,13 +199,6 @@ footer {
 			color: var(--playlist-hover-txt);
 		}
 	}
-	a {
-		color: var(--accent);
-	}
-	a:hover {
-		color: var(--internal-link);
-	}
-}
 	logo {
 		margin: auto;
 		width: 4rem;

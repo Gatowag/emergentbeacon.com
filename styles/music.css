@@ -40,9 +40,6 @@ music {
 			text-align: left;
 			text-decoration: none;
 
-			span {
-				color: yellow;
-			}
 			a {
 				cursor: pointer;
 				color: var(--txt);

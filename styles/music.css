@@ -148,20 +148,6 @@ grid-item:hover {
 	opacity: 80%;
 	transform: scale(96%);
 }
-
-button {
-	background-color: var(--accent);
-	color: var(--background);
-	border: none;
-	border-radius: .1rem;
-	padding: .3rem .7rem;
-	margin: 0 .2rem 1rem;
-	transition: .2s ease;
-
-	font-family: "Roboto", serif;
-	font-optical-sizing: auto;
-	font-weight: 600;
-}
 button:hover {
 	background-color: var(--txt);
 	transform: translateY(-.2em);

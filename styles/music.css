@@ -79,9 +79,7 @@ music {
 		li:hover {
 			background-color: hsl(from var(--playlist-hover-back) h s l / 0.1)
 		}
-		li:has(:not(:any-link)) {
-			opacity: .4;
-		}
+		li:has(:not(:any-link)) { opacity: .4 }
 	}
 }
 
@@ -192,19 +190,15 @@ button:active {
 	}
 }
 @keyframes list-b {
-	0% {
-		border: .12rem solid var(--txt)
-	}
-	100% {
-		border: .12rem solid black
-	}
+	0% { border: .12rem solid var(--txt) }
+	100% { border: .12rem solid black }
 }
 
 /* [### ↓ DISPLAY: MOBILE ↓ ###] */
 
 @media screen and (max-width: 51rem) {
-	grid-item { width: 30.9%; }
-	grid { gap: 0 3.6%; }
+	grid-item { width: 30.9% }
+	grid { gap: 0 3.6% }
 	music {
 		flex-direction: column;
 		iframe { width: 100% }
@@ -219,6 +213,6 @@ button:active {
 		width: 30%;
 		font-size: 2.4rem;
 
-		time { font-size: 2rem; }
+		time { font-size: 2rem }
 	}
 }

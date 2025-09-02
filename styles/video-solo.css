@@ -509,15 +509,9 @@ bonus {
 				object-fit: cover;
 				transition: .4s ease;
 			}
-			p {
-				margin: .2rem 0 .4rem;
-			}
-			time {
-				font-size: .8rem;
-			}
-			span {
-				font-size: .9rem;
-			}
+			p { margin: .2rem 0 .4rem }
+			time { font-size: .8rem }
+			span { font-size: .9rem }
 		}
 		bonus-entry:hover {
 			opacity: 70%;
@@ -644,7 +638,5 @@ footnav {
  |__ SCREENS: >1080p __|
 */
 @media screen and (min-width: 121rem) {
-	.content-column {
-		width: 90vw;
-	}
+	.content-column { width: 90vw }
 }

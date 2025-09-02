@@ -51,14 +51,10 @@ music {
 				border-radius: .2rem;
 				transition: .2s ease;
 
-				overflow: hidden;
 				text-decoration: none;
 				text-wrap: nowrap;
 				text-align: center;
 				font-family: "Roboto Mono", serif;
-				font-optical-sizing: auto;
-				font-weight: 400;
-				font-style: normal;
 				font-size: .8rem;
 			}
 			a:hover, a:focus-visible {
@@ -96,14 +92,10 @@ perma {
 		border-radius: .2rem;
 		transition: .2s ease;
 
-		overflow: hidden;
 		text-decoration: none;
 		text-wrap: nowrap;
 		text-align: center;
 		font-family: "Roboto Mono", serif;
-		font-optical-sizing: auto;
-		font-weight: 400;
-		font-style: normal;
 		font-size: .8rem;
 	}
 	a:hover, a:focus-visible {

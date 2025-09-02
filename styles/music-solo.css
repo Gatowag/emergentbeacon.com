@@ -4,6 +4,7 @@ main {
 section {
 	width: 100%;
 }
+nav ul li { display: inline }
 h1 {
 	margin: 3rem auto 0;
 }

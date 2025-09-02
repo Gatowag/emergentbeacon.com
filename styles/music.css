@@ -1,9 +1,5 @@
-main {
-	width: 80vw;
-}
-section {
-	width: 100%;
-}
+main { width: 80vw }
+section { width: 100% }
 
 music {
 	display: flex;
@@ -99,8 +95,7 @@ perma {
 		font-size: .8rem;
 	}
 	a:hover, a:focus-visible {
-		animation:
-			0s ease 0s forwards perma-c;
+		animation: 0s ease 0s forwards perma-c;
 		transform: translateY(-.2rem);
 	}
 	a:active { transform: translateY(.1rem) }
@@ -175,8 +170,11 @@ grid {
 /* [### ↓ DISPLAY: MOBILE ↓ ###] */
 
 @media screen and (max-width: 51rem) {
-	grid-item { width: 30.9% }
-	grid { gap: 0 3.6% }
+	
+	grid {
+		gap: 0 3.6%;
+		grid-item { width: 30.9% }
+	}
 	music {
 		flex-direction: column;
 		iframe { width: 100% }

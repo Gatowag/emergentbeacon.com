@@ -1,8 +1,6 @@
 /*	* {border: 1px solid red}
 
-/*_____________________
- |__ COLOR PALETTES __|
-*/
+/* [### ↓ THEME VARIABLES ↓ ###] */
 :root {
 	--background: #26292e;
 	--secondary: #000000;
@@ -94,26 +92,18 @@
 	}
 }*/
 
-/*____________________
- |__ PAGE DEFAULTS __|
-*/
+/* [### ↓ TOP LEVEL TAGS ↓ ###] */
 html {
 	min-height: 100vh;
 	height: fit-content;
 	scroll-behavior: smooth;
 }
-
-
-/*_________________________________
- |__ CONSTRAINED CONTENT COLUMN __|
-*/
 main {
 	text-align: center;
 	width: 75vw;
 	max-width: 56rem;
 	margin: auto;
 }
-
 body {
 	margin:0;
 	background-color: var(--background);
@@ -121,9 +111,8 @@ body {
 }
 
 
-/*________________________
- |__ TOP LEFT NAV MENU __|
-*/
+/* [### ↓ NAV MENUS ↓ ###] */
+
 nav {
 	border-radius: .2rem;
 	padding: .4rem .7rem;
@@ -181,9 +170,8 @@ nav {
 }
 
 
-/*___________________
- |__ SOCIAL LINKS __|
-*/
+/* [### ↓ FOOTER ↓ ###] */
+
 footer {
 	width: calc(100% - 1rem);
 	height: max-content;
@@ -252,10 +240,8 @@ socials {
 	}
 }
 
+/* [### ↓ TOOLTIPS ↓ ###] */
 
-/*_______________
- |__ TOOLTIPS __|
-*/
 .tooltip {
 	position: relative;
 	display: inline-block;
@@ -287,9 +273,8 @@ socials {
 }
 
 
-/*______________
- |__ BUTTONS __|
-*/
+/* [### ↓ BUTTONS ↓ ###] */
+
 button {
 	cursor: pointer;
 	border: none;
@@ -297,9 +282,8 @@ button {
 }
 
 
-/*_____________________________
- |__ ANIMATED SUPPORT LINKS __|
-*/
+/* [### ↓ SUPPORT LINKS ↓ ###] */
+
 .support-link {
 	color: var(--accent);
 	font-weight: 600;
@@ -312,10 +296,8 @@ button {
 }
 
 
-/*___________________________
- |__ DARK HIGHLIGHT LINKS __|
- (commonly used in media/info sources)
-*/
+/* [### ↓ DARK HIGHLIGHT LINKS ↓ ###]
+(commonly used in media/info sources) */
 .dark-link {
 	color: #7ff5ce;
 	background: #203c3c;
@@ -331,18 +313,16 @@ button {
 }
 
 
-/*____________________________
- |__ SELECTION / HIGHLIGHT __|
-*/
+/* [### ↓ SELECTION / HIGHLIGHT ↓ ###] */
+
 ::selection {
 	background: #111111; color: #ffdc3e; }
 ::-moz-selection {
 	background: #111111; color: #ffdc3e; }
 
 
-/*______________________
- |__ COLOR PALLETTES __|
-*/
+/* [### ↓ COLOR PALLETTES ↓ ###] */
+
 .slate { background-color: #141414; color: #bdaa84; }
 .islate { background-color: #bdaa84; color: #141414; }
 .dslate { background-color: #64553a; color: #e6e5e2; }
@@ -357,9 +337,8 @@ button {
 .dark { background: #000000; color: #e6e5e2; }
 
 
-/*____________________
- |__ STYLE MODULES __|
-*/
+/* [### ↓ STYLE MODULES ↓ ###] */
+
 .hidden { display: none; }
 .mono { font-family: roboto mono, courier new, monospace; }
 .cutout { outline-style: dashed; outline-offset: -.125rem; outline-width: .125rem; }
@@ -367,9 +346,8 @@ button {
 .outline { border: .2rem solid black; }
 
 
-/*_____________________
- |__ IMPORTED FONTS __|
-*/
+/* [### ↓ IMPORTED FONTS ↓ ###] */
+
 .roboto-400 {
 	font-family: "Roboto", serif;
 	font-optical-sizing: auto;
@@ -398,11 +376,8 @@ button {
 }
 
 
-/*________________________
- |__ ANIMATION PRESETS __|
-	-> bounce: support links
-	-> error: invalid source search
-*/
+/* [### ↓ ANIMATION PRESETS ↓ ###] */
+
 @keyframes bounce {
 	0%  {top:0;}
 	50%  {top:-.25rem;}
@@ -446,9 +421,8 @@ button {
 }
 
 
-/*______________________
- |__ SCREENS: MOBILE __|
-*/
+/* [### ↓ DISPLAY: MOBILE ↓ ###] */
+
 @media screen and (max-width: 41.5rem) {
 	main { width: 90vw; }
 	nav {
@@ -481,9 +455,8 @@ button {
 }
 
 
-/*______________________
- |__ SCREENS: >1080p __|
-*/
+/* [### ↓ DISPLAY: >1080p ↓ ###] */
+
 @media screen and (min-width: 121em) {
 	main {
 		width: 90vw;

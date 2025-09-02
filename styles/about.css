@@ -54,10 +54,3 @@ logo {
 		}
 	}
 }
-button:hover {
-	background-color: var(--internal-link);
-	transform: translateY(-.2em);
-}
-button:active {
-	transform: translateY(.1em);
-}

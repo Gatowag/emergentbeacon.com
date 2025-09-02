@@ -200,10 +200,8 @@ button:active {
 	}
 }
 
-/*______________________
-	|__ SCREENS: MOBILE __|
-	-> adjust grid size
-*/
+/* [### ↓ DISPLAY: MOBILE ↓ ###] */
+
 @media screen and (max-width: 51rem) {
 	grid-item { width: 30.9%; }
 	grid { gap: 0 3.6%; }
@@ -214,10 +212,8 @@ button:active {
 	}
 }
 
-/*______________________
-	|__ SCREENS: >1080p __|
-	-> adjust grid size
-*/
+/* [### ↓ DISPLAY: >1080p ↓ ###] */
+
 @media screen and (min-width: 121em) {
 	grid-item {
 		width: 30%;

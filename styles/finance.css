@@ -47,13 +47,12 @@ report {
 table {
 	border-collapse: collapse;
 	width:100%;
-	
 
 	caption {
 		margin-bottom: 1rem;
 		font-size: 1.2rem;
 	}
-	th { padding: .5rem 0; }
+	th { padding: .5rem 0 }
 	td {
 		padding: .1rem .5rem;
 		border: 1px solid black;
@@ -62,12 +61,8 @@ table {
 		font-size: .9rem;
 	}
 	tr {
-		td:first-child {
-			padding-left: 1rem;
-		}
-		td:nth-child(2){
-			text-align: right;
-		}
+		td:nth-child(1) { padding-left: 1rem }
+		td:nth-child(2) { text-align: right }
 		td[colspan] {
 			padding-left: .5rem;
 			background-color: var(--table-cat);

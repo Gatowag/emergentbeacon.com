@@ -71,9 +71,19 @@ music {
 				transform: translateY(-.2rem);
 			}
 			a:active { transform: translateY(.1rem) }
+			a:not(:any-link) {
+				cursor: not-allowed;
+				filter: saturate(0);
+			}
+			a:not(:any-link):hover, a:not(:any-link):active {
+				animation: a-shake .2s cubic-bezier(0.165, 0.84, 0.44, 1) 0s infinite forwards;
+			}
 		}
 		li:hover {
 			background-color: hsl(from var(--playlist-hover-back) h s l / 0.1)
+		}
+		li:has(:not(:any-link)) {
+			opacity: .4;
 		}
 	}
 }
@@ -171,16 +181,6 @@ button:hover {
 }
 button:active {
 	transform: translateY(.1em);
-}
-.disabled-link {
-	cursor: not-allowed;
-	filter: saturate(0);
-}
-.disabled-link:hover, .disabled-link:active {
-	animation: a-shake .2s cubic-bezier(0.165, 0.84, 0.44, 1) 0s infinite forwards;
-}
-.disabled {
-	opacity: .4;
 }
 
 

@@ -52,26 +52,26 @@
 					<li id="li-bandcamp">
 						✦ Bandcamp<a href="https://emergentbeacon.bandcamp.com/album/dunefall">buy</a>
 					</li>
-					<li id="li-apple" class="disabled">
-						Apple Music <a href="" class="disabled-link">upcoming</a>
+					<li id="li-apple">
+						Apple Music <a>upcoming</a>
 					</li>
-					<li id="li-spotify" class="disabled">
-						Spotify <a href="" class="disabled-link">upcoming</a>
+					<li id="li-spotify">
+						Spotify <a>upcoming</a>
 					</li>
-					<li id="li-amazon" class="disabled">
-						Amazon Music <a href="" class="disabled-link">upcoming</a>
+					<li id="li-amazon">
+						Amazon Music <a>upcoming</a>
 					</li>
-					<li id="li-youtube" class="disabled">
-						YouTube Music <a href="" class="disabled-link">upcoming</a>
+					<li id="li-youtube">
+						YouTube Music <a>upcoming</a>
 					</li>
-					<li id="li-tidal" class="disabled">
-						Tidal <a href="" class="disabled-link">upcoming</a>
+					<li id="li-tidal">
+						Tidal <a>upcoming</a>
 					</li>
-					<li id="li-deezer" class="disabled">
-						Deezer <a href="" class="disabled-link">upcoming</a>
+					<li id="li-deezer">
+						Deezer <a>upcoming</a>
 					</li>
-					<li id="li-pandora" class="disabled">
-						Pandora <a href="" class="disabled-link">upcoming</a>
+					<li id="li-pandora">
+						Pandora <a>upcoming</a>
 					</li>
 					<small>✦ indicates the best way to support</small>
 				</ul>
@@ -275,12 +275,7 @@
 				e.children[0].setAttribute("href",list[id][chart[ind][0]]);
 				e.children[0].innerHTML = list[id][chart[ind][1]];
 				if (list[id][chart[ind][0]] == "") {
-					e.children[0].classList.add("disabled-link");
-					e.classList.add("disabled");
 					e.children[0].removeAttribute("href");
-				} else {
-					e.children[0].classList.remove("disabled-link");
-					e.classList.remove("disabled");
 				}
 			});
 

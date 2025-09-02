@@ -57,9 +57,7 @@ table {
 	td {
 		padding: .1rem .5rem;
 		border: 1px solid black;
-		border-collapse: collapse;
 		font-family: "Roboto Mono", serif;
-		font-optical-sizing: auto;
 		font-weight: 500;
 		font-size: .9rem;
 	}

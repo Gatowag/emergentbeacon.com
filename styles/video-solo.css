@@ -509,13 +509,17 @@ bonus {
 				object-fit: cover;
 				transition: .4s ease;
 			}
+			a { display: block; transition: .2s ease;}
+			a:hover, a:focus-visible { transform: translateY(-.2em) }
+			a:active { transform: translateY(.1em) }
 			p { margin: .2rem 0 .4rem }
 			time { font-size: .8rem }
 			span { font-size: .9rem }
 		}
-		bonus-entry:hover {
-			opacity: 70%;
+		bonus-entry:hover, bonus-entry:focus-visible {
+			opacity: 90%;
 			transform: scale(96%);
+			span { color: var(--accent) }
 		}
 	}
 }

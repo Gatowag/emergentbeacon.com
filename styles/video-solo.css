@@ -82,6 +82,7 @@ main {
 		"transcript"
 		"bonus";
 }
+nav ul li { display: inline }
 header { grid-area: header }
 h1 {
 	grid-area: vid-title;

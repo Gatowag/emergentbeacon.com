@@ -1,6 +1,4 @@
-/*_____________________
- |__ COLOR PALETTES __|
-*/
+/* [### ↓ COLOR THEMES ↓ ###] */
 :root {
 	--synopsis-fill: var(--playlist-item);
 	--synopsis-txt: #bdaa84;
@@ -56,9 +54,7 @@
 	--credits-name-txt: #000000;
 }
 
-/*__________________
- |__ GRID LAYOUT __|
-*/
+/* [### ↓ TOP LEVEL TAGS ↓ ###] */
 body {
 	font-family: "Rubik", serif;
 	font-optical-sizing: auto;
@@ -131,9 +127,7 @@ synopsis {
 }
 
 
-/*__________________
- |__ CORRECTIONS __|
-*/
+/* [### ↓ CORRECTIONS ↓ ###] */
 corrections, clarifications {
 	grid-area: corrections;
 	background-color: var(--correction-fill);
@@ -181,9 +175,7 @@ clarifications {
 	grid-area: clarifications;
 }
 
-/*________________
- |__ CITATIONS __|
-*/
+/* [### ↓ SOURCES ↓ ###] */
 sources-info {
 	grid-area: source-info;
 	height: 100%;
@@ -336,9 +328,7 @@ sources-media {
 }
 
 
-/*_____________________
- |__ SEARCH SOURCES __|
-*/
+/* [### ↓ SEARCH SOURCES ↓ ###] */
 form {
 	display: flex;
 	flex-wrap: wrap;
@@ -366,10 +356,7 @@ form {
 }
 
 
-/*__________________
- |__ DETAILS ROW __|
- (group under citations)
-*/
+/* [### ↓ BUTTONS ↓ ###] */
 button {
 	background: var(--btn-fill);
 	color: var(--btn-txt);
@@ -389,9 +376,7 @@ button:hover, button:active {
 }
 
 
-/*____________________
- |__ MUSIC PREVIEW __|
-*/
+/* [### ↓ MUSIC PREVIEW ↓ ###] */
 music {
 	grid-area: music;
 	background: #000000;
@@ -414,10 +399,7 @@ music {
 }
 
 
-
-/*______________
- |__ CREDITS __|
-*/
+/* [### ↓ CREDITS ↓ ###] */
 credits {
 	grid-area: credits;
 	display: block;
@@ -451,9 +433,7 @@ credits {
 }
 
 
-/*____________________
- |__ TRANSCRIPTION __|
-*/
+/* [### ↓ TRANSCRIPTION ↓ ###] */
 transcription {
 	grid-area: transcript;
 
@@ -477,11 +457,9 @@ transcription {
 }
 
 
-/*____________________
- |__ PATREON BONUS __|
-*/
 bonus {
 	grid-area: bonus;
+/* [### ↓ PATREON REWARDS ↓ ###] */
 	display: block;
 	width: 100%;
 	max-width: 90vw;
@@ -531,9 +509,7 @@ bonus {
 }
 
 
-/*_____________
- |__ FOOTER __|
-*/
+/* [### ↓ FOOTER ↓ ###] */
 footnav {
 	width: 75vw;
 	max-width: 56rem;
@@ -594,19 +570,14 @@ footnav {
 }
 
 
-/*______________________
- |__ SCREENS: MOBILE __|
-*/
+/* [### ↓ DISPLAY: MOBILE ↓ ###] */
 @media screen and (max-width: 37rem) {
 	music { height: 30rem }
 	footnav { display: hidden; font-size: .9rem; }
 	.footnav-mobile { display: visible; font-size: .9rem; }
 }
 
-
-/*__________________________
- |__ SCREENS: NON-MOBILE __|
-*/
+/* [### ↓ DISPLAY: NON-MOBILE ↓ ###] */
 @media screen and (min-width: 41.5rem) {
 	main {
 		grid-template-columns: repeat(12, [col-start] 1fr);
@@ -638,9 +609,7 @@ footnav {
 }
 
 
-/*______________________
- |__ SCREENS: >1080p __|
-*/
+/* [### ↓ DISPLAY: >1080p ↓ ###] */
 @media screen and (min-width: 121rem) {
 	.content-column { width: 90vw }
 }

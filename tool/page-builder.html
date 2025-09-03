@@ -50,9 +50,10 @@
 								<label>Correction credit:</label>
 								<input id="input-correction1-credit" autocomplete="off">
 							</row>
-							<button-row id="correction-buttons">
-								<button id="btn-correction1" class="add-new-button" value="1" onclick="addNewField('correction',1)">add correction</button>
-								<button id="btn-correction1-group" class="add-new-button" value="1" onclick="addNewField('correction-group',1)">new correction group</button>
+							<button-row id="correction1-buttons">
+								<button id="btn-correction1" value="1" onclick="addNewField('correction',1)">+ correction</button>
+								<button id="btn-correction1-remove" class="rmv" onclick="removeField('correction',1)">- correction</button>
+								<button id="btn-correction1-group" value="1" onclick="addNewField('correction-group',1)">+ group</button>
 							</button-row>
 						</div>
 					</corrections>

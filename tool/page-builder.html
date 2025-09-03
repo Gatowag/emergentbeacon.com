@@ -585,13 +585,21 @@
 				let vidLink = document.getElementById("input-url").value;
 				let output = "";
 
-				if (srcCountI) { output += buildSourcesInfo() }
-				if (srcCountI > 2) { output += buildSourcesSearchBar("info") }
-				output += `\n${tabs(3)}</sources-info>`;
-				if (srcCountM) { output += buildSourcesMedia() } 
-				output += `\n${tabs(4)}</container>`;
-				if (srcCountM > 2) { output += buildSourcesSearchBar("media") }
-				output += `\n${tabs(3)}</sources-media>`;
+				if (srcCountI) {
+					output += buildSourcesInfo()
+					if (srcCountI > 2) {
+						output += buildSourcesSearchBar("info")
+					}
+					output += `\n${tabs(3)}</sources-info>`;
+				}
+				if (srcCountM) {
+					output += buildSourcesMedia()
+					if (srcCountM > 2) {
+						output += buildSourcesSearchBar("media")
+					}
+					output += `\n${tabs(3)}</sources-media>`;
+				} 
+				
 				return output;
 			} catch(err) {
 				console.log(">!< ERROR, buildSources: " + err);

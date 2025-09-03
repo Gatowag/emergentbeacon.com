@@ -332,7 +332,38 @@
 			removeAllAdditionalEntries(correctionGroupCount, creditCount, patreonCount);
 			refreshCounts(correctionGroupCount, creditCount, patreonCount);
 		}
+		function removeAllAdditionalEntries(CG, Cr, Pa) {
+			diag && console.log("| removing all additional entries");
+			diag && console.log("| CG: " + CG.value + ", Cr: " + Cr.value + ", Pa: " + Pa.value);
+			if (Number(CG.value) > 1) {
+				diag && console.log("| recreate the original correction group button");
+				addGroupButton(1);
 			}
+			for (a = CG.value; a > 1; a--) {
+				diag && console.log("| removing additional correction groups");
+				let container = document.getElementById("correction-container");
+				container.removeChild(container.lastChild);
+			}
+			for (b = Number(document.getElementById("btn-correction1").value); b > 1; b--) {
+				diag && console.log("| removing additional corrections");
+				let container = document.getElementById("correction1-rows");
+				container.removeChild(container.children[1]);
+			}
+			for (c = Cr.value; c > 1; c--) {
+				diag && console.log("| removing additional credits");
+				let container = document.getElementById("credit-container");
+				for (y = 2; y > 0; y--) {
+					container.removeChild(container.lastChild)
+				}
+			}
+			for (d = Pa.value; d > 1; d--) {
+				diag && console.log("| removing additional patreon posts");
+				let container = document.getElementById("patreon-container");
+				for (x = 3; x > 0; x--) {
+					container.removeChild(container.lastChild)
+				}
+			}
+		}
 		function refreshCounts(CG, Cr, Pa) {
 			diag && console.log("| refreshing counts");
 			CG.value = 1;

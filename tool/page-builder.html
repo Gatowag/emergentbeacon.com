@@ -15,7 +15,7 @@
 			<button type="button" onclick="save()">SAVE</button>
 			<input type="file" id="load-input" value="load" hidden onchange="loading()">
 			<button type="button" id="load-button" onclick="document.getElementById('load-input').click()">LOAD</button>
-			<button type="reset" value="Reset" onclick="clearAll()">CLEAR</button>
+			<button type="reset" value="Reset" class="rmv" id="btn-reset" onclick="reset()">RESET</button>
 		</header>
 
 		<main>
@@ -245,15 +245,10 @@
 			}
 		}
 
-			function clearAll() {
-				var elements = document.getElementsByTagName("input");
-				for (e = 0; e < elements.length; e++) {
-					if (elements[e].type == "text") {
-						elements[e].value = "";
 		function loading() {
 			console.log("... LOADING PRESSED");
 			document.getElementById("processing").classList.remove("hidden");
-			clearAll();
+			reset();
 			file = document.getElementById("load-input").files[0];
 			fileName = file.name;
 			reader = new FileReader();
@@ -321,9 +316,22 @@
 			document.getElementById("processing").classList.add("hidden");
 			console.log("/// LOADING DONE");
 		}
+
+		function reset() {
+			diag && console.log("| reset called");
+			var elements = document.getElementsByTagName("input");
+			for (e = 0; e < elements.length; e++) {
+				if (elements[e].type == "text") {
+					elements[e].value = "";
 				}
 			}
+			let correctionGroupCount = document.getElementById("correction-group-count");
+			let creditCount = document.getElementById("btn-credit");
+			let patreonCount = document.getElementById("btn-patreon");
 
+			removeAllAdditionalEntries(correctionGroupCount, creditCount, patreonCount);
+			refreshCounts(correctionGroupCount, creditCount, patreonCount);
+		}
 			}
 		function refreshCounts(CG, Cr, Pa) {
 			diag && console.log("| refreshing counts");

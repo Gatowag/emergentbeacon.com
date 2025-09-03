@@ -543,7 +543,7 @@
 				diag && console.log("| building sources");
 				srcCountI = file[0].length;
 				srcCountM = file[1].length;
-				let vidLink = file[0][0][0];
+				let vidLink = document.getElementById("input-url").value;
 				let output = "";
 
 				if (srcCountI) { output += buildSourcesInfo() }

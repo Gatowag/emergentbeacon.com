@@ -1101,6 +1101,42 @@
 			container.appendChild(row);
 			document.getElementById(`btn-correction${g}`).value = corrNum;
 		}
+		function addNewCorrectionGroup(g) {
+			let count = document.getElementById("correction-group-count");
+			let newCount = g + 1;
+			count.value = newCount;
+			diag && console.log("group: " + g + ", newCount: " + newCount);
+
+			const newGroup = document.createElement("div");
+			newGroup.id = `correction${newCount}-group`;
+
+			diag && console.log("prepping innerHTML");
+			
+			newGroup.innerHTML =
+				`${tabs(8)}<div id="correction${newCount}-rows" class="rowgroup">` +
+				`\n${tabs(9)}<row>` +
+				`\n${tabs(10)}<label>Correction:</label>` +
+				`\n${tabs(10)}<input id="input-correction${newCount}-tcode1" autocomplete="off"><input id="input-correction${newCount}-details1" autocomplete="off">` +
+				`\n${tabs(9)}</row>` +
+				`\n${tabs(8)}</div>` +
+				`\n${tabs(8)}<row>` +
+				`\n${tabs(9)}<label>Correction credit:</label>` +
+				`\n${tabs(9)}<input id="input-correction${newCount}-credit" autocomplete="off">` +
+				`\n${tabs(8)}</row>` +
+				`\n${tabs(8)}<button-row id="correction${newCount}-buttons">` +
+				`\n${tabs(9)}<button id="btn-correction${newCount}" value="1" onclick="addNewField('correction',${newCount})">+ correction</button>` +
+				`\n${tabs(9)}<button id="btn-correction${newCount}-remove" class="rmv" onclick="removeField('correction',${newCount})">- correction</button>` +
+				`\n${tabs(9)}<button id="btn-correction${newCount}-group" value="1" onclick="addNewField('correction-group',${newCount})">+ group</button>` +
+				`\n${tabs(9)}<button id="btn-correction${newCount}-group-remove"  class="rmv" onclick="removeField('correction-group',${newCount})">- group</button>` +
+				`\n${tabs(8)}</button-row>`;
+
+			document.getElementById(`btn-correction${g}-group`).remove();
+			diag && console.log("button deleted");
+			let container = document.getElementById("correction-container");
+			diag && console.log("container defined");
+			container.appendChild(newGroup);
+			diag && console.log("child appended");
+		}
 				} else if (type == "credit") {
 					let count = document.getElementById(type + "-count");
 					console.log("count: " + count);

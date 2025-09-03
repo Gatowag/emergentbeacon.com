@@ -295,20 +295,10 @@
 					console.log("# credit: " + load[1][a-1][load[1][a-1].length - 1]);
 					document.getElementById(`input-correction${a}-credit`).value = load[1][a-1][load[1][a-1].length - 1];
 				}
-				refreshCounts();
-			}
-
-			function refreshCounts() {
-				let correctionCount = document.getElementById("correction-group-count");
-				for (i = 1; i < Number.parseInt(correctionCount.value + 1); i++) {
-					if (document.getElementById(`input-correction${i}`)) {correctionCount.value = i;}
 				for (b = 1; b < clarificationCount + 1; b++) {
 					if (b > 1) { addNewField("clarification") }
 					document.getElementById(`input-clarification${b}`).value = load[2][b - 1];
 				}
-				let clarificationCount = document.getElementById("clarification-count");
-				for (j = 1; j < Number.parseInt(clarificationCount.value + 1); j++) {
-					if (document.getElementById(`input-clarification${j}`)) {clarificationCount.value = j;}
 				for (c = 1; c < creditCount + 1; c++) {
 					if (c > 1) { addNewField("credit") }
 					let nameNum = c * 2 - 2;
@@ -316,9 +306,6 @@
 					document.getElementById(`input-credit${c}-name`).value = load[4][nameNum];
 					document.getElementById(`input-credit${c}-role`).value = load[4][roleNum];
 				}
-				let creditCount = document.getElementById("credit-count");
-				for (k = 1; k < Number.parseInt(creditCount.value + 1); k++) {
-					if (document.getElementById(`input-credit${k}-name`)) {creditCount.value = k;}
 				for (d = 1; d < patreonCount + 1; d++) {
 					if (d > 1) { addNewField("patreon") }
 					let urlNum = d * 3 - 2;
@@ -328,9 +315,6 @@
 					document.getElementById(`input-patreon${d}-title`).value = load[6][titleNum];
 					document.getElementById(`input-patreon${d}-duration`).value = load[6][durationNum];
 				}
-				let patreonCount = document.getElementById("patreon-count");
-				for (p = 1; p < Number.parseInt(patreonCount.value + 1); p++) {
-					if (document.getElementById(`input-patreon${p}-url`)) {patreonCount.value = p;}
 			};
 			reader.readAsText(file);
 
@@ -341,6 +325,13 @@
 			}
 
 			}
+		function refreshCounts(CG, Cr, Pa) {
+			diag && console.log("| refreshing counts");
+			CG.value = 1;
+			Cr.value = 1;
+			Pa.value = 1;
+		}
+
 		function toTopFunction() {
 			let topButton = document.getElementById("to-top-button");
 			document.body.scrollTop = 0; // For Safari

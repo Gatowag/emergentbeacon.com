@@ -1277,6 +1277,18 @@
 				container.removeChild(container.lastChild);
 			}
 		}
+		function removeCorrectionGroup(g) {
+			let container = document.getElementById("correction-container");
+			let CG = document.getElementById("correction-group-count");
+			let countNum = Number.parseInt(CG.value);
+			let newCount = countNum - 1;
+
+			if (CG.value == g) { addGroupButton(g-1) }
+			if (CG.value < 3) { addGroupButton(1) }
+
+			CG.value = newCount;
+			container.removeChild(document.getElementById("correction" + g + "-group"));
+		}
 
 		function urlSanitize(url) {
 			if (url.indexOf("https://www.") != -1) { return url.slice(12) }

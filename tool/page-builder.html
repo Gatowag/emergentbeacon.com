@@ -1087,6 +1087,20 @@
 				console.log(">!< ERROR: " + err);
 			}
 		}
+		function addNewCorrection(g) {
+			let corrCount = document.getElementById(`btn-correction${g}`).value;
+			let corrNum = Number(corrCount) + 1;
+			corrCount = corrNum;
+
+			const row = document.createElement("row");
+			row.innerHTML =
+				`${tabs(8)}<label></label>` +
+				`\n${tabs(8)}<input id="input-correction${g}-tcode${corrNum}" autocomplete="off"><input id="input-correction${g}-details${corrNum}" autocomplete="off">`;
+
+			let container = document.getElementById("correction" + g + "-rows");
+			container.appendChild(row);
+			document.getElementById(`btn-correction${g}`).value = corrNum;
+		}
 				} else if (type == "credit") {
 					let count = document.getElementById(type + "-count");
 					console.log("count: " + count);

@@ -1186,6 +1186,16 @@
 			container.appendChild(row2);
 			container.appendChild(row3);
 		}
+
+		function addGroupButton(n){
+			const btn = document.createElement("button");
+				btn.id = "btn-correction" + n + "-group";
+				btn.value = 1;
+				btn.innerHTML = "+ group";
+				btn.setAttribute("onclick", "addNewField('correction-group'," + n + ")");
+			let container = document.getElementById("correction" + n + "-buttons");
+			container.appendChild(btn);
+		}
 				} else if (type == "credit") {
 					let count = document.getElementById(type + "-count");
 					console.log("count: " + count);

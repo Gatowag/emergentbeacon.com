@@ -785,7 +785,7 @@
 				`\n${tabs(4)}<h2>Credits</h2>` +
 				`\n${tabs(4)}<container>` +
 				`\n${tabs(5)}<p>`;
-			let creditCount = Number.parseInt(document.getElementById("credit-count").value);
+			let creditCount = Number.parseInt(document.getElementById("btn-credit").value);
 			for (cr = 1; cr < (creditCount + 1); cr++) {
 				let creditName = document.getElementById(`input-credit${cr}-name`).value;
 				let creditRole = document.getElementById(`input-credit${cr}-role`).value;
@@ -831,7 +831,7 @@
 				`\n${tabs(5)}</p>` +
 				`\n${tabs(5)}<items>`;
 
-			let patreonCount = Number.parseInt(document.getElementById("patreon-count").value);
+			let patreonCount = Number.parseInt(document.getElementById("btn-patreon").value);
 			let patreonImage = document.getElementById("input-patreon-image").value;
 			for (pa = 1; pa < patreonCount + 1; pa++) {
 				let patreonURL = document.getElementById(`input-patreon${pa}-url`).value;

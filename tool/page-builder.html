@@ -205,29 +205,21 @@
 				diag && console.log("| correctionGroupCount: " + correctionGroupCount);
 				for (g = 1; g < (correctionGroupCount + 1); g++) {
 					diag && console.log("| started corrections");
-					diag && console.log("| g: " + g);
 					let entries = Number(document.getElementById(`btn-correction${g}`).value);
-					diag && console.log("| 1");
 					let credit = document.getElementById(`input-correction${g}-credit`).value;
-					diag && console.log("| 2");
 					let group = [];
 
 					for (e = 1; e < entries + 1; e++) {
-						diag && console.log("| 3");
 						let eTcode = document.getElementById(`input-correction${g}-tcode${e}`).value;
 						if (eTcode == null) { eTcode = "0:00" };
 						let eDetails = document.getElementById(`input-correction${g}-details${e}`).value;
 						group.push(eTcode);
 						group.push(eDetails);
 					}
-					diag && console.log("| 4");
 					group.push(credit);
-					diag && console.log("| 5");
 					vidCorrections.push(group);
-					diag && console.log("| 6");
 				}
-				
-				diag && console.log("| 7");
+
 				for (j = 1; j < (clarificationCount + 1); j++) {
 					diag && console.log("| started clarifications");
 					vidClarifications.push(document.getElementById(`input-clarification${j}`).value);
@@ -266,7 +258,6 @@
 			reader = new FileReader();
 			reader.onloadend = function(){
 				load = JSON.parse(reader.result);
-
 				document.getElementById("input-title").value = load[0][0];
 				document.getElementById("input-url").value = load[0][1];
 				document.getElementById("input-nav-id").value = load[0][2];
@@ -281,13 +272,11 @@
 				document.getElementById("input-next-link").value = load[7][1];
 				document.getElementById("input-prev-title").value = load[7][2];
 				document.getElementById("input-prev-link").value = load[7][3];
-
 				let correctionGroupCount = load[1].length;
 				let clarificationCount = load[2].length;
 				let creditCount = load[4].length / 2;
 				let patreonCount = (load[6].length - 1) / 3;
 				console.log("# group count: " + correctionGroupCount);
-
 				// add +1 to for loop when correction groups are accounted for
 				for (a = 1; a < correctionGroupCount + 1; a++) {
 					console.log("# group (a): " + a);

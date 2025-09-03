@@ -768,10 +768,10 @@
 			let output = `\n` +
 				`\n${tabs(3)}<music>` +
 				`\n${tabs(4)}<h2>Music</h2>` +
-				`\n${tabs(4)}<iframe id="bandcamp-player" src="https://bandcamp.com/EmbeddedPlayer/album=${bandcampID}/size=large/bgcol=333333/linkcol=6decc2/artwork=small/transparent=true/" seamless><a href="${bandcampLink}">${bandcampTitle}</a></iframe>` +
+				`\n${tabs(4)}<iframe id="bandcamp-player" src="https://bandcamp.com/EmbeddedPlayer/album=${bandcampID}/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="${bandcampLink}">${bandcampTitle}</a></iframe>` +
 				`\n${tabs(4)}<download>` +
-				`\n${tabs(5)}available on all major platforms<br>` +
-				`\n${tabs(5)}<button type="button" onclick="document.location='/music/${document.getElementById(`input-nav-id`).value}.html'" value="Go to music details page.">buy or stream</button>` +
+				`\n${tabs(5)}available on some platforms<br>` +
+				`\n${tabs(5)}<button type="button" onclick="document.location='../music/${document.getElementById(`input-nav-id`).value}.html'" value="Go to music details page.">more info</button>` +
 				`\n${tabs(4)}</download>` +
 				`\n${tabs(3)}</music>`;
 

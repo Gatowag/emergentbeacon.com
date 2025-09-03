@@ -21,8 +21,6 @@
 		<main>
 			<input value="1" name="correction group count" id="correction-group-count" type="hidden">
 			<input value="1" name="clarification count" id="clarification-count" type="hidden">
-			<input value="1" name="credit count" id="credit-count" type="hidden">
-			<input value="1" name="patreon count" id="patreon-count" type="hidden">
 			<fieldset id="data">
 					<row>
 						<label>Video Title:</label>
@@ -81,7 +79,7 @@
 						</row>
 					</div>
 					<button-row>
-						<button id="btn-credit" class="add-new-button" onclick="addNewField('credit')">add credit</button>
+						<button id="btn-credit" value="1" onclick="addNewField('credit')">+ credit</button>
 					</button-row>
 					<row>
 						<label>Transcript:</label>
@@ -114,7 +112,7 @@
 						</row>
 					</div>
 					<button-row>
-						<button id="btn-patreon" class="add-new-button" onclick="addNewField('patreon')">add reward</button>
+						<button id="btn-patreon" value="1" onclick="addNewField('patreon')">+ reward</button>
 					</button-row>
 					<row>
 						<label>Next Page Title:</label>
@@ -198,8 +196,8 @@
 
 				let correctionGroupCount = Number.parseInt(document.getElementById("correction-group-count").value);
 				let clarificationCount = Number.parseInt(document.getElementById("clarification-count").value);
-				let creditCount = Number.parseInt(document.getElementById("credit-count").value);
-				let patreonCount = Number.parseInt(document.getElementById("patreon-count").value);
+				let creditCount = Number.parseInt(document.getElementById("btn-credit").value);
+				let patreonCount = Number.parseInt(document.getElementById("btn-patreon").value);
 				diag && console.log("| defined terms");
 
 				diag && console.log("| correctionGroupCount: " + correctionGroupCount);

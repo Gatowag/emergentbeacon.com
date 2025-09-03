@@ -1137,6 +1137,29 @@
 			container.appendChild(newGroup);
 			diag && console.log("child appended");
 		}
+		function addNewCredit() {
+			let count = document.getElementById("btn-credit");
+			console.log("count: " + count);
+			let countNum = Number.parseInt(count.value);
+			console.log("countNum: " + countNum);
+			let newCount = countNum + 1;
+			console.log("newCount: " + newCount);
+			count.value = newCount;
+
+			const row1 = document.createElement("row");
+			row1.innerHTML =
+				`${tabs(8)}<label>Credit (name):</label>` +
+				`\n${tabs(8)}<input id="input-credit${newCount}-name" autocomplete="off">`;
+
+			const row2 = document.createElement("row");
+			row2.innerHTML =
+				`${tabs(8)}<label>Credit (role):</label>` +
+				`\n${tabs(8)}<input id="input-credit${newCount}-role" autocomplete="off">`;
+
+			let container = document.getElementById("credit-container");
+			container.appendChild(row1);
+			container.appendChild(row2);
+		}
 				} else if (type == "credit") {
 					let count = document.getElementById(type + "-count");
 					console.log("count: " + count);

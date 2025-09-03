@@ -1289,6 +1289,18 @@
 			CG.value = newCount;
 			container.removeChild(document.getElementById("correction" + g + "-group"));
 		}
+		function removeCredit() {
+			let container = document.getElementById("credit-container");
+			let c = document.getElementById("btn-credit");
+			if (container.children[2]) {
+				let countNum = Number.parseInt(c.value);
+				let newCount = countNum - 1;
+				c.value = newCount;
+				for (x = 2; x > 0; x--) {
+					container.removeChild(container.lastChild)
+				}
+			}
+		}
 
 		function urlSanitize(url) {
 			if (url.indexOf("https://www.") != -1) { return url.slice(12) }

@@ -444,9 +444,9 @@
 				`\n${tabs(2)}<link rel="preconnect" href="https://fonts.googleapis.com">` +
 				`\n${tabs(2)}<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>` +
 				`\n${tabs(2)}<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap">` +
-				`\n${tabs(2)}<link rel="stylesheet" href="/styles/main.css">` +
-				`\n${tabs(2)}<link rel="stylesheet" href="/styles/video-solo.css">` +
-				`\n${tabs(2)}<script type="text/javascript" src="/color-palettes.js" defer><\/script>` +
+				`\n${tabs(2)}<link rel="stylesheet" href="../styles/main.css">` +
+				`\n${tabs(2)}<link rel="stylesheet" href="../styles/video-solo.css">` +
+				`\n${tabs(2)}<script type="text/javascript" src="../styles/color-palettes.js" defer><\/script>` +
 				`\n${tabs(1)}</head>\n`;
 
 			return output;
@@ -459,16 +459,16 @@
 			let output =
 				`\n${tabs(1)}<body>` +
 				`\n${tabs(2)}<nav class="nav-desktop">` +
-				`\n${tabs(3)}<span><a href="/home.html">/ home</a> <a href="/videos.html">/ videos</a> / ${navID}.html</span>` +
+				`\n${tabs(3)}<span><a href="../home.html">/ home</a> <a href="../videos.html">/ videos</a> / ${navID}.html</span>` +
 				`\n${tabs(2)}</nav>\n`;
 
 			output +=
 				`\n${tabs(2)}<main>` +
 				`\n${tabs(3)}<header class="content-column">` +
 				`\n${tabs(4)}<nav class="nav-mobile">` +
-				`\n${tabs(5)}<span><a href="/home.html">/ home</a></span>` +
-				`\n${tabs(5)}<span><a href="/videos.html">/ videos</a></span>` +
-				`\n${tabs(5)}<span><a href="/music.html">/ music</a></span>` +
+				`\n${tabs(5)}<span><a href="../home.html">/ home</a></span>` +
+				`\n${tabs(5)}<span><a href="../videos.html">/ videos</a></span>` +
+				`\n${tabs(5)}<span><a href="../music.html">/ music</a></span>` +
 				`\n${tabs(5)}<span>/ ${navID}.html</span>` +
 				`\n${tabs(4)}</nav>\n` +
 				`\n${tabs(4)}<button id="theme">` +
@@ -822,7 +822,7 @@
 				`\n${tabs(5)}</aside>` +
 				`\n${tabs(5)}<button type="button" onclick="location.href='https://www.dropbox.com/s/rprclv3buqbqehn/EB003__main--cc_en_captions.srt?dl=0'" value="download english captions">captions</button>` +
 				`\n${tabs(5)}<button type="button" onclick="location.href='https://www.dropbox.com/s/3w1rg1r7hn5160u/EB003__main--cc_en_sub.srt?dl=0'" value="download english subtitles">subtitles</button>` +
-				`\n${tabs(5)}<button type="button" onclick="document.location='/translations'" value="details about translations">info</button>` +
+				`\n${tabs(5)}<button type="button" onclick="document.location='../translations'" value="details about translations">info</button>` +
 				`\n${tabs(4)}</container>` +
 				`\n${tabs(3)}</transcription>`;
 
@@ -850,7 +850,7 @@
 				output +=
 					`\n${tabs(6)}<bonus-entry>` +
 					`\n${tabs(7)}<a href="${patreonURL}">` +
-					`\n${tabs(8)}<img src="/assets/${patreonImage}" style="object-position: ${imageOffset}rem 0;">` +
+					`\n${tabs(8)}<img src="../assets/patreon/${patreonImage}" style="object-position: ${imageOffset}rem 0;">` +
 					`\n${tabs(7)}</a>` +
 					`\n${tabs(7)}<p>` +
 					`\n${tabs(8)}<time datetime="${genDateTime(patreonDuration)}">${patreonDuration}</time><br>` +
@@ -872,20 +872,20 @@
 			let output = `\n` +
 				`\n${tabs(2)}<footnav>` +
 				`\n${tabs(3)}<tooltip>` +
-				`\n${tabs(4)}<a href="/videos/${document.getElementById(`input-prev-link`).value}.html">← Previous</a>` +
+				`\n${tabs(4)}<a href="./${document.getElementById(`input-prev-link`).value}.html">← Previous</a>` +
 				`\n${tabs(4)}<span>${document.getElementById(`input-prev-title`).value}</span>` +
 				`\n${tabs(3)}</tooltip>` +
 				`\n${tabs(3)}<a href="#">TO TOP</a>` +
 				`\n${tabs(3)}<tooltip>` +
-				`\n${tabs(4)}<a href="/videos/${document.getElementById(`input-next-link`).value}.html">Next →</a>` +
+				`\n${tabs(4)}<a href="./${document.getElementById(`input-next-link`).value}.html">Next →</a>` +
 				`\n${tabs(4)}<span>${document.getElementById(`input-next-title`).value}</span>` +
 				`\n${tabs(3)}</tooltip>` +
 				`\n${tabs(2)}</footnav>` +
 
 				`\n\n${tabs(2)}<footer>` +
 				`\n${tabs(3)}<p>` +
-				`\n${tabs(4)}<a href="/home.html">home</a><a href="/videos.html">videos</a><a href="/music.html">music</a><a href="/about.html">about</a><br>` +
-				`\n${tabs(4)}<a href="/finance.html">financial reports</a><a href="/media.html">media kits</a>` +
+				`\n${tabs(4)}<a href="../home.html">home</a><a href="../videos.html">videos</a><a href="../music.html">music</a><a href="../about.html">about</a><br>` +
+				`\n${tabs(4)}<a href="../finance.html">financial reports</a><a href="../media.html">media kits</a>` +
 				`\n${tabs(3)}</p>` +
 				`\n${tabs(3)}<logo>` +
 				`\n${tabs(4)}<svg id="v1-7:organic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 629.556 629.556">` +

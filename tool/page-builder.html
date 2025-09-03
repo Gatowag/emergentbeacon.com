@@ -1244,9 +1244,24 @@
 			let container = document.getElementById("correction" + n + "-buttons");
 			container.appendChild(btn);
 		}
+
+		function removeField(type, group) {
+			try {
+				document.getElementById("processing").classList.remove("hidden");
+				diag && console.log("| removing " + type + " field");
+
+				// create a field for another source group
+				if (type == "correction") {
+					removeCorrection(group)
+				} else if (type == "correction-group") {
+					removeCorrectionGroup(group)
 				} else if (type == "credit") {
+					removeCredit()
+				} else if (type == "patreon") {
+					removePatreon()
 				}
 
+				console.log("successfully removed " + type + " field");
 				document.getElementById("processing").classList.add("hidden");
 			} catch(err) {
 				console.log(">!< ERROR: " + err);

@@ -1301,6 +1301,18 @@
 				}
 			}
 		}
+		function removePatreon() {
+			let container = document.getElementById("patreon-container");
+			let p = document.getElementById("btn-patreon");
+			if (container.children[4]) {
+				let countNum = Number.parseInt(p.value);
+				let newCount = countNum - 1;
+				p.value = newCount;
+				for (x = 3; x > 0; x--) {
+					container.removeChild(container.lastChild)
+				}
+			}
+		}
 
 		function urlSanitize(url) {
 			if (url.indexOf("https://www.") != -1) { return url.slice(12) }

@@ -1160,6 +1160,32 @@
 			container.appendChild(row1);
 			container.appendChild(row2);
 		}
+		function addNewPatreonReward() {
+			let count = document.getElementById("btn-patreon");
+			let countNum = Number.parseInt(count.value);
+			let newCount = countNum + 1;
+			count.value = newCount;
+
+			const row1 = document.createElement("row");
+			row1.innerHTML =
+				`${tabs(8)}<label>Patreon URL:</label>` +
+				`\n${tabs(8)}<input id="input-patreon${newCount}-url" autocomplete="off">`;
+
+			const row2 = document.createElement("row");
+			row2.innerHTML =
+				`${tabs(8)}<label>Patreon Title:</label>` +
+				`\n${tabs(8)}<input id="input-patreon${newCount}-title" autocomplete="off">`;
+
+			const row3 = document.createElement("row");
+			row3.innerHTML =
+				`${tabs(8)}<label>Patreon Duration:</label>` +
+				`\n${tabs(8)}<input id="input-patreon${newCount}-duration" autocomplete="off">`;
+
+			let container = document.getElementById("patreon-container");
+			container.appendChild(row1);
+			container.appendChild(row2);
+			container.appendChild(row3);
+		}
 				} else if (type == "credit") {
 					let count = document.getElementById(type + "-count");
 					console.log("count: " + count);

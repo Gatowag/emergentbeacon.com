@@ -1267,6 +1267,16 @@
 				console.log(">!< ERROR: " + err);
 			}
 		}
+		function removeCorrection(g) {
+			let container = document.getElementById("correction" + g + "-rows");
+			let c = document.getElementById("btn-correction" + g);
+			if (container.children[1]) {
+				let countNum = Number.parseInt(c.value);
+				let newCount = countNum - 1;
+				c.value = newCount;
+				container.removeChild(container.lastChild);
+			}
+		}
 
 		function urlSanitize(url) {
 			if (url.indexOf("https://www.") != -1) { return url.slice(12) }

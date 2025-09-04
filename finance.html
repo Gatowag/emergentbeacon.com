@@ -109,10 +109,10 @@
 				["labor: Brandt Hughes","-$61.89","*"]],
 			total: "$0"}
 		];
-		let insufficient = false;
+		let insufficientFunds = false;
 
 		function generateReport() {
-			insufficient = false;
+			insufficientFunds = false;
 			let id = document.getElementById("report-id").value;
 			let indx = reportData
 				.map(function (element) {return element.id;})
@@ -133,7 +133,7 @@
 			table.append(createTableFoot(reportData[indx].total));
 
 			report.append(table);
-			if (insufficient == true) { report.append(createSub()) }
+			if (insufficientFunds == true) { report.append(createSub()) }
 			container.append(report);
 		}
 		function createTableHeaders() {
@@ -175,7 +175,7 @@
 					td2.innerHTML = e[1];
 				if (e[2]) {
 					td2.innerHTML = e[1] + e[2];
-					insufficient = true;
+					insufficientFunds = true;
 				}
 				tr.append(td1, td2);
 				output.append(tr);

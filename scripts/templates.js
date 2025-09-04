@@ -89,3 +89,10 @@ function adjustGrid() {
 		});
 	}
 }
+
+function tabs(num) {
+	let x = `	`;
+	let output = "";
+	for (i = 0; i < num; i++) { output += x; }
+	return output;
+}

@@ -1,6 +1,6 @@
-function buildFooter(levels) {
-	let a = "";
-	for (l = levels; l > 0; l--) { a += "." }
+function buildFooter(path) {
+	let levels = (path.match(/\//g) || []).length;
+	let a = relativePath(levels);
 	let footer = document.getElementsByTagName("footer")[0];
 	footer.innerHTML =
 `		<p>
@@ -59,6 +59,12 @@ function buildFooter(levels) {
 				<span class="tooltip-text">youtube 2</span>
 			</div>
 		</socials>`;
+}
+
+function relativePath(levels) {
+	let a = "";
+	for (l = levels; l > 0; l--) { a += "." }
+	return a;
 }
 
 function adjustGrid() {

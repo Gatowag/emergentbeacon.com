@@ -1,28 +1,25 @@
 let palette = localStorage.getItem("palette");
-const themeSwitch = document.getElementById("theme");
 
 if (palette === "dark") {
 	enableDark();
-	updateThemeButton("1");
+	//updateThemeButton("1");
 	updateBandcamp(":root");
 	console.log("dark mode enabled");
 }
 else if (palette === "light") {
 	enableLight();
-	updateThemeButton("2");
+	//updateThemeButton("2");
 	updateBandcamp(".mode-light");
 	console.log("light mode enabled");
 }
 else if (palette === "contrast") {
 	enableContrast();
-	updateThemeButton("3");
+	//updateThemeButton("3");
 	updateBandcamp(".mode-contrast");
 	console.log("high contrast mode enabled");
 }
 
-themeSwitch.addEventListener("click", (e) => {
-	let palette = localStorage.getItem("palette");
-
+/*themeSwitch.addEventListener("click", (e) => {
 	if (e.ctrlKey) {
 		if (palette == "dark") {
 			enableContrast();
@@ -58,7 +55,7 @@ themeSwitch.addEventListener("click", (e) => {
 			console.log("dark mode enabled");
 		}
 	}
-})
+})*/
 
 function updateBandcamp(b) {
 	let bcamp = document.getElementById("bandcamp-player");

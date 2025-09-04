@@ -1,4 +1,8 @@
 let palette = localStorage.getItem("palette");
+//const themeSwitch = document.getElementById("theme");
+const themeDark = document.getElementById("theme-dark");
+const themeLight = document.getElementById("theme-light");
+const themeContrast = document.getElementById("theme-contrast");
 
 if (palette === "dark") {
 	enableDark();
@@ -19,6 +23,21 @@ else if (palette === "contrast") {
 	console.log("high contrast mode enabled");
 }
 
+themeDark.addEventListener("click", (e) => {
+	enableDark();
+	updateBandcamp(":root");
+	console.log("dark mode enabled");
+});
+themeLight.addEventListener("click", (e) => {
+	enableLight();
+	updateBandcamp(".mode-light");
+	console.log("light mode enabled");
+});
+themeContrast.addEventListener("click", (e) => {
+	enableContrast();
+	updateBandcamp(".mode-contrast");
+	console.log("high contrast mode enabled");
+});
 /*themeSwitch.addEventListener("click", (e) => {
 	if (e.ctrlKey) {
 		if (palette == "dark") {
@@ -91,4 +110,8 @@ function enableContrast() {
 	document.body.classList.add("mode-contrast");
 	document.body.classList.remove("mode-light");
 	localStorage.setItem("palette", "contrast");
+}
+function toggleThemeList() {
+	let tl = document.getElementById("theme-list");
+	tl.classList.toggle("hidden");
 }

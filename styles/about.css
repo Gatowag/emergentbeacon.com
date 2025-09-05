@@ -14,7 +14,7 @@
 	--plaque: var(--secondary);
 }
 
-logo {
+main logo {
 	svg {
 		width: 6rem;
 		
@@ -24,6 +24,12 @@ logo {
 			stroke-width: var(--logo-stroke);
 		}
 		#interior { fill: var(--logo-int) }
+	}
+}
+footer logo {
+	svg {
+		#shell { fill: var(--social-icon); stroke-width: 0; }
+		#interior { fill: var(--secondary) }
 	}
 }
 about {

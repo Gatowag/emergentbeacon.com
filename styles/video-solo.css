@@ -74,6 +74,17 @@ main {
 			border: .2rem solid black;
 		}
 	}
+	button {
+		background: var(--btn-fill);
+		color: var(--btn-txt);
+		border-radius: .2rem;
+		padding: .3rem .6rem;
+		margin: .4rem .1rem;
+	}
+	button:hover, button:active {
+		background: hsl(160, 100%, 60%);
+		color: black;
+	}
 }
 h1 {
 	margin: 0;

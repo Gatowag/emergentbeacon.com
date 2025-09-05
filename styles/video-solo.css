@@ -63,25 +63,9 @@ body {
 }
 main {
 	display: grid;
-	gap: .6em;
-	grid-template-areas:
-		"header"
-		"vid-title"
-		"vid-embed"
-		"synopsis"
-		"corrections"
-		"clarifications"
-		"source-info"
-		"source-media"
-		"music"
-		"credits"
-		"transcript"
-		"rewards";
 }
 nav ul li { display: inline }
-header { grid-area: header }
 h1 {
-	grid-area: vid-title;
 	margin-top: 2.5rem;
 }
 h2 {
@@ -106,7 +90,6 @@ container {
 }
 
 #yt-player {
-	grid-area: vid-embed;
 	background-color: black;
 	border-radius: 1rem 1rem 0 0;
 	border: .2rem solid black;
@@ -116,7 +99,6 @@ container {
 	margin-top: -.6rem;
 }
 synopsis {
-	grid-area: synopsis;
 	background-color: var(--synopsis-fill);
 	color: var(--synopsis-txt);
 	padding: 1rem 1rem;
@@ -129,7 +111,6 @@ synopsis {
 
 /* [### ↓ CORRECTIONS ↓ ###] */
 corrections, clarifications {
-	grid-area: corrections;
 	background-color: var(--correction-fill);
 	color: var(--correction-txt);
 	border: .2rem solid black;
@@ -171,13 +152,9 @@ corrections, clarifications {
 		}
 	}
 }
-clarifications {
-	grid-area: clarifications;
-}
 
 /* [### ↓ SOURCES ↓ ###] */
 sources-info {
-	grid-area: source-info;
 	height: 100%;
 	min-width: 12em;
 
@@ -290,7 +267,6 @@ citation {
 }
 
 sources-media {
-	grid-area: source-media;
 	height: 100%;
 	min-width: 12em;
 
@@ -377,7 +353,6 @@ button:hover, button:active {
 
 /* [### ↓ MUSIC PREVIEW ↓ ###] */
 music {
-	grid-area: music;
 	background: #000000;
 	
 	height: 100%;
@@ -400,7 +375,6 @@ music {
 
 /* [### ↓ CREDITS ↓ ###] */
 credits {
-	grid-area: credits;
 	display: block;
 
 	container {
@@ -434,8 +408,6 @@ credits {
 
 /* [### ↓ TRANSCRIPTION ↓ ###] */
 transcription {
-	grid-area: transcript;
-
 	container {
 		padding: .2rem 0 1rem;
 		background: var(--credits-fill);
@@ -455,10 +427,8 @@ transcription {
 	}
 }
 
-
 /* [### ↓ PATREON REWARDS ↓ ###] */
 rewards {
-	grid-area: rewards;
 	display: block;
 	width: 100%;
 	max-width: 90vw;
@@ -506,7 +476,6 @@ rewards {
 	aspect-ratio: 2/1;
 	margin: 0 1rem 1rem;
 }
-
 
 /* [### ↓ FOOTER ↓ ###] */
 footnav {
@@ -568,59 +537,74 @@ footnav {
 	}
 }
 
+/* [### ↓ PRIMARY LAYOUT FLOW ↓ ###] */
+:root {
+	--row-clarifications: 5;
+	--row-sources: 6;
+	--row-music: 7;
+	--row-credits: 7;
+	--row-transcript: 8;
+	--row-rewards: 9;
+}
+
+main {
+	section {
+		display: grid;
+		gap: .6rem;
+		grid-template-columns: repeat(12, [col-start] 1fr);
+		grid-column: 3 / -3;
+
+		h1, #video, synopsis, corrections, clarifications, transcription, rewards { grid-column: col-start / -1 }
+		sources-info, music { grid-column: col-start / 7 }
+		sources-media, credits { grid-column: col-start 7 / -1 }
+
+		h1 { grid-row: 1 }
+		#video { grid-row: 2 }
+		synopsis { grid-row: 3 }
+		corrections { grid-row: 4 }
+		clarifications { grid-row: var(--row-clarifications) }
+		sources-info { grid-row: var(--row-sources) }
+		sources-media { grid-row: var(--row-sources) }
+		music { grid-row: var(--row-music) }
+		credits { grid-row: var(--row-credits) }
+		transcription { grid-row: var(--row-transcript) }
+		rewards { grid-row: var(--row-rewards) }
+		
+	}
+	section:not(:has(sources-media)) {
+		sources-info { grid-column: col-start / -1 }
+	}
+	section:not(:has(sources-info)) {
+		sources-media { grid-column: col-start / -1 }
+	}
+}
 
 /* [### ↓ DISPLAY: MOBILE ↓ ###] */
 @media screen and (max-width: 37rem) {
 	music { height: 30rem }
-	footnav { display: hidden; font-size: .9rem; }
-	.footnav-mobile { display: visible; font-size: .9rem; }
+	footnav { font-size: 1rem }
 }
 
-:root {
-	--row-clarifications: 6;
-	--row-sources: 7;
-	--row-music: 8;
-	--row-credits: 8;
-	--row-transcript: 9;
-	--row-rewards: 10;
-}
-/* [### ↓ DISPLAY: NON-MOBILE ↓ ###] */
-@media screen and (min-width: 41.5rem) {
+@media screen and (max-width: 41.5rem) {
 	main {
-		grid-template-columns: repeat(12, [col-start] 1fr);
-		grid-template-areas:
-			"header header"
-			"vid-title vid-title"
-			"vid-embed vid-embed"
-			"synopsis synopsis"
-			"corrections corrections"
-			"clarifications clarifications"
-			"source-info source-media"
-			"music credits"
-			"transcript"
-			"rewards rewards";
+		display: block;
+		section {
+			h1, #video, synopsis, corrections, clarifications, sources-info,
+			sources-media, music, credits, transcription, rewards { grid-column: col-start / -1 }
+			h1 { grid-row: 1 }
+			#video { grid-row: 2 }
+			synopsis { grid-row: 3 }
+			corrections { grid-row: 4 }
+			clarifications { grid-row: var(--row-clarifications) }
+			sources-info { grid-row: var(--row-sources) }
+			sources-media { grid-row: calc(var(--row-sources) + 1) }
+			music { grid-row: calc(var(--row-music) + 1) }
+			credits { grid-row: calc(var(--row-credits) + 2) }
+			transcription { grid-row: calc(var(--row-transcript) + 2) }
+			rewards { grid-row: calc(var(--row-rewards) + 2) }
+		}
 	}
-	h1, #yt-player, synopsis, corrections, clarifications, rewards { grid-column: col-start / -1 }
-	clarifications { grid-row: var(--row-clarifications) }
-	sources-info { grid-column: col-start / span 6;
-		grid-row: var(--row-sources) }
-	sources-media { grid-column: col-start 7 / -1;
-		grid-row: var(--row-sources) }
-
-	music { grid-column: col-start / 7;
-		grid-row: var(--row-music) }
-	credits { grid-column: col-start 7 / -1;
-		grid-row: var(--row-credits) }
-	transcription { grid-column: col-start / -1;
-		grid-row: var(--row-transcript) }
-	rewards { grid-row: var(--row-rewards) / -1 }
-
-	main:not(:has(sources-media)) {
-		sources-info { grid-column: col-start / -1 }
-	}
-	main:not(:has(sources-info)) {
-		sources-media { grid-column: col-start / -1 }
-	}
+	footnav { width: 90vw }
 }
 
 

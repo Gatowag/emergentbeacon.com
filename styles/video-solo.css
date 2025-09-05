@@ -439,7 +439,7 @@ transcription {
 		padding: .2rem 0 1rem;
 		background: var(--credits-fill);
 
-		aside {
+		p {
 			background:#e6e5e2;
 			color: #141414;
 			border: 2px solid black;

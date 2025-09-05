@@ -19,7 +19,9 @@
 		<header></header>
 		<main>
 			<h1>No Frames, No Boundaries</h1>
-			<video id="yt-player"></video>
+				<player id="video">
+					<video id="youtube"></video>
+				</player>
 
 			<synopsis>
 				Originally written by Russel Schweickart in 1974. The overview effect has a special place in my heart as an intense moment of developing extreme empathy that very few of us get to experience.
@@ -163,47 +165,10 @@
 
 	<script>
 		let path = window.location.pathname;
+		let ytID = "Vfmfdb_dEek";
 		buildHeader(path);
 		buildFooter(path);
 		adjustGrid();
-
-		// 2. This code loads the IFrame Player API code asynchronously.
-		var tag = document.createElement('script');
-		tag.src = "https://www.youtube.com/iframe_api";
-		var firstScriptTag = document.getElementsByTagName('script')[0];
-		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-		// 3. This function creates an <iframe> (and YouTube player)
-		//    after the API code downloads.
-		var player;
-		function onYouTubeIframeAPIReady() {
-		player = new YT.Player('yt-player', {
-			height: '400',
-			width: '100%',
-			videoId: 'Vfmfdb_dEek',
-			playerVars: {
-				'playsinline': 1
-			},
-			events: {
-				'onReady': onPlayerReady,
-				'onStateChange': onPlayerStateChange
-			}
-		});
-		}
-
-		// 4. The API will call this function when the video player is ready.
-		function onPlayerReady(event) {}
-		function onPlayerStateChange(event) {}
-
-		//generic seekTo function taking a player element and seconds as parameters
-		function playerSeekTo(player, seconds) {
-			player.seekTo(seconds);
-			player.scrollIntoView({
-				behavior: 'smooth',
-				block: 'start',
-				inline: 'nearest'
-			});
-		}
 
 		const iSearch = document.getElementById("infoSearchBanner");
 		function infoSearch() {

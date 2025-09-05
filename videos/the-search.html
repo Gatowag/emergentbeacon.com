@@ -202,8 +202,8 @@
 		});
 
 		// remove css color animation class when animation finishes
-		mSearch.addEventListener("animationend", listener, false);
-		function listener(event) {
+		mSearch.addEventListener("animationend", errorDisable, false);
+		function errorDisable(event) {
 			switch (event.type) {
 				case "animationend":
 					mSearch.classList.remove("error");

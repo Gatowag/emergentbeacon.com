@@ -162,19 +162,19 @@ function adjustGrid() {
 	let r = document.querySelector(':root');
 	let rs = getComputedStyle(r);
 	if (!document.getElementsByTagName("corrections")[0]) {
-		let arr = ["--row-clarifications","--row-sources","--row-music","--row-credits","--row-transcript","--row-rewards"];
+		let arr = ["--row-clarifications","--row-sources","--row-music","--row-credits","--row-transcript","--row-rewards","--row-footnav"];
 		arr.forEach((e) => {
 			r.style.setProperty(e, rs.getPropertyValue(e) - 1);
 		});
 	}
 	if (!document.getElementsByTagName("clarifications")[0]) {
-		let arr = ["--row-sources","--row-music","--row-credits","--row-transcript","--row-rewards"];
+		let arr = ["--row-sources","--row-music","--row-credits","--row-transcript","--row-rewards","--row-footnav"];
 		arr.forEach((e) => {
 			r.style.setProperty(e, rs.getPropertyValue(e) - 1);
 		});
 	}
 	if (!document.getElementsByTagName("sources-media")[0] && !document.getElementsByTagName("sources-info")[0]) {
-		let arr = ["--row-music","--row-credits","--row-transcript","--row-rewards"];
+		let arr = ["--row-music","--row-credits","--row-transcript","--row-rewards","--row-footnav"];
 		arr.forEach((e) => {
 			r.style.setProperty(e, rs.getPropertyValue(e) - 1);
 		});

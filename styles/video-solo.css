@@ -506,8 +506,7 @@ rewards {
 
 /* [### ↓ FOOTER ↓ ###] */
 footnav {
-	width: 75vw;
-	max-width: 56rem;
+	width: 100%;
 	text-align: center;
 	padding: .8rem 0 1rem;
 	margin: 0 auto;
@@ -572,6 +571,7 @@ footnav {
 	--row-credits: 7;
 	--row-transcript: 8;
 	--row-rewards: 9;
+	--row-footnav: 10;
 }
 
 main {
@@ -581,7 +581,7 @@ main {
 		grid-template-columns: repeat(12, [col-start] 1fr);
 		grid-column: 3 / -3;
 
-		h1, #video, synopsis, corrections, clarifications, transcription, rewards { grid-column: col-start / -1 }
+		h1, #video, synopsis, corrections, clarifications, transcription, rewards, footnav { grid-column: col-start / -1 }
 		sources-info, music { grid-column: col-start / 7 }
 		sources-media, credits { grid-column: col-start 7 / -1 }
 
@@ -596,6 +596,7 @@ main {
 		credits { grid-row: var(--row-credits) }
 		transcription { grid-row: var(--row-transcript) }
 		rewards { grid-row: var(--row-rewards) }
+		footnav { grid-row: var(--row-footnav) }
 		
 	}
 	section:not(:has(sources-media)) {
@@ -609,7 +610,7 @@ main {
 /* [### ↓ DISPLAY: MOBILE ↓ ###] */
 @media screen and (max-width: 37rem) {
 	music { height: 30rem }
-	footnav { font-size: 1rem }
+	footnav { font-size: 1rem; min-width: 17rem; }
 }
 
 @media screen and (max-width: 41.5rem) {
@@ -617,7 +618,7 @@ main {
 		display: block;
 		section {
 			h1, #video, synopsis, corrections, clarifications, sources-info,
-			sources-media, music, credits, transcription, rewards { grid-column: col-start / -1 }
+			sources-media, music, credits, transcription, rewards, footnav { grid-column: col-start / -1 }
 			h1 { grid-row: 1 }
 			#video { grid-row: 2 }
 			synopsis { grid-row: 3 }
@@ -629,9 +630,9 @@ main {
 			credits { grid-row: calc(var(--row-credits) + 2) }
 			transcription { grid-row: calc(var(--row-transcript) + 2) }
 			rewards { grid-row: calc(var(--row-rewards) + 2) }
+			footnav { grid-row: calc(var(--row-footnav) + 2) }
 		}
 	}
-	footnav { width: 90vw }
 }
 
 @media screen and (max-width: 54rem) {

@@ -412,7 +412,6 @@ button {
 @media screen and (max-width: 41.5rem) {
 	main { width: 90vw }
 	h1 { margin-top: 2.6rem }
-	.gallery { width: 28% }
 	footer {
 		flex-direction: column;
 		p { text-align: center; margin: 1rem auto; line-height: 2rem; }

@@ -70,7 +70,53 @@ h2 {
 	margin: 0 0 -3px;
 	padding: .15rem 0;
 	border: .2rem solid black;
+
+
+aside {
+	grid-column: 2 / 3;
+	display: inline-block;
+	position: sticky;
+	top: 0;
+	max-height: max-content;
+	padding: 1rem;
+	margin-top: 5.6rem;
+	height: fit-content;
+
+	toc {
+		display: inline-block;
+		font-size: .8rem;
+		line-height: 1.5rem;
+		padding: .4rem 1rem 1rem;
+		border-radius: .3rem;
+		background-color: var(--header-fill);
+		color: var(--header-txt);
+
+		h2 { font-size: 1rem; margin: .4rem; }
+		hr { border: 1px solid }
+		ul {
+			padding: unset;
+			margin: unset;
+			list-style: none;
+			li {
+				a {
+					color: var(--header-txt);
+					text-decoration: none;
+				}
+				a:hover {
+					color: var(--accent);
+				}
+			}
+			
+		}
+	}
 }
+aside li[data-current] > a {
+	color: var(--nav-current);
+}
+aside:not(:hover) li:not([data-current]) > a {
+	opacity: 1;
+}
+
 time {
 	font-family: "Roboto Mono", serif;
 }

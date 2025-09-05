@@ -112,31 +112,5 @@ playlist {
 }
 
 
-/*_________________
- |__ LIGHT MODE __|
-	-> 
-*/
-@media (prefers-color-scheme: light) {
-	.catalog-title {
-		color: #00586e;
-	}
-	.btn-random {
-		background: #85c7a1;
-		color: #141414;
-	}
-	.btn-random:hover, .btn-random:active {
-		background: #ffdc3e;
-	}
-	.vid-entry:hover {
-		background: #549070;
-		opacity: 0.3;
-		color: white;
-		transition: .4s ease;
-	}
-	.vid-block:hover > .vid-entry {
-		opacity: 0.5;
-	}
-	.vid-block:hover > .vid-entry:hover {
-		opacity: 1;
 	}
 }

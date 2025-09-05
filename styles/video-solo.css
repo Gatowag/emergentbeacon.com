@@ -137,6 +137,7 @@ container {
 }
 
 #youtube {
+	display: block;
 	background-color: black;
 	border-radius: 1rem 1rem 0 0;
 	border: .2rem solid black;

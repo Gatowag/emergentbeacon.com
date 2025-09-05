@@ -6,8 +6,9 @@ function buildHeader(path) {
 	console.log("levels: " + levels);
 
 	if (levels == 2) {
-		let l1End = path.indexOf("/",1);
-		let l2 = path.slice(1, l1End);
+		let l1End = path.indexOf("/", 1);
+		let l2End = path.indexOf("/", l1End + 1);
+		let l2 = path.slice(l2End + 1);
 		console.log("l2: " + l2);
 
 		if (l2 == "index.html") { navUl += `${tabs(5)}<li>/ home</li>` } else { navUl += `${tabs(5)}<li><a href="./index.html">| home</a></li>` }

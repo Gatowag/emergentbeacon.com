@@ -2,24 +2,28 @@ function buildHeader(path) {
 	let levels = (path.match(/\//g) || []).length;
 	let header = document.getElementsByTagName("header")[0];
 	let navUl = "";
+	console.log("path: " + path);
+	console.log("levels: " + levels);
 
-	if (levels == 1) {
-		let l1 = path.slice(1);
+	if (levels == 2) {
+		let l1End = path.indexOf("/",1);
+		let l2 = path.slice(1, l1End);
 
-		if (l1 == "index.html" || l1 == "home.html") { navUl += `${tabs(5)}<li>/ home</li>` } else { navUl += `${tabs(5)}<li><a href="./index.html">| home</a></li>` }
-		if (l1 == "videos.html") { navUl += `${tabs(5)}<li>/ videos</li>` } else { navUl += `${tabs(5)}<li><a href="./videos.html">| videos</a></li>` }
-		if (l1 == "music.html") { navUl += `${tabs(5)}<li>/ music</li>` } else { navUl += `${tabs(5)}<li><a href="./music.html">| music</a></li>` }
-		if (l1 == "about.html") { navUl += `${tabs(5)}<li>/ about</li>` } else { navUl += `${tabs(5)}<li><a href="./about.html">| about</a></li>` }
+		if (l2 == "index.html" || l1 == "home.html") { navUl += `${tabs(5)}<li>/ home</li>` } else { navUl += `${tabs(5)}<li><a href="./index.html">| home</a></li>` }
+		if (l2 == "videos.html") { navUl += `${tabs(5)}<li>/ videos</li>` } else { navUl += `${tabs(5)}<li><a href="./videos.html">| videos</a></li>` }
+		if (l2 == "music.html") { navUl += `${tabs(5)}<li>/ music</li>` } else { navUl += `${tabs(5)}<li><a href="./music.html">| music</a></li>` }
+		if (l2 == "about.html") { navUl += `${tabs(5)}<li>/ about</li>` } else { navUl += `${tabs(5)}<li><a href="./about.html">| about</a></li>` }
 
-	} else if (levels == 2) {
-		let end = path.indexOf("/",1);
-		let l1 = path.slice(1, end);
-		let l2 = path.slice(end + 1);
+	} else if (levels == 3) {
+		let l1End = path.indexOf("/", 1);
+		let l2End = path.indexOf("/", l1End + 1);
+		let l2 = path.slice(1, l2End);
+		let l3 = path.slice(l2End + 1);
 
 		navUl =
 			`${tabs(5)}<li><a href="../index.html">/ home</a></li>` +
-			`${tabs(5)}<li><a href="../${l1}.html">/ ${l1}</a></li>` +
-			`${tabs(5)}<li>/ ${l2}</li>`;
+			`${tabs(5)}<li><a href="../${l2}.html">/ ${l2}</a></li>` +
+			`${tabs(5)}<li>/ ${l3}</li>`;
 	}
 	header.innerHTML =
 `			<nav>
@@ -52,7 +56,7 @@ function buildHeader(path) {
 
 function buildFooter(path) {
 	let levels = (path.match(/\//g) || []).length;
-	let a = relativePath(levels);
+	let a = relativePath(levels - 1);
 	let footer = document.getElementsByTagName("footer")[0];
 	footer.innerHTML =
 `		<p>
@@ -113,6 +117,12 @@ function buildFooter(path) {
 		</socials>`;
 }
 
+function relativePath(levels) {
+	let a = "";
+	for (l = levels; l > 0; l--) { a += "." }
+	return a;
+}
+
 
 /* [### ↓ YT EMBED GENERATION ↓ ###] */
 // This code loads the IFrame Player API code asynchronously.
@@ -150,12 +160,6 @@ function playerSeekTo(player, seconds) {
 		block: 'start',
 		inline: 'nearest'
 	});
-}
-
-function relativePath(levels) {
-	let a = "";
-	for (l = levels; l > 0; l--) { a += "." }
-	return a;
 }
 
 function adjustGrid() {

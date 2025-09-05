@@ -56,9 +56,13 @@
 
 /* [### ↓ TOP LEVEL TAGS ↓ ###] */
 body {
+	width: unset;
 }
 main {
 	display: grid;
+	grid-template-columns: repeat(12, [col-start] 1fr);
+	width: 100%;
+	max-width: 90rem;
 }
 h1 {
 	margin-top: 2.5rem;
@@ -615,8 +619,8 @@ main {
 
 @media screen and (max-width: 41.5rem) {
 	main {
-		display: block;
 		section {
+			grid-column: 2 / -2;
 			h1, #video, synopsis, corrections, clarifications, sources-info,
 			sources-media, music, credits, transcription, rewards, footnav { grid-column: col-start / -1 }
 			h1 { grid-row: 1 }
@@ -637,9 +641,10 @@ main {
 
 @media screen and (max-width: 54rem) {
 	aside:has(toc) { display: none; opacity: 0 }
+	main { width: 100% }
 }
 
 /* [### ↓ DISPLAY: >1080p ↓ ###] */
 @media screen and (min-width: 121rem) {
-	.content-column { width: 90vw }
+	html { font-size: 2rem }
 }

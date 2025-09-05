@@ -83,9 +83,3 @@ table {
 		}
 	}
 }
-:not(:has(report)) {
-	footer {
-		position: absolute;
-		bottom: 0;
-	}
-}

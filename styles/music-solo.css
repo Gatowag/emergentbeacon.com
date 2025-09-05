@@ -27,10 +27,9 @@ music {
 	}
 	ul {
 		display: block;
-		min-width: 13rem;
+		min-width: 16rem;
 		width: 28rem;
 		line-height: 2rem;
-		font-size: 1rem;
 		margin: 0 auto;
 		padding: 0;
 		border-radius: .5rem;
@@ -40,6 +39,7 @@ music {
 		li {
 			list-style: none;
 			border-bottom: solid 1px black;
+			display: flex;
 			gap: 8rem;
 			position: relative;
 			padding: .4rem 1.4rem;
@@ -47,9 +47,6 @@ music {
 			text-align: left;
 			text-decoration: none;
 
-			span {
-				color: yellow;
-			}
 			a {
 				cursor: pointer;
 				color: var(--txt);
@@ -61,7 +58,6 @@ music {
 				border-radius: .2rem;
 				transition: .2s ease;
 
-				overflow: hidden;
 				text-decoration: none;
 				text-wrap: nowrap;
 				text-align: center;

@@ -106,6 +106,9 @@ html {
 }
 body {
 	margin:0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 	background-color: var(--background);
 	color: var(--txt);
 	font-family: "Rubik", serif;
@@ -114,6 +117,7 @@ main {
 	max-width: 56rem;
 	text-align: center;
 	margin: auto;
+	flex-grow: 1;
 }
 h1 { font-size: 3rem }
 
@@ -213,6 +217,7 @@ footer {
 	justify-content: space-evenly;
 	margin-top: 4rem;
 	padding: .5rem;
+	bottom: 0;
 
 	p {
 		display: flex-inline;

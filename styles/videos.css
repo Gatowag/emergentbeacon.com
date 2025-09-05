@@ -79,7 +79,6 @@ vid-grid {
 	object-position: 0 0;
 	transition: .5s ease;
 }
-#img-tenere:hover { content: url("../assets/video-previews/eb009--preview.gif") }
 
 playlist {
 	display: block;

@@ -9,7 +9,7 @@ function buildHeader(path) {
 		let l1End = path.indexOf("/",1);
 		let l2 = path.slice(1, l1End);
 
-		if (l2 == "index.html" || l1 == "home.html") { navUl += `${tabs(5)}<li>/ home</li>` } else { navUl += `${tabs(5)}<li><a href="./index.html">| home</a></li>` }
+		if (l2 == "index.html" || l2 == "home.html") { navUl += `${tabs(5)}<li>/ home</li>` } else { navUl += `${tabs(5)}<li><a href="./index.html">| home</a></li>` }
 		if (l2 == "videos.html") { navUl += `${tabs(5)}<li>/ videos</li>` } else { navUl += `${tabs(5)}<li><a href="./videos.html">| videos</a></li>` }
 		if (l2 == "music.html") { navUl += `${tabs(5)}<li>/ music</li>` } else { navUl += `${tabs(5)}<li><a href="./music.html">| music</a></li>` }
 		if (l2 == "about.html") { navUl += `${tabs(5)}<li>/ about</li>` } else { navUl += `${tabs(5)}<li><a href="./about.html">| about</a></li>` }
@@ -17,7 +17,7 @@ function buildHeader(path) {
 	} else if (levels == 3) {
 		let l1End = path.indexOf("/", 1);
 		let l2End = path.indexOf("/", l1End + 1);
-		let l2 = path.slice(1, l2End);
+		let l2 = path.slice(l1End + 1, l2End);
 		let l3 = path.slice(l2End + 1);
 
 		navUl =

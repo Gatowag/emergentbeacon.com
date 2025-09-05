@@ -346,7 +346,7 @@ button {
 
 /* [### ↓ STYLE MODULES ↓ ###] */
 
-.hidden { display: none; }
+.hidden { display: none; opacity: 0; }
 .mono { font-family: roboto mono, courier new, monospace; }
 .cutout { outline-style: dashed; outline-offset: -.125rem; outline-width: .125rem; }
 .extrude { border: .2rem solid black; box-shadow: .125rem .125rem black; }

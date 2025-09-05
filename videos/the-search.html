@@ -173,26 +173,6 @@
 		adjustGrid();
 		updateTOC();
 
-		const iSearch = document.getElementById("infoSearchBanner");
-		function infoSearch() {
-			let input = document.getElementById("infoInput");
-			let inputVal = input.value;
-			let container = document.documentElement;
-			let containerPos = container.scrollTop;
-			let anchor = document.getElementById('Info' + inputVal);
-
-			if (anchor == null) {
-				iSearch.classList.add("error");
-			} else {
-				anchor.scrollIntoView({
-					behavior: 'smooth',
-					block: 'start',
-					inline: 'nearest'
-				});
-				container.scrollTop = containerPos;
-			}
-		}
-
 		const mSearch = document.getElementById("mediaSearchBanner");
 		function mediaSearch() {
 			let input = document.getElementById("mediaInput");
@@ -214,12 +194,6 @@
 		}
 
 		// source lookup behavior: disable form submit on "Enter," replace with function
-		document.getElementById("infoInput").addEventListener("keydown", function (e) {
-			if (e.code === "Enter") {
-				e.preventDefault();
-				infoSearch();
-			}
-		});
 		document.getElementById("mediaInput").addEventListener("keydown", function (e) {
 			if (e.code === "Enter") {
 				e.preventDefault();
@@ -228,13 +202,11 @@
 		});
 
 		// remove css color animation class when animation finishes
-		iSearch.addEventListener("animationend", listener, false);
 		mSearch.addEventListener("animationend", listener, false);
 		function listener(event) {
 			switch (event.type) {
 				case "animationend":
 					mSearch.classList.remove("error");
-					iSearch.classList.remove("error");
 					break;
 			}
 		}

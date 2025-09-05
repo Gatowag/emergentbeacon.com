@@ -409,23 +409,8 @@ button {
 
 
 /* [### ↓ DISPLAY: MOBILE ↓ ###] */
-
 @media screen and (max-width: 41.5rem) {
 	main { width: 90vw }
-	nav {
-		display: block;
-		position: unset;
-		margin: 0 auto;
-		text-align: center;
-
-		ul li { display: inline }
-	}
-	#theme {
-		top: 2.2rem;
-		right: calc(50% - 2rem);
-	}
-	#theme:hover, #theme:focus-visible { transform: translateY(-.2em) }
-	#theme:active { transform: translateY(.1em) }
 	h1 { margin-top: 2.6rem }
 	.gallery { width: 28% }
 	footer {
@@ -437,7 +422,6 @@ button {
 
 
 /* [### ↓ DISPLAY: >1080p ↓ ###] */
-
 @media screen and (min-width: 121em) {
 	main { width: 90vw }
 }

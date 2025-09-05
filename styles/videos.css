@@ -1,4 +1,24 @@
-main { width: 80vw }
+main {
+	width: 80vw;
+
+	button {
+		background-color: var(--accent);
+		color: var(--background);
+		border: none;
+		border-radius: .1rem;
+		padding: .3rem .7rem;
+		margin: 0 .2rem 1rem;
+		transition: .2s ease;
+
+		font-family: "Roboto", serif;
+		font-weight: 600;
+	}
+	button:hover {
+		background-color: var(--txt);
+		transform: translateY(-.2rem);
+	}
+	button:active { transform: translateY(.1rem) }
+}
 section { width: 100% }
 
 .catalog-entry {
@@ -60,26 +80,6 @@ vid-grid {
 	transition: .5s ease;
 }
 #img-tenere:hover { content: url("../assets/video-previews/eb009--preview.gif") }
-
-
-button {
-	background-color: var(--accent);
-	color: var(--background);
-	border: none;
-	border-radius: .1rem;
-	padding: .3rem .7rem;
-	margin: 0 .2rem 1rem;
-	transition: .2s ease;
-
-	font-family: "Roboto", serif;
-	font-weight: 600;
-}
-button:hover {
-	background-color: var(--txt);
-	transform: translateY(-.2rem);
-}
-button:active { transform: translateY(.1rem) }
-
 
 playlist {
 	display: block;

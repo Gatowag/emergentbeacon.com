@@ -18,134 +18,150 @@
 	<body>
 		<header></header>
 		<main>
-			<h1>No Frames, No Boundaries</h1>
+			<aside>
+				<toc class="toc">
+					<h2>contents</h2>
+					<hr>
+					<ul class="toc-list">
+						<li><a href="#title">title</a></li>
+						<li><a href="#video">video</a></li>
+						<li><a href="#clarifications">clarifications</a></li>
+						<li><a href="#sources">sources</a></li>
+						<li><a href="#music">music</a></li>
+						<li><a href="#credits">credits</a></li>
+						<li><a href="#transcript">transcript</a></li>
+						<li><a href="#rewards">rewards</a></li>
+					</ul>
+				</toc>
+			</aside>
+			<section>
+				<h1 id="title">No Frames, No Boundaries</h1>
 				<player id="video">
 					<video id="youtube"></video>
 				</player>
 
-			<synopsis>
-				Originally written by Russel Schweickart in 1974. The overview effect has a special place in my heart as an intense moment of developing extreme empathy that very few of us get to experience.
-			</synopsis>
+				<synopsis>
+					Originally written by Russel Schweickart in 1974. The overview effect has a special place in my heart as an intense moment of developing extreme empathy that very few of us get to experience.
+				</synopsis>
 
-			<clarifications>
-				<h4>CLARIFICATIONS</h4>
-				<ul>
-					<li>the lecture was truncated for this video but can be heard in full at <a href="https://youtu.be/IvcHuzrv_gM">youtu.be/IvcHuzrv_gM</a></li>
-				</ul>
-			</clarifications>
+				<clarifications id="clarifications">
+					<h4>CLARIFICATIONS</h4>
+					<ul>
+						<li>the lecture was truncated for this video but can be heard in full at <a href="https://youtu.be/IvcHuzrv_gM">youtu.be/IvcHuzrv_gM</a></li>
+					</ul>
+				</clarifications>
 
-			<sources-info>
-				<h2>Info Sources</h2>
-				<container id="infoContainer">
-					<citation id="Info1">
-						<number>1</number>
-						<blockquote>
-							But up there you go around every hour and a half
-							<time datetime="PT00M08S">timecode <a href="#" onclick="playerSeekTo(player, 8); return false;">00:08</a></time>
-						</blockquote>
-						<info>
-							<cite>No Frames, No Boundaries lecture</cite>
-							<info-details>
-								1974, Russel Schweickart<br>
-								<a href="http://youtu.be/IvcHuzrv_gM?t=1965">performed section starts at timecode 32:45</a>
-							</info-details>
-							<origin>
-								<a href="https://youtu.be/IvcHuzrv_gM">youtu.be/IvcHuzrv_gM</a>
-							</origin>
-						</info>
-					</citation>
-				</container>
-			</sources-info>
+				<sources-info id="sources">
+					<h2>Info Sources</h2>
+					<container id="infoContainer">
+						<citation id="Info1">
+							<number>1</number>
+							<blockquote>
+								But up there you go around every hour and a half
+								<time datetime="PT00M08S">timecode <a href="#" onclick="playerSeekTo(player, 8); return false;">00:08</a></time>
+							</blockquote>
+							<info>
+								<cite>No Frames, No Boundaries lecture</cite>
+								<info-details>
+									1974, Russel Schweickart<br>
+									<a href="http://youtu.be/IvcHuzrv_gM?t=1965">performed section starts at timecode 32:45</a>
+								</info-details>
+								<origin>
+									<a href="https://youtu.be/IvcHuzrv_gM">youtu.be/IvcHuzrv_gM</a>
+								</origin>
+							</info>
+						</citation>
+					</container>
+				</sources-info>
 
-			<sources-media>
-				<h2>Media Sources</h2>
-				<container id="media-container">
-					<citation id="Media1">
-						<anchor>
-							<a href="#" onclick="playerSeekTo(player, 274); return false;"><time datetime="PT04M34S">04:34</time></a><indx>m1</indx>
-						</anchor>
-						<info>
-							<cite>PHOTO: Russel Schweickart</cite>
-							<info-details>
-								1971
-								NASA<br>
-							</info-details>
-							<origin>
-								<a href="https://commons.wikimedia.org/wiki/File:RustySchweickart.jpg">commons.wikimedia.org/wiki/File:RustySchweickart.jpg</a>
-							</origin>
-						</info>
-					</citation>
-					<citation id="Media2">
-						<anchor>
-							<a href="#" onclick="playerSeekTo(player, 88); return false;"><time datetime="PT01M28S">01:28</time></a><indx>m2</indx>
-						</anchor>
-						<info>
-							<cite>photos from the Apollo 9 and Apollo 15 missions</cite>
-							<info-details>
-								1969/1971
-								NASA<br>
-							</info-details>
-							<origin>
-								<a href="http://apolloarchive.com/apollo_gallery.html">apolloarchive.com/apollo_gallery.html</a>
-							</origin>
-						</info>
-					</citation>
-				</container>
-			</sources-media>
+				<sources-media>
+					<h2>Media Sources</h2>
+					<container id="media-container">
+						<citation id="Media1">
+							<anchor>
+								<a href="#" onclick="playerSeekTo(player, 274); return false;"><time datetime="PT04M34S">04:34</time></a><indx>m1</indx>
+							</anchor>
+							<info>
+								<cite>PHOTO: Russel Schweickart</cite>
+								<info-details>
+									1971
+									NASA<br>
+								</info-details>
+								<origin>
+									<a href="https://commons.wikimedia.org/wiki/File:RustySchweickart.jpg">commons.wikimedia.org/wiki/File:RustySchweickart.jpg</a>
+								</origin>
+							</info>
+						</citation>
+						<citation id="Media2">
+							<anchor>
+								<a href="#" onclick="playerSeekTo(player, 88); return false;"><time datetime="PT01M28S">01:28</time></a><indx>m2</indx>
+							</anchor>
+							<info>
+								<cite>photos from the Apollo 9 and Apollo 15 missions</cite>
+								<info-details>
+									1969/1971
+									NASA<br>
+								</info-details>
+								<origin>
+									<a href="http://apolloarchive.com/apollo_gallery.html">apolloarchive.com/apollo_gallery.html</a>
+								</origin>
+							</info>
+						</citation>
+					</container>
+				</sources-media>
 
-			<music>
-				<h2>Music</h2>
-				<iframe id="bandcamp-player" src="https://bandcamp.com/EmbeddedPlayer/album=2488943393/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="https://emergentbeacon.bandcamp.com/album/what-exactly-is-art">What Exactly is Art? by Emergent Beacon</a></iframe>
-				<download>
-					available on some platforms<br>
-					<button type="button" onclick="document.location='../music/art.html'" value="Go to music details page.">more info</button>
-				</download>
-			</music>
+				<music id="music">
+					<h2>Music</h2>
+					<iframe id="bandcamp-player" src="https://bandcamp.com/EmbeddedPlayer/album=2488943393/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="https://emergentbeacon.bandcamp.com/album/what-exactly-is-art">What Exactly is Art? by Emergent Beacon</a></iframe>
+					<download>
+						available on some platforms<br>
+						<button type="button" onclick="document.location='../music/art.html'" value="Go to music details page.">more info</button>
+					</download>
+				</music>
 
-			<credits>
-				<h2>Credits</h2>
-				<container>
-					<p>
-						<credit-name>Brandt Hughes</credit-name>
-						<credit-role>research, writing, host, camera operator, audio engineer, music production, editor</credit-role>
-						<credit-name>Jason Murphy</credit-name>
-						<credit-role>guest speaker</credit-role>
-						<credit-name>Bryce Castillo</credit-name>
-						<credit-role>additional audio engineering, production assistance </credit-role>
-					</p>
-				</container>
-			</credits>
+				<credits id="credits">
+					<h2>Credits</h2>
+					<container>
+						<p>
+							<credit-name>Brandt Hughes</credit-name>
+							<credit-role>research, writing, host, camera operator, audio engineer, music production, editor</credit-role>
+							<credit-name>Jason Murphy</credit-name>
+							<credit-role>guest speaker</credit-role>
+							<credit-name>Bryce Castillo</credit-name>
+							<credit-role>additional audio engineering, production assistance </credit-role>
+						</p>
+					</container>
+				</credits>
 
-			<transcription>
-				<h2>Transcript</h2>
-				<container>
-					<aside>
+				<transcription id="transcript">
+					<h2>Transcript</h2>
+					<container>
 						<p>
 							But up there you go around every hour and a half; time after time after time.<br><br>And you wake up usually in the mornings, and just the way the track of your orbits go you wake up over the Mid-East, and over North Africa.<br><br>And as you eat breakfast, you look out the window as you're going past and there's the Mediterranean area, Greece, and Rome, and North Africa, and the Sinai, that whole area.<br><br>And you realize that in one glance, what you're seeing is what was the whole history of man for years -- the cradle of civilization.<br><br>And you think of all that history that you can imagine, and you go down across North Africa and out over the Indian Ocean and you look up at that great subcontinent of India pointed down toward you as you go past it, Ceylon off to the side, and Burma, Southeast Asia, out over the Philippines and up across that monstrous Pacific Ocean, that vast body of water.<br><br>You've never realized how big that is before.<br><br>And you finally come up across the coast of California and you look for those friendly things, Los Angeles, and Phoenix and on across to El Paso.<br><br>And there's Houston, there's home.<br><br>You know, and you look and sure enough, there's the Astrodome -- and you identify with that.<br><br>It's an attachment.<br><br>And on across New Orleans and then you look down to the south and there's the whole peninsula of Florida just laid out.<br><br>And all the hundreds of hours you've spent flying across that route down in the atmosphere, all that is friendly again.<br><br>You go out across the Atlantic Ocean and back across Africa, you do it again and again and again.<br><br>And you identify with Houston, and then you identify with Los Angeles, Phoenix, and New Orleans.<br><br>And the next thing you recognize in yourself is that you're identifying with North Africa.<br><br>You look forward to that, you anticipate it, and there it is.<br><br>That whole process begins to shift of what it is you identify with.<br><br>When you go around it in an hour and a half, you begin to recognize that your identity is with that whole thing.<br><br>And that makes a change.<br><br>And you look down there, and you can't imagine how many borders and boundaries you cross.<br><br>Again and again and again, and you don't even see them.<br><br>There you are -- hundreds of people killing each other over some imaginary line that you're not even aware of, that you can't see.<br><br>And from where you see it, this thing is a whole and it's so beautiful.<br><br>You wish you could take one in each hand, one from each side and say, "Look.<br><br>Look at it from this perspective, look at that.<br><br>"What's important?" And a little later on, your friend, the person next to you goes out to the Moon.<br><br>And now he looks back and he sees the Earth not as something big, where he can see the beautiful details, but now he sees the Earth as a a small thing out there.<br><br>Now that contrast between the bright blue and white Christmas tree ornament and that black sky, that...<br><br>infinite universe, it really comes through.<br><br>And the size of it, the significance of it -- it becomes both things.<br><br>It becomes so small and so fragile, and such a precious little spot in that universe that you can block out with your thumb.<br><br>And you realize that on that small spot, that little blue and white thing, is everything that means anything to you.<br><br>All of history, music, poetry, art, war and death and birth, love, tears, joy, games, all of it!<br><br>And that little spot out there that you can cover with your thumb.<br><br>And you realize from that perspective that you've changed that there's something new there and that the relationship is it's no longer what it was.<br><br>And it tells you something about your relationship with this thing we call life.<br><br>So that's a change that's -- that's something new.<br><br>When you come back, there's a difference in that world now, there's a difference in that relationship between you and that planet.<br><br>And you and all those other forms of life on that planet because you've had that kind of experience.<br><br>It's a difference and it's so precious.<br><br>That was a lecture given by astronaut Russell Schweickart in 1974, where he described for the first time publicly, his experiences being in outer space during the Apollo Nine mission in 1969.<br><br>He was describing what's come to be known as the overview effect, and it's something that more than a few astronauts have reported experiencing.<br><br>Now, to me, this sounds like the effects of a most potent art.<br><br>What every work of art should really aspire to do.<br><br>He had a literal change in worldview.<br><br>He was up there, and by every measure that I can imagine, he felt it.<br><br>But there was no artist who painted this canvas.<br><br>No, this was the result of billions of years of change and a whole lot of good luck--
 						</p>
-					</aside>
-				</container>
-			</transcription>
+					</container>
+				</transcription>
 
-			<rewards>
-				<h2>Bonus Material</h2>
-				<container>
-					<p>
-						<a href="https://patreon.com/emergentbeacon" class="support-link" title="patreon.com/emergentbeacon">Pledge now</a> for these behind the scenes exclusives!
-					</p>
-					<items>
-						<bonus-entry>
-							<a href="https://patreon.com/posts/58836465">
-								<img src="../assets/patreon/003--no-frames.jpg" style="object-position: 0rem 0;">
-							</a>
-							<p>
-								<time datetime="PT5M16S">5:16</time><br>
-								<span>The Longest Take</span>
-							</p>
-						</bonus-entry>
-					</items>
-				</container>
-			</rewards>
+				<rewards id="rewards">
+					<h2>Bonus Material</h2>
+					<container>
+						<p>
+							<a href="https://patreon.com/emergentbeacon" class="support-link" title="patreon.com/emergentbeacon">Pledge now</a> for these behind the scenes exclusives!
+						</p>
+						<items>
+							<bonus-entry>
+								<a href="https://patreon.com/posts/58836465">
+									<img src="../assets/patreon/003--no-frames.jpg" style="object-position: 0rem 0;">
+								</a>
+								<p>
+									<time datetime="PT5M16S">5:16</time><br>
+									<span>The Longest Take</span>
+								</p>
+							</bonus-entry>
+						</items>
+					</container>
+				</rewards>
+			</section>
 		</main>
 
 		<footnav>
@@ -169,6 +185,7 @@
 		buildHeader(path);
 		buildFooter(path);
 		adjustGrid();
+		updateTOC();
 
 		const iSearch = document.getElementById("infoSearchBanner");
 		function infoSearch() {

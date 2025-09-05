@@ -18,403 +18,419 @@
 	<body>
 		<header></header>
 		<main>
-			<h1>The Mystery of Sedna’s Orbit</h1>
+			<aside>
+				<toc class="toc">
+					<h2>contents</h2>
+					<hr>
+					<ul class="toc-list">
+						<li><a href="#title">title</a></li>
+						<li><a href="#video">video</a></li>
+						<li><a href="#corrections">corrections</a></li>
+						<li><a href="#sources">sources</a></li>
+						<li><a href="#music">music</a></li>
+						<li><a href="#credits">credits</a></li>
+						<li><a href="#transcript">transcript</a></li>
+						<li><a href="#rewards">rewards</a></li>
+					</ul>
+				</toc>
+			</aside>
+			<section>
+				<h1 id="title">The Mystery of Sedna’s Orbit</h1>
 				<player id="video">
 					<video id="youtube"></video>
 				</player>
 
-			<synopsis>
-				Quite far away, a lonely, red rock has something imprinted upon its mysterious orbit. What secrets might it hold?
-			</synopsis>
+				<synopsis>
+					Quite far away, a lonely, red rock has something imprinted upon its mysterious orbit. What secrets might it hold?
+				</synopsis>
 
-			<corrections>
-				<h4>CORRECTIONS</h4>
-				<ul>
-					<li><a class="roboto-mono-400" href="#" onclick="playerSeekTo(player, 240); return false;">4:00</a> The diagram mistakenly swaps the labels for sedna's periapsis and apoapsis.</li>
-					<span>(reported by youtube viewer CatKhakis)</span>
-				</ul>
-			</corrections>
+				<corrections id="corrections">
+					<h4>CORRECTIONS</h4>
+					<ul>
+						<li><a class="roboto-mono-400" href="#" onclick="playerSeekTo(player, 240); return false;">4:00</a> The diagram mistakenly swaps the labels for sedna's periapsis and apoapsis.</li>
+						<span>(reported by youtube viewer CatKhakis)</span>
+					</ul>
+				</corrections>
 
-			<sources-info>
-				<h2>Info Sources</h2>
-				<container id="infoContainer">
-					<citation id="Info1">
-						<number>1</number>
-						<blockquote>
-							"Sunrise is cold and brief here. There's a new one every 10 hours."
-							<time datetime="PT00M14S">timecode <a href="#" onclick="playerSeekTo(player, 14); return false;">00:14</a></time>
-						</blockquote>
-						<info>
-							<cite>on the rotation period of (90377) Sedna</cite>
-							<info-details>
-								2018, Gaudi et al.<br>
-								§ abstract
-							</info-details>
-							<origin>
-								<a href="https://arxiv.org/pdf/astro-ph/0503673.pdf">arxiv.org/pdf/astro-ph/0503673.pdf</a>
-							</origin>
-						</info>
-					</citation>
-					<citation id="Info2">
-						<number>2</number>
-						<blockquote>
-							<span class="cite-box-detail">assumption: observer is 5' 9" tall<br></span>"a short horizon, never further than a mile away."
-							<time datetime="PT00M23S">timecode <a href="#" onclick="playerSeekTo(player, 23); return false;">00:23</a></time>
-						</blockquote>
-						<info>
-							<cite>distance to horizon on Sedna</cite>
-							<info-details>
-								2022, 
-								WolframAlpha<br>
-								§ results
-							</info-details>
-							<origin>
-								<a href="https://www.wolframalpha.com/input?i=distance+to+horizon&assumption=%7B%22FS%22%7D+-%3E+%7B%7B%22HorizonDistance%22%2C+%22d%22%7D%7D&assumption=%7B%22F%22%2C+%22HorizonDistance%22%2C+%22h%22%7D+-%3E%225+ft+9+in%22&assumption=%7B%22F%22%2C+%22HorizonDistance%22%2C+%22r%22%7D+-%3E%22sedna%22">wolframalpha.com/input?i=distance+to+horizon&assumption=%7B%22FS%22%7D+-%3E+%7B%7B%22HorizonDistance%22%2C+%22d%22%7D%7D&assumption=%7B%22F%22%2C+%22HorizonDistance%22%2C+%22h%22%7D+-%3E%225+ft+9+in%22&assumption=%7B%22F%22%2C+%22HorizonDistance%22%2C+%22r%22%7D+-%3E%22sedna%22</a>
-							</origin>
-						</info>
-					</citation>
-					<citation id="Info3">
-						<number>3</number>
-						<multi>
-							<tab-align>
-								<tab-part>A</tab-part>
-								<blockquote>
-									"Sedna was discovered in the year 2003."<br>
-									<time datetime="PT00M55S">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 55); return false;">00:55</a></time>
-								</blockquote>
-							</tab-align>
-							<tab-align>
-								<tab-part>B</tab-part>
-								<blockquote>
-									"There are a few theories about Sedna's orbit and how it became so eccentric."<br>
-									<time datetime="PT04M04S">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 55); return false;">04:04</a></time>
-								</blockquote>
-							</tab-align>
+				<sources-info id="sources">
+					<h2>Info Sources</h2>
+					<container id="infoContainer">
+						<citation id="Info1">
+							<number>1</number>
+							<blockquote>
+								"Sunrise is cold and brief here. There's a new one every 10 hours."
+								<time datetime="PT00M14S">timecode <a href="#" onclick="playerSeekTo(player, 14); return false;">00:14</a></time>
+							</blockquote>
 							<info>
-								<cite>discovery of a candidate inner Oort cloud planetoid</cite>
+								<cite>on the rotation period of (90377) Sedna</cite>
 								<info-details>
-									2004, Brown et al.<br>
-									A: publish date<br>B: § 4. Origin
+									2018, Gaudi et al.<br>
+									§ abstract
 								</info-details>
 								<origin>
-									<a href="https://web.gps.caltech.edu/~mbrown/papers/ps/sedna.pdf">web.gps.caltech.edu/~mbrown/papers/ps/sedna.pdf</a>
+									<a href="https://arxiv.org/pdf/astro-ph/0503673.pdf">arxiv.org/pdf/astro-ph/0503673.pdf</a>
 								</origin>
 							</info>
-						</multi>
-					</citation>
-					<citation id="Info4">
-						<number>4</number>
-						<blockquote>
-							... "advancements in astronomy started revealing exoplanets that defy expectations and distant local bodies roughly the size of Pluto, calling into question what exactly earns the title of planet. Sedna's discovery was one among them" ...
-							<time datetime="PT01M03S">timecode <a href="#" onclick="playerSeekTo(player, 63); return false;">01:03</a></time>
-						</blockquote>
-						<info>
-							<cite>Planetesimals to Brown Dwarfs: What is a Planet?</cite>
-							<info-details>
-								2006, Basri & Brown<br>
-								§ introduction
-							</info-details>
-							<origin>
-								<a href="https://web.gps.caltech.edu/~mbrown/papers/ps/basribrown.pdf">web.gps.caltech.edu/~mbrown/papers/ps/basribrown.pdf</a>
-							</origin>
-						</info>
-					</citation>
-					<citation id="Info5">
-						<number>5</number>
-						<blockquote>
-							"In 2015, Leleākūhonua was discovered, an even more distant object orbiting the Sun." ...
-							<time datetime="PT01M24S">timecode <a href="#" onclick="playerSeekTo(player, 84); return false;">01:24</a></time>
-						</blockquote>
-						<info>
-							<cite>wiki: Leleākūhonua</cite>
-							<info-details>
-								Wikipedia<br>
-								accessed 2022<br>
-								§ summary
-							</info-details>
-							<origin>
-								<a href="https://en.wikipedia.org/wiki/541132_Lele%C4%81k%C5%ABhonua">en.wikipedia.org/wiki/541132_Lele%C4%81k%C5%ABhonua</a>
-							</origin>
-						</info>
-					</citation>
-					<citation id="Info6">
-						<number>6</number>
-						<blockquote>
-							"These objects collectively motivated the 2006 redefinition of planets." ...
-							<time datetime="PT01M28S">timecode <a href="#" onclick="playerSeekTo(player, 88); return false;">01:28</a></time>
-						</blockquote>
-						<info>
-							<cite>Results of the 2006 IAU Resolution votes</cite>
-							<info-details>
-								2006, 
-								IAU<br>
-								¶ 4
-							</info-details>
-							<origin>
-								<a href="https://web.archive.org/web/20061107022302/http://www.iau2006.org/mirror/www.iau.org/iau0603/index.html">web.archive.org/web/20061107022302/http://www.iau2006.org/mirror/www.iau.org/iau0603/index.html</a>
-							</origin>
-						</info>
-					</citation>
-					<citation id="Info7">
-						<number>7</number>
-						<blockquote>
-							"And so it was deemed that planets are a more exclusive club. Pluto was shut out."
-							<time datetime="PT01M45S">timecode <a href="#" onclick="playerSeekTo(player, 105); return false;">01:45</a></time>
-						</blockquote>
-						<info>
-							<cite>Breaking News– Pluto not a planet!</cite>
-							<info-details>
-								2006, Phil Plait<br>
-								Slate<br>
-								¶ 1
-							</info-details>
-							<origin>
-								<a href="https://slate.com/technology/2006/08/breaking-news-pluto-not-a-planet.html">slate.com/technology/2006/08/breaking-news-pluto-not-a-planet.html</a>
-							</origin>
-						</info>
-					</citation>
-					<citation id="Info8">
-						<number>8</number>
-						<multi>
-							<tab-align>
-								<tab-part>A</tab-part>
-								<blockquote>
-									"It measures about a thousand kilometers in diameter across each dimension."<br>
-									<time datetime="PT02M01S">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 121); return false;">02:01</a></time>
-								</blockquote>
-							</tab-align>
-							<tab-align>
-								<tab-part>B</tab-part>
-								<blockquote>
-									... "that's only one percent of Earth's orbital speed."<br>
-									<time datetime="PT03M12S">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 121); return false;">03:12</a></time>
-								</blockquote>
-							</tab-align>
+						</citation>
+						<citation id="Info2">
+							<number>2</number>
+							<blockquote>
+								<span class="cite-box-detail">assumption: observer is 5' 9" tall<br></span>"a short horizon, never further than a mile away."
+								<time datetime="PT00M23S">timecode <a href="#" onclick="playerSeekTo(player, 23); return false;">00:23</a></time>
+							</blockquote>
 							<info>
-								<cite>wiki: Sedna</cite>
+								<cite>distance to horizon on Sedna</cite>
+								<info-details>
+									2022, 
+									WolframAlpha<br>
+									§ results
+								</info-details>
+								<origin>
+									<a href="https://www.wolframalpha.com/input?i=distance+to+horizon&assumption=%7B%22FS%22%7D+-%3E+%7B%7B%22HorizonDistance%22%2C+%22d%22%7D%7D&assumption=%7B%22F%22%2C+%22HorizonDistance%22%2C+%22h%22%7D+-%3E%225+ft+9+in%22&assumption=%7B%22F%22%2C+%22HorizonDistance%22%2C+%22r%22%7D+-%3E%22sedna%22">wolframalpha.com/input?i=distance+to+horizon&assumption=%7B%22FS%22%7D+-%3E+%7B%7B%22HorizonDistance%22%2C+%22d%22%7D%7D&assumption=%7B%22F%22%2C+%22HorizonDistance%22%2C+%22h%22%7D+-%3E%225+ft+9+in%22&assumption=%7B%22F%22%2C+%22HorizonDistance%22%2C+%22r%22%7D+-%3E%22sedna%22</a>
+								</origin>
+							</info>
+						</citation>
+						<citation id="Info3">
+							<number>3</number>
+							<multi>
+								<tab-align>
+									<tab-part>A</tab-part>
+									<blockquote>
+										"Sedna was discovered in the year 2003."<br>
+										<time datetime="PT00M55S">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 55); return false;">00:55</a></time>
+									</blockquote>
+								</tab-align>
+								<tab-align>
+									<tab-part>B</tab-part>
+									<blockquote>
+										"There are a few theories about Sedna's orbit and how it became so eccentric."<br>
+										<time datetime="PT04M04S">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 55); return false;">04:04</a></time>
+									</blockquote>
+								</tab-align>
+								<info>
+									<cite>discovery of a candidate inner Oort cloud planetoid</cite>
+									<info-details>
+										2004, Brown et al.<br>
+										A: publish date<br>B: § 4. Origin
+									</info-details>
+									<origin>
+										<a href="https://web.gps.caltech.edu/~mbrown/papers/ps/sedna.pdf">web.gps.caltech.edu/~mbrown/papers/ps/sedna.pdf</a>
+									</origin>
+								</info>
+							</multi>
+						</citation>
+						<citation id="Info4">
+							<number>4</number>
+							<blockquote>
+								... "advancements in astronomy started revealing exoplanets that defy expectations and distant local bodies roughly the size of Pluto, calling into question what exactly earns the title of planet. Sedna's discovery was one among them" ...
+								<time datetime="PT01M03S">timecode <a href="#" onclick="playerSeekTo(player, 63); return false;">01:03</a></time>
+							</blockquote>
+							<info>
+								<cite>Planetesimals to Brown Dwarfs: What is a Planet?</cite>
+								<info-details>
+									2006, Basri & Brown<br>
+									§ introduction
+								</info-details>
+								<origin>
+									<a href="https://web.gps.caltech.edu/~mbrown/papers/ps/basribrown.pdf">web.gps.caltech.edu/~mbrown/papers/ps/basribrown.pdf</a>
+								</origin>
+							</info>
+						</citation>
+						<citation id="Info5">
+							<number>5</number>
+							<blockquote>
+								"In 2015, Leleākūhonua was discovered, an even more distant object orbiting the Sun." ...
+								<time datetime="PT01M24S">timecode <a href="#" onclick="playerSeekTo(player, 84); return false;">01:24</a></time>
+							</blockquote>
+							<info>
+								<cite>wiki: Leleākūhonua</cite>
 								<info-details>
 									Wikipedia<br>
 									accessed 2022<br>
-									A: § infobox ¶ physical characteristics<br>B: § orbit and rotation
+									§ summary
 								</info-details>
 								<origin>
-									<a href="https://en.wikipedia.org/wiki/90377_Sedna#Orbit_and_rotation">en.wikipedia.org/wiki/90377_Sedna#Orbit_and_rotation</a>
+									<a href="https://en.wikipedia.org/wiki/541132_Lele%C4%81k%C5%ABhonua">en.wikipedia.org/wiki/541132_Lele%C4%81k%C5%ABhonua</a>
 								</origin>
 							</info>
-						</multi>
-					</citation>
-					<citation id="Info9">
-						<number>9</number>
-						<blockquote>
-							"It can be found at 76 astronomical units."
-							<time datetime="PT02M34S">timecode <a href="#" onclick="playerSeekTo(player, 154); return false;">02:34</a></time>
-						</blockquote>
-						<info>
-							<cite>sedna ephemerides for July 2076</cite>
-							<info-details>
-								AstDyS<br>
-								accessed 2022<br>
-								R value where "RA*cosDE" flips from negative to positive
-							</info-details>
-							<origin>
-								<a href="https://newton.spacedys.com/astdys/index.php?pc=1.1.3.1&n=90377&oc=500&y0=2076&m0=1&d0=1&y1=2076&m1=12&d1=1&ti=18&tiu=days">newton.spacedys.com/astdys/index.php?pc=1.1.3.1&n=90377&oc=500&y0=2076&m0=1&d0=1&y1=2076&m1=12&d1=1&ti=18&tiu=days</a>
-							</origin>
-						</info>
-					</citation>
-					<citation id="Info10">
-						<number>10</number>
-						<blockquote>
-							"It accelerates to a speed of 4.6 kilometers every second" ...
-							<time datetime="PT02M53S">timecode <a href="#" onclick="playerSeekTo(player, 173); return false;">02:53</a></time>
-						</blockquote>
-						<info>
-							<cite>sedna orbital speed at perihelion</cite>
-							<info-details>
-								WolframAlpha<br>
-								accessed 2022<br>
-								§ unit conversions
-							</info-details>
-							<origin>
-								<a href="https://www.wolframalpha.com/input?key=&i=sedna+orbital+speed+at+perihelion">wolframalpha.com/input?key=&i=sedna+orbital+speed+at+perihelion</a>
-							</origin>
-						</info>
-					</citation>
-					<citation id="Info11">
-						<number>11</number>
-						<blockquote>
-							Sedna "gradually slows to 0.37 kilometers per second at apoapsis."
-							<time datetime="PT03M03S">timecode <a href="#" onclick="playerSeekTo(player, 183); return false;">03:03</a></time>
-						</blockquote>
-						<info>
-							<cite>sedna instantaneous heliocentric velocity at apoapsis</cite>
-							<info-details>
-								WolframAlpha<br>
-								accessed 2022<br>
-								§ results
-							</info-details>
-							<origin>
-								<a href="https://www.wolframalpha.com/input?key=&i=90377+sedna+instantaneous+heliocentric+velocity+at+previous+apoapsis+time+in+km%2Fs">wolframalpha.com/input?key=&i=90377+sedna+instantaneous+heliocentric+velocity+at+previous+apoapsis+time+in+km%2Fs</a>
-							</origin>
-						</info>
-					</citation>
-					<citation id="Info12">
-						<number>12</number>
-						<blockquote>
-							"This [apoapsis] is past the termination shock; past the heliopause; past Voyager 1; through interstellar space; and right on the cusp of the theorized Oort cloud's inner edge."
-							<time datetime="PT03M28S">timecode <a href="#" onclick="playerSeekTo(player, 208); return false;">03:28</a></time>
-						</blockquote>
-						<info>
-							<cite>voyager goes interstellar</cite>
-							<info-details>
-								2013, 
-								NASA/JPL-Caltech<br>
-								§ image
-							</info-details>
-							<origin>
-								<a href="https://photojournal.jpl.nasa.gov/catalog/PIA17046">photojournal.jpl.nasa.gov/catalog/PIA17046</a>
-							</origin>
-						</info>
-					</citation>
-					<citation id="Info13">
-						<number>13</number>
-						<blockquote>
-							... Sedna's "orbit takes a long time. 11,000 Earth years" ...
-							<time datetime="PT05M10S">timecode <a href="#" onclick="playerSeekTo(player, 310); return false;">05:10</a></time>
-						</blockquote>
-						<info>
-							<cite>horizons: barycentric osculating orbital elements for sedna</cite>
-							<info-details>
-								JPL/HORIZONS<br>
-								accessed 2022<br>
-								PR values (measured in days)
-							</info-details>
-							<origin>
-								<a href="https://ssd.jpl.nasa.gov/horizons_batch.cgi?batch=1&COMMAND=%27Sedna%27&TABLE_TYPE=%27ELEMENTS%27&START_TIME=%271900-01-01%27&STOP_TIME=%272500-01-01%27&STEP_SIZE=%2750%20years%27&CENTER=%27@0%27&OUT_UNITS=%27AU-D%27">ssd.jpl.nasa.gov/horizons_batch.cgi?batch=1&COMMAND=%27Sedna%27&TABLE_TYPE=%27ELEMENTS%27&START_TIME=%271900-01-01%27&STOP_TIME=%272500-01-01%27&STEP_SIZE=%2750%20years%27&CENTER=%27@0%27&OUT_UNITS=%27AU-D%27</a>
-							</origin>
-						</info>
-					</citation>
-					<citation id="Info14">
-						<number>14</number>
-						<blockquote>
-							"The last time it reached perihelion, Earth was in an ice age."
-							<time datetime="PT05M24S">timecode <a href="#" onclick="playerSeekTo(player, 324); return false;">05:24</a></time>
-						</blockquote>
-						<info>
-							<cite>scientists find an icy world beyond pluto, and the solar system suddenly seems bigger</cite>
-							<info-details>
-								2004, John Noble Wilford<br>
-								The New York Times<br>
-								accessed 2022<br>
-								last line of article
-							</info-details>
-							<origin>
-								<a href="http://www.nytimes.com/2004/03/16/us/scientists-find-icy-world-beyond-pluto-solar-system-suddenly-seems-bigger.html">nytimes.com/2004/03/16/us/scientists-find-icy-world-beyond-pluto-solar-system-suddenly-seems-bigger.html</a>
-							</origin>
-						</info>
-					</citation>
-					<citation id="Info15">
-						<number>15</number>
-						<blockquote>
-							"Sedna will reach its nearest approach by the year 2076."
-							<time datetime="PT05M38S">timecode <a href="#" onclick="playerSeekTo(player, 338); return false;">05:38</a></time>
-						</blockquote>
-						<info>
-							<cite>horizons: sedna july 2076 batch</cite>
-							<info-details>
-								JPL/HORIZONS<br>
-								accessed 2022<br>
-								where "rdot" flips from negative to positive values
-							</info-details>
-							<origin>
-								<a href="https://ssd.jpl.nasa.gov/horizons_batch.cgi?batch=1&COMMAND=%27Sedna%27&START_TIME=%272076-Jul-10%27&STOP_TIME=%272076-Jul-25%27&STEP_SIZE=%274%20hours%27&QUANTITIES=%2719%27">ssd.jpl.nasa.gov/horizons_batch.cgi?batch=1&COMMAND=%27Sedna%27&START_TIME=%272076-Jul-10%27&STOP_TIME=%272076-Jul-25%27&STEP_SIZE=%274%20hours%27&QUANTITIES=%2719%27</a>
-							</origin>
-						</info>
-					</citation>
-				</container>
-				<form id="infoSearchBanner">
-					<input id="infoInput" placeholder="#" onfocus="this.value=''">
-					<button id="infoBtn" type="submit" onclick="infoSearch()">go to</button>
-				</form>
-			</sources-info>
+						</citation>
+						<citation id="Info6">
+							<number>6</number>
+							<blockquote>
+								"These objects collectively motivated the 2006 redefinition of planets." ...
+								<time datetime="PT01M28S">timecode <a href="#" onclick="playerSeekTo(player, 88); return false;">01:28</a></time>
+							</blockquote>
+							<info>
+								<cite>Results of the 2006 IAU Resolution votes</cite>
+								<info-details>
+									2006, 
+									IAU<br>
+									¶ 4
+								</info-details>
+								<origin>
+									<a href="https://web.archive.org/web/20061107022302/http://www.iau2006.org/mirror/www.iau.org/iau0603/index.html">web.archive.org/web/20061107022302/http://www.iau2006.org/mirror/www.iau.org/iau0603/index.html</a>
+								</origin>
+							</info>
+						</citation>
+						<citation id="Info7">
+							<number>7</number>
+							<blockquote>
+								"And so it was deemed that planets are a more exclusive club. Pluto was shut out."
+								<time datetime="PT01M45S">timecode <a href="#" onclick="playerSeekTo(player, 105); return false;">01:45</a></time>
+							</blockquote>
+							<info>
+								<cite>Breaking News– Pluto not a planet!</cite>
+								<info-details>
+									2006, Phil Plait<br>
+									Slate<br>
+									¶ 1
+								</info-details>
+								<origin>
+									<a href="https://slate.com/technology/2006/08/breaking-news-pluto-not-a-planet.html">slate.com/technology/2006/08/breaking-news-pluto-not-a-planet.html</a>
+								</origin>
+							</info>
+						</citation>
+						<citation id="Info8">
+							<number>8</number>
+							<multi>
+								<tab-align>
+									<tab-part>A</tab-part>
+									<blockquote>
+										"It measures about a thousand kilometers in diameter across each dimension."<br>
+										<time datetime="PT02M01S">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 121); return false;">02:01</a></time>
+									</blockquote>
+								</tab-align>
+								<tab-align>
+									<tab-part>B</tab-part>
+									<blockquote>
+										... "that's only one percent of Earth's orbital speed."<br>
+										<time datetime="PT03M12S">timecode <a href="#" class="roboto-mono-400" onclick="playerSeekTo(player, 121); return false;">03:12</a></time>
+									</blockquote>
+								</tab-align>
+								<info>
+									<cite>wiki: Sedna</cite>
+									<info-details>
+										Wikipedia<br>
+										accessed 2022<br>
+										A: § infobox ¶ physical characteristics<br>B: § orbit and rotation
+									</info-details>
+									<origin>
+										<a href="https://en.wikipedia.org/wiki/90377_Sedna#Orbit_and_rotation">en.wikipedia.org/wiki/90377_Sedna#Orbit_and_rotation</a>
+									</origin>
+								</info>
+							</multi>
+						</citation>
+						<citation id="Info9">
+							<number>9</number>
+							<blockquote>
+								"It can be found at 76 astronomical units."
+								<time datetime="PT02M34S">timecode <a href="#" onclick="playerSeekTo(player, 154); return false;">02:34</a></time>
+							</blockquote>
+							<info>
+								<cite>sedna ephemerides for July 2076</cite>
+								<info-details>
+									AstDyS<br>
+									accessed 2022<br>
+									R value where "RA*cosDE" flips from negative to positive
+								</info-details>
+								<origin>
+									<a href="https://newton.spacedys.com/astdys/index.php?pc=1.1.3.1&n=90377&oc=500&y0=2076&m0=1&d0=1&y1=2076&m1=12&d1=1&ti=18&tiu=days">newton.spacedys.com/astdys/index.php?pc=1.1.3.1&n=90377&oc=500&y0=2076&m0=1&d0=1&y1=2076&m1=12&d1=1&ti=18&tiu=days</a>
+								</origin>
+							</info>
+						</citation>
+						<citation id="Info10">
+							<number>10</number>
+							<blockquote>
+								"It accelerates to a speed of 4.6 kilometers every second" ...
+								<time datetime="PT02M53S">timecode <a href="#" onclick="playerSeekTo(player, 173); return false;">02:53</a></time>
+							</blockquote>
+							<info>
+								<cite>sedna orbital speed at perihelion</cite>
+								<info-details>
+									WolframAlpha<br>
+									accessed 2022<br>
+									§ unit conversions
+								</info-details>
+								<origin>
+									<a href="https://www.wolframalpha.com/input?key=&i=sedna+orbital+speed+at+perihelion">wolframalpha.com/input?key=&i=sedna+orbital+speed+at+perihelion</a>
+								</origin>
+							</info>
+						</citation>
+						<citation id="Info11">
+							<number>11</number>
+							<blockquote>
+								Sedna "gradually slows to 0.37 kilometers per second at apoapsis."
+								<time datetime="PT03M03S">timecode <a href="#" onclick="playerSeekTo(player, 183); return false;">03:03</a></time>
+							</blockquote>
+							<info>
+								<cite>sedna instantaneous heliocentric velocity at apoapsis</cite>
+								<info-details>
+									WolframAlpha<br>
+									accessed 2022<br>
+									§ results
+								</info-details>
+								<origin>
+									<a href="https://www.wolframalpha.com/input?key=&i=90377+sedna+instantaneous+heliocentric+velocity+at+previous+apoapsis+time+in+km%2Fs">wolframalpha.com/input?key=&i=90377+sedna+instantaneous+heliocentric+velocity+at+previous+apoapsis+time+in+km%2Fs</a>
+								</origin>
+							</info>
+						</citation>
+						<citation id="Info12">
+							<number>12</number>
+							<blockquote>
+								"This [apoapsis] is past the termination shock; past the heliopause; past Voyager 1; through interstellar space; and right on the cusp of the theorized Oort cloud's inner edge."
+								<time datetime="PT03M28S">timecode <a href="#" onclick="playerSeekTo(player, 208); return false;">03:28</a></time>
+							</blockquote>
+							<info>
+								<cite>voyager goes interstellar</cite>
+								<info-details>
+									2013, 
+									NASA/JPL-Caltech<br>
+									§ image
+								</info-details>
+								<origin>
+									<a href="https://photojournal.jpl.nasa.gov/catalog/PIA17046">photojournal.jpl.nasa.gov/catalog/PIA17046</a>
+								</origin>
+							</info>
+						</citation>
+						<citation id="Info13">
+							<number>13</number>
+							<blockquote>
+								... Sedna's "orbit takes a long time. 11,000 Earth years" ...
+								<time datetime="PT05M10S">timecode <a href="#" onclick="playerSeekTo(player, 310); return false;">05:10</a></time>
+							</blockquote>
+							<info>
+								<cite>horizons: barycentric osculating orbital elements for sedna</cite>
+								<info-details>
+									JPL/HORIZONS<br>
+									accessed 2022<br>
+									PR values (measured in days)
+								</info-details>
+								<origin>
+									<a href="https://ssd.jpl.nasa.gov/horizons_batch.cgi?batch=1&COMMAND=%27Sedna%27&TABLE_TYPE=%27ELEMENTS%27&START_TIME=%271900-01-01%27&STOP_TIME=%272500-01-01%27&STEP_SIZE=%2750%20years%27&CENTER=%27@0%27&OUT_UNITS=%27AU-D%27">ssd.jpl.nasa.gov/horizons_batch.cgi?batch=1&COMMAND=%27Sedna%27&TABLE_TYPE=%27ELEMENTS%27&START_TIME=%271900-01-01%27&STOP_TIME=%272500-01-01%27&STEP_SIZE=%2750%20years%27&CENTER=%27@0%27&OUT_UNITS=%27AU-D%27</a>
+								</origin>
+							</info>
+						</citation>
+						<citation id="Info14">
+							<number>14</number>
+							<blockquote>
+								"The last time it reached perihelion, Earth was in an ice age."
+								<time datetime="PT05M24S">timecode <a href="#" onclick="playerSeekTo(player, 324); return false;">05:24</a></time>
+							</blockquote>
+							<info>
+								<cite>scientists find an icy world beyond pluto, and the solar system suddenly seems bigger</cite>
+								<info-details>
+									2004, John Noble Wilford<br>
+									The New York Times<br>
+									accessed 2022<br>
+									last line of article
+								</info-details>
+								<origin>
+									<a href="http://www.nytimes.com/2004/03/16/us/scientists-find-icy-world-beyond-pluto-solar-system-suddenly-seems-bigger.html">nytimes.com/2004/03/16/us/scientists-find-icy-world-beyond-pluto-solar-system-suddenly-seems-bigger.html</a>
+								</origin>
+							</info>
+						</citation>
+						<citation id="Info15">
+							<number>15</number>
+							<blockquote>
+								"Sedna will reach its nearest approach by the year 2076."
+								<time datetime="PT05M38S">timecode <a href="#" onclick="playerSeekTo(player, 338); return false;">05:38</a></time>
+							</blockquote>
+							<info>
+								<cite>horizons: sedna july 2076 batch</cite>
+								<info-details>
+									JPL/HORIZONS<br>
+									accessed 2022<br>
+									where "rdot" flips from negative to positive values
+								</info-details>
+								<origin>
+									<a href="https://ssd.jpl.nasa.gov/horizons_batch.cgi?batch=1&COMMAND=%27Sedna%27&START_TIME=%272076-Jul-10%27&STOP_TIME=%272076-Jul-25%27&STEP_SIZE=%274%20hours%27&QUANTITIES=%2719%27">ssd.jpl.nasa.gov/horizons_batch.cgi?batch=1&COMMAND=%27Sedna%27&START_TIME=%272076-Jul-10%27&STOP_TIME=%272076-Jul-25%27&STEP_SIZE=%274%20hours%27&QUANTITIES=%2719%27</a>
+								</origin>
+							</info>
+						</citation>
+					</container>
+					<form id="infoSearchBanner">
+						<input id="infoInput" placeholder="#" onfocus="this.value=''">
+						<button id="infoBtn" type="submit" onclick="infoSearch()">go to</button>
+					</form>
+				</sources-info>
 
-			<sources-media>
-				<h2>Media Sources</h2>
-				<container id="media-container">
-					<citation id="Media1">
-						<anchor>
-							<a href="#" onclick="playerSeekTo(player, 274); return false;"><time datetime="PT04M34S">04:34</time></a><indx>m1</indx>
-						</anchor>
-						<info>
-							<cite>sedna as seen by hubble</cite>
-							<info-details>
-								2004, NASA, ESA, and M. Brown (Caltech)<br>
-							</info-details>
-							<origin>
-								<a href="https://hubblesite.org/contents/media/images/2004/14/1518-Image.html">hubblesite.org/contents/media/images/2004/14/1518-Image.html</a>
-							</origin>
-						</info>
-					</citation>
-				</container>
-			</sources-media>
+				<sources-media>
+					<h2>Media Sources</h2>
+					<container id="media-container">
+						<citation id="Media1">
+							<anchor>
+								<a href="#" onclick="playerSeekTo(player, 274); return false;"><time datetime="PT04M34S">04:34</time></a><indx>m1</indx>
+							</anchor>
+							<info>
+								<cite>sedna as seen by hubble</cite>
+								<info-details>
+									2004, NASA, ESA, and M. Brown (Caltech)<br>
+								</info-details>
+								<origin>
+									<a href="https://hubblesite.org/contents/media/images/2004/14/1518-Image.html">hubblesite.org/contents/media/images/2004/14/1518-Image.html</a>
+								</origin>
+							</info>
+						</citation>
+					</container>
+				</sources-media>
 
-			<music>
-				<h2>Music</h2>
-				<iframe id="bandcamp-player" src="https://bandcamp.com/EmbeddedPlayer/album=825353223/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="https://emergentbeacon.bandcamp.com/album/sedna">Sedna by Emergent Beacon</a></iframe>
-				<download>
-					available on some platforms<br>
-					<button type="button" onclick="document.location='../music/sedna.html'" value="Go to music details page.">more info</button>
-				</download>
-			</music>
+				<music id="music">
+					<h2>Music</h2>
+					<iframe id="bandcamp-player" src="https://bandcamp.com/EmbeddedPlayer/album=825353223/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="https://emergentbeacon.bandcamp.com/album/sedna">Sedna by Emergent Beacon</a></iframe>
+					<download>
+						available on some platforms<br>
+						<button type="button" onclick="document.location='../music/sedna.html'" value="Go to music details page.">more info</button>
+					</download>
+				</music>
 
-			<credits>
-				<h2>Credits</h2>
-				<container>
-					<p>
-						<credit-name>Brandt Hughes</credit-name>
-						<credit-role>research, writer, host, editor, music production, sound design, caption writer</credit-role>
-					</p>
-				</container>
-			</credits>
+				<credits id="credits">
+					<h2>Credits</h2>
+					<container>
+						<p>
+							<credit-name>Brandt Hughes</credit-name>
+							<credit-role>research, writer, host, editor, music production, sound design, caption writer</credit-role>
+						</p>
+					</container>
+				</credits>
 
-			<transcription>
-				<h2>Transcript</h2>
-				<container>
-					<aside>
+				<transcription id="transcription">
+					<h2>Transcript</h2>
+					<container>
 						<p>
 							>> Query preempted.<br><br>>> Sunrise is cold and brief here.<br><br>There's a new one every 10 hours.<br><br>Hills of rich red soil and sparse outbreaks of ice sprawl out toward a short horizon, never further than a mile away.<br><br>This is 903777 Sedna.<br><br>Sedna coasts through the inky, black night; as an outcast in its own home.<br><br>It stares back at us from just at the edge of our perception.<br><br>And the thing is, nobody's quite sure how it got there.<br><br>Sedna was discovered in the year 2003.<br><br>At the time, Pluto was still widely considered to be a planet but advancements in astronomy started revealing planets in other solar systems that defy expectations and distant bodies in our own solar system roughly the size of Pluto.<br><br>All of which called into question, what exactly earns the title of planet?<br><br>Sedna's discovery was one among them.<br><br>It wasn't the largest local body found, but it was the most distant at the time.<br><br>The discovery of these objects collectively motivated the 2006 redefinition of planets, which was a two year process carried out by an organization called the International Astronomical Union, or the IAU.<br><br>And so it was deemed that planets are a more exclusive club.<br><br>Pluto was shut out and Sedna found itself belonging elsewhere.<br><br>However, it begets acceptance as a dwarf planet, a trans-neptunian object, or TNO, and as an eponymous sednoid.<br><br>It measures about a thousand kilometers in diameter across each dimension.<br><br>About the same size as Ceres, and just over a quarter the size of our moon.<br><br>Its mass is unknown.<br><br>Usually we would calculate that by observing it interacting with its satellites, but we haven't detected any.<br><br>Sedna exists in anxious isolation.<br><br>It's an extraordinary isolation at that.<br><br>It's a big part of what makes Sedna so notable.<br><br>It can be found at 76 astronomical units, or AU, which is two and a half times Neptune's distance from the Sun.<br><br>But that's at its perihelion, the point in its orbit where it's closest to the Sun.<br><br>As it approaches the Sun, it accelerates to a speed of 4.6 kilometers every second until it is flung out to drag through that vast darkness.<br><br>It gradually slows to 0.37 kilometers per second at apoapsis.<br><br>This is fairly slow.<br><br>For context, that's only 1% of Earth's orbital speed.<br><br>To find Sedna when it's furthest from the Sun, you would have to investigate an area about a thousand times beyond the Earth's distance from the Sun.<br><br>This is past the termination shock; past the heliopause; past Voyager One; through interstellar space; and right on the cusp of the theorized Oort cloud's inner edge.<br><br>This orbit is unusual.<br><br>The solar system likes to make objects that are in fairly concentric orbits, but this one is all over the place.<br><br>This indicates that something happened to it after it had already formed.<br><br>But what?<br><br>It doesn't seem like there's a definitive consensus yet, but there are a few theories about Sedna's eccentricity, which, if determined, might unveil a piece of our solar system's history.<br><br>Our solar system may have been born in a dense, stellar cluster wherein many nearby stars may have gradually displaced Sedna's orbit before the cluster dispersed.<br><br>This was the leading theory at the time of discovery.<br><br>Or...<br><br>maybe it's possible that eons ago, a single star may have grazed by our system in an impressive near-miss that displaced Sedna's orbit.<br><br>Or...<br><br>there may be a large but distant planet in the far reaches of our solar system that we haven't discovered yet.<br><br>And maybe it influences the orbits of Sedna and many other distant bodies.<br><br>Or...<br><br>Sedna may have originated in another solar system entirely.<br><br>Then it was ejected in exile, only to stumble upon our own safe haven.<br><br>And of course, it could always be the result of something we haven't thought of.<br><br>But what we do know is that its orbit takes a long time.<br><br>11,000 Earth years.<br><br>But Sedna will bask in its next frigid summer a lot sooner than that.<br><br>The last time it reached perihelion Earth was in an ice age.<br><br>Next time, however...<br><br>Earth will be in— -well, I'll let you find out.<br><br>Sedna will reach its nearest approach by the year 2076.<br><br>But I should note that when Sedna gets as close as it's going to get, you still can't see it with the unaided human eye from Earth.<br><br>But if you were to look at it with a powerful telescope or a probe of some sort, you might see one of the reddest bodies in the solar system just behind Mars.<br><br>In the meantime, you can find me online at cohost.org/brandt, and you can chat with other viewers of the channel at discord.emergentbeacon.com and you can support the channel at patreon.com/emergentbeacon where you can get updates about upcoming videos, as I work on them, and just help fund and support videos just like this.<br><br>For those of you still watching, thanks for your time.
 						</p>
-					</aside>
-				</container>
-			</transcription>
+					</container>
+				</transcription>
 
-			<rewards>
-				<h2>Bonus Material</h2>
-				<container>
-					<p>
-						<a href="https://patreon.com/emergentbeacon" class="support-link" title="patreon.com/emergentbeacon">Pledge now</a> for these behind the scenes exclusives!
-					</p>
-					<items>
-						<bonus-entry>
-							<a href="https://patreon.com/posts/82112627">
-								<img src="../assets/patreon/005--sedna.jpg" style="object-position: 0rem 0;">
-							</a>
-							<p>
-								<time datetime="PT3HsiMnsS">3 versions</time><br>
-								<span>SHOT LIST</span>
-							</p>
-						</bonus-entry>
-						<bonus-entry>
-							<a href="https://patreon.com/posts/76993864">
-								<img src="../assets/patreon/005--sedna.jpg" style="object-position: -7rem 0;">
-							</a>
-							<p>
-								<time datetime="PT6M10S">6:10</time><br>
-								<span>MUSIC PACK:<br>"Sedna"</span>
-							</p>
-						</bonus-entry>
-					</items>
-				</container>
-			</rewards>
+				<rewards id="rewards">
+					<h2>Bonus Material</h2>
+					<container>
+						<p>
+							<a href="https://patreon.com/emergentbeacon" class="support-link" title="patreon.com/emergentbeacon">Pledge now</a> for these behind the scenes exclusives!
+						</p>
+						<items>
+							<bonus-entry>
+								<a href="https://patreon.com/posts/82112627">
+									<img src="../assets/patreon/005--sedna.jpg" style="object-position: 0rem 0;">
+								</a>
+								<p>
+									<time datetime="PT3HsiMnsS">3 versions</time><br>
+									<span>SHOT LIST</span>
+								</p>
+							</bonus-entry>
+							<bonus-entry>
+								<a href="https://patreon.com/posts/76993864">
+									<img src="../assets/patreon/005--sedna.jpg" style="object-position: -7rem 0;">
+								</a>
+								<p>
+									<time datetime="PT6M10S">6:10</time><br>
+									<span>MUSIC PACK:<br>"Sedna"</span>
+								</p>
+							</bonus-entry>
+						</items>
+					</container>
+				</rewards>
+			</section>
 		</main>
 
 		<footnav>
@@ -438,6 +454,7 @@
 		buildHeader(path);
 		buildFooter(path);
 		adjustGrid();
+		updateTOC();
 
 		const iSearch = document.getElementById("infoSearchBanner");
 		function infoSearch() {

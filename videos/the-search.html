@@ -18,120 +18,135 @@
 	<body>
 		<header></header>
 		<main>
-			<h1>The Search</h1>
-
-			<synopsis>
-				Do you know what to do with data cubes and transmission spectra? Most people don't, but there’s something else you can get out of new space telescopes.
-			</synopsis>
-
-			<sources-media>
-				<h2>Media Sources</h2>
-				<container id="media-container">
-					<citation id="Media1">
-						<anchor>
-							<a href="#" onclick="playerSeekTo(player, 165); return false;"><time datetime="PT2M45S">2:45</time></a><indx>m1</indx>
-						</anchor>
-						<info>
-							<cite>PHOTO: Webb's First Deep Field</cite>
-							<info-details>
-								2022
-								NASA, ESA, CSA, STScI<br>
-							</info-details>
-							<origin>
-								<a href="https://webbtelescope.org/contents/media/images/2022/035/01G7DCWB7137MYJ05CSH1Q5Z1Z">webbtelescope.org/contents/media/images/2022/035/01G7DCWB7137MYJ05CSH1Q5Z1Z</a>
-							</origin>
-						</info>
-					</citation>
-					<citation id="Media2">
-						<anchor>
-							<a href="#" onclick="playerSeekTo(player, 212); return false;"><time datetime="PT3M32S">3:32</time></a><indx>m2</indx>
-						</anchor>
-						<info>
-							<cite>gallery of JWST photos</cite>
-							<info-details>
-								2022
-								NASA, ESA, CSA, STScI<br>
-							</info-details>
-							<origin>
-								<a href="https://webbtelescope.org/resource-gallery/images">webbtelescope.org/resource-gallery/images</a>
-							</origin>
-						</info>
-					</citation>
-					<citation id="Media3">
-						<anchor>
-							<a href="#" onclick="playerSeekTo(player, 212); return false;"><time datetime="PT3M32S">3:32</time></a><indx>m3</indx>
-						</anchor>
-						<info>
-							<cite>Webb’s Jupiter Images</cite>
-							<info-details>image processing by Judy Schmidt<br>
-								NASA, ESA, CSA, Jupiter ERS Team<br>
-							</info-details>
-							<origin>
-								<a href="https://blogs.nasa.gov/webb/2022/08/22/webbs-jupiter-images-showcase-auroras-hazes">blogs.nasa.gov/webb/2022/08/22/webbs-jupiter-images-showcase-auroras-hazes</a>
-							</origin>
-						</info>
-					</citation>
-				</container>
-				<form id="mediaSearchBanner">
-					<input id="mediaInput" placeholder="#" onfocus="this.value=''">
-					<button id="mediaBtn" type="submit" onclick="mediaSearch()">go to</button>
-				</form>
-			</sources-media>
-
-			<music>
-				<h2>Music</h2>
-				<iframe id="bandcamp-player" src="https://bandcamp.com/EmbeddedPlayer/album=1958114715/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="https://emergentbeacon.bandcamp.com/album/the-search">The Search by Emergent Beacon</a></iframe>
-				<download>
-					available on some platforms<br>
-					<button type="button" onclick="document.location='../music/the-search.html'" value="Go to music details page.">more info</button>
-				</download>
-			</music>
-
-			<credits>
-				<h2>Credits</h2>
-				<container>
-					<p>
-						<credit-name>Brandt Hughes</credit-name>
-						<credit-role>writer, host, camera operator, audio engineer, music production, editor</credit-role>
-						<credit-name>Jeff McLaughlin</credit-name>
-						<credit-role>production assistance</credit-role>
-					</p>
-				</container>
-			</credits>
+			<aside>
+				<toc class="toc">
+					<h2>contents</h2>
+					<hr>
+					<ul class="toc-list">
+						<li><a href="#title">title</a></li>
+						<li><a href="#video">video</a></li>
+						<li><a href="#sources">sources</a></li>
+						<li><a href="#music">music</a></li>
+						<li><a href="#credits">credits</a></li>
+						<li><a href="#transcript">transcript</a></li>
+						<li><a href="#rewards">rewards</a></li>
+					</ul>
+				</toc>
+			</aside>
+			<section>
+				<h1 id="title">The Search</h1>
 				<player id="video">
 					<video id="youtube"></video>
 				</player>
 
-			<transcription>
-				<h2>Transcript</h2>
-				<container>
-					<aside>
+				<synopsis>
+					Do you know what to do with data cubes and transmission spectra? Most people don't, but there’s something else you can get out of new space telescopes.
+				</synopsis>
+
+				<sources-media id="sources">
+					<h2>Media Sources</h2>
+					<container id="media-container">
+						<citation id="Media1">
+							<anchor>
+								<a href="#" onclick="playerSeekTo(player, 165); return false;"><time datetime="PT2M45S">2:45</time></a><indx>m1</indx>
+							</anchor>
+							<info>
+								<cite>PHOTO: Webb's First Deep Field</cite>
+								<info-details>
+									2022
+									NASA, ESA, CSA, STScI<br>
+								</info-details>
+								<origin>
+									<a href="https://webbtelescope.org/contents/media/images/2022/035/01G7DCWB7137MYJ05CSH1Q5Z1Z">webbtelescope.org/contents/media/images/2022/035/01G7DCWB7137MYJ05CSH1Q5Z1Z</a>
+								</origin>
+							</info>
+						</citation>
+						<citation id="Media2">
+							<anchor>
+								<a href="#" onclick="playerSeekTo(player, 212); return false;"><time datetime="PT3M32S">3:32</time></a><indx>m2</indx>
+							</anchor>
+							<info>
+								<cite>gallery of JWST photos</cite>
+								<info-details>
+									2022
+									NASA, ESA, CSA, STScI<br>
+								</info-details>
+								<origin>
+									<a href="https://webbtelescope.org/resource-gallery/images">webbtelescope.org/resource-gallery/images</a>
+								</origin>
+							</info>
+						</citation>
+						<citation id="Media3">
+							<anchor>
+								<a href="#" onclick="playerSeekTo(player, 212); return false;"><time datetime="PT3M32S">3:32</time></a><indx>m3</indx>
+							</anchor>
+							<info>
+								<cite>Webb’s Jupiter Images</cite>
+								<info-details>image processing by Judy Schmidt<br>
+									NASA, ESA, CSA, Jupiter ERS Team<br>
+								</info-details>
+								<origin>
+									<a href="https://blogs.nasa.gov/webb/2022/08/22/webbs-jupiter-images-showcase-auroras-hazes">blogs.nasa.gov/webb/2022/08/22/webbs-jupiter-images-showcase-auroras-hazes</a>
+								</origin>
+							</info>
+						</citation>
+					</container>
+					<form id="mediaSearchBanner">
+						<input id="mediaInput" placeholder="#" onfocus="this.value=''">
+						<button id="mediaBtn" type="submit" onclick="mediaSearch()">go to</button>
+					</form>
+				</sources-media>
+
+				<music id="music">
+					<h2>Music</h2>
+					<iframe id="bandcamp-player" src="https://bandcamp.com/EmbeddedPlayer/album=1958114715/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="https://emergentbeacon.bandcamp.com/album/the-search">The Search by Emergent Beacon</a></iframe>
+					<download>
+						available on some platforms<br>
+						<button type="button" onclick="document.location='../music/the-search.html'" value="Go to music details page.">more info</button>
+					</download>
+				</music>
+
+				<credits id="credits">
+					<h2>Credits</h2>
+					<container>
+						<p>
+							<credit-name>Brandt Hughes</credit-name>
+							<credit-role>writer, host, camera operator, audio engineer, music production, editor</credit-role>
+							<credit-name>Jeff McLaughlin</credit-name>
+							<credit-role>production assistance</credit-role>
+						</p>
+					</container>
+				</credits>
+
+				<transcription id="transcript">
+					<h2>Transcript</h2>
+					<container>
 						<p>
 							I am engaged in The Search inescapably.<br><br>As days go by faster and faster, my joints creak and my memory stutters.<br><br>My skin stubbornly refuses to heal in monument to my frailty.<br><br>Nonetheless, the Search continues, maybe even more now than ever before.<br><br>I squint, but I can't see past my nose.<br><br>How could I?<br><br>Self-preservation forbids it.<br><br>It's a failing of my species, I suppose.<br><br>But I try.<br><br>The Search gives me that courage.<br><br>It lures me beyond my insignificant sphere of influence.<br><br>My eyes can hardly be faulted for not being able to see beyond myself as I am adrift in a sea of unthinkable nothingness.<br><br>And yet, the Search has given me new eyes.<br><br>And with them, I see that in every possible direction glistening maelstroms are swirling in oblivion.<br><br>There are too many to count.<br><br>Their enormity, if I let it, overwhelms.<br><br>They teeter on the precipice of calamity and awe.<br><br>Each one is teeming with glints of light staring back at me with that all-too-familiar inflated self-importance.<br><br>But maybe also the same uncertainty.<br><br>Definitely the same isolation in this beautiful, cold sea.<br><br>It would be easy to forget all I have seen and slip back into the comforting warmth of my home, my community, places where I have some control.<br><br>But doing so would give something up, because the Search emboldens my protest against living thoughtlessly in service only to myself.<br><br>That simply is not enough.<br><br>The Search confronts the unfathomable where yielding is so inconsequential that instead of closing the distance of that vastness, it creates new distance within you.<br><br>Without the Search, my small troubles would appear large, maybe even overwhelming, if I let it.<br><br>And I would forfeit an immutable truth of the self that I so ardently preserve.<br><br>There is so much and we play such a small role.<br><br>I, too, find myself lost in that chasm.<br><br>But the Search is the beacon that reassures me to carry on through this unrelenting night.<br><br>In July of 2022 the first batch of photos from the James Webb Space Telescope, or JWST, or the Webb Telescope, whatever you want to call it, were released and they're gorgeous.<br><br>This video really features one of them, but you should really take the time to like open all of them up in full resolution and just really soak in them because they're really phenomenal.<br><br>Now, there's a lot of reasons why astronomers and researchers are really excited about this new data that we can get from JWST.<br><br>We can see different things than we could before, and we can see them in higher resolution and more importantly, maybe we can see them a lot faster.<br><br>But I think there is a reason for laypeople, people who are not researchers, people who are just normal citizens like I am, to be excited about this sort of advancement as well.<br><br>And...<br><br>you know, astronomy is an extraordinarily distant field of research.<br><br>More so than any other I can think of.<br><br>It entirely consists of looking outward and seeing all of these extraordinary places that we'll never be able to go to, that we'll never be able to experience for ourselves.<br><br>It's all about learning about everything other than us.<br><br>And I think there's an isolation that comes with that.<br><br>And that can be a bit scary, understandably.<br><br>But in astronomy, we we feel this -- this friction, this contrast between seeing the enormity of everything and seeing how quiet it seems.<br><br>It's there's a chaotic tumult with all of these spinning planets and black holes and galaxies, and yet we don't see anything that we inherently recognize within ourself.<br><br>And I think it would be easy to fall into the despair of that, but I think that contrast is a really important tool.<br><br>Um.<br><br>Something that we can just carry with us in our day-to-day lives and can help enrich our lives and allow us to be more caring and empathetic people.<br><br>It's an extraordinary tool for empathy.<br><br>And so that's why I wrote the Search.<br><br>If you like videos like this, consider pledging to patreon.com/emergentbeacon.<br><br>Not only will you be supporting me, so I can you know, pay rent and try to eat food, but you'll also be supporting these kinds of videos that can be viewed for free by anybody.<br><br>And I think that's something that's really special, and if you think that's special, then you can help fund it, and make more of that in this world.<br><br>Also, you can join the Discord at discord.emergentbeacon.com, you can follow the Twitter or Instagram, whatever.<br><br>As I leave as I leave you with your thoughts, I would ask you to consider that nothing can ever improve in your life or the life of those around you without something inherently changing.<br><br>As always, thank you for your time.
 						</p>
-					</aside>
-				</container>
-			</transcription>
+					</container>
+				</transcription>
 
-			<rewards>
-				<h2>Bonus Material</h2>
-				<container>
-					<p>
-						<a href="https://patreon.com/emergentbeacon" class="support-link" title="patreon.com/emergentbeacon">Pledge now</a> for these behind the scenes exclusives!
-					</p>
-					<items>
-						<bonus-entry>
-							<a href="https://patreon.com/posts/72403096">
-								<img src="../assets/patreon/004--the-search.jpg" style="object-position: 0rem 0;">
-							</a>
-							<p>
-								<time datetime="PT7mS">7m</time><br>
-								<span>MUSIC PACK: "The Search"</span>
-							</p>
-						</bonus-entry>
-					</items>
-				</container>
-			</rewards>
+				<rewards id="rewards">
+					<h2>Bonus Material</h2>
+					<container>
+						<p>
+							<a href="https://patreon.com/emergentbeacon" class="support-link" title="patreon.com/emergentbeacon">Pledge now</a> for these behind the scenes exclusives!
+						</p>
+						<items>
+							<bonus-entry>
+								<a href="https://patreon.com/posts/72403096">
+									<img src="../assets/patreon/004--the-search.jpg" style="object-position: 0rem 0;">
+								</a>
+								<p>
+									<time datetime="PT7mS">7m</time><br>
+									<span>MUSIC PACK: "The Search"</span>
+								</p>
+							</bonus-entry>
+						</items>
+					</container>
+				</rewards>
+			</section>
 		</main>
 
 		<footnav>
@@ -155,6 +170,7 @@
 		buildHeader(path);
 		buildFooter(path);
 		adjustGrid();
+		updateTOC();
 
 		const iSearch = document.getElementById("infoSearchBanner");
 		function infoSearch() {

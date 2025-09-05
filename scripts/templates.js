@@ -181,6 +181,84 @@ function adjustGrid() {
 	}
 }
 
+function updateTOC() {
+	document.addEventListener('DOMContentLoaded', () => {
+		// In this site's layout, the table of contents (.toc) is an element that appears before any other content at the same hierarchy level
+		const headings = Array.from(document.querySelectorAll(':is(h1, #video, #corrections, #clarifications, #sources, #music, #credits, #transcript, #rewards)'));
+		if (headings.length === 0) {
+			return; // No headings? No business here
+		}
+
+		// A few helper functions (.toc-list is the top-level ordered list)
+		const markTocItemActive = (a) => a.closest('.toc-list li').setAttribute('data-current', '');
+		const markTocItemInactive = (a) => a.closest('.toc-list li').removeAttribute('data-current');
+		const getTocLinkFromHeading = (h) => document.querySelector(`.toc-list a[href="#${h.id}"]`);
+		const getDocHeight = () => Math.floor(document.body.clientHeight);
+
+		const visibleHeadings = new Set();
+		let resizeDebounce;
+		let currentObserver;
+		let height = getDocHeight();
+
+		function beginObservation(docHeight) {
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						// Keep track of visible headings
+						if (entry.isIntersecting) {
+							visibleHeadings.add(entry.target);
+						} else {
+							visibleHeadings.delete(entry.target);
+						}
+					});
+
+					console.log(visibleHeadings.entries());
+
+					headings.forEach((heading) => {
+						// Find the link in the TOC list matching the heading in this list of heading elements
+						const tocLink = getTocLinkFromHeading(heading);
+
+						// If it's the last visible item, mark it to make it stand out, else, revert to the default style
+						if (visibleHeadings.has(heading)) {
+							markTocItemActive(tocLink);
+						} else {
+							markTocItemInactive(tocLink);
+						}
+					});
+				},
+				{
+					//? docHeight: Extend the detection above the heading so it's always considered as intersecting if above the scrollport
+					//? -33%: The element won't be considered as intersecting until it has gone _above_ the bottom third of the scrollport
+					rootMargin: `0px 0px 0px 0px`,
+					threshold: .5, // Only considered intersecting if all the pixels are inside the intersection area
+				}
+			);
+
+			headings.forEach((heading) => observer.observe(heading));
+
+			return observer;
+		}
+
+		// On page load...
+		markTocItemActive(getTocLinkFromHeading(headings[0])); // Mark the first item as active (even if the heading appears a bit further down)
+		currentObserver = beginObservation(height); // Start the intersection observer
+
+		// On resize, replace the observer with a new one matching the updated body height, if different
+		window.addEventListener('resize', () => {
+			clearTimeout(resizeDebounce);
+			resizeDebounce = setTimeout(() => {
+				const heightAfterResize = getDocHeight();
+				if (height !== heightAfterResize) {
+					if (currentObserver) {
+						currentObserver.disconnect();
+					}
+					currentObserver = beginObservation(heightAfterResize);
+				}
+			}, 200);
+		});
+	});
+}
+
 function tabs(num) {
 	let x = `	`;
 	let output = "";

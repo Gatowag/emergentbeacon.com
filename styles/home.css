@@ -32,7 +32,7 @@ main {
 		display: block;
 		width: calc(100% - .4rem);
 		margin-top: .4rem;
-		background-color: rgb(0, 0, 0);
+		background-color: var(--playlist-header);
 
 		playlist-buttons {
 			display: inline-block;

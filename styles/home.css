@@ -39,8 +39,8 @@ main {
 			margin: .5rem auto;
 
 			button {
-				background-color: var(--playlist-btn);
-				color: var(--playlist-btn-txt);
+				background-color: var(--playlist-btn-f);
+				color: var(--playlist-btn-t);
 				margin: .3rem .3rem;
 				padding: .3rem .7rem;
 				transition: .2s ease;

@@ -112,15 +112,16 @@
 		let insufficientFunds = false;
 
 		function generateReport() {
-			insufficientFunds = false;
 			let id = document.getElementById("report-id").value;
-			let indx = reportData
-				.map(function (element) {return element.id;})
-				.indexOf(id);
 			const container = document.getElementsByTagName("reports")[0];
 			if (container.children.length > 0) {
 				container.removeChild(container.firstElementChild)
 			}
+			if (id == "default") { return }
+			let indx = reportData
+				.map(function (e) {return e.id;})
+				.indexOf(id);
+			insufficientFunds = false;
 
 			let report = document.createElement("report");
 			let table = document.createElement("table");

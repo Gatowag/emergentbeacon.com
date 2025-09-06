@@ -15,11 +15,13 @@
 	--pledge: #263e4d;
 	--pledge-inner-glow: var(--accent);
 	--pledge-outer-glow: #da2323;
+	--playlist-header: black;
 	--playlist-item: #141414;
-	--playlist-btn: var(--accent);
-	--playlist-btn-txt: var(--secondary);
-	--playlist-btn-hover: var(--txt);
-	--playlist-select-back: #363420;
+	--playlist-btn-f: var(--accent);
+	--playlist-btn-t: var(--secondary);
+	--playlist-btn-hover-f: #ffffff;
+	--playlist-btn-hover-t: black;
+	--playlist-select-back: #232425;
 	--playlist-hover-back: var(--txt);
 	--playlist-hover-txt: var(--secondary);
 	--bcampLink: #236dce;
@@ -41,12 +43,14 @@
 	--theme-t: #000000;
 	--nav-current: #8f5f5f;
 	--pledge: #d6d2af;
-	--pledge-inner-glow: #da6f3e;
-	--pledge-outer-glow: #f1e7aa;
+	--pledge-inner-glow: #ee9458;
+	--pledge-outer-glow: #d1beb4;
+	--playlist-header: #383128;
 	--playlist-item: #d6d2af;
-	--playlist-btn: #ffdd33;
-	--playlist-btn-txt: black;
-	--playlist-btn-hover: var(--accent);
+	--playlist-btn-f: #ffcc6c;
+	--playlist-btn-t: black;
+	--playlist-btn-hover-f: #fada22;
+	--playlist-btn-hover-t: black;
 	--playlist-select-back: #b3ac89;
 	--playlist-hover-back: var(--accent);
 	--playlist-hover-txt: var(--secondary);
@@ -72,9 +76,10 @@
 	--pledge-inner-glow: #67cbf3;
 	--pledge-outer-glow: #90f1ed;
 	--playlist-item: var(--background);
-	--playlist-btn: var(--background);
-	--playlist-btn-txt: var(--txt);
-	--playlist-btn-hover: var(--accent);
+	--playlist-btn-f: var(--background);
+	--playlist-btn-t: var(--txt);
+	--playlist-btn-hover-f: var(--accent);
+	--playlist-btn-hover-t: white;
 	--playlist-select-back: #ced6cb;
 	--playlist-hover-back: #105cbe;
 	--playlist-hover-txt: var(--background);
@@ -408,10 +413,10 @@ button {
 	to { background-color: #131313 }
 }
 @keyframes a-btn-color {
-	0% { background-color: var(--playlist-btn);
-		 color: var(--playlist-btn-txt); }
-	100% { background-color: var(--playlist-btn-hover);
-		   color: var(--playlist-hover-txt); }
+	0% { background-color: var(--playlist-btn-f);
+		 color: var(--playlist-btn-t); }
+	100% { background-color: var(--playlist-btn-hover-f);
+		   color: var(--playlist-btn-hover-t); }
 }
 @keyframes a-shake {
 	0% { transform: translatex(0) }

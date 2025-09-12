@@ -108,8 +108,8 @@ aside {
 		line-height: 1.5rem;
 		padding: .4rem 1rem 1rem;
 		border-radius: .3rem;
-		background-color: var(--header-fill);
-		color: var(--header-txt);
+		background-color: var(--header-f);
+		color: var(--header-t);
 
 		h2 { font-size: 1rem; margin: .4rem; }
 		hr { border: 1px solid }
@@ -119,11 +119,11 @@ aside {
 			list-style: none;
 			li {
 				a {
-					color: var(--header-txt);
+					color: var(--header-t);
 					text-decoration: none;
 				}
 				a:hover {
-					color: var(--accent);
+					color: var(--header-link);
 				}
 			}
 			

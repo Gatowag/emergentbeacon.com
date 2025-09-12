@@ -9,7 +9,7 @@ function buildHeader(path) {
 		let l1 = path.slice(1);
 		console.log("l1: " + l1);
 
-		if (l1 == "index.html") { navUl += `${tabs(5)}<li>/ home</li>` } else { navUl += `${tabs(5)}<li><a href="./index.html">| home</a></li>` }
+		if (l1 == "index.html" || l1 == "") { navUl += `${tabs(5)}<li>/ home</li>` } else { navUl += `${tabs(5)}<li><a href="./">| home</a></li>` }
 		if (l1 == "videos.html") { navUl += `${tabs(5)}<li>/ videos</li>` } else { navUl += `${tabs(5)}<li><a href="./videos.html">| videos</a></li>` }
 		if (l1 == "music.html") { navUl += `${tabs(5)}<li>/ music</li>` } else { navUl += `${tabs(5)}<li><a href="./music.html">| music</a></li>` }
 		if (l1 == "about.html") { navUl += `${tabs(5)}<li>/ about</li>` } else { navUl += `${tabs(5)}<li><a href="./about.html">| about</a></li>` }
@@ -23,7 +23,7 @@ function buildHeader(path) {
 		console.log("l2: " + l2);
 
 		navUl =
-			`${tabs(5)}<li><a href="../index.html">/ home</a></li>` +
+			`${tabs(5)}<li><a href="../">/ home</a></li>` +
 			`${tabs(5)}<li><a href="../${l1}.html">/ ${l1}</a></li>` +
 			`${tabs(5)}<li>/ ${l2}</li>`;
 	}
@@ -58,11 +58,11 @@ function buildHeader(path) {
 
 function buildFooter(path) {
 	let levels = (path.match(/\//g) || []).length;
-	let a = relativePath(levels - 1);
+	let a = relativePath(levels);
 	let footer = document.getElementsByTagName("footer")[0];
 	footer.innerHTML =
 `		<p>
-			<a href="${a}/home.html">home</a><a href="${a}/videos.html">videos</a><a href="${a}/music.html">music</a><a href="${a}/about.html">about</a><br>
+			<a href="${a}/">home</a><a href="${a}/videos.html">videos</a><a href="${a}/music.html">music</a><a href="${a}/about.html">about</a><br>
 			<a href="${a}/finance.html">financial reports</a><a href="https://drive.google.com/drive/folders/1icyr1zHReUEhCLmlI2ActieXJ6NpgQDg?usp=sharing">media kit</a>
 		</p>
 		<logo>

@@ -92,11 +92,11 @@ main {
 				font-family: "Rubik", serif;
 			}
 			button:hover, button:focus-visible {
-				background: var(--playlist-hover-back);
-				color: var(--playlist-hover-txt);
+				background: var(--playlist-hover-f);
+				color: var(--playlist-hover-t);
 
 				strong { text-decoration: underline }
-				time { color: var(--playlist-hover-txt) }
+				time { color: var(--playlist-hover-t) }
 			}
 			time {
 				margin-left: .5rem;

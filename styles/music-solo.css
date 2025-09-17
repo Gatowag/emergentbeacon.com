@@ -80,7 +80,7 @@ music {
 			}
 		}
 		li:hover {
-			background-color: hsl(from var(--playlist-hover-back) h s l / 0.1)
+			background-color: hsl(from var(--playlist-hover-f) h s l / 0.1)
 		}
 		li:has(:not(:any-link)) { opacity: .4 }
 	}

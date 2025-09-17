@@ -113,14 +113,14 @@ playlist {
 			font-size: .8rem;
 		}
 		a:hover, a:focus-visible {
-			background: var(--playlist-hover-back);
-			color: var(--playlist-hover-txt);
+			background: var(--playlist-hover-f);
+			color: var(--playlist-hover-t);
 		}
 		a:hover strong, a:focus-visible strong {
 			text-decoration: underline;
 		}
 		a:hover time, a:focus-visible time {
-			color: var(--playlist-hover-txt);
+			color: var(--playlist-hover-t);
 		}
 	}
 }

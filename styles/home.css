@@ -7,16 +7,12 @@ main {
 			margin: -.6em 0 -.1em;
 			padding: .6em;
 			border-radius: 1em 1em 0 0;
-			font-size: .8em;
+			font-family: "Roboto Mono", serif;
+			font-size: .85em;
+			font-weight: 500;
 
-			background-color: var(--pledge);
+			background-color: var(--pledge-f);
 			color: var(--txt);
-			strong {
-				padding: .2em .5em;
-				border-radius: .2rem;
-				transition: .15s ease;
-			}
-			strong:hover { background-color: black }
 		}
 	}
 	.yt-player {

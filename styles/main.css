@@ -345,17 +345,33 @@ button {
 
 /* [### ↓ SUPPORT LINKS ↓ ###] */
 
-.support-link {
-	color: var(--accent);
-	font-weight: 600;
-	text-decoration: none;
-	position: relative;
-	text-shadow: 0 0 .8em var(--pledge-inner-glow), 0 0 1em var(--pledge-outer-glow);
-	animation: bounce 1s ease-in-out 2s infinite;
+support {
+	display: inline-block;
+
+	a {
+		display: flex;
+		flex-direction: row;
+		align-content: center;
+		height: fit-content;
+		padding: .4em .4em;
+		text-decoration: none;
+		color: var(--support-t);
+		text-shadow:
+			0 0 .15em var(--support-inner-glow),
+			0 0 .4em var(--support-outer-glow);
+
+		strong {
+			display: inline;
+			position: relative;
+			animation: bounce 1s ease-in-out 0s infinite alternate-reverse;
+		}
+	}
 }
-.support-link:hover {
-	color: var(--internal-link);
-	text-shadow: unset;
+support:hover > a {
+	color: var(--support-t-hov);
+	text-shadow:
+		0 0 .15em var(--support-inner-glow-hov),
+		0 0 .4em var(--support-outer-glow-hov);
 }
 
 
@@ -425,9 +441,8 @@ button {
 /* [### ↓ ANIMATION PRESETS ↓ ###] */
 
 @keyframes bounce {
-	0%  { top:0 }
-	50%  { top:-.25rem }
-	100% { top:0 }
+	0%  { top:-.2em }
+	100% { top:.2em }
 }
 @keyframes error {
 	from { background-color: #ff0000 }

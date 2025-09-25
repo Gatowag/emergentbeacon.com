@@ -48,7 +48,6 @@ vid-grid {
 			font-weight: 500;
 			transition: .2s ease;
 		}
-		a:hover { color: var(--accent) }
 		img {
 			width: 100%;
 			border-radius: .4rem;
@@ -59,7 +58,10 @@ vid-grid {
 			background-color: black;
 			transition: .2s ease;
 		}
-		img:hover, img:focus-visible { transform: translateY(-.2em) }
+		a:hover, a:focus-visible {
+			color: var(--accent);
+			img { transform: translateY(-.2em) }
+		}
 		img:active { transform: translateY(.1em) }
 	}
 }

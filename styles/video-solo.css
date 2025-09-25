@@ -81,7 +81,7 @@ main {
 		padding: .3rem .6rem;
 		margin: .4rem .1rem;
 	}
-	button:hover, button:active {
+	button:hover, button:focus-visible {
 		background: hsl(160, 100%, 60%);
 		color: black;
 	}
@@ -122,7 +122,7 @@ aside {
 					color: var(--header-t);
 					text-decoration: none;
 				}
-				a:hover {
+				a:hover, a:focus-visible {
 					color: var(--header-link);
 				}
 			}
@@ -200,7 +200,7 @@ corrections, clarifications {
 			border: .15rem solid #000000;
 			text-decoration: none;
 		}
-		a:hover {
+		a:hover, a:focus-visible {
 			background-color: #33ffbb;
 			color: black;
 			border: .15rem solid black;
@@ -319,7 +319,7 @@ citation {
 		text-decoration: none;
 		font-weight: 500;
 	}
-	a:hover {
+	a:hover, a:focus-visible {
 		background-color: var(--txt);
 		border: .2em solid black;
 	}
@@ -428,7 +428,7 @@ music {
 			padding: .3em .6em;
 			margin: .4em .1em;
 		}
-		a:hover, a:active {
+		a:hover, a:focus-visible {
 			background: hsl(160, 100%, 60%);
 			color: black;
 		}
@@ -526,7 +526,7 @@ rewards {
 			time { font-size: .8rem }
 			span { font-size: .9rem }
 		}
-		bonus-entry:hover, bonus-entry:focus-visible {
+		bonus-entry:hover, bonus-entry:has(a:focus-visible) {
 			opacity: 90%;
 			transform: scale(96%);
 			span { color: var(--accent) }
@@ -571,7 +571,7 @@ footnav {
 			transition: .2s ease;
 		}
 	}
-	tooltip:hover span {
+	tooltip:hover span, tooltip a:focus-visible ~ span {
 		visibility: visible;
 		opacity: 1;
 	}
@@ -593,7 +593,7 @@ footnav {
 		color: #e6e5e2;
 		text-decoration: none;
 	}
-	a:hover {
+	a:hover, a:focus-visible {
 		border: .2rem solid black;
 		background:#33ffbb; color: black;
 	}

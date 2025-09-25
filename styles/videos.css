@@ -13,7 +13,7 @@ main {
 		font-family: "Roboto", serif;
 		font-weight: 600;
 	}
-	button:hover {
+	button:hover, button:focus-visible {
 		background-color: var(--txt);
 		transform: translateY(-.2rem);
 	}

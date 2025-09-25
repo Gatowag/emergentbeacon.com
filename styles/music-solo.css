@@ -75,11 +75,11 @@ music {
 				cursor: not-allowed;
 				filter: saturate(0);
 			}
-			a:not(:any-link):hover, a:not(:any-link):active {
+			a:not(:any-link):hover {
 				animation: a-shake .2s cubic-bezier(0.165, 0.84, 0.44, 1) 0s infinite forwards;
 			}
 		}
-		li:hover {
+		li:hover, li:has(a:focus-visible) {
 			background-color: hsl(from var(--playlist-hover-f) h s l / 0.1)
 		}
 		li:has(:not(:any-link)) { opacity: .4 }

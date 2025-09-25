@@ -17,11 +17,11 @@
 	--nav-current: #bec3c4;
 	--pledge-f: #263e4d;
 	--support-t: var(--accent);
-	--support-inner-glow: var(--accent);
-	--support-outer-glow: #da2323;
+	--support-inner-glow: #f84b2c;
+	--support-outer-glow: var(--accent);
 	--support-t-hov: var(--internal-link);
-	--support-inner-glow-hov: #1ba9c2;
-	--support-outer-glow-hov: #0a92bb;
+	--support-inner-glow-hov: #3f34b8;
+	--support-outer-glow-hov: #24b1b6;
 	--playlist-btn-f: var(--accent);
 	--playlist-btn-t: var(--secondary);
 	--playlist-btn-hover-f: #ffffff;
@@ -56,9 +56,9 @@
 	--support-t: #c52828;
 	--support-inner-glow: #f77a7a;
 	--support-outer-glow: #ffd4ca;
-	--support-t-hov: #ffffff;
-	--support-inner-glow-hov: #0e2cd3;
-	--support-outer-glow-hov: #9008df;
+	--support-t-hov: #9359a0;
+	--support-inner-glow-hov: #eb9abf;
+	--support-outer-glow-hov: #f089e6;
 	--playlist-btn-f: #f1d087;
 	--playlist-btn-t: black;
 	--playlist-btn-hover-f: #ffdf28;
@@ -356,9 +356,10 @@ support {
 		padding: .4em .4em;
 		text-decoration: none;
 		color: var(--support-t);
+		transition: .15s ease-in-out;
 		text-shadow:
-			0 0 .15em var(--support-inner-glow),
-			0 0 .4em var(--support-outer-glow);
+			0 0 .8em var(--support-inner-glow),
+			0 0 .2em var(--support-outer-glow);
 
 		strong {
 			display: inline;
@@ -367,11 +368,11 @@ support {
 		}
 	}
 }
-support:hover > a {
+support:hover > a, support > a:focus-visible {
 	color: var(--support-t-hov);
 	text-shadow:
-		0 0 .15em var(--support-inner-glow-hov),
-		0 0 .4em var(--support-outer-glow-hov);
+		0 0 .8em var(--support-inner-glow-hov),
+		0 0 .2em var(--support-outer-glow-hov);
 }
 
 

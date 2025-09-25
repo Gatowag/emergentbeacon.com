@@ -21,15 +21,6 @@ main {
 }
 section { width: 100% }
 
-.catalog-entry {
-	padding: .4em;
-	border-radius: .3em;
-	transition: .2s ease;
-}
-.catalog-entry:hover {
-	background: rgba(0, 0, 0, .3);
-	transition: 1s ease;
-}
 vid-grid {
 	padding: .1rem;
 	display: flex;
@@ -123,12 +114,6 @@ playlist {
 			color: var(--playlist-hover-t);
 		}
 	}
-}
-.selected {
-	background-color: #d9dbdf;
-	color: var(--txt);
-	a {color: var(--txt);}
-	time {color: hsl(from var(--txt) h s l / 0.8);}
 }
 
 

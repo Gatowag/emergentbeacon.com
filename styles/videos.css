@@ -66,13 +66,6 @@ vid-grid {
 	}
 }
 
-
-#img-tenere {
-	content: url("../assets/vid-grid.jpg");
-	object-position: 0 0;
-	transition: .5s ease;
-}
-
 playlist {
 	display: block;
 	margin-top: .4rem;

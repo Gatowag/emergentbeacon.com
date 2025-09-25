@@ -108,12 +108,8 @@ playlist {
 		a:hover, a:focus-visible {
 			background: var(--playlist-hover-f);
 			color: var(--playlist-hover-t);
-		}
-		a:hover strong, a:focus-visible strong {
-			text-decoration: underline;
-		}
-		a:hover time, a:focus-visible time {
-			color: var(--playlist-hover-t);
+			strong { text-decoration: underline }
+			time { color: var(--playlist-hover-t) }
 		}
 	}
 }

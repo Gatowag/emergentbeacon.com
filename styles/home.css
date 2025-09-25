@@ -41,6 +41,7 @@ main {
 			button, a {
 				background-color: var(--playlist-btn-f);
 				color: var(--playlist-btn-t);
+				border: .2em solid black;
 				margin: .3em .2em;
 				padding: .3em .7em;
 				transition: .2s ease;
@@ -62,6 +63,7 @@ main {
 				list-style: none;
 				cursor: pointer;
 				background-color: var(--playlist-item);
+				border-top: .2em solid black;
 				margin: 0;
 				padding: 0;
 			}

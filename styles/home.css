@@ -94,8 +94,6 @@ main {
 			button:hover, button:focus-visible {
 				background: var(--playlist-hover-f);
 				color: var(--playlist-hover-t);
-
-				strong { text-decoration: underline }
 				time { color: var(--playlist-hover-t) }
 			}
 			time {

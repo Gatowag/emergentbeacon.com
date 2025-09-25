@@ -38,21 +38,23 @@ main {
 			display: inline-block;
 			margin: .5rem auto;
 
-			button {
+			button, a {
 				background-color: var(--playlist-btn-f);
 				color: var(--playlist-btn-t);
 				margin: .3rem .3rem;
 				padding: .3rem .7rem;
 				transition: .2s ease;
+				display: inline-block;
 				font-family: "Roboto", serif;
 				font-weight: 600;
 				font-size: .84em;
+				text-decoration: none;
 			}
-			button:hover, button:focus-visible {
+			button:hover, a:hover, button:focus-visible, a:focus-visible {
 				animation: a-btn-color 0s forwards;
 				transform: translateY(-.2rem);
 			}
-			button:active { transform: translateY(.1rem) }
+			button:active, a:active { transform: translateY(.1rem) }
 		}
 
 		playlist-items {

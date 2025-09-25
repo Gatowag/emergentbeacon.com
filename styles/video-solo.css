@@ -417,6 +417,21 @@ music {
 		color: #e6e5e2;
 		text-align: center;
 		margin: 1rem auto 0rem;
+
+		a {
+			background: var(--btn-fill);
+			color: var(--btn-txt);
+			display: inline-block;
+			text-decoration: none;
+			font-size: .9em;
+			border-radius: .2em;
+			padding: .3em .6em;
+			margin: .4em .1em;
+		}
+		a:hover, a:active {
+			background: hsl(160, 100%, 60%);
+			color: black;
+		}
 	}
 }
 

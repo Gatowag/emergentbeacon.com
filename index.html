@@ -47,9 +47,9 @@
 				<playlist class="extrude">
 					<playlist-buttons>
 						<button id="btn" type="button" onclick="randomize()">random</button>
-						<button id="btn-details" type="button" onclick="document.location='./videos/trailer.html'">this video's page</button>
-						<button id="btn-music" type="button" onclick="document.location='./music/the-world-remembers.html'">this video's music</button>
-						<button onclick="document.location='./videos.html'">all videos</button type="button">
+						<a id="btn-details" href="./videos/trailer.html">this video's page</a>
+						<a id="btn-music" href="./music/the-world-remembers.html">this video's music</a>
+						<a href="./videos.html">all videos</a>
 					</playlist-buttons>
 
 					<playlist-items>
@@ -135,10 +135,10 @@
 			vidEmbed.src = "https://www.youtube.com/embed/" + id;
 		}
 		function soloPageButton(id) {
-			btnPage.setAttribute("onclick", `document.location='${id}'`)
+			btnPage.setAttribute("href", id)
 		}
 		function soloMusicButton(id) {
-			btnMusic.setAttribute("onclick",`document.location='${id}'`)
+			btnMusic.setAttribute("href", id)
 		}
 	</script>
 </html>

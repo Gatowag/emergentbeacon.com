@@ -22,12 +22,11 @@ main {
 		width: calc(100% - .4em);
 		height: 100%;
 		background-color: black;
-		margin-bottom: 1em;
 	}
 	playlist {
 		display: block;
 		width: calc(100% - .4em);
-		margin-top: .4em;
+		margin-top: 1em;
 		background-color: var(--playlist-header);
 
 		playlist-buttons {
@@ -116,5 +115,6 @@ main {
 			aside { border-radius: 1em 1em 0 0 }
 		}
 		#video-embed { border-radius: 0 0 0 0  }
+		playlist { margin: 0em }
 	}
 }

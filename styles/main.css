@@ -234,7 +234,6 @@ header {
 
 
 /* [### ↓ FOOTER ↓ ###] */
-
 footer {
 	background-color: var(--footer-f);
 	width: calc(100% - 1rem);
@@ -332,7 +331,6 @@ footer {
 
 
 /* [### ↓ BUTTONS ↓ ###] */
-
 button {
 	cursor: pointer;
 	border: none;
@@ -341,7 +339,6 @@ button {
 
 
 /* [### ↓ SUPPORT LINKS ↓ ###] */
-
 support {
 	display: inline-block;
 
@@ -391,14 +388,12 @@ support:hover > a, support > a:focus-visible {
 
 
 /* [### ↓ SELECTION / HIGHLIGHT ↓ ###] */
-
 ::selection {
 	background: #111111; color: #ffdc3e; }
 ::-moz-selection {
 	background: #111111; color: #ffdc3e; }
 
 /* [### ↓ STYLE MODULES ↓ ###] */
-
 .hidden { display: none; opacity: 0; }
 .mono { font-family: roboto mono, courier new, monospace; }
 .cutout { outline-style: dashed; outline-offset: -.125rem; outline-width: .125rem; }
@@ -407,7 +402,6 @@ support:hover > a, support > a:focus-visible {
 
 
 /* [### ↓ IMPORTED FONTS ↓ ###] */
-
 .roboto-400 {
 	font-family: "Roboto", serif;
 	font-optical-sizing: auto;

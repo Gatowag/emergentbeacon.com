@@ -2,15 +2,15 @@
  |__ COLOR PALETTES __|
 */
 :root {
-	--title: #bdbdbd;
+	--title: #cadbd6;
 	--plaque: #111111;
 }
 .mode-light {
-	--title: #919090;
+	--title: #7c7c7c;
 	--plaque: #ffffff;
 }
 .mode-contrast {
-	--title: #bdbdbd;
+	--title: #486274;
 	--plaque: var(--secondary);
 }
 

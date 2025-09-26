@@ -30,14 +30,16 @@ main {
 		background-color: var(--playlist-header);
 
 		playlist-buttons {
-			display: inline-block;
-			margin: .5em auto;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+			padding: .6em;
+			gap: .4em .6em;
 
 			button, a {
 				background-color: var(--playlist-btn-f);
 				color: var(--playlist-btn-t);
 				border: .2em solid black;
-				margin: .3em .2em;
 				padding: .3em .7em;
 				transition: .2s ease;
 				display: inline-block;
@@ -115,6 +117,15 @@ main {
 			aside { border-radius: 1em 1em 0 0 }
 		}
 		#video-embed { border-radius: 0 0 0 0  }
-		playlist { margin: 0em }
+		playlist { margin: 0em;
+			playlist-buttons {
+				justify-content: space-between;
+				button, a {
+					width: 47%;
+					padding: .3em 0;
+				}
+				button { width: calc(47% + .4em)}
+			}
+		}
 	}
 }

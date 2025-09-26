@@ -10,8 +10,10 @@
 	--plaque: #ffffff;
 }
 .mode-contrast {
-	--title: #486274;
+	--title: #343738;
 	--plaque: var(--secondary);
+	--logo-stroke: #000000;
+	--logo-stroke-w: 5em;
 }
 
 main {

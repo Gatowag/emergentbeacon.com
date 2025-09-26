@@ -112,23 +112,6 @@
 	--active-theme: 3;
 }
 
-/*@media (prefers-color-scheme: light) {
-	body {
-		background: var(--background);
-		color: var(--txt);
-	}
-	nav {
-		background-color: white;
-		a { color: black }
-		a:hover { color: rgb(0, 141, 184) }
-	}
-	footer {
-		background-color: #ffffff;
-		color: black;
-		img { filter: invert() }
-		p > a { color: black }
-	}
-}*/
 
 /* [### ↓ TOP LEVEL TAGS ↓ ###] */
 html {

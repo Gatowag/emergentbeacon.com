@@ -21,11 +21,12 @@ main {
 			margin: 2em auto .3em;
 			
 			#shell {
-				fill: var(--logo-form);
-				stroke: #ffffff;
-				stroke-width: var(--logo-stroke);
-			}
-			#interior { fill: var(--logo-int) }
+			fill: var(--logo-form);
+			stroke: var(--logo-stroke);
+			stroke-width: var(--logo-stroke-w);
+			paint-order: stroke fill;
+		}
+		#interior { fill: var(--logo-int) }
 		}
 	}
 	h1 { margin: 0 auto .4em; }

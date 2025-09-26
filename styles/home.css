@@ -119,12 +119,15 @@ main {
 		#video-embed { border-radius: 0 0 0 0  }
 		playlist { margin: 0em;
 			playlist-buttons {
+				gap: .4em .2em;
 				justify-content: space-between;
 				button, a {
-					width: 47%;
+					width: calc(50% - .6em);
 					padding: .3em 0;
+					margin: unset;
+					gap: unset;
 				}
-				button { width: calc(47% + .4em)}
+				button { width: calc(50% - .2em) }
 			}
 		}
 	}

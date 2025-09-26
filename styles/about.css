@@ -28,6 +28,7 @@ main {
 			#interior { fill: var(--logo-int) }
 		}
 	}
+	h1 { margin: 0 auto .4em; }
 	about {
 		display: block;
 		width: 20em;
@@ -39,6 +40,11 @@ main {
 			font-size: 1.2em;
 			letter-spacing: .1em;
 		}
+	}
+	img {
+		width: 20em;
+		margin: 1em;
+		border-radius: .2em;
 	}
 	contact {
 		display: block;

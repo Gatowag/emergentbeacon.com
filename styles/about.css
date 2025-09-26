@@ -57,9 +57,3 @@ main {
 		a { color: var(--accent) }
 	}
 }
-footer logo {
-	svg {
-		#shell { fill: var(--social-icon); stroke-width: 0; }
-		#interior { fill: var(--secondary) }
-	}
-}

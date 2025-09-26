@@ -112,11 +112,9 @@ main {
 @media screen and (max-width: 41.5rem) {
 	main {
 		width: 90vw;
-			section {
-				aside {
-					border-radius: 1em 1em 0 0;
-				}
-			}
+		section {
+			aside { border-radius: 1em 1em 0 0 }
+		}
 		#video-embed { border-radius: 0 0 0 0  }
 	}
 }

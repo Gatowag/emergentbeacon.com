@@ -33,22 +33,28 @@ main {
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: center;
-			padding: .6em;
-			gap: .4em .6em;
+			padding: .3em .6em;
+			gap: .4em .2em;
 
-			button, a {
-				background-color: var(--playlist-btn-f);
-				color: var(--playlist-btn-t);
-				border: .2em solid black;
-				padding: .3em .7em;
-				transition: .2s ease;
+			button-target {
 				display: inline-block;
-				font-family: "Roboto", serif;
-				font-weight: 600;
-				font-size: .84em;
-				text-decoration: none;
+				padding: .3em;
+			
+				button, a {
+					background-color: var(--playlist-btn-f);
+					color: var(--playlist-btn-t);
+					border: .2em solid black;
+					padding: .3em .7em;
+					transition: .2s ease;
+					display: inline-block;
+					font-family: "Roboto", serif;
+					font-weight: 600;
+					font-size: .84em;
+					text-decoration: none;
+				}
 			}
-			button:hover, a:hover, button:focus-visible, a:focus-visible {
+			button-target:hover button, button-target:hover a,
+			button-target:has(button:focus-visible) button, button-target:has(a:focus-visible) a {
 				animation: a-btn-color 0s forwards;
 				transform: translateY(-.2em);
 			}
@@ -121,13 +127,17 @@ main {
 			playlist-buttons {
 				gap: .4em .2em;
 				justify-content: space-between;
-				button, a {
+
+				button-target {
+					padding: .2em .2em;
 					width: calc(50% - .6em);
-					padding: .3em 0;
-					margin: unset;
-					gap: unset;
+
+					button, a {
+						width: calc(100% - .4em);
+						padding: .3em 0;
+					}
+					button { width: calc(100% - .2em) }
 				}
-				button { width: calc(50% - .2em) }
 			}
 		}
 	}

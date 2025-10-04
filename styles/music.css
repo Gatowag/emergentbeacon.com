@@ -1,3 +1,16 @@
+:root {
+	--perma-f: var(--txt);
+	--perma-t: var(--secondary);
+}
+.mode-light {
+	--perma-f: var(--txt);
+	--perma-t: var(--secondary);
+}
+.mode-contrast {
+	--perma-f: var(--txt);
+	--perma-t: var(--playlist-item);
+}
+
 main { width: 80vw }
 section { width: 100% }
 
@@ -78,27 +91,27 @@ music {
 perma {
 	a {
 		cursor: pointer;
-		background-color: var(--playlist-item);
-		color: var(--txt);
+		background-color: var(--perma-f);
+		color: var(--perma-t);
 		display: inline-block;
-		width: 4rem;
-		margin: .2rem auto 0;
-		padding: .3rem .7rem;
-		border: .18rem solid black;
-		border-radius: .2rem;
+		width: 5em;
+		margin: .2em auto .2em;
+		padding: .4em .7em;
+		border: .18em solid black;
+		border-radius: .3em;
 		transition: .2s ease;
 
 		text-decoration: none;
 		text-wrap: nowrap;
 		text-align: center;
 		font-family: "Roboto Mono", serif;
-		font-size: .8rem;
+		font-size: .8em;
 	}
 	a:hover, a:focus-visible {
 		animation: 0s ease 0s forwards perma-c;
-		transform: translateY(-.2rem);
+		transform: translateY(-.2em);
 	}
-	a:active { transform: translateY(.1rem) }
+	a:active { transform: translateY(.1em) }
 }
 
 grid {

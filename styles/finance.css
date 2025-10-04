@@ -1,6 +1,4 @@
-/*_____________________
- |__ COLOR PALETTES __|
-*/
+/* [ COLOR PALETTES ] */
 :root {
 	--report: #ecebe8;
 	--table-cat: #bac0c2;
@@ -18,10 +16,10 @@
 }
 
 section {
-	margin: 2rem;
+	margin: 2em;
 	
 	p {
-		width: 20rem;
+		width: 20em;
 		margin: auto;
 		text-align: justify;
 	}
@@ -30,7 +28,7 @@ section {
 select {
 	background-color: white;
 	color: black;
-	margin-bottom: 2rem;
+	margin-bottom: 2em;
 }
 
 report {
@@ -38,10 +36,11 @@ report {
 	background-color: var(--report);
 	color: black;
 	text-align: left;
-	padding: 1rem 2rem 2rem;
-	border-radius: .2rem;
+	padding: 1em 2em 2em;
+	min-width: 16em;
+	border-radius: .3em;
 
-	h2 { margin:.5rem 0 }
+	h2 { margin:.6em 0 }
 }
 
 table {
@@ -49,29 +48,29 @@ table {
 	width:100%;
 
 	caption {
-		margin-bottom: 1rem;
-		font-size: 1.2rem;
+		margin-bottom: 1em;
+		font-size: 1.2em;
 	}
-	th { padding: .5rem 0 }
+	th { padding: .5em 0 }
 	td {
-		padding: .1rem .5rem;
+		padding: .1em .5em;
 		border: 1px solid black;
 		font-family: "Roboto Mono", serif;
 		font-weight: 500;
-		font-size: .9rem;
+		font-size: .9em;
 	}
 	tr {
-		td:nth-child(1) { padding-left: 1rem }
+		td:nth-child(1) { padding-left: 1em }
 		td:nth-child(2) { text-align: right }
 		td[colspan] {
-			padding-left: .5rem;
+			padding-left: .5em;
 			background-color: var(--table-cat);
 			color: var(--table-cat-txt);
 		}
 	}
 	tfoot {
 		tr:first-child > td {
-			height: .6rem;
+			height: .6em;
 			border: none;
 			background-color: transparent;
 		}
@@ -81,5 +80,13 @@ table {
 				color: black;
 			}
 		}
+	}
+}
+
+/* [ DISPLAY: MOBILE ] */
+@media screen and (max-width: 32em) {
+	section {
+		margin: 2em .3em;
+		p { width: 100% }
 	}
 }

@@ -49,6 +49,7 @@
 				<select name="report-id" id="report-id" onchange="generateReport()">
 					<option value="default" selected>---</option>
 					<optgroup label="2025">
+						<option value="2025-Q3">2025 Q3</option>
 						<option value="2025-Q2">2025 Q2</option>
 						<option value="2025-Q1">2025 Q1</option>
 					</optgroup>
@@ -88,6 +89,16 @@
 		buildHeader(path);
 		buildFooter(path);
 		const reportData = [
+			{id: "2025-Q3", caption: "2025 Q3 Finances",
+			income: [
+				["Patreon","$226.18"],
+				["Bandcamp","$14.21"]],
+			expenses: [
+				["community","-$28.92"],
+				["admin services","-$9.99"],
+				["creative assets","-$42.09"],
+				["labor: Brandt Hughes","-$159.39","*"]],
+			total: "$0"},
 			{id: "2025-Q2", caption: "2025 Q2 Finances",
 			income: [
 				["Patreon","$244.45"]],

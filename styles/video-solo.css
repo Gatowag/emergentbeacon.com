@@ -510,25 +510,75 @@ rewards {
 			height: max-content;
 			width: 7rem;
 			vertical-align: top;
-			margin: .3em;
+			margin: .55em;
 			transition: .2s ease;
+			--box-outline: #d488a2;
 
-			img {
-				height: 7rem;
+			target {
+				display: inline-block;
+				height: 7em;
 				aspect-ratio: 1;
-				object-fit: cover;
-				transition: .4s ease;
+				padding: 1em 0;
+
+				a {
+					img {
+						height: 7rem;
+						aspect-ratio: 1;
+						object-fit: cover;
+						box-shadow:
+							0 0 0 .1em black,
+							0 0 0 .3em var(--box-outline),
+							0 0 0 .45em black;
+						background-color: black;
+						transition: .2s ease;
+					}
+				}
+				
 			}
-			a { display: block; transition: .2s ease;}
-			a:hover, a:focus-visible { transform: translateY(-.2em) }
+			target[data=plog] { --box-outline: #fd9e28 }
+			target[data=music] { --box-outline: #18eaa2 }
+			target[data=video] { --box-outline: #915ab5 }
+			target[data=breakdown] { --box-outline: #1883ea }
+			a { display: block; transition: .2s ease }
+			target:hover, target:has(a:focus-visible) {
+				a {
+					transform: translateY(-.2em);
+
+					img {
+						box-shadow:
+							0 0 0 .1em black,
+							0 0 0 .4em white,
+							0 0 0 .6em black;
+					}
+				}
+			}
+			
 			a:active { transform: translateY(.1em) }
-			p { margin: .2rem 0 .4rem }
-			time { font-size: .8rem }
-			span { font-size: .9rem }
+			p {
+				margin: 0 0 .4rem;
+				font-size: 1.1em;
+				transition: .2s ease;
+
+				b {
+					display: inline-block;
+					padding: .1em 0 .3em;
+					font-size: 1em;
+				}
+				time {
+					display: block;
+					font-size: .8em
+				}
+				span { font-size: .75em	}
+			}
+			
+			
 		}
 		bonus-entry:hover, bonus-entry:has(a:focus-visible) {
 			opacity: 90%;
-			transform: scale(96%);
+			target {
+				a { transform: scale(96%) }
+			}
+			p { transform: translateY(-.3em) }
 			span { color: var(--accent) }
 		}
 	}

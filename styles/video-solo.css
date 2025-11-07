@@ -579,7 +579,7 @@ rewards {
 				a { transform: scale(96%) }
 			}
 			p { transform: translateY(-.3em) }
-			span { color: var(--accent) }
+			time, span { color: var(--accent) }
 		}
 	}
 }

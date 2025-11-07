@@ -140,13 +140,23 @@ grid {
 			img {
 				width: 100%;
 				aspect-ratio: 1/1;
+				transition: .3s ease;
 				
 				object-fit: cover;
 				background: black;
-				border: 2px solid black;
+				box-shadow:
+					0 0 0 .2em black;
 			}
 		}
-		button:hover, button:focus-visible { transform: translateY(-.2em) }
+		button:hover, button:focus-visible {
+			transform: translateY(-.2em);
+			img {
+				box-shadow:
+					0 0 0 .1em black,
+					0 0 0 .4em hsl(from var(--accent) h 200% 75%),
+					0 0 0 .6em black;
+			}
+		}
 		button:active { transform: translateY(.1em) }
 		time, info {
 			display: block;
@@ -159,7 +169,6 @@ grid {
 	}
 	grid-item:hover, grid-item:has(button:focus-visible) {
 		color: var(--accent);
-		opacity: 90%;
 		transform: scale(96%);
 	}
 }
